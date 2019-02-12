@@ -1,0 +1,47 @@
+Animations:
+
+- Sea Lion Interaction -
+
+1. Scarlet greeting
+
+2. Sea lion swims by, Scarlet greets sea lion (sings)
+
+3. Scarlet gestures to rock / waits for you
+
+4. Interaction with Sea lion and scarlet is happy
+
+- Scarlet Name -
+
+1. She sings new tune refers to self
+
+2. Same idle animation
+
+3. Sea lion pops up and interacts (which can be the same)
+
+4. Scalret celebrates (which can also be the same) 
+
+- Scarlet Hide and seek -
+
+1. Gestures behind you
+
+2. reacts to you saying her name (old animation)
+
+3. sea lion reacts to hearing his name (old interaction)
+
+4. scarlet hids (which is litearlly not an animation)
+
+5. Scarlet sings back and becomes visible
+
+6. Scarlet pops up and she is happy
+
+- Pod Interaction - 
+
+1. scarlet seees pod
+
+2. scarlet idle where she keeps looking at it
+
+2. reacts to you saying her name, though less active
+
+3. sea lion reacts to hearing his name (old interaction)
+
+4. end scene where everything happens

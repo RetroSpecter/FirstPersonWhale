@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicRock : Interacatble {
 
     public float lookTimer;
+    public string triggerName;
     private IEnumerator currentTimer;
     private AudioSource source;
 
@@ -32,6 +33,10 @@ public class MusicRock : Interacatble {
 
     public void PlayRock() {
         source.Play();
+        if (!triggerName.Equals("")) {
+            print(triggerName);
+            AnimatorHandler.instance.ActivateTriggers(triggerName);
+        }
     }
 
     IEnumerator timeToLook(float delay) {
