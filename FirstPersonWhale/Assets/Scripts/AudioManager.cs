@@ -29,6 +29,20 @@ public class AudioManager : MonoBehaviour {
     public void Play(AudioSource source, AudioClip sound, float volume = 1, float pitch = 1)
     {
 
+        /* this is adjusting the volume and pitch values of the AudioSource to match the settings we passed in*/
+        source.volume = volume;
+        source.pitch = pitch;
+
+        /* Audiosource has this value, clip, which is the sound that it is going to play. We set that to the sound we passed in earlier*/
+        source.clip = sound;
+
+        /* this is a function of AudioSource that tells it to play itself with whatever audiosettings we just gave it*/
+        source.Play();
+
+
+
+
+
     }
 
     public void Play(AudioSource source, AudioClip sound, float volume = 1, float minPitch= 1, float maxPitch = 1)
