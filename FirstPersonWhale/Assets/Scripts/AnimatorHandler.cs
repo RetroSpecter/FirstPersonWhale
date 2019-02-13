@@ -35,7 +35,7 @@ public class AnimatorHandler : MonoBehaviour {
     }
 
     IEnumerator resetTrigger(string triggerName) {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         foreach (Animator anim in animators)
         {
             anim.ResetTrigger(triggerName);
