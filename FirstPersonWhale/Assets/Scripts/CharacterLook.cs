@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicRock : Interacatble {
+public class CharacterLook : Interacatble
+{
 
     public float lookTimer;
     public string triggerName;
     private IEnumerator currentTimer;
-    private AudioSource source;
-
-    private void Start()
-    {
-        source = GetComponent<AudioSource>();
-    }
 
     public override void OnDeselected(CameraRaycast camera)
     {
@@ -24,32 +19,38 @@ public class MusicRock : Interacatble {
 
     public override void OnSelected(CameraRaycast camera)
     {
-        if (currentTimer == null) {
+        if (currentTimer == null)
+        {
             currentTimer = timeToLook(lookTimer);
             StartCoroutine(currentTimer);
         }
         return;
     }
 
-    public void PlayRock() {
-        source.Play();
-        if (!triggerName.Equals("")) {
+
+    public void TriggerAnimation()
+    {
+        if (!triggerName.Equals(""))
+        {
             print(triggerName);
             AnimatorHandler.instance.ActivateTriggers(triggerName);
         }
     }
 
-    IEnumerator timeToLook(float delay) {   
+    IEnumerator timeToLook(float delay)
+    {
         float t = 0;
-        while (t < delay) {
+        while (t < delay)
+        {
             t += Time.deltaTime;
             yield return null;
         }
 
-        PlayRock();
+        TriggerAnimation();
 
         //TODO: this is pretty lazy. If things run really slow it might be this. 
-        while (true) {
+        while (true)
+        {
             yield return null;
         }
     }

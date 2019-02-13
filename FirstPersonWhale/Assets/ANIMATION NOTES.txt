@@ -45,3 +45,38 @@ Animations:
 3. sea lion reacts to hearing his name (old interaction)
 
 4. end scene where everything happens
+
+Sounds:
+
+- General -
+ambient underwater sounds
+	- low constant. filtering up and down.
+distant bubble sounds
+faint whale noises in the distant
+
+Wooshing when Scarlet or sea lion swim around
+
+- Sea Lion Interaction -
+
+Scarlet calls to greet you (3 - 4)
+Sea lion noises
+ambient bubble sounds (particle effects bubbles as well)
+Scarlet sea lion song
+Scarlet gesture sound (real short and question sounding)
+rock bubble sounds (more like scuba diving)
+
+
+- Scarlet Name -
+
+Scarlet song
+
+
+- Scarlet Hide and seek -
+
+big woosh sound effect as she swim away
+scarlet quiet response
+
+- Pod Interaction - 
+
+Family Song
+Pod 
