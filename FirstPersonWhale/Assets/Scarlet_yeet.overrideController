@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Scarlet_yeet
+  m_Controller: {fileID: 9100000, guid: 40642a83188c24147a2c6040c090dac5, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6c2ad91fe0400a64faa4a756dc9e849b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0c016fa87c2057343b9898fd79a167f2, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 816d3845ade80ee4698bcc4c99d55108, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 13649340fdaed6d4b948e00e7cb5ac0a, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 8fdc4709936c9c34ab5c2449f634e16c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8c7dff12dd4892c47888ccadd5143d42, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: a5489cd8e2ed8544da5330df1ec43b02, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8c7dff12dd4892c47888ccadd5143d42, type: 3}
