@@ -8,14 +8,37 @@ public class MusicRock : Interacatble {
     public string triggerName;
     private IEnumerator currentTimer;
     private AudioSource source;
+    public bool isActive;
+
+    public delegate void selectionEvent();
+    public selectionEvent select;
+    public selectionEvent deselect;
+    public selectionEvent active;
+    public selectionEvent deactive;
+
 
     private void Start()
     {
         source = GetComponent<AudioSource>();
     }
 
+    public void ActivateRock(bool active) {
+        if (active && this.active != null)
+            this.active();
+
+        else if (!active && this.deactive != null)
+            this.deactive();
+
+        isActive = active;
+    }
+
     public override void OnDeselected(CameraRaycast camera)
     {
+        if (!isActive) return;
+
+        if (deselect != null)
+            deselect();
+
         if (currentTimer != null)
             StopCoroutine(currentTimer);
 
@@ -24,6 +47,11 @@ public class MusicRock : Interacatble {
 
     public override void OnSelected(CameraRaycast camera)
     {
+        if (!isActive) return;
+
+        if (select != null)
+            select();
+
         if (currentTimer == null) {
             currentTimer = timeToLook(lookTimer);
             StartCoroutine(currentTimer);

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class RockManager : MonoBehaviour {
 
-    public GameObject[] rocks;
+    public static RockManager instance;
+    public MusicRock[] rocks;
 
     private void Start()
     {
-        foreach (GameObject r in rocks)
-            r.SetActive(false);
+        instance = this;
+        foreach (MusicRock r in rocks)
+            r.ActivateRock(false);
     }
 
     public void ActivateRock(int i) {
-        rocks[i].SetActive(true);
+        for (int j = 0; j < rocks.Length; j++) {
+            if (j < i)
+                rocks[j].ActivateRock(true);
+            else
+                rocks[j].ActivateRock(false);
+        }
     }
 }
