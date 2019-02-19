@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c7dff12dd4892c47888ccadd5143d42
+guid: 7c41ff9924d95b64287d200b13517188
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -668,7 +668,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: Take 001
+    7400000: Point Rock Idle
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -704,7 +704,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Point Rock Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -749,6 +777,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
