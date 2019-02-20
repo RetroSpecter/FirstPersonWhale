@@ -29,6 +29,22 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint/luna:center_jaw_bind_joint
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.43500003, y: 2.1980002, z: -6.558}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -42,6 +58,13 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 1694811646
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2632553244
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -126,6 +149,63 @@ AnimationClip:
     path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint/luna:center_jaw_bind_joint
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.43500003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 2.1980002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -6.558
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
+    classID: 4
+    script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
@@ -155,6 +235,36 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
     path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint/luna:center_jaw_bind_joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: luna:Luna_topCon/luna:bind_joint_grp/luna:Luna_root_bind_joint/luna:center_root_bind_joint/luna:center_neck_bind_joint/luna:center_head_bind_joint
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

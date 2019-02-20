@@ -6,28 +6,34 @@ public class LipFlap : MonoBehaviour {
 
 
     private Animator anim;
-    private AudioSource audio;
+    private AudioSource source;
     public float offset = 0;
 
+    float targetVelocity;
+    float curVelocity;
     float[] clipSampleData;
 
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
         clipSampleData = new float[1024];
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        audio.clip.GetData(clipSampleData, audio.timeSamples);
-
         float volume = 0;
-        foreach (var sample in clipSampleData)
+
+        if (source.isPlaying)
         {
-            volume += Mathf.Abs(sample);
+            source.clip.GetData(clipSampleData, source.timeSamples);
+            foreach (var sample in clipSampleData)
+            {
+                volume += Mathf.Abs(sample);
+            }
         }
 
-        anim.SetFloat("mouth", volume/1024 * offset);
+        targetVelocity = Mathf.SmoothDamp(targetVelocity, volume / 1024 * offset, ref curVelocity, Time.deltaTime * 3);
+        anim.SetFloat("mouth", targetVelocity);
 	}
 }
