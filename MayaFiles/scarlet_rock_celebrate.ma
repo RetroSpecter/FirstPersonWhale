@@ -1,11 +1,13 @@
 //Maya ASCII 2017ff05 scene
 //Name: scarlet_rock_celebrate.ma
-//Last modified: Tue, Feb 12, 2019 06:14:35 PM
+//Last modified: Wed, Feb 20, 2019 04:58:19 PM
 //Codeset: 1252
 file -rdi 1 -ns "granny" -dr 1 -rfn "grannyRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/granny/_published/granny.ma";
-file -rdi 1 -ns "luna" -rfn "lunaRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/luna/_published/luna.ma";
+file -rdi 1 -ns "luna" -dr 1 -rfn "lunaRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/luna/_published/luna.ma";
+file -rdi 1 -ns "luna1" -rfn "lunaRN1" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/luna/_published/luna.ma";
 file -r -ns "granny" -dr 1 -rfn "grannyRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/granny/_published/granny.ma";
 file -r -ns "luna" -dr 1 -rfn "lunaRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/luna/_published/luna.ma";
+file -r -ns "luna1" -dr 1 -rfn "lunaRN1" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/luna/_published/luna.ma";
 requires maya "2017ff05";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -18,13 +20,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "1A880240-4B35-353D-F04D-FBA2F302276A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1340.0569271689892 647.3601803768853 138.78691063430639 ;
-	setAttr ".r" -type "double3" -22.538352729618143 90.200000000000728 -4.5799987413074647e-013 ;
+	setAttr ".t" -type "double3" -388.05012459513136 171.51656413397242 439.50909430051729 ;
+	setAttr ".r" -type "double3" -11.138352729545174 -50.60000000000089 2.5054370439963702e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8674BAAA-47AA-459D-68D5-9C9D052195FA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1480.9317740833226;
+	setAttr ".coi" 475.20829842184241;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -76,268 +78,42 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode fosterParent -n "lunaRNfosterParent1";
-	rename -uid "4CFFCA62-4EC1-1939-2020-BBBD7799279A";
-createNode transform -n "luna:mesh_grp1" -p "lunaRNfosterParent1";
-	rename -uid "E775E86A-47D8-0D10-A355-129D2C90404D";
-	setAttr ".ovdt" 1;
-	setAttr ".ove" yes;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode transform -n "luna:bind_joint_grp1" -p "lunaRNfosterParent1";
-	rename -uid "6D1DB603-43C8-1705-E414-CFB62730C304";
-	setAttr ".ovdt" 1;
-	setAttr ".ove" yes;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode transform -n "luna:component_grp1" -p "lunaRNfosterParent1";
-	rename -uid "4E74BB91-480E-1AA1-0F7C-3BA4D08687AD";
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode transform -n "luna:mesh_grp2" -p "lunaRNfosterParent1";
-	rename -uid "96360362-48E7-FA83-F222-55BE02928FA7";
-	setAttr ".ovdt" 1;
-	setAttr ".ove" yes;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode transform -n "luna:bind_joint_grp2" -p "lunaRNfosterParent1";
-	rename -uid "24603AE3-4196-184A-BF99-029ECDB5A564";
-	setAttr ".ovdt" 1;
-	setAttr ".ove" yes;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode transform -n "luna:component_grp2" -p "lunaRNfosterParent1";
-	rename -uid "404EC56E-4531-D1E4-327F-E295C634F8C2";
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode transform -n "luna:DO_NOT_TOUCH16" -p "lunaRNfosterParent1";
-	rename -uid "1A046D8F-4C71-39C1-3CD2-B98BF4FD2BC7";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 4.7195954265719344e-015 43.959498760360496 98.376290861423016 ;
-	setAttr ".sp" -type "double3" 4.7195954265719344e-015 43.959498760360496 98.376290861423016 ;
-createNode transform -n "luna:DO_NOT_TOUCH15" -p "lunaRNfosterParent1";
-	rename -uid "8978EDF4-49DA-C9A0-B3F2-0B97827684D7";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 2.4822322970408095e-006 96.781264754872836 118.36471148411559 ;
-	setAttr ".sp" -type "double3" 2.4822322970408095e-006 96.781264754872836 118.36471148411559 ;
-createNode transform -n "luna:DO_NOT_TOUCH14" -p "lunaRNfosterParent1";
-	rename -uid "B8E828CE-4ADE-DF6B-8FDA-13A0A1FDE11B";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" -13.406500000000001 48.390613723086787 118.3648718264638 ;
-	setAttr ".sp" -type "double3" -13.406500000000001 48.390613723086787 118.3648718264638 ;
-createNode transform -n "luna:DO_NOT_TOUCH13" -p "lunaRNfosterParent1";
-	rename -uid "E27600FB-40E0-8B56-B93C-6A95660F6CA4";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 13.406504964285832 48.390651031696663 118.36455114176741 ;
-	setAttr ".sp" -type "double3" 13.406504964285832 48.390651031696663 118.36455114176741 ;
-createNode transform -n "luna:DO_NOT_TOUCH12" -p "lunaRNfosterParent1";
-	rename -uid "D0015864-48E3-1468-F695-919F9377ECA8";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" -8.6000199999985618 47.870630964158082 -128.08719880983926 ;
-	setAttr ".sp" -type "double3" -8.6000199999985618 47.870630964158082 -128.08719880983926 ;
-createNode transform -n "luna:DO_NOT_TOUCH11" -p "lunaRNfosterParent1";
-	rename -uid "ACB8C805-4E34-31D9-994D-77A3CCD51047";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" -25.707700000000006 18.797699739175791 63.521481956390581 ;
-	setAttr ".sp" -type "double3" -25.707700000000006 18.797699739175791 63.521481956390581 ;
-createNode transform -n "luna:DO_NOT_TOUCH10" -p "lunaRNfosterParent1";
-	rename -uid "A85254AA-45BE-C8BC-8EA3-FF90C4B99AF5";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 8.6000198624706812 47.87073250554139 -128.08730082755926 ;
-	setAttr ".sp" -type "double3" 8.6000198624706812 47.87073250554139 -128.08730082755926 ;
-createNode transform -n "luna:DO_NOT_TOUCH9" -p "lunaRNfosterParent1";
-	rename -uid "556D4477-4D4D-2797-3519-EA8EB313B0AA";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 25.707695960998535 18.79774883859471 63.521496660738016 ;
-	setAttr ".sp" -type "double3" 25.707695960998535 18.79774883859471 63.521496660738016 ;
-createNode transform -n "luna:DO_NOT_TOUCH8" -p "lunaRNfosterParent1";
-	rename -uid "18A5FC14-4D54-82EE-DB56-499EFC4FE7C6";
-	setAttr ".v" no;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-	setAttr ".rp" -type "double3" -9.1945107527635628e-008 47.426665136467804 -80.053189391462411 ;
-	setAttr ".sp" -type "double3" -9.1945107527635628e-008 47.426665136467804 -80.053189391462411 ;
-createNode transform -n "luna:DO_NOT_TOUCH7" -p "lunaRNfosterParent1";
-	rename -uid "4E66A674-414E-459B-04E4-0CA0887DE5B5";
-	setAttr ".v" no;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-	setAttr ".rp" -type "double3" -1.5766018179874663e-007 45.986903917331773 -34.250609076162199 ;
-	setAttr ".sp" -type "double3" -1.5766018179874663e-007 45.986903917331773 -34.250609076162199 ;
-createNode transform -n "luna:DO_NOT_TOUCH6" -p "lunaRNfosterParent1";
-	rename -uid "C2CAEE87-49C8-2382-941B-9EAF0F905659";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 1.0585771426987955 82.896602839891926 6.6423473355656739 ;
-	setAttr ".sp" -type "double3" 1.0585771426987955 82.896602839891926 6.6423473355656739 ;
-createNode transform -n "luna:DO_NOT_TOUCH5" -p "lunaRNfosterParent1";
-	rename -uid "D096D15C-4DA0-69B8-8164-B4B5E8DBB79C";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" -1.9320507062316586e-015 42.357397085942267 95.921871711858884 ;
-	setAttr ".sp" -type "double3" -1.9320507062316586e-015 42.357397085942267 95.921871711858884 ;
-createNode transform -n "luna:DO_NOT_TOUCH4" -p "lunaRNfosterParent1";
-	rename -uid "51AC5A0B-41E1-E356-0E7A-3CBB71E9426D";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 9.371287717647719e-016 42.32914066314698 80.703767723569527 ;
-	setAttr ".sp" -type "double3" 9.371287717647719e-016 42.32914066314698 80.703767723569527 ;
-createNode transform -n "luna:DO_NOT_TOUCH3" -p "lunaRNfosterParent1";
-	rename -uid "DDD24AFD-41B7-DFD4-9FAA-07A34DAA5458";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 4.3455377755253471e-015 45.2566876188815 -10.825129366625553 ;
-	setAttr ".sp" -type "double3" 4.3455377755253471e-015 45.2566876188815 -10.825129366625553 ;
-createNode joint -n "luna:center_tail_1_deformer_null1" -p "lunaRNfosterParent1";
-	rename -uid "291ECDF3-4A1D-476A-9B4F-DEBA1361761D";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 1.7763568394002505e-015 1.4210854715202004e-014 
-		0 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2738703532167232e-015 3.2780820550904871e-016 -4.3732626870123352e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_1_deformer_null" -p "luna:center_tail_1_deformer_null1";
-	rename -uid "7550EFE1-48BE-FD30-8173-FA83B65AAF27";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 7.1054273576010019e-015 -1.0097419586828951e-028 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" 2.7540606431126687e-014 -1.3396919391387838e-014 3.5781240166464568e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_2_deformer_null1" -p "lunaRNfosterParent1";
-	rename -uid "99FB97CB-4F14-4073-E8F2-3B8960373F65";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 7.1054273576010019e-015 -5.0487097934144756e-029 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2738703532167232e-015 3.2780820550904871e-016 -4.3732626870123352e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_2_deformer_null" -p "luna:center_tail_2_deformer_null1";
-	rename -uid "C318DCA7-47BC-1244-98AD-4ABD24E3535A";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 -7.1054273576010019e-015 0 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" 5.2806031877210787e-015 1.2599212143807727e-014 1.4113711398994352e-014 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_3_deformer_null1" -p "lunaRNfosterParent1";
-	rename -uid "BBA922EB-4864-5B33-8471-45949BECDFDC";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 1.4210854715202004e-014 5.0487097934144756e-029 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2738703532167232e-015 3.2780820550904871e-016 -4.3732626870123352e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_3_deformer_null" -p "luna:center_tail_3_deformer_null1";
-	rename -uid "04CF0B54-4B11-32D0-4F0E-E8BB04C0C81A";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 7.1054273576010019e-015 -5.0487097934144756e-029 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" 4.219350346875762e-013 1.243190977064375e-014 -7.5538173684758519e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_4_deformer_null1" -p "lunaRNfosterParent1";
-	rename -uid "F0315446-410D-823A-6DF3-98A20429D073";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 0 -5.0487097934144756e-029 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2738703532167232e-015 3.2780820550904871e-016 -4.3732626870123352e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_4_deformer_null" -p "luna:center_tail_4_deformer_null1";
-	rename -uid "BDF6984A-4878-56D6-C60F-39A1A1652AF9";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 -7.1054273576010019e-015 5.0487097934144756e-029 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" 5.2827297769834911e-015 1.2398087291786566e-014 -7.7526020360673203e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_5_deformer_null1" -p "lunaRNfosterParent1";
-	rename -uid "2EC0DFB9-469C-E4BA-D545-F1BB9CAEED2D";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" -2.8421709430404007e-014 7.1054273576010019e-015 
-		2.6469779601696886e-023 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2738703532167232e-015 3.2780820550904871e-016 -4.3732626870123352e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_5_deformer_null" -p "luna:center_tail_5_deformer_null1";
-	rename -uid "89135EFA-49CE-5D59-B7AD-DAA560CEF460";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" -2.8421709430404007e-014 0 0 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" 2.4365116123582602e-014 -1.3548789492659682e-014 -7.7526020360673203e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_6_deformer_null1" -p "lunaRNfosterParent1";
-	rename -uid "54851040-4A3E-CD2D-AA77-D5AB92215B62";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 -7.1054273576010019e-015 2.6469779601696886e-023 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2738703532167232e-015 3.2780820550904871e-016 -4.3732626870123352e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode joint -n "luna:center_tail_6_deformer_null" -p "luna:center_tail_6_deformer_null1";
-	rename -uid "AC460753-4EE0-1733-1F62-689E1DF0E9FC";
-	addAttr -ci true -h true -sn "fbxID" -ln "filmboxTypeID" -at "short";
-	setAttr -l on ".t" -type "double3" 0 -7.1054273576010019e-015 0 ;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr ".jo" -type "double3" -4.2622587837488415e-015 -8.912835688666647e-017 9.1440947092076072e-015 ;
-	setAttr ".ds" 2;
-	setAttr ".radi" 3.6300000000000012;
-	setAttr ".fbxID" 5;
-createNode transform -n "luna:DO_NOT_TOUCH2" -p "lunaRNfosterParent1";
-	rename -uid "DF9B2C01-4AB0-C765-7A8D-709BD54C665C";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 7.2575203280333086e-029 42.329140663146973 80.703767723569527 ;
-	setAttr ".sp" -type "double3" 7.2575203280333086e-029 42.329140663146973 80.703767723569527 ;
-createNode transform -n "luna:DO_NOT_TOUCH1" -p "lunaRNfosterParent1";
-	rename -uid "5BB01EFE-42EF-3A4D-DC88-1EA6ECCD43BD";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" -7.3607155524396693e-016 43.844644546508839 34.924152374267535 ;
-	setAttr ".sp" -type "double3" -7.3607155524396693e-016 43.844644546508839 34.924152374267535 ;
+createNode transform -n "render_cam";
+	rename -uid "A4F04C54-4CFD-D65F-6990-DA92434DA26F";
+	setAttr ".t" -type "double3" -479.419 74.323 569.095 ;
+	setAttr -l on ".tx";
+	setAttr -l on ".ty";
+	setAttr -l on ".tz";
+	setAttr ".r" -type "double3" -3.938 -41.8 2.9236893181567143e-014 ;
+	setAttr -l on ".rx";
+	setAttr -l on ".ry";
+	setAttr -l on ".rz";
+createNode camera -n "render_camShape" -p "render_cam";
+	rename -uid "BB70506D-4196-EA71-2BED-13AAD3C132AD";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".fl" 34.999999999999993;
+	setAttr -l on ".coi" 3841.8745424597091;
+	setAttr -l on ".ow";
+	setAttr ".imn" -type "string" "persp1";
+	setAttr ".den" -type "string" "persp1_depth";
+	setAttr ".man" -type "string" "persp1_mask";
+	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A5C84F10-43C9-5BA3-E76C-83A791502878";
-	setAttr -s 119 ".lnk";
-	setAttr -s 119 ".slnk";
+	rename -uid "FB598E1E-4B75-32E8-2CA1-AE9980EEAE2A";
+	setAttr -s 353 ".lnk";
+	setAttr -s 353 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C74E3F69-4B72-66BA-EBB2-B28B3715B63A";
+	rename -uid "6BFF3496-4A83-0166-E4ED-4087065B292A";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 1 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "49EF1114-49F0-EEA4-F085-3D9BD057B4CD";
+	rename -uid "B6E53AAC-48E9-6421-46C6-0D8ACF8596D4";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "17C0D59C-4D0C-C8F7-D60D-08B42DDD5F87";
+	rename -uid "69FCED2C-4D62-435B-520D-59AD5DEA298A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7B98E5E4-4049-C10F-AE42-49A022970C20";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "118AC78C-41E1-07FD-92EA-89AFD2A7FBBF";
+	rename -uid "1AA0FEC9-4DA5-53CE-A00D-1582DC975BC3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "ED04D043-4C47-5E5F-35B0-40A28B32A89A";
 	setAttr ".g" yes;
@@ -528,27 +304,27 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
 		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
 		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
-		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"render_cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1258\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 873\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
 		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n"
 		+ "            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
-		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n"
-		+ "                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n"
-		+ "                -clipTime \"on\" \n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
-		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n"
-		+ "                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
-		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
-		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n"
+		+ "                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
+		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n"
+		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n"
+		+ "                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
 		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
@@ -557,8 +333,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n"
 		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
 		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1258\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1258\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"render_cam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 873\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"render_cam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 873\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 1000 -size 1000 -divisions 10 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -702,251 +478,458 @@ createNode animCurveTU -n "center_tail_3_anim_center_tail_flap_influence";
 	setAttr ".kot[0]"  18;
 createNode reference -n "lunaRN";
 	rename -uid "C48095F0-4585-885C-34B9-F486F9DE05C0";
-	setAttr -s 185 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
+	setAttr -s 179 ".phl";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lunaRN"
-		"lunaRN" 0
-		"lunaRN" 6324
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH1" "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH2" "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:center_tail_6_deformer_null1" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:center_tail_5_deformer_null1" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:center_tail_4_deformer_null1" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:center_tail_3_deformer_null1" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:center_tail_2_deformer_null1" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:center_tail_1_deformer_null1" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH3" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH4" "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH5" "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH6" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH7" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH8" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH9" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH10" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH11" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH12" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH13" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH14" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH15" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:DO_NOT_TOUCH16" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:component_grp2" "|luna:Luna_topCon|luna:Luna_Face_topCon" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:bind_joint_grp2" "|luna:Luna_topCon|luna:Luna_Face_topCon" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:mesh_grp2" "|luna:Luna_topCon|luna:Luna_Face_topCon" 
-		"-s -r "
-		0 "|lunaRNfosterParent1|luna:component_grp1" "|luna:Luna_topCon" "-s -r "
-		
-		0 "|lunaRNfosterParent1|luna:bind_joint_grp1" "|luna:Luna_topCon" "-s -r "
-		
-		0 "|lunaRNfosterParent1|luna:mesh_grp1" "|luna:Luna_topCon" "-s -r "
+		"lunaRN" 6346
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"jointOrient" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"stiffness" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"minRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"minRotateDampStrength" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"maxRotateDampRange" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
+		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon" "visibility" " 1"
 		2 "|luna:Luna_topCon" "rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon" "minRotXLimitEnable" " 0"
@@ -965,12 +948,12 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon" "global_scale" " -k 1 1"
 		2 "|luna:Luna_topCon" "mesh_display" " -k 1 2"
 		2 "|luna:Luna_topCon" "bind_joint_display" " -k 1 0"
-		2 "|luna:Luna_topCon" "shape_visibility" " -k 1 1"
-		2 "|luna:Luna_topCon" "anim_opacity" " -k 1 0.5"
+		2 "|luna:Luna_topCon" "shape_visibility" " -k 1 0"
 		2 "|luna:Luna_topCon" "primary_anim_vis" " -k 1 1"
-		2 "|luna:Luna_topCon" "primary_face_anim_vis" " -k 1 1"
-		2 "|luna:Luna_topCon" "secondary_anim_vis" " -k 1 0"
+		2 "|luna:Luna_topCon" "primary_face_anim_vis" " -k 1 0"
+		2 "|luna:Luna_topCon" "secondary_anim_vis" " -k 1 1"
 		2 "|luna:Luna_topCon" "secondary_face_anim_vis" " -k 1 0"
+		2 "|luna:Luna_topCon" "anim_opacity" " -k 1 0.5"
 		2 "|luna:Luna_topCon|luna:component_grp" "visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp" "visibility" 
 		" 1"
@@ -1050,20 +1033,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
@@ -1093,7 +1062,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
-		"swim_offset" " -av -k 1 0"
+		"swim_offset" " -av -k 1 4.4543284406537378"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"swim_height" " -av -k 1 0.05000000074505806"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
@@ -1135,7 +1104,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:DO_NOT_TOUCH|luna:center_COG_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:DO_NOT_TOUCH|luna:center_COG_control_joint" 
-		"translate" " -type \"double3\" 0 43.844644546508825 34.92415237426755"
+		"translate" " -type \"double3\" 0 43.844644546508825 55.763030100004045"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:DO_NOT_TOUCH|luna:center_COG_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:DO_NOT_TOUCH|luna:center_COG_control_joint" 
@@ -1210,8 +1179,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
-		"translate" " -type \"double3\" 0 2.4556932487485028e-008 -7.9562879307104595e-007"
-		
+		"translate" " -type \"double3\" 0 6.3473197071195315 20.60839427237984"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
 		"translateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
@@ -1219,7 +1187,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -7.9512922935615595 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp" 
@@ -1331,20 +1299,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim" 
 		"rotate" " -type \"double3\" 0 0 -8.9044942855834961"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim" 
@@ -1451,22 +1405,8 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
-		"rotate" " -type \"double3\" 0 0 -5.7461237907409668"
+		"rotate" " -type \"double3\" 0 0 -7.0148078332108508"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
@@ -1538,7 +1478,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
-		"translate" " -type \"double3\" 0 47.736631275144944 80.703767711336127"
+		"translate" " -type \"double3\" 0 45.813257141429105 80.703767732046217"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
@@ -1546,7 +1486,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
-		"rotate" " -type \"double3\" 0 0 -10.885473966598505"
+		"rotate" " -type \"double3\" 0 0 -12.197583675384523"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint" 
@@ -1587,7 +1527,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
-		"translate" " -type \"double3\" 45.804578726007556 0.10247577033437949 0"
+		"translate" " -type \"double3\" 45.804578726007577 0.1024757703343866 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
@@ -1595,7 +1535,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
-		"rotate" " -type \"double3\" 0 0 -6.8201762437820497"
+		"rotate" " -type \"double3\" 0 0 -7.183528838531398"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:DO_NOT_TOUCH|luna:center_spine_1_control_joint|luna:center_spine_2_control_joint" 
@@ -1665,7 +1609,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "visibility" 
 		" 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "translate" 
-		" -type \"double3\" 0 -17.245576452992957 2.2751654460738333"
+		" -type \"double3\" 0 -27.227605172795521 26.86529096013814"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "translateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "translateY" 
@@ -1673,7 +1617,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "translateZ" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "rotate" 
-		" -type \"double3\" -17.705650210380551 0 0"
+		" -type \"double3\" -27.332404807477467 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "rotateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp" "rotateY" 
@@ -1755,22 +1699,8 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
-		"rotate" " -type \"double3\" 0 0 -5.0478568077087402"
+		"rotate" " -type \"double3\" 0 0 -10.742656700818388"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
@@ -1855,22 +1785,9 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim" 
-		"rotate" " -type \"double3\" 0 0 -3.2279555797576904"
+		"rotate" " -type \"double3\" 1.2660551272499998 -2.2470592646683314 -8.5376506500695548"
+		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim" 
@@ -1947,22 +1864,8 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
-		"rotate" " -type \"double3\" 0 0 -3.6975998878479004"
+		"rotate" " -type \"double3\" 0 0 -15.217350991962583"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
@@ -2039,20 +1942,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim" 
@@ -2127,20 +2016,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim" 
@@ -2215,20 +2090,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim" 
@@ -2304,7 +2165,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
-		"translate" " -type \"double3\" 0 45.256687618881543 -10.825129366625553"
+		"translate" " -type \"double3\" 0 45.256687618881536 -10.825129366625546"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
@@ -2312,7 +2173,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
-		"rotate" " -type \"double3\" 0 0 -5.5212975065262651"
+		"rotate" " -type \"double3\" 0 0 -10.257878261504619"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint" 
@@ -2353,7 +2214,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
-		"translate" " -type \"double3\" 27.848136841577016 0 0"
+		"translate" " -type \"double3\" 27.848136841577034 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
@@ -2361,7 +2222,12 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
-		"rotate" " -type \"double3\" 0 0 -3.1960501553138054"
+		"rotate" " -type \"double3\" 1.26605512725 -2.2470592646683314 -7.8810739033054968"
+		
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint" 
@@ -2397,7 +2263,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
-		"translate" " -type \"double3\" 23.632791699857364 0 0"
+		"translate" " -type \"double3\" 23.632791699857375 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
@@ -2405,7 +2271,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
-		"rotate" " -type \"double3\" 0 0 -3.4425857572013396"
+		"rotate" " -type \"double3\" 0 0 -14.505434451717493"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint" 
@@ -2441,7 +2311,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
-		"translate" " -type \"double3\" 20.129306219146372 0 0"
+		"translate" " -type \"double3\" 20.129306219146393 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
@@ -2449,7 +2319,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
-		"rotate" " -type \"double3\" 0 0 0.40339700215732999"
+		"rotate" " -type \"double3\" 0 0 -9.7090406106155935"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint" 
@@ -2485,7 +2359,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
-		"translate" " -type \"double3\" 19.729113630177423 0 -1.7456699250741543e-007"
+		"translate" " -type \"double3\" 19.729113630177451 0 -1.7456699330509196e-007"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
@@ -2493,7 +2367,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
-		"rotate" " -type \"double3\" 0 0 0.56147239234801827"
+		"rotate" " -type \"double3\" 0 0 -5.0220052203780314"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint" 
@@ -2529,7 +2407,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
-		"translate" " -type \"double3\" 22.846659206249825 0 2.7785877279450237e-009"
+		"translate" " -type \"double3\" 22.846659206249811 0 2.7785851952621954e-009"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
@@ -2537,7 +2415,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
-		"rotate" " -type \"double3\" 0 0 0.65107358864459752"
+		"rotate" " -type \"double3\" 0 0 -13.093285827725564"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_1_control_joint|luna:center_tail_2_control_joint|luna:center_tail_3_control_joint|luna:center_tail_4_control_joint|luna:center_tail_5_control_joint|luna:center_tail_6_control_joint" 
@@ -2607,7 +2489,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "visibility" 
 		" 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "translate" 
-		" -type \"double3\" 0 5.407490636554904 -8.0786216472006345e-007"
+		" -type \"double3\" 0 9.7979399720166143 20.126432218148821"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "translateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "translateY" 
@@ -2615,7 +2497,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "translateZ" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "rotate" 
-		" -type \"double3\" -10.885473966598504 0 0"
+		" -type \"double3\" -20.148875968946079 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "rotateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp" "rotateY" 
@@ -2685,7 +2567,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null" 
-		"rotate" " -type \"double3\" 0 0 10.874803787880964"
+		"rotate" " -type \"double3\" -360 0 12.186913496666991"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null" 
@@ -2736,20 +2618,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim" 
@@ -2813,7 +2681,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
-		"translate" " -type \"double3\" 0 42.329140663146987 80.703767723569555"
+		"translate" " -type \"double3\" 0 42.32914066314698 80.703767723569513"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
@@ -2821,7 +2689,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
-		"rotate" " -type \"double3\" 0 0 10.874803787880966"
+		"rotate" " -type \"double3\" 0 0 13.427421792654503"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:center_neck_control_joint" 
@@ -2895,7 +2763,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
-		"translate" " -type \"double3\" 0 37.018948897307183 79.682582924213079"
+		"translate" " -type \"double3\" 0 38.923678601430638 79.967631899440136"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
@@ -2903,9 +2771,13 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
-		"rotate" " -type \"double3\" 90 79.125196212119036 90"
+		"rotate" " -type \"double3\" -270 77.813086503333011 90"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
+		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
 		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
+		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_COG_anim_null" 
@@ -2925,7 +2797,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
-		"translate" " -type \"double3\" 0 42.32914066314698 80.703767723569541"
+		"translate" " -type \"double3\" 0 42.329140663146973 80.703767723569484"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
@@ -2933,7 +2805,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
-		"rotate" " -type \"double3\" 0 89.999999999999901 0"
+		"rotate" " -type \"double3\" 0 89.999999999999886 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_center_spine_1_anim_null" 
@@ -2959,7 +2831,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
-		"translate" " -type \"double3\" 0 37.018948897307183 79.682582924213079"
+		"translate" " -type \"double3\" 0 40.06359137957439 58.434053132432894"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
@@ -2967,9 +2839,13 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
-		"rotate" " -type \"double3\" 90 79.125196212119036 90"
+		"rotate" " -type \"double3\" 90 69.86179420977146 90"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
+		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
 		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
+		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint_Luna_topCon_null" 
@@ -2989,7 +2865,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "visibility" 
 		" 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "translate" 
-		" -type \"double3\" 0 5.4103246989389433 -5.9597435324576509e-006"
+		" -type \"double3\" 0 11.578912532782162 20.018529727456837"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "translateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "translateY" 
@@ -2997,7 +2873,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "translateZ" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "rotate" 
-		" -type \"double3\" -0.010670178717531231 0 0"
+		" -type \"double3\" -6.7214541762915845 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "rotateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp" "rotateY" 
@@ -3069,7 +2945,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null" 
 		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null" 
+		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null" 
@@ -3114,20 +2994,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim" 
@@ -3191,7 +3057,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
-		"translate" " -type \"double3\" 0 42.357397085942281 95.92187171185887"
+		"translate" " -type \"double3\" 0 42.357397085942281 95.921871711858898"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
@@ -3199,9 +3065,13 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 4.3690355840825825"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
+		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
 		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
+		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:center_head_control_joint" 
@@ -3269,7 +3139,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
-		"translate" " -type \"double3\" 0 42.35739708682884 95.921871337660392"
+		"translate" " -type \"double3\" 0 42.357397086828854 95.921871337660463"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
@@ -3279,7 +3149,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
 		"rotate" " -type \"double3\" 0 89.999999999999986 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
 		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
+		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_neck_anim_null" 
@@ -3299,7 +3173,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
-		"translate" " -type \"double3\" 0 36.949906543893484 95.920865109896852"
+		"translate" " -type \"double3\" 0 39.203537304302522 95.992473542965257"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
@@ -3307,7 +3181,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
-		"rotate" " -type \"double3\" 0 90 0"
+		"rotate" " -type \"double3\" -450 88.75949170401249 -90"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_center_COG_anim_null" 
@@ -3333,7 +3207,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
-		"translate" " -type \"double3\" 0 36.949906543893484 95.920865109896852"
+		"translate" " -type \"double3\" 0 33.203904010734902 74.686031465870741"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
@@ -3341,7 +3215,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
-		"rotate" " -type \"double3\" 0 90 0"
+		"rotate" " -type \"double3\" 90 83.289216002425945 90"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint1_Luna_topCon_null" 
@@ -3367,7 +3241,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
-		"translate" " -type \"double3\" 0 -13.716191375886496 -9.9995567754462371"
+		"translate" " -type \"double3\" 0 -23.409583986938117 7.6327377674907169"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
 		"translateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
@@ -3375,7 +3249,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
-		"rotate" " -type \"double3\" -17.705650210380551 0 0"
+		"rotate" " -type \"double3\" -27.332404807477474 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp" 
@@ -3457,20 +3331,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim" 
@@ -3542,20 +3402,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim" 
@@ -3627,20 +3473,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null|luna:center_dorsal_fin_3_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null|luna:center_dorsal_fin_3_anim" 
@@ -3712,7 +3544,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint" 
-		"translate" " -type \"double3\" 1.0585771426987918 82.896602839891969 6.6423473355656917"
+		"translate" " -type \"double3\" 1.0585771426987918 82.896602839891955 6.6423473355656881"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint" 
 		"translateX" " -av"
@@ -3762,7 +3594,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint|luna:center_dorsal_fin_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint|luna:center_dorsal_fin_2_control_joint" 
-		"translate" " -type \"double3\" 9.7166797153816091 0 0"
+		"translate" " -type \"double3\" 9.7166797153816162 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint|luna:center_dorsal_fin_2_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:DO_NOT_TOUCH|luna:center_dorsal_fin_1_control_joint|luna:center_dorsal_fin_2_control_joint" 
@@ -3910,10 +3742,10 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_IK" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_IK" 
-		"translate" " -type \"double3\" 3.5404271015587783e-009 44.036367816575542 -146.53308317886001"
+		"translate" " -type \"double3\" 3.5403955315966278e-009 44.138134470564303 -146.5040333359602"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_IK" 
-		"rotate" " -type \"double3\" 90.00000000001026 89.857747893884365 90.000000000009763"
+		"rotate" " -type \"double3\" 90.000000000000583 87.475893457449686 90.000000000000171"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_IK" 
 		"scale" " -type \"double3\" 1 1 1"
@@ -3969,7 +3801,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint" 
-		"translate" " -type \"double3\" 0.16681993458723809 5.404918033977097 0"
+		"translate" " -type \"double3\" 0.094506880879976052 3.0620218912705184 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint" 
@@ -4337,7 +4169,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:center_swim_display_sine_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:center_swim_display_sine_null" 
-		"translate" " -type \"double3\" 0 43.844644546508825 34.92415237426755"
+		"translate" " -type \"double3\" 0 43.844644546508825 55.763030100004045"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:center_swim_display_sine_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:center_swim_display_sine_null" 
@@ -4399,7 +4231,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_IK" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_IK" 
-		"translate" " -type \"double3\" 3.5404763686764075e-009 49.481287162514334 -146.467027300474"
+		"translate" " -type \"double3\" 3.5404528690800658e-009 49.481287162514306 -146.467027300474"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_IK" 
 		"rotate" " -type \"double3\" 90.000000000000824 88.22747350608276 90.000000000000426"
@@ -4458,7 +4290,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint" 
-		"translate" " -type \"double3\" 1.1617907880179246e-007 1.5227446397148015e-006 0"
+		"translate" " -type \"double3\" 1.1617907880179246e-007 1.5227446255039467e-006 0"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint" 
 		"scale" " -type \"double3\" 1 1 1"
@@ -4759,7 +4591,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:center_tail_flap_display_sine_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:center_tail_flap_display_sine_null" 
-		"translate" " -type \"double3\" 0 28.011111165888583 -8.5499639205517308"
+		"translate" " -type \"double3\" 0 18.029082446086015 16.040161593512565"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:center_tail_flap_display_sine_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:center_tail_flap_display_sine_null" 
@@ -4813,15 +4645,15 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
-		"translate" " -type \"double3\" 0 2.5884035515487156 4.7480794363378678"
+		"translate" " -type \"double3\" 0 5.3209219946430046 29.278396907957799"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
-		"translateX" " -k 0"
+		"translateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
 		"translateY" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
-		"rotate" " -type \"double3\" -10.874803787880966 0 0"
+		"rotate" " -type \"double3\" -20.138205790228543 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp" 
@@ -4903,20 +4735,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim" 
@@ -4988,20 +4806,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim" 
@@ -5073,20 +4877,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null|luna:left_flipper_3_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null|luna:left_flipper_3_anim" 
@@ -5158,7 +4948,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint" 
-		"translate" " -type \"double3\" 25.707695960998539 18.797748838594707 63.521496660738038"
+		"translate" " -type \"double3\" 25.707695960998546 18.7977488385947 63.521496660738023"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint" 
 		"translateX" " -av"
@@ -5208,7 +4998,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint|luna:left_flipper_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint|luna:left_flipper_2_control_joint" 
-		"translate" " -type \"double3\" 17.135202304731951 0.22501174195163287 -0.15426273522696476"
+		"translate" " -type \"double3\" 17.135202304731962 0.2250117419516755 -0.15426273522693279"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint|luna:left_flipper_2_control_joint" 
 		"translateX" " -av"
@@ -5258,7 +5048,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint|luna:left_flipper_2_control_joint|luna:left_flipper_3_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint|luna:left_flipper_2_control_joint|luna:left_flipper_3_control_joint" 
-		"translate" " -type \"double3\" 17.164527021519667 0.23946310362107681 0.08460825395298599"
+		"translate" " -type \"double3\" 17.16452702151966 0.23946310362110523 0.084608253953010859"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:DO_NOT_TOUCH|luna:left_flipper_1_control_joint|luna:left_flipper_2_control_joint|luna:left_flipper_3_control_joint" 
 		"translateX" " -av"
@@ -5342,7 +5132,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "visibility" 
 		" 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "translate" 
-		" -type \"double3\" 0 -71.259215180902629 14.2563271594029"
+		" -type \"double3\" 2.6335689025113691 -122.73700123721872 80.927941432557972"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "translateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "translateY" 
@@ -5350,7 +5140,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "translateZ" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "rotate" 
-		" -type \"double3\" -28.242526797478128 0 0"
+		" -type \"double3\" -87.783077714289917 -2.4991146844811669 0.63720666370973544"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "rotateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp" "rotateY" 
@@ -5432,20 +5222,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim" 
@@ -5516,20 +5292,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim" 
@@ -5600,20 +5362,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null|luna:left_fluke_3_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null|luna:left_fluke_3_anim" 
@@ -5679,7 +5427,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint" 
-		"translate" " -type \"double3\" 8.6000198624707078 47.870732505541426 -128.08730082755932"
+		"translate" " -type \"double3\" 8.6000198624707096 47.870732505541419 -128.08730082755932"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint" 
 		"translateX" " -av"
@@ -5729,7 +5477,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
-		"translate" " -type \"double3\" 14.509070951782576 0 0"
+		"translate" " -type \"double3\" 14.509070951782554 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
@@ -5738,6 +5486,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint" 
@@ -5773,7 +5525,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
-		"translate" " -type \"double3\" 15.968807821756499 0 0"
+		"translate" " -type \"double3\" 15.968807821756549 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
@@ -5782,6 +5534,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:DO_NOT_TOUCH|luna:left_fluke_1_control_joint|luna:left_fluke_2_control_joint|luna:left_fluke_3_control_joint" 
@@ -5851,15 +5607,15 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
-		"translate" " -type \"double3\" 0 2.5884016591120442 4.7480889636751513"
+		"translate" " -type \"double3\" 0 5.3209199338432889 29.278414711143654"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
-		"translateX" " -k 0"
+		"translateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
 		"translateY" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
-		"rotate" " -type \"double3\" -10.874803787880966 0 0"
+		"rotate" " -type \"double3\" -20.138205790228543 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp" 
@@ -5941,20 +5697,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim" 
@@ -6026,20 +5768,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim" 
@@ -6111,20 +5839,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null|luna:right_flipper_3_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null|luna:right_flipper_3_anim" 
@@ -6196,7 +5910,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint" 
-		"translate" " -type \"double3\" -25.707699999999996 18.797699739175783 63.521481956390566"
+		"translate" " -type \"double3\" -25.707700000000006 18.797699739175794 63.521481956390538"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint" 
 		"translateX" " -av"
@@ -6246,7 +5960,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint|luna:right_flipper_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint|luna:right_flipper_2_control_joint" 
-		"translate" " -type \"double3\" -17.135153662181391 -0.2249767603579329 0.15424650670293616"
+		"translate" " -type \"double3\" -17.135153662181395 -0.22497676035796133 0.15424650670291129"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint|luna:right_flipper_2_control_joint" 
 		"translateX" " -av"
@@ -6296,7 +6010,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint|luna:right_flipper_2_control_joint|luna:right_flipper_3_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint|luna:right_flipper_2_control_joint|luna:right_flipper_3_control_joint" 
-		"translate" " -type \"double3\" -17.164537634746768 -0.23952780597751655 -0.084598333468438369"
+		"translate" " -type \"double3\" -17.164537634746758 -0.23952780597747392 -0.084598333468523634"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:DO_NOT_TOUCH|luna:right_flipper_1_control_joint|luna:right_flipper_2_control_joint|luna:right_flipper_3_control_joint" 
 		"translateX" " -av"
@@ -6381,7 +6095,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "visibility" 
 		" 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "translate" 
-		" -type \"double3\" 0 -71.259154817380022 14.256363064311614"
+		" -type \"double3\" 2.6509849192118597 -122.92790360272559 80.177955041337057"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "translateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "translateY" 
@@ -6389,7 +6103,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "translateZ" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "rotate" 
-		" -type \"double3\" -28.242526797478128 0 0"
+		" -type \"double3\" -87.783077714289917 -2.4991146844811669 0.63720666370973544"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "rotateX" 
 		" -av -k 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp" "rotateY" 
@@ -6471,20 +6185,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim" 
@@ -6555,20 +6255,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim" 
@@ -6639,20 +6325,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null|luna:right_fluke_3_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null|luna:right_fluke_3_anim" 
@@ -6718,7 +6390,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint" 
-		"translate" " -type \"double3\" -8.600019999998592 47.870630964158103 -128.08719880983929"
+		"translate" " -type \"double3\" -8.6000199999985902 47.870630964158096 -128.08719880983932"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint" 
 		"translateX" " -av"
@@ -6768,7 +6440,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
-		"translate" " -type \"double3\" -14.509301636506791 -0.0002262182633394616 0.00033194269690284273"
+		"translate" " -type \"double3\" -14.509301636506784 -0.00022621826335722517 0.00033194269688863187"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
 		"translateX" " -av"
@@ -6778,6 +6450,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint" 
@@ -6813,7 +6489,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
-		"translate" " -type \"double3\" -15.968734420078974 4.6599776926115055e-005 -5.6670326699759244e-005"
+		"translate" " -type \"double3\" -15.968734420078974 4.6599776915456914e-005 -5.6670326728180953e-005"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
 		"translateX" " -av"
@@ -6823,6 +6499,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:DO_NOT_TOUCH|luna:right_fluke_1_control_joint|luna:right_fluke_2_control_joint|luna:right_fluke_3_control_joint" 
@@ -6925,7 +6605,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
-		"translate" " -type \"double3\" 0 47.736631299701877 80.703766915707334"
+		"translate" " -type \"double3\" 0 52.127080635163587 100.83019994171832"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
@@ -6933,7 +6613,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 -10.885473966598505"
+		"rotate" " -type \"double3\" 0 0 -20.148875968946079"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint" 
@@ -6975,7 +6655,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
-		"translate" " -type \"double3\" 45.804578726007527 0.10247577033436528 0"
+		"translate" " -type \"double3\" 45.804578726007577 0.10247577033437594 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
@@ -6983,7 +6663,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 -6.8201762437820515"
+		"rotate" " -type \"double3\" 0 0 -7.1835288385313962"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint" 
@@ -7021,7 +6705,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
-		"translate" " -type \"double3\" 45.771068572998054 0 0"
+		"translate" " -type \"double3\" 45.771068572998061 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
@@ -7029,7 +6713,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 -5.5212975065262615"
+		"rotate" " -type \"double3\" 0 0 -10.25787826150461"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint" 
@@ -7071,7 +6755,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
-		"translate" " -type \"double3\" 27.848136841577016 0 0"
+		"translate" " -type \"double3\" 27.848136841577034 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
@@ -7079,7 +6763,12 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 -3.1960501553138059"
+		"rotate" " -type \"double3\" 1.2660551272500002 -2.2470592646683309 -7.8810739033054968"
+		
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint" 
@@ -7125,7 +6814,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 -3.4425857572013401"
+		"rotate" " -type \"double3\" 0 0 -14.505434451717493"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint" 
@@ -7163,7 +6856,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
-		"translate" " -type \"double3\" 20.129306219146386 0 0"
+		"translate" " -type \"double3\" 20.129306219146397 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
@@ -7171,7 +6864,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 0.40339700215732999"
+		"rotate" " -type \"double3\" 0 0 -9.7090406106155953"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint" 
@@ -7209,7 +6906,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
-		"translate" " -type \"double3\" 19.729113630177423 0 -1.7456698802561818e-007"
+		"translate" " -type \"double3\" 19.729113630177451 0 -1.7456702861018414e-007"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
@@ -7217,7 +6914,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 0.56147239234801827"
+		"rotate" " -type \"double3\" 0 0 -5.0220052203780314"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint" 
@@ -7255,7 +6956,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
-		"translate" " -type \"double3\" 22.846659206249853 0 2.7785938345321506e-009"
+		"translate" " -type \"double3\" 22.846659206249804 0 2.7785352907372385e-009"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
@@ -7263,7 +6964,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 0.65107358864459763"
+		"rotate" " -type \"double3\" 0 0 -13.093285827725564"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint" 
@@ -7335,7 +7040,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint" 
-		"translate" " -type \"double3\" 3.1011181012648308 -1.0070388678748152 8.6000200342591189"
+		"translate" " -type \"double3\" 3.1011181012648592 -1.0070388678748188 8.6000200342591153"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint" 
 		"translateX" " -av"
@@ -7387,7 +7092,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
-		"translate" " -type \"double3\" 14.509070951782519 0 0"
+		"translate" " -type \"double3\" 14.509070951782505 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
@@ -7396,6 +7101,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint" 
@@ -7433,7 +7142,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
-		"translate" " -type \"double3\" 15.968807821756542 0 0"
+		"translate" " -type \"double3\" 15.968807821756577 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
@@ -7442,6 +7151,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:left_fluke_1_bind_joint|luna:left_fluke_2_bind_joint|luna:left_fluke_3_bind_joint" 
@@ -7513,7 +7226,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint" 
-		"translate" " -type \"double3\" 3.1010130117502541 -1.0071372267161713 -8.6000198282101703"
+		"translate" " -type \"double3\" 3.1010130117502541 -1.0071372267161962 -8.6000198282101792"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint" 
 		"translateX" " -av"
@@ -7565,7 +7278,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
-		"translate" " -type \"double3\" -14.509301636506791 -0.00022621826333590889 0.00033194269686021016"
+		"translate" " -type \"double3\" -14.509301636506784 -0.00022621826345670115 0.00033194269670389076"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
 		"translateX" " -av"
@@ -7575,6 +7288,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint" 
@@ -7612,7 +7329,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
-		"translate" " -type \"double3\" -15.968734420078931 4.6599776915456914e-005 -5.6670326713970098e-005"
+		"translate" " -type \"double3\" -15.968734420078952 4.6599776801770076e-005 -5.6670326927132919e-005"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
 		"translateX" " -av"
@@ -7622,6 +7339,10 @@ createNode reference -n "lunaRN";
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_tail_1_bind_joint|luna:center_tail_2_bind_joint|luna:center_tail_3_bind_joint|luna:center_tail_4_bind_joint|luna:center_tail_5_bind_joint|luna:center_tail_6_bind_joint|luna:right_fluke_1_bind_joint|luna:right_fluke_2_bind_joint|luna:right_fluke_3_bind_joint" 
@@ -7694,7 +7415,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint" 
-		"translate" " -type \"double3\" 29.473101230675269 38.160873242650503 1.0585771426986419"
+		"translate" " -type \"double3\" 29.473101230675269 38.16087324265051 1.0585771426986283"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint" 
 		"translateX" " -av"
@@ -7797,7 +7518,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint|luna:center_dorsal_fin_2_bind_joint|luna:center_dorsal_fin_3_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint|luna:center_dorsal_fin_2_bind_joint|luna:center_dorsal_fin_3_bind_joint" 
-		"translate" " -type \"double3\" 10.714433491549144 0 0"
+		"translate" " -type \"double3\" 10.714433491549155 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint|luna:center_dorsal_fin_2_bind_joint|luna:center_dorsal_fin_3_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_chest_bind_joint|luna:center_dorsal_fin_1_bind_joint|luna:center_dorsal_fin_2_bind_joint|luna:center_dorsal_fin_3_bind_joint" 
@@ -7882,7 +7603,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint" 
-		"translate" " -type \"double3\" 16.452624931173915 -24.047203017218706 25.70769596099861"
+		"translate" " -type \"double3\" 16.452624931173929 -24.047203017218699 25.707695960998628"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint" 
 		"translateX" " -av"
@@ -7934,7 +7655,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint|luna:left_flipper_2_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint|luna:left_flipper_2_bind_joint" 
-		"translate" " -type \"double3\" 17.135202304731955 0.2250117419516755 -0.15426273522695766"
+		"translate" " -type \"double3\" 17.135202304731962 0.22501174195166129 -0.15426273522692924"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint|luna:left_flipper_2_bind_joint" 
 		"translateX" " -av"
@@ -7986,7 +7707,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint|luna:left_flipper_2_bind_joint|luna:left_flipper_3_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint|luna:left_flipper_2_bind_joint|luna:left_flipper_3_bind_joint" 
-		"translate" " -type \"double3\" 17.164527021519667 0.23946310362103418 0.084608253952943357"
+		"translate" " -type \"double3\" 17.164527021519675 0.23946310362104839 0.08460825395302507"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:left_flipper_1_bind_joint|luna:left_flipper_2_bind_joint|luna:left_flipper_3_bind_joint" 
 		"translateX" " -av"
@@ -8080,7 +7801,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 10.874803787880962"
+		"rotate" " -type \"double3\" 0 0 13.427421792654499"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint" 
@@ -8122,7 +7843,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
-		"translate" " -type \"double3\" -15.218104362487807 0.028256421908757545 0"
+		"translate" " -type \"double3\" -15.218104362487836 0.028256421908757545 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
@@ -8130,9 +7851,13 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 4.3690355840825816"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
+		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
 		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
+		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint" 
@@ -8202,7 +7927,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:center_jaw_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:center_jaw_bind_joint" 
-		"translate" " -type \"double3\" -2.4547224642888779 1.5988104965927334 0"
+		"translate" " -type \"double3\" -2.4547224642888494 1.5988104965927121 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:center_jaw_bind_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:center_jaw_bind_joint" 
@@ -8643,180 +8368,178 @@ createNode reference -n "lunaRN";
 		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:center_back_blowhole_base_bind_joint|luna:center_back_blowhole_3_bind_joint" 
 		"lockInfluenceWeights" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"visibility" " 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
-		"translate" " -type \"double3\" -22.443807610398352 6.0262402823880024 13.406504964285793"
-		
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"translateX" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"translateY" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"translateZ" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
+		"rotate" " -type \"double3\" 0 179.99999999999986 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"rotateX" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"rotateY" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"rotateZ" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"minRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"minRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"minRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"maxRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"maxRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"jointOrient" " -type \"double3\" 0 180.00000000000003 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint" 
 		"lockInfluenceWeights" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"visibility" " 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"translate" " -type \"double3\" 10.197354316711426 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"minRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"minRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"minRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"maxRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"maxRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:left_eye_socket_bind_joint|luna:left_eye_bind_joint|luna:left_eye_end_joint" 
 		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"visibility" " 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
-		"translate" " -type \"double3\" -22.444128288141215 6.0262029140577127 -13.406500000000015"
-		
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"translateX" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"translateY" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"translateZ" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
+		"rotate" " -type \"double3\" 179.99999755877212 8.5377362080715655e-007 0"
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"rotateX" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"rotateY" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"rotateZ" " -av"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"minRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"minRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"minRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"maxRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"maxRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"jointOrient" " -type \"double3\" -180 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint" 
 		"lockInfluenceWeights" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"visibility" " 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"translate" " -type \"double3\" -10.196999549865723 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"minRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"minRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"minRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"maxRotXLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"maxRotYLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
+		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:center_neck_bind_joint|luna:center_head_bind_joint|luna:right_eye_socket_bind_joint|luna:right_eye_bind_joint|luna:right_eye_end_joint" 
 		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint" 
-		"translate" " -type \"double3\" 16.452638123022936 -24.047252544442614 -25.707699999999917"
+		"translate" " -type \"double3\" 16.452638123022979 -24.0472525444426 -25.707699999999939"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint" 
 		"translateX" " -av"
@@ -8868,7 +8591,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint|luna:right_flipper_2_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint|luna:right_flipper_2_bind_joint" 
-		"translate" " -type \"double3\" -17.135153662181391 -0.22497676035796133 0.15424650670292905"
+		"translate" " -type \"double3\" -17.135153662181388 -0.22497676035797554 0.15424650670290418"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint|luna:right_flipper_2_bind_joint" 
 		"translateX" " -av"
@@ -8920,7 +8643,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint|luna:right_flipper_2_bind_joint|luna:right_flipper_3_bind_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint|luna:right_flipper_2_bind_joint|luna:right_flipper_3_bind_joint" 
-		"translate" " -type \"double3\" -17.164537634746758 -0.23952780597748813 -0.084598333468424158"
+		"translate" " -type \"double3\" -17.164537634746758 -0.23952780597750234 -0.084598333468537845"
 		
 		2 "|luna:Luna_topCon|luna:bind_joint_grp|luna:Luna_root_bind_joint|luna:center_root_bind_joint|luna:right_flipper_1_bind_joint|luna:right_flipper_2_bind_joint|luna:right_flipper_3_bind_joint" 
 		"translateX" " -av"
@@ -9149,14 +8872,14 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:mesh_grp|luna:body_grp|luna:gum_upper|luna:gum_upperShape" 
 		"visibility" " -k 0 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "visibility" " 1"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "translate" " -type \"double3\" 0 47.767721784881232 95.921865752115352"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "translate" " -type \"double3\" 0 53.936309618724451 115.94040143931575"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "translateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "translateY" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "translateZ" " -av -k 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotate" " -type \"double3\" -90.000000000068312 89.989329821282453 -90.000000000136637"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotate" " -type \"double3\" 90.000000000000156 92.352418592209006 90"
 		
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotateX" " -k 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotateY" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon" "rotateAxis" " -type \"double3\" 0 0 0"
@@ -9186,7 +8909,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
-		"translate" " -type \"double3\" 95.929753257632967 -42.342366909474457 -1.482582945300237e-010"
+		"translate" " -type \"double3\" 95.929753257632953 -42.342366909490394 -1.411013528240801e-010"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
 		"translateX" " -av -k 0"
@@ -9195,7 +8918,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
-		"rotate" " -type \"double3\" 0.010670178717531235 -89.999999999931674 0"
+		"rotate" " -type \"double3\" 0.010670178717537098 -89.999999999999858 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp" 
@@ -9268,6 +8991,10 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null" 
+		"rotateY" " -av"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null" 
 		"scale" " -type \"double3\" 1 1 1"
@@ -9313,20 +9040,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null|luna:left_eye_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:left_eye_anim_grp|luna:left_eye_null|luna:left_eye_aim_null|luna:left_eye_vis_null|luna:left_eye_anim" 
@@ -9388,7 +9101,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:DO_NOT_TOUCH|luna:left_eye_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:DO_NOT_TOUCH|luna:left_eye_control_joint" 
-		"translate" " -type \"double3\" 13.406504964285826 48.390651031696642 118.36455114176738"
+		"translate" " -type \"double3\" 13.406504964285821 48.390651031696613 118.36455114176736"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:left_eye_component_grp|luna:DO_NOT_TOUCH|luna:left_eye_control_joint" 
 		"translateX" " -av"
@@ -9472,7 +9185,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
-		"translate" " -type \"double3\" 95.929753257664899 -42.342366909506431 -1.4828316352577531e-010"
+		"translate" " -type \"double3\" 95.929753257664828 -42.342366909490472 -1.411049055377589e-010"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
 		"translateX" " -av -k 0"
@@ -9481,7 +9194,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
-		"rotate" " -type \"double3\" 0.010670178717531235 -89.999999999931674 0"
+		"rotate" " -type \"double3\" 0.010670178717537098 -89.999999999999858 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp" 
@@ -9551,7 +9264,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -2.441227898311414e-006 0 0"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null" 
+		"rotateX" " -av"
+		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null" 
+		"rotateY" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null" 
@@ -9598,20 +9315,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null|luna:right_eye_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:right_eye_anim_grp|luna:right_eye_null|luna:right_eye_aim_null|luna:right_eye_vis_null|luna:right_eye_anim" 
@@ -9673,7 +9376,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:DO_NOT_TOUCH|luna:right_eye_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:DO_NOT_TOUCH|luna:right_eye_control_joint" 
-		"translate" " -type \"double3\" -13.406500000000003 48.390613723086815 118.36487182646377"
+		"translate" " -type \"double3\" -13.406500000000003 48.390613723086766 118.36487182646377"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:right_eye_component_grp|luna:DO_NOT_TOUCH|luna:right_eye_control_joint" 
 		"translateX" " -av"
@@ -9748,7 +9451,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
-		"translate" " -type \"double3\" 95.929753257648898 -42.342366909490401 0"
+		"translate" " -type \"double3\" 95.929753257648912 -42.342366909490408 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
 		"translateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
@@ -9756,7 +9459,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
-		"rotate" " -type \"double3\" 0.010670178717531235 -89.999999999931674 0"
+		"rotate" " -type \"double3\" 0.010670178717537098 -89.999999999999858 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp" 
@@ -9833,7 +9536,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null" 
-		"translate" " -type \"double3\" 7.0746294227319595e-006 -2.5332037267844498e-007 1.1561596344937278e-010"
+		"translate" " -type \"double3\" 7.0746292522017029e-006 -2.5332030162417141e-007 -2.2374210638009177e-010"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null" 
 		"translateX" " -av"
@@ -9893,20 +9596,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim" 
@@ -9986,20 +9675,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null|luna:center_eye_aim_right_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null|luna:center_eye_aim_right_anim" 
@@ -10079,20 +9754,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null|luna:center_eye_aim_left_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null|luna:center_eye_aim_left_anim" 
@@ -10174,7 +9835,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_head_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_head_anim_null" 
-		"translate" " -type \"double3\" 2.4820273019155117e-006 48.390632377391668 236.72942296823118"
+		"translate" " -type \"double3\" 2.4823666599853412e-006 48.390632377391725 236.72942296823101"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_head_anim_null" 
 		"translateX" " -av"
@@ -10183,7 +9844,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_head_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_head_anim_null" 
-		"rotate" " -type \"double3\" -89.999999633935985 -89.989329821282467 89.999999634004311"
+		"rotate" " -type \"double3\" -89.999999267803673 -89.989329821282453 89.999999267803673"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_head_anim_null" 
 		"rotateX" " -av"
@@ -10210,7 +9871,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_neck_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_neck_anim_null" 
-		"translate" " -type \"double3\" 2.4820273022873697e-006 48.390632378208551 236.72942259403254"
+		"translate" " -type \"double3\" 2.4823666327934838e-006 59.099853255088739 235.86084836157272"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_neck_anim_null" 
 		"translateX" " -av"
@@ -10219,7 +9880,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_neck_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_neck_anim_null" 
-		"rotate" " -type \"double3\" -89.999999633970148 -89.989329821282467 89.999999634038474"
+		"rotate" " -type \"double3\" -89.999999998219423 -85.620294237199886 89.999999998214349"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_neck_anim_null" 
 		"rotateX" " -av"
@@ -10246,7 +9907,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_COG_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_COG_anim_null" 
-		"translate" " -type \"double3\" 2.4820337494936631e-006 42.983141741653625 236.72942340189476"
+		"translate" " -type \"double3\" 2.4823666050549441e-006 58.986247251659087 235.77689327117434"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_COG_anim_null" 
 		"translateX" " -av"
@@ -10255,7 +9916,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_COG_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_COG_anim_null" 
-		"rotate" " -type \"double3\" -89.999999266676483 -89.989329821282482 89.999999266847254"
+		"rotate" " -type \"double3\" -449.99999999844158 -84.37978594121239 89.999999998605659"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_center_COG_anim_null" 
 		"rotateX" " -av"
@@ -10282,7 +9943,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_Luna_topCon_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_Luna_topCon_null" 
-		"translate" " -type \"double3\" 2.4820337494936631e-006 42.983141741653625 236.72942340189473"
+		"translate" " -type \"double3\" 2.4823667268981395e-006 31.883764824360547 216.38341985052077"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_Luna_topCon_null" 
 		"translateX" " -av"
@@ -10291,7 +9952,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_Luna_topCon_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_Luna_topCon_null" 
-		"rotate" " -type \"double3\" -89.999999266676483 -89.989329821282482 89.999999266847254"
+		"rotate" " -type \"double3\" 89.999999996816769 -87.66892176522606 -89.999999996643183"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint3_Luna_topCon_null" 
 		"rotateX" " -av"
@@ -10318,7 +9979,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
-		"translate" " -type \"double3\" 95.929753257648869 -42.34236690949043 -1.1914012816359522e-010"
+		"translate" " -type \"double3\" 95.929753257648855 -42.342366909490423 -1.172373184295821e-010"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
 		"translateX" " -av -k 0"
@@ -10327,7 +9988,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
 		"translateZ" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
-		"rotate" " -type \"double3\" 0.010670178717531235 -89.999999999931674 0"
+		"rotate" " -type \"double3\" 0.010670178717537098 -89.999999999999858 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
 		"rotateX" " -av -k 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp" 
@@ -10449,20 +10110,6 @@ createNode reference -n "lunaRN";
 		"maxRotYLimitEnable" " 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
 		"maxRotZLimitEnable" " 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"jointOrient" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"stiffness" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"preferredAngle" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"minRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"minRotateDampStrength" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"maxRotateDampRange" " -type \"double3\" 0 0 0"
-		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null" 
-		"maxRotateDampStrength" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null|luna:center_jaw_anim" 
 		"rotateAxis" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null|luna:center_jaw_anim" 
@@ -10526,7 +10173,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:center_jaw_control_joint" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:center_jaw_control_joint" 
-		"translate" " -type \"double3\" 0 43.959498760360489 98.376290861423001"
+		"translate" " -type \"double3\" 0 43.959498760360475 98.376290861422973"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:center_jaw_control_joint" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:center_jaw_control_joint" 
@@ -10601,7 +10248,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
-		"translate" " -type \"double3\" 0 43.959498760360482 98.376290861422987"
+		"translate" " -type \"double3\" 0 43.959498760360468 98.376290861422916"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
@@ -10609,7 +10256,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
-		"rotate" " -type \"double3\" 89.999999973320669 -89.853240397034838 90.000000026751351"
+		"rotate" " -type \"double3\" 89.999999999937913 -89.853240397034838 90.0000000000596"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_head_anim_null" 
 		"rotateX" " -av"
@@ -10636,7 +10283,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
 		"visibility" " 1"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
-		"translate" " -type \"double3\" 0 43.95949876117735 98.376290487224352"
+		"translate" " -type \"double3\" 0 44.141829880140676 98.247325604503644"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
 		"translateX" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
@@ -10644,7 +10291,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
-		"rotate" " -type \"double3\" 89.99999997331571 -89.853240397034838 90.000000026756325"
+		"rotate" " -type \"double3\" 89.999999999998067 -85.484204812952271 90.00000000000226"
 		
 		2 "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:DO_NOT_TOUCH|luna:MultiConstraint2_center_neck_anim_null" 
 		"rotateX" " -av"
@@ -10722,322 +10369,310 @@ createNode reference -n "lunaRN";
 		"lunaRN.placeHolderList[26]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim.center_swim_influence" 
 		"lunaRN.placeHolderList[27]" ""
-		5 3 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null.scale" 
-		"lunaRN.placeHolderList[28]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.rotateX" 
-		"lunaRN.placeHolderList[29]" ""
+		"lunaRN.placeHolderList[28]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.rotateY" 
-		"lunaRN.placeHolderList[30]" ""
+		"lunaRN.placeHolderList[29]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.rotateZ" 
-		"lunaRN.placeHolderList[31]" ""
+		"lunaRN.placeHolderList[30]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.display_deformer" 
-		"lunaRN.placeHolderList[32]" ""
+		"lunaRN.placeHolderList[31]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.center_swim_influence" 
-		"lunaRN.placeHolderList[33]" ""
+		"lunaRN.placeHolderList[32]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.tail_flap_height" 
-		"lunaRN.placeHolderList[34]" ""
+		"lunaRN.placeHolderList[33]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.tail_flap_length" 
-		"lunaRN.placeHolderList[35]" ""
+		"lunaRN.placeHolderList[34]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.tail_flap_offset" 
-		"lunaRN.placeHolderList[36]" ""
+		"lunaRN.placeHolderList[35]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim.center_tail_flap_influence" 
-		"lunaRN.placeHolderList[37]" ""
-		5 3 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null.scale" 
-		"lunaRN.placeHolderList[38]" ""
+		"lunaRN.placeHolderList[36]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim.rotateX" 
-		"lunaRN.placeHolderList[39]" ""
+		"lunaRN.placeHolderList[37]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim.rotateY" 
-		"lunaRN.placeHolderList[40]" ""
+		"lunaRN.placeHolderList[38]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim.rotateZ" 
-		"lunaRN.placeHolderList[41]" ""
+		"lunaRN.placeHolderList[39]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim.center_swim_influence" 
-		"lunaRN.placeHolderList[42]" ""
+		"lunaRN.placeHolderList[40]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim.center_tail_flap_influence" 
-		"lunaRN.placeHolderList[43]" ""
-		5 3 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null.scale" 
-		"lunaRN.placeHolderList[44]" ""
+		"lunaRN.placeHolderList[41]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim.rotateX" 
-		"lunaRN.placeHolderList[45]" ""
+		"lunaRN.placeHolderList[42]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim.rotateY" 
-		"lunaRN.placeHolderList[46]" ""
+		"lunaRN.placeHolderList[43]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim.rotateZ" 
-		"lunaRN.placeHolderList[47]" ""
+		"lunaRN.placeHolderList[44]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim.center_swim_influence" 
-		"lunaRN.placeHolderList[48]" ""
+		"lunaRN.placeHolderList[45]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim.center_tail_flap_influence" 
-		"lunaRN.placeHolderList[49]" ""
-		5 3 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null.scale" 
-		"lunaRN.placeHolderList[50]" ""
+		"lunaRN.placeHolderList[46]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim.rotateX" 
-		"lunaRN.placeHolderList[51]" ""
+		"lunaRN.placeHolderList[47]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim.rotateY" 
-		"lunaRN.placeHolderList[52]" ""
+		"lunaRN.placeHolderList[48]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim.rotateZ" 
-		"lunaRN.placeHolderList[53]" ""
+		"lunaRN.placeHolderList[49]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim.center_swim_influence" 
-		"lunaRN.placeHolderList[54]" ""
+		"lunaRN.placeHolderList[50]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim.center_tail_flap_influence" 
-		"lunaRN.placeHolderList[55]" ""
-		5 3 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null.scale" 
-		"lunaRN.placeHolderList[56]" ""
+		"lunaRN.placeHolderList[51]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim.rotateX" 
-		"lunaRN.placeHolderList[57]" ""
+		"lunaRN.placeHolderList[52]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim.rotateY" 
-		"lunaRN.placeHolderList[58]" ""
+		"lunaRN.placeHolderList[53]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim.rotateZ" 
-		"lunaRN.placeHolderList[59]" ""
+		"lunaRN.placeHolderList[54]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim.center_swim_influence" 
-		"lunaRN.placeHolderList[60]" ""
+		"lunaRN.placeHolderList[55]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim.center_tail_flap_influence" 
-		"lunaRN.placeHolderList[61]" ""
-		5 3 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null.scale" 
-		"lunaRN.placeHolderList[62]" ""
+		"lunaRN.placeHolderList[56]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim.rotateX" 
-		"lunaRN.placeHolderList[63]" ""
+		"lunaRN.placeHolderList[57]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim.rotateY" 
-		"lunaRN.placeHolderList[64]" ""
+		"lunaRN.placeHolderList[58]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim.rotateZ" 
-		"lunaRN.placeHolderList[65]" ""
+		"lunaRN.placeHolderList[59]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim.center_swim_influence" 
-		"lunaRN.placeHolderList[66]" ""
+		"lunaRN.placeHolderList[60]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim.center_tail_flap_influence" 
-		"lunaRN.placeHolderList[67]" ""
+		"lunaRN.placeHolderList[61]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim.rotateX" 
-		"lunaRN.placeHolderList[68]" ""
+		"lunaRN.placeHolderList[62]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim.rotateY" 
-		"lunaRN.placeHolderList[69]" ""
+		"lunaRN.placeHolderList[63]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim.rotateZ" 
-		"lunaRN.placeHolderList[70]" ""
+		"lunaRN.placeHolderList[64]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim.parent_to" 
-		"lunaRN.placeHolderList[71]" ""
+		"lunaRN.placeHolderList[65]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim.rotateX" 
-		"lunaRN.placeHolderList[72]" ""
+		"lunaRN.placeHolderList[66]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim.rotateY" 
-		"lunaRN.placeHolderList[73]" ""
+		"lunaRN.placeHolderList[67]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim.rotateZ" 
-		"lunaRN.placeHolderList[74]" ""
+		"lunaRN.placeHolderList[68]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim.parent_to" 
-		"lunaRN.placeHolderList[75]" ""
+		"lunaRN.placeHolderList[69]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim.rotateX" 
-		"lunaRN.placeHolderList[76]" ""
+		"lunaRN.placeHolderList[70]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim.rotateY" 
-		"lunaRN.placeHolderList[77]" ""
+		"lunaRN.placeHolderList[71]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim.rotateZ" 
-		"lunaRN.placeHolderList[78]" ""
+		"lunaRN.placeHolderList[72]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim.rotateX" 
-		"lunaRN.placeHolderList[79]" ""
+		"lunaRN.placeHolderList[73]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim.rotateY" 
-		"lunaRN.placeHolderList[80]" ""
+		"lunaRN.placeHolderList[74]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim.rotateZ" 
-		"lunaRN.placeHolderList[81]" ""
+		"lunaRN.placeHolderList[75]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null|luna:center_dorsal_fin_3_anim.rotateX" 
-		"lunaRN.placeHolderList[82]" ""
+		"lunaRN.placeHolderList[76]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null|luna:center_dorsal_fin_3_anim.rotateY" 
-		"lunaRN.placeHolderList[83]" ""
+		"lunaRN.placeHolderList[77]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_dorsal_fin_component_grp|luna:center_dorsal_fin_anim_grp|luna:center_dorsal_fin_1_null|luna:center_dorsal_fin_1_vis_null|luna:center_dorsal_fin_1_anim|luna:center_dorsal_fin_2_null|luna:center_dorsal_fin_2_vis_null|luna:center_dorsal_fin_2_anim|luna:center_dorsal_fin_3_null|luna:center_dorsal_fin_3_vis_null|luna:center_dorsal_fin_3_anim.rotateZ" 
-		"lunaRN.placeHolderList[84]" ""
+		"lunaRN.placeHolderList[78]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[85]" ""
+		"lunaRN.placeHolderList[79]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[86]" ""
+		"lunaRN.placeHolderList[80]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[87]" ""
+		"lunaRN.placeHolderList[81]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[88]" ""
+		"lunaRN.placeHolderList[82]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[89]" ""
+		"lunaRN.placeHolderList[83]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[90]" ""
+		"lunaRN.placeHolderList[84]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[91]" ""
+		"lunaRN.placeHolderList[85]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[92]" ""
+		"lunaRN.placeHolderList[86]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[93]" ""
+		"lunaRN.placeHolderList[87]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[94]" ""
+		"lunaRN.placeHolderList[88]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[95]" ""
+		"lunaRN.placeHolderList[89]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[96]" ""
+		"lunaRN.placeHolderList[90]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[97]" ""
+		"lunaRN.placeHolderList[91]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[98]" ""
+		"lunaRN.placeHolderList[92]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[99]" ""
+		"lunaRN.placeHolderList[93]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[100]" ""
+		"lunaRN.placeHolderList[94]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[101]" ""
+		"lunaRN.placeHolderList[95]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[102]" ""
+		"lunaRN.placeHolderList[96]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[103]" ""
+		"lunaRN.placeHolderList[97]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[104]" ""
+		"lunaRN.placeHolderList[98]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[105]" ""
+		"lunaRN.placeHolderList[99]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint|luna:center_swim_8_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[106]" ""
+		"lunaRN.placeHolderList[100]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint|luna:center_swim_8_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[107]" ""
+		"lunaRN.placeHolderList[101]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint|luna:center_swim_8_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[108]" ""
+		"lunaRN.placeHolderList[102]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint|luna:center_swim_8_deformer_joint|luna:center_swim_end_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[109]" ""
+		"lunaRN.placeHolderList[103]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint|luna:center_swim_8_deformer_joint|luna:center_swim_end_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[110]" ""
+		"lunaRN.placeHolderList[104]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_1_deformer_zero_joint|luna:center_swim_1_deformer_joint|luna:center_swim_2_deformer_joint|luna:center_swim_3_deformer_joint|luna:center_swim_4_deformer_joint|luna:center_swim_5_deformer_joint|luna:center_swim_6_deformer_joint|luna:center_swim_7_deformer_joint|luna:center_swim_8_deformer_joint|luna:center_swim_end_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[111]" ""
+		"lunaRN.placeHolderList[105]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[112]" ""
+		"lunaRN.placeHolderList[106]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[113]" ""
+		"lunaRN.placeHolderList[107]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[114]" ""
+		"lunaRN.placeHolderList[108]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[115]" ""
+		"lunaRN.placeHolderList[109]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[116]" ""
+		"lunaRN.placeHolderList[110]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[117]" ""
+		"lunaRN.placeHolderList[111]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[118]" ""
+		"lunaRN.placeHolderList[112]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[119]" ""
+		"lunaRN.placeHolderList[113]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[120]" ""
+		"lunaRN.placeHolderList[114]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[121]" ""
+		"lunaRN.placeHolderList[115]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[122]" ""
+		"lunaRN.placeHolderList[116]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[123]" ""
+		"lunaRN.placeHolderList[117]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[124]" ""
+		"lunaRN.placeHolderList[118]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[125]" ""
+		"lunaRN.placeHolderList[119]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[126]" ""
+		"lunaRN.placeHolderList[120]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint|luna:center_tail_flap_6_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[127]" ""
+		"lunaRN.placeHolderList[121]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint|luna:center_tail_flap_6_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[128]" ""
+		"lunaRN.placeHolderList[122]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint|luna:center_tail_flap_6_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[129]" ""
+		"lunaRN.placeHolderList[123]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint|luna:center_tail_flap_6_deformer_joint|luna:center_tail_flap_end_deformer_joint.rotateX" 
-		"lunaRN.placeHolderList[130]" ""
+		"lunaRN.placeHolderList[124]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint|luna:center_tail_flap_6_deformer_joint|luna:center_tail_flap_end_deformer_joint.rotateY" 
-		"lunaRN.placeHolderList[131]" ""
+		"lunaRN.placeHolderList[125]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_1_deformer_zero_joint|luna:center_tail_flap_1_deformer_joint|luna:center_tail_flap_2_deformer_joint|luna:center_tail_flap_3_deformer_joint|luna:center_tail_flap_4_deformer_joint|luna:center_tail_flap_5_deformer_joint|luna:center_tail_flap_6_deformer_joint|luna:center_tail_flap_end_deformer_joint.rotateZ" 
-		"lunaRN.placeHolderList[132]" ""
+		"lunaRN.placeHolderList[126]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim.rotateX" 
-		"lunaRN.placeHolderList[133]" ""
+		"lunaRN.placeHolderList[127]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim.rotateY" 
-		"lunaRN.placeHolderList[134]" ""
+		"lunaRN.placeHolderList[128]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim.rotateZ" 
-		"lunaRN.placeHolderList[135]" ""
+		"lunaRN.placeHolderList[129]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim.rotateX" 
-		"lunaRN.placeHolderList[136]" ""
+		"lunaRN.placeHolderList[130]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim.rotateY" 
-		"lunaRN.placeHolderList[137]" ""
+		"lunaRN.placeHolderList[131]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim.rotateZ" 
-		"lunaRN.placeHolderList[138]" ""
+		"lunaRN.placeHolderList[132]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null|luna:left_flipper_3_anim.rotateX" 
-		"lunaRN.placeHolderList[139]" ""
+		"lunaRN.placeHolderList[133]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null|luna:left_flipper_3_anim.rotateY" 
-		"lunaRN.placeHolderList[140]" ""
+		"lunaRN.placeHolderList[134]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_flipper_component_grp|luna:left_flipper_anim_grp|luna:left_flipper_1_null|luna:left_flipper_1_vis_null|luna:left_flipper_1_anim|luna:left_flipper_2_null|luna:left_flipper_2_vis_null|luna:left_flipper_2_anim|luna:left_flipper_3_null|luna:left_flipper_3_vis_null|luna:left_flipper_3_anim.rotateZ" 
-		"lunaRN.placeHolderList[141]" ""
+		"lunaRN.placeHolderList[135]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim.rotateX" 
-		"lunaRN.placeHolderList[142]" ""
+		"lunaRN.placeHolderList[136]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim.rotateY" 
-		"lunaRN.placeHolderList[143]" ""
+		"lunaRN.placeHolderList[137]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim.rotateZ" 
-		"lunaRN.placeHolderList[144]" ""
+		"lunaRN.placeHolderList[138]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim.rotateX" 
-		"lunaRN.placeHolderList[145]" ""
+		"lunaRN.placeHolderList[139]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim.rotateY" 
-		"lunaRN.placeHolderList[146]" ""
+		"lunaRN.placeHolderList[140]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim.rotateZ" 
-		"lunaRN.placeHolderList[147]" ""
+		"lunaRN.placeHolderList[141]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null|luna:left_fluke_3_anim.rotateX" 
-		"lunaRN.placeHolderList[148]" ""
+		"lunaRN.placeHolderList[142]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null|luna:left_fluke_3_anim.rotateY" 
-		"lunaRN.placeHolderList[149]" ""
+		"lunaRN.placeHolderList[143]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:left_fluke_component_grp|luna:left_fluke_anim_grp|luna:left_fluke_1_null|luna:left_fluke_1_vis_null|luna:left_fluke_1_anim|luna:left_fluke_2_null|luna:left_fluke_2_vis_null|luna:left_fluke_2_anim|luna:left_fluke_3_null|luna:left_fluke_3_vis_null|luna:left_fluke_3_anim.rotateZ" 
-		"lunaRN.placeHolderList[150]" ""
+		"lunaRN.placeHolderList[144]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim.rotateX" 
-		"lunaRN.placeHolderList[151]" ""
+		"lunaRN.placeHolderList[145]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim.rotateY" 
-		"lunaRN.placeHolderList[152]" ""
+		"lunaRN.placeHolderList[146]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim.rotateZ" 
-		"lunaRN.placeHolderList[153]" ""
+		"lunaRN.placeHolderList[147]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim.rotateX" 
-		"lunaRN.placeHolderList[154]" ""
+		"lunaRN.placeHolderList[148]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim.rotateY" 
-		"lunaRN.placeHolderList[155]" ""
+		"lunaRN.placeHolderList[149]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim.rotateZ" 
-		"lunaRN.placeHolderList[156]" ""
+		"lunaRN.placeHolderList[150]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null|luna:right_flipper_3_anim.rotateX" 
-		"lunaRN.placeHolderList[157]" ""
+		"lunaRN.placeHolderList[151]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null|luna:right_flipper_3_anim.rotateY" 
-		"lunaRN.placeHolderList[158]" ""
+		"lunaRN.placeHolderList[152]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_flipper_component_grp|luna:right_flipper_anim_grp|luna:right_flipper_1_null|luna:right_flipper_1_vis_null|luna:right_flipper_1_anim|luna:right_flipper_2_null|luna:right_flipper_2_vis_null|luna:right_flipper_2_anim|luna:right_flipper_3_null|luna:right_flipper_3_vis_null|luna:right_flipper_3_anim.rotateZ" 
-		"lunaRN.placeHolderList[159]" ""
+		"lunaRN.placeHolderList[153]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim.rotateX" 
-		"lunaRN.placeHolderList[160]" ""
+		"lunaRN.placeHolderList[154]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim.rotateY" 
-		"lunaRN.placeHolderList[161]" ""
+		"lunaRN.placeHolderList[155]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim.rotateZ" 
-		"lunaRN.placeHolderList[162]" ""
+		"lunaRN.placeHolderList[156]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim.rotateX" 
-		"lunaRN.placeHolderList[163]" ""
+		"lunaRN.placeHolderList[157]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim.rotateY" 
-		"lunaRN.placeHolderList[164]" ""
+		"lunaRN.placeHolderList[158]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim.rotateZ" 
-		"lunaRN.placeHolderList[165]" ""
+		"lunaRN.placeHolderList[159]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null|luna:right_fluke_3_anim.rotateX" 
-		"lunaRN.placeHolderList[166]" ""
+		"lunaRN.placeHolderList[160]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null|luna:right_fluke_3_anim.rotateY" 
-		"lunaRN.placeHolderList[167]" ""
+		"lunaRN.placeHolderList[161]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:component_grp|luna:right_fluke_component_grp|luna:right_fluke_anim_grp|luna:right_fluke_1_null|luna:right_fluke_1_vis_null|luna:right_fluke_1_anim|luna:right_fluke_2_null|luna:right_fluke_2_vis_null|luna:right_fluke_2_anim|luna:right_fluke_3_null|luna:right_fluke_3_vis_null|luna:right_fluke_3_anim.rotateZ" 
-		"lunaRN.placeHolderList[168]" ""
+		"lunaRN.placeHolderList[162]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.parent_to" 
-		"lunaRN.placeHolderList[169]" ""
+		"lunaRN.placeHolderList[163]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.translateX" 
-		"lunaRN.placeHolderList[170]" ""
+		"lunaRN.placeHolderList[164]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.translateY" 
-		"lunaRN.placeHolderList[171]" ""
+		"lunaRN.placeHolderList[165]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.translateZ" 
-		"lunaRN.placeHolderList[172]" ""
+		"lunaRN.placeHolderList[166]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.rotateX" 
-		"lunaRN.placeHolderList[173]" ""
+		"lunaRN.placeHolderList[167]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.rotateY" 
-		"lunaRN.placeHolderList[174]" ""
+		"lunaRN.placeHolderList[168]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim.rotateZ" 
-		"lunaRN.placeHolderList[175]" ""
+		"lunaRN.placeHolderList[169]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null|luna:center_eye_aim_right_anim.translateX" 
-		"lunaRN.placeHolderList[176]" ""
+		"lunaRN.placeHolderList[170]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null|luna:center_eye_aim_right_anim.translateY" 
-		"lunaRN.placeHolderList[177]" ""
+		"lunaRN.placeHolderList[171]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_right_null|luna:center_eye_aim_right_vis_null|luna:center_eye_aim_right_anim.translateZ" 
-		"lunaRN.placeHolderList[178]" ""
+		"lunaRN.placeHolderList[172]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null|luna:center_eye_aim_left_anim.translateX" 
-		"lunaRN.placeHolderList[179]" ""
+		"lunaRN.placeHolderList[173]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null|luna:center_eye_aim_left_anim.translateY" 
-		"lunaRN.placeHolderList[180]" ""
+		"lunaRN.placeHolderList[174]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_eye_aim_component_grp|luna:center_eye_aim_anim_grp|luna:center_eye_aim_main_null|luna:center_eye_aim_main_multicon_null|luna:center_eye_aim_main_vis_null|luna:center_eye_aim_main_anim|luna:center_eye_aim_left_null|luna:center_eye_aim_left_vis_null|luna:center_eye_aim_left_anim.translateZ" 
-		"lunaRN.placeHolderList[181]" ""
+		"lunaRN.placeHolderList[175]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null|luna:center_jaw_anim.rotateX" 
-		"lunaRN.placeHolderList[182]" ""
+		"lunaRN.placeHolderList[176]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null|luna:center_jaw_anim.rotateY" 
-		"lunaRN.placeHolderList[183]" ""
+		"lunaRN.placeHolderList[177]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null|luna:center_jaw_anim.rotateZ" 
-		"lunaRN.placeHolderList[184]" ""
+		"lunaRN.placeHolderList[178]" ""
 		5 4 "lunaRN" "|luna:Luna_topCon|luna:Luna_Face_topCon|luna:component_grp|luna:center_jaw_component_grp|luna:center_jaw_anim_grp|luna:center_jaw_null|luna:center_jaw_multicon_null|luna:center_jaw_vis_null|luna:center_jaw_anim.parent_to" 
-		"lunaRN.placeHolderList[185]" ""
+		"lunaRN.placeHolderList[179]" ""
 		8 "|luna:Luna_topCon" "translate"
 		8 "|luna:Luna_topCon" "translateX"
 		8 "|luna:Luna_topCon" "translateY"
@@ -13722,7 +13357,7 @@ createNode animCurveTA -n "center_spine_1_anim_rotateY1";
 createNode animCurveTA -n "center_spine_1_anim_rotateZ1";
 	rename -uid "D19A6F90-4F53-9815-F82F-2780818417A7";
 	setAttr ".tan" 1;
-	setAttr -s 5 ".ktv[0:4]"  1 -8.9044942855834961 10 -11.64461612701416
+	setAttr -s 5 ".ktv[0:4]"  1 -8.9044942855834961 10 -11.644616127014162
 		 20 -6.7412090301513672 46 -8.9044942855834961 90 -8.9044942855834961;
 	setAttr -s 5 ".kix[0:4]"  0.33000000317891437 0.375 0.41654165585835773 
 		1.8331832885742187 0.41639165083567303;
@@ -13758,7 +13393,7 @@ createNode animCurveTA -n "center_spine_2_anim_rotateZ1";
 	rename -uid "A299BD72-4258-A541-40D7-65B0292BD2FF";
 	setAttr ".tan" 1;
 	setAttr -s 7 ".ktv[0:6]"  1 -5.7461237907409668 10 28.653619766235352
-		 20 5.8621506690979004 30 21.433122634887695 46 -5.7461237907409668 56 -16.457366943359375
+		 20 5.8621506690979013 30 21.433122634887695 46 -5.7461237907409668 56 -16.457366943359375
 		 90 -5.7461237907409668;
 	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.37500000487485269 
 		0.41654163417123002 0.41654168462327518 0.99990002314249671 0.41654165585835773 0.41654165585835773;
@@ -13874,7 +13509,7 @@ createNode animCurveTA -n "center_tail_2_anim_rotateZ1";
 	rename -uid "EF9F906D-4A13-92FE-243D-F19F9E6A5712";
 	setAttr ".tan" 1;
 	setAttr -s 7 ".ktv[0:6]"  1 -3.2279555797576904 10 10.946612358093262
-		 20 12.359272956848145 30 12.653008460998535 56 -11.850085258483887 64 -14.321401596069336
+		 20 12.359272956848146 30 12.653008460998535 56 -11.850085258483887 64 -14.321401596069336
 		 90 -3.2279555797576904;
 	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.375 0.41654165585835773 
 		0.41654165585835773 1.0833333333333333 0.33333333333333331 0.41636661688486737;
@@ -14051,7 +13686,7 @@ createNode animCurveTA -n "center_spine_1_deformer_null_rotateX";
 		 26 4.2864928273544933e-010 27 6.6657908359690765e-011 28 -3.012017857351168e-010
 		 29 -6.6761118855396262e-010 30 -1.0252484416994889e-009 31 -1.3669626541812363e-009
 		 32 -1.6859420526316171e-009 33 -1.9758683578174896e-009 34 -2.2310486791354833e-009
-		 35 -2.4465260928252519e-009 36 -2.6181623535848075e-009 37 -2.7426998450152951e-009
+		 35 -2.4465260928252523e-009 36 -2.6181623535848075e-009 37 -2.7426998450152951e-009
 		 38 -2.8177988831146195e-009 39 -2.8420632514070121e-009 40 -2.8150490827272279e-009
 		 41 -2.737267967845014e-009 42 -2.610178739814728e-009 43 -2.4361728190314125e-009
 		 44 -2.218547789922809e-009 45 -1.9614674329204718e-009 46 -1.669902549572555e-009
@@ -14061,12 +13696,12 @@ createNode animCurveTA -n "center_spine_1_deformer_null_rotateX";
 		 56 -2.4285959909775556e-009 57 -2.1684627427021042e-009 58 -1.854322473349157e-009
 		 59 -1.4943007942136433e-009 60 -1.0981805464993499e-009 61 -6.7707683903961424e-010
 		 62 -2.4302618251148544e-010 63 1.9148552188319456e-010 64 6.1402238848984325e-010
-		 65 1.0126861571535528e-009 66 1.3765564244039297e-009 67 1.6960550741629277e-009
+		 65 1.0126861571535528e-009 66 1.3765564244039299e-009 67 1.6960550741629277e-009
 		 68 1.9632198089425401e-009 69 2.1718868925546531e-009 70 2.3177884056480025e-009
 		 71 2.3985815555960244e-009 72 2.4138273602147819e-009 73 2.364927365050562e-009 74 2.2550290523781769e-009
 		 75 2.0888986096423423e-009 76 1.8727559503162183e-009 77 1.6140665470842919e-009
 		 78 1.3212897442826943e-009 79 1.0035813291509044e-009 80 6.704645172384005e-010 81 3.3148722655695906e-010
-		 82 -4.1095859354411957e-012 83 -3.2768193714005633e-010 84 -6.3139743433637818e-010
+		 82 -4.1095859354411957e-012 83 -3.2768193714005639e-010 84 -6.3139743433637818e-010
 		 85 -9.0833462973449752e-010 86 -1.1524102783155854e-009 87 -1.3580370161747624e-009
 		 88 -1.5192956892562393e-009 89 -1.6281033188292326e-009 90 -1.669902549572555e-009;
 createNode animCurveTA -n "center_spine_1_deformer_null_rotateY";
@@ -14080,27 +13715,27 @@ createNode animCurveTA -n "center_spine_1_deformer_null_rotateY";
 		 14 8.4906552899610688e-008 15 8.4874763217612781e-008 16 8.4858697846357245e-008
 		 17 8.4859259175118495e-008 18 8.4876411676759744e-008 19 8.4909167696878285e-008
 		 20 8.4955701140643214e-008 21 8.5013425632496364e-008 22 8.5079193468118319e-008
-		 23 8.5149480355539708e-008 24 8.522067673766287e-008 25 8.5289258322518435e-008 26 8.5352077405786986e-008
+		 23 8.5149480355539708e-008 24 8.522067673766287e-008 25 8.5289258322518449e-008 26 8.5352077405786986e-008
 		 27 8.540653340105564e-008 28 8.5450771791784064e-008 29 8.5483740974723332e-008 30 8.5505270419616863e-008
-		 31 8.5516020931208914e-008 32 8.5517406489543646e-008 33 8.5511402403426473e-008
+		 31 8.5516020931208927e-008 32 8.5517406489543646e-008 33 8.5511402403426473e-008
 		 34 8.5500388991022191e-008 35 8.5486909995324822e-008 36 8.5473430999627453e-008
 		 37 8.5462119159274152e-008 38 8.5454672671403387e-008 39 8.5452164455546153e-008
 		 40 8.5454949783070333e-008 41 8.5462637855471257e-008 42 8.5474106015226425e-008
 		 43 8.5487648959770013e-008 44 8.5501056901193806e-008 45 8.5511864256204717e-008
 		 46 8.5517534387236083e-008 47 8.551155872282834e-008 48 8.5499891611107159e-008 49 8.5485304168742005e-008
-		 50 8.5470809096932499e-008 51 8.5459255672049039e-008 52 8.5452917630846059e-008
-		 53 8.5453137899094145e-008 54 8.5460058585340448e-008 55 8.5472535715780396e-008
+		 50 8.5470809096932499e-008 51 8.5459255672049039e-008 52 8.5452917630846072e-008
+		 53 8.5453137899094158e-008 54 8.5460058585340448e-008 55 8.5472535715780409e-008
 		 56 8.5488181866821833e-008 57 8.5503586433333112e-008 58 8.5514763270566618e-008
 		 59 8.5517577019800228e-008 60 8.5508368385944777e-008 61 8.5484444412031735e-008
 		 62 8.5444519015709375e-008 63 8.5388982995482365e-008 64 8.5319975084985344e-008
-		 65 8.5241211422726337e-008 66 8.5157672913283022e-008 67 8.5075079425678268e-008
+		 65 8.5241211422726337e-008 66 8.5157672913283022e-008 67 8.5075079425678282e-008
 		 68 8.4999328464618884e-008 69 8.493589831459758e-008 70 8.4889315132841148e-008 71 8.4862719518241647e-008
 		 72 8.4857639137680962e-008 73 8.4873867933765723e-008 74 8.4909579811665026e-008
-		 75 8.496157732906795e-008 76 8.5025661178406153e-008 77 8.5097099145059474e-008 78 8.5171080854706815e-008
-		 79 8.524315830982232e-008 80 8.5309629582752677e-008 81 8.5367759083965211e-008 82 8.5415912565167673e-008
-		 83 8.5453521592171455e-008 84 8.5480969858053868e-008 85 8.549938712576477e-008 86 8.5510393432741694e-008
-		 87 8.5515864611807046e-008 88 8.5517726233774738e-008 89 8.5517775971766241e-008
-		 90 8.5517534387236083e-008;
+		 75 8.4961577329067963e-008 76 8.5025661178406153e-008 77 8.5097099145059474e-008
+		 78 8.5171080854706815e-008 79 8.524315830982232e-008 80 8.5309629582752677e-008 81 8.5367759083965211e-008
+		 82 8.5415912565167673e-008 83 8.5453521592171455e-008 84 8.5480969858053868e-008
+		 85 8.549938712576477e-008 86 8.5510393432741694e-008 87 8.5515864611807046e-008 88 8.5517726233774738e-008
+		 89 8.5517775971766241e-008 90 8.5517534387236083e-008;
 createNode animCurveTA -n "center_spine_1_deformer_null_rotateZ";
 	rename -uid "23E7202F-4EE7-6A40-2597-C0B816424A0E";
 	setAttr ".tan" 9;
@@ -14109,11 +13744,11 @@ createNode animCurveTA -n "center_spine_1_deformer_null_rotateZ";
 		 3 -1.0927802324295044 4 -0.61264282464981079 5 -0.12089640647172926 6 0.37280410528182983
 		 7 0.85876834392547607 8 1.3274722099304199 9 1.7697553634643555 10 2.1770081520080566
 		 11 2.5413429737091064 12 2.8557450771331787 13 3.1142013072967529 14 3.3118035793304443
-		 15 3.4448294639587402 16 3.5107972621917725 17 3.5084998607635498 18 3.4380185604095459
+		 15 3.4448294639587407 16 3.5107972621917725 17 3.5084998607635498 18 3.4380185604095459
 		 19 3.300715446472168 20 3.0992088317871094 21 2.8373301029205322 22 2.5200605392456055
 		 23 2.1534509658813477 24 1.7445204257965088 25 1.3011331558227539 26 0.83185738325119019
 		 27 0.34580445289611816 28 -0.14754906296730042 29 -0.63855123519897461 30 -1.1175729036331177
-		 31 -1.5752075910568237 32 -2.0024673938751221 33 -2.39096999168396 34 -2.7331082820892334
+		 31 -1.575207591056824 32 -2.0024673938751221 33 -2.39096999168396 34 -2.7331082820892334
 		 35 -3.0222012996673584 36 -3.2526242733001709 37 -3.4199097156524658 38 -3.5208282470703125
 		 39 -3.5534417629241943 40 -3.5171325206756592 41 -3.412611722946167 42 -3.2419028282165527
 		 43 -3.0083067417144775 44 -2.7163422107696533 45 -2.3716676235198975 46 -1.9809796810150146
@@ -14136,7 +13771,7 @@ createNode animCurveTA -n "center_spine_2_deformer_null_rotateX";
 		 3 -2.0645660736562377e-009 4 -2.2325514770216159e-009 5 -2.3548623051539153e-009
 		 6 -2.4289377176245353e-009 7 -2.4532527120868508e-009 8 -2.4273754117842827e-009
 		 9 -2.3519839409402721e-009 10 -2.2288391132718743e-009 11 -2.0607129336269736e-009
-		 12 -1.8512840149753629e-009 13 -1.6050054618688137e-009 14 -1.3269598753140599e-009
+		 12 -1.8512840149753629e-009 13 -1.6050054618688139e-009 14 -1.3269598753140599e-009
 		 15 -1.0227151348018992e-009 16 -6.9818800740861775e-010 17 -3.59525936799443e-010
 		 18 -1.3008046029217013e-011 19 3.3503549934366106e-010 20 6.7829031280552954e-010
 		 21 1.0105181136310648e-009 22 1.3256183928334053e-009 23 1.6176990857985629e-009
@@ -14149,9 +13784,9 @@ createNode animCurveTA -n "center_spine_2_deformer_null_rotateX";
 		 44 -1.0176027798181053e-009 45 -1.3256127306959797e-009 46 -1.6064148899985753e-009
 		 47 -1.315294428927416e-009 48 -9.8808106141490271e-010 49 -6.3116867288215417e-010
 		 50 -2.522864139820058e-010 51 1.3972460688460586e-010 52 5.3515242237622829e-010
-		 53 9.2367574699991895e-010 54 1.2946551608550294e-009 55 1.6374629430160326e-009
+		 53 9.2367574699991895e-010 54 1.2946551608550294e-009 55 1.6374629430160328e-009
 		 56 1.9418584518149373e-009 57 2.198401460873356e-009 58 2.398881759901883e-009 59 2.536734378111305e-009
-		 60 2.6073905257106844e-009 61 2.6085276161325055e-009 62 2.5401807324243464e-009
+		 60 2.6073905257106848e-009 61 2.6085276161325055e-009 62 2.5401807324243464e-009
 		 63 2.4047059898890666e-009 64 2.2066053428915211e-009 65 1.9522388150505776e-009
 		 66 1.6494715593395881e-009 67 1.3072969373695287e-009 68 9.3547358748224951e-010
 		 69 5.4420068451577208e-010 70 1.4383602642276117e-010 71 -2.5534840908392198e-010
@@ -14169,14 +13804,14 @@ createNode animCurveTA -n "center_spine_2_deformer_null_rotateY";
 	setAttr -s 90 ".ktv[0:89]"  1 1.7138476948730386e-007 2 1.7140024510808871e-007
 		 3 1.714129496122041e-007 4 1.7141981345503154e-007 5 1.7141796604391857e-007 6 1.7140497732270887e-007
 		 7 1.7137904251285363e-007 8 1.7133928054136049e-007 9 1.7128577667335776e-007 10 1.7121971040978679e-007
-		 11 1.7114328443312843e-007 12 1.7105961092056532e-007 13 1.7097252680287056e-007
-		 14 1.7088633796902286e-007 15 1.7080552083825751e-007 16 1.7073440972126264e-007
+		 11 1.7114328443312843e-007 12 1.7105961092056532e-007 13 1.7097252680287059e-007
+		 14 1.7088633796902286e-007 15 1.7080552083825753e-007 16 1.7073440972126264e-007
 		 17 1.7067689839223021e-007 18 1.7063615587176173e-007 19 1.7061445589661162e-007
 		 20 1.7061299217857595e-007 21 1.7063182156107359e-007 22 1.7066984980829147e-007
 		 23 1.707249310811676e-007 24 1.7079401004593819e-007 25 1.7087334924781317e-007 26 1.709587280629421e-007
 		 27 1.7104576954807271e-007 28 1.7113023886849987e-007 29 1.712082280391769e-007 30 1.7127653961779288e-007
 		 31 1.7133275775904622e-007 32 1.7137548979917483e-007 33 1.714043520451014e-007 34 1.7141996977443341e-007
-		 35 1.7142392039204424e-007 36 1.7141847763468832e-007 37 1.7140642682988982e-007
+		 35 1.7142392039204424e-007 36 1.7141847763468834e-007 37 1.7140642682988982e-007
 		 38 1.7139083752226725e-007 39 1.7137467978045606e-007 40 1.7136063945599744e-007
 		 41 1.7135086238795338e-007 42 1.7134674124008598e-007 43 1.7134884444658383e-007
 		 44 1.7135680252522434e-007 45 1.7136943597506615e-007 46 1.7138476948730386e-007
@@ -14189,11 +13824,10 @@ createNode animCurveTA -n "center_spine_2_deformer_null_rotateY";
 		 67 1.7066706448076729e-007 68 1.7062573931525549e-007 69 1.7061113055660826e-007
 		 70 1.7062393453670666e-007 71 1.7066268753751501e-007 72 1.7072393632133753e-007
 		 73 1.7080266445645975e-007 74 1.7089277548620885e-007 75 1.7098784610425355e-007
-		 76 1.7108163774537388e-007 77 1.7116875028477807e-007 78 1.7124499152032513e-007
-		 79 1.7130766138961917e-007 80 1.7135559460257355e-007 81 1.713890185328637e-007 82 1.7140934005510644e-007
-		 83 1.7141877606263733e-007 84 1.7141994135272398e-007 85 1.714155644094717e-007 86 1.7140817476501979e-007
-		 87 1.7139987562586612e-007 88 1.7139235808372177e-007 89 1.7138691532636585e-007
-		 90 1.7138476948730386e-007;
+		 76 1.7108163774537388e-007 77 1.711687502847781e-007 78 1.7124499152032513e-007 79 1.713076613896192e-007
+		 80 1.7135559460257357e-007 81 1.713890185328637e-007 82 1.7140934005510647e-007 83 1.7141877606263733e-007
+		 84 1.7141994135272398e-007 85 1.714155644094717e-007 86 1.7140817476501979e-007 87 1.7139987562586612e-007
+		 88 1.7139235808372177e-007 89 1.7138691532636585e-007 90 1.7138476948730386e-007;
 createNode animCurveTA -n "center_spine_2_deformer_null_rotateZ";
 	rename -uid "AF583BCA-4ECD-A74E-FEFE-E4BD00B465FF";
 	setAttr ".tan" 9;
@@ -14211,7 +13845,7 @@ createNode animCurveTA -n "center_spine_2_deformer_null_rotateZ";
 		 39 0.47457119822502142 40 0.24164943397045133 41 0.0051580425351858139 42 -0.23036299645900726
 		 43 -0.46039190888404852 44 -0.68049442768096924 45 -0.88639509677886963 46 -1.0740524530410767
 		 47 -0.87949842214584351 48 -0.66075664758682251 49 -0.42210161685943604 50 -0.16872100532054901
-		 51 0.09343971312046051 52 0.35785007476806641 53 0.61758369207382202 54 0.86552536487579346
+		 51 0.09343971312046051 52 0.35785007476806641 53 0.61758369207382202 54 0.86552536487579357
 		 55 1.0945990085601807 56 1.2980163097381592 57 1.469541072845459 58 1.6037577390670776
 		 59 1.6963255405426025 60 1.7441946268081665 61 1.7457621097564697 62 1.7009505033493042
 		 63 1.611198902130127 64 1.4793713092803955 65 1.3095955848693848 66 1.1070535182952881
@@ -14219,500 +13853,8 @@ createNode animCurveTA -n "center_spine_2_deformer_null_rotateZ";
 		 71 -0.17145374417304993 72 -0.43184936046600342 73 -0.6781877875328064 74 -0.90464669466018677
 		 75 -1.1061528921127319 76 -1.2785496711730957 77 -1.4187467098236084 78 -1.5248407125473022
 		 79 -1.5961921215057373 80 -1.6334502696990967 81 -1.6385241746902466 82 -1.6145061254501343
-		 83 -1.5655637979507446 84 -1.4968205690383911 85 -1.4142590761184692 86 -1.3246843814849854
+		 83 -1.5655637979507446 84 -1.4968205690383911 85 -1.4142590761184692 86 -1.3246843814849856
 		 87 -1.2358102798461914 88 -1.1565676927566528 89 -1.0978364944458008 90 -1.0740524530410767;
-createNode animCurveTA -n "center_tail_1_deformer_null1_rotateX";
-	rename -uid "10859FA2-4784-562E-BFBD-2CA5BDB93A8E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -6.1449179078465477e-010 2 -8.5459594956205365e-010
-		 3 -1.0793302918088443e-009 4 -1.2843331953504844e-009 5 -1.465557120106098e-009 6 -1.6193512086815076e-009
-		 7 -1.7425487719435753e-009 8 -1.8325575501521028e-009 9 -1.8874444229766141e-009
-		 10 -1.9060095723943959e-009 11 -1.8878381080611462e-009 12 -1.8333258244851438e-009
-		 13 -1.7436730948006132e-009 14 -1.6208459019395605e-009 15 -1.4675067827596422e-009
-		 16 -1.2869242338453546e-009 17 -1.0828652419192508e-009 18 -8.5948348438336108e-010
-		 19 -6.2120980581781282e-010 20 -3.7265254770879608e-010 21 -1.1851113146388315e-010
-		 22 1.3649599506226906e-010 23 3.8769085164425121e-010 24 6.3048694043388309e-010
-		 25 8.6043627778309439e-010 26 1.0732782440570077e-009 27 1.2649943315068413e-009
-		 28 1.4318718433159461e-009 29 1.5705774458751875e-009 30 1.6782385481306505e-009
-		 31 1.7525290108011402e-009 32 1.7917506367481906e-009 33 1.7949064456956876e-009
-		 34 1.7617539649350533e-009 35 1.6928333179677679e-009 36 1.5894676685945797e-009
-		 37 1.4537304693362785e-009 38 1.2883863975687859e-009 39 1.0968081998186108e-009
-		 40 8.8287838151401843e-010 41 6.5088279210812061e-010 42 4.0540576451419952e-010
-		 43 1.5123019503349155e-010 44 -1.0675198919285478e-010 45 -3.6361935684681157e-010
-		 46 -6.1449179078465477e-010 47 -3.5473357584692167e-010 48 -8.2967889503127168e-011
-		 49 1.9457954691937118e-010 50 4.7105847000850076e-010 51 7.3918543508355583e-010
-		 52 9.9146901799684883e-010 53 1.2204721677733232e-009 54 1.4191083863579479e-009
-		 55 1.5809589193338525e-009 56 1.7005883368170771e-009 57 1.7738284174839691e-009
-		 58 1.7980007482876201e-009 59 1.7720508393992418e-009 60 1.6965816529435076e-009
-		 61 1.5737893210854281e-009 62 1.4073150422788672e-009 63 1.2020417994307309e-009
-		 64 9.638636555564517e-010 65 6.994543277905052e-010 66 4.1604975020703705e-010 67 1.2125091208847749e-010
-		 68 -1.7715705291632133e-010 69 -4.7138148939751545e-010 70 -7.5380707231786914e-010
-		 71 -1.0171991027263516e-009 72 -1.2549274952533551e-009 73 -1.4612046017603575e-009
-		 74 -1.6313188577754545e-009 75 -1.7618416725539987e-009 76 -1.8507806398559978e-009
-		 77 -1.8976604732046098e-009 78 -1.9035195641947666e-009 79 -1.8708234961195558e-009
-		 80 -1.8033139426165688e-009 81 -1.7058092716126794e-009 82 -1.583991715570221e-009
-		 83 -1.44420364556197e-009 84 -1.2932868109771789e-009 85 -1.1384911902112549e-009
-		 86 -9.8750008170611636e-010 87 -8.4863871485651998e-010 88 -7.3141509515650682e-010
-		 89 -6.4771621399728474e-010 90 -6.1449179078465477e-010;
-createNode animCurveTA -n "center_tail_1_deformer_null1_rotateY";
-	rename -uid "0D70D0AB-4471-4C04-E8F4-979BC6025F45";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 1.4873076281674003e-007 2 1.4872921383357607e-007
-		 3 1.4873738507503731e-007 4 1.4875629972266324e-007 5 1.4878608567414631e-007 6 1.488259044890583e-007
-		 7 1.4887405086483341e-007 8 1.489279810584776e-007 9 1.4898455447109882e-007 10 1.4904018996730883e-007
-		 11 1.4909120693573641e-007 12 1.4913408108441217e-007 13 1.4916572865786293e-007
-		 14 1.4918377644335123e-007 15 1.4918667545771314e-007 16 1.4917389989932417e-007
-		 17 1.4914590451553522e-007 18 1.4910412460267253e-007 19 1.4905084810834524e-007
-		 20 1.4898901667947939e-007 21 1.4892206934291607e-007 22 1.4885368671002652e-007
-		 23 1.4878753518132726e-007 24 1.4872708220536879e-007 25 1.4867529785078659e-007
-		 26 1.4863458375202754e-007 27 1.4860651731396501e-007 28 1.4859179486848006e-007
-		 29 1.4859023167446139e-007 30 1.4860071928524121e-007 31 1.486213676571424e-007 32 1.4864961883631622e-007
-		 33 1.486825027541272e-007 34 1.4871687881168327e-007 35 1.4874963483180181e-007 36 1.4877805654123222e-007
-		 37 1.4879994125749363e-007 38 1.4881388210596924e-007 39 1.4881929644161573e-007
-		 40 1.4881645427067269e-007 41 1.4880652088322677e-007 42 1.4879137211210036e-007
-		 43 1.4877340959174035e-007 44 1.487554186496709e-007 45 1.4874029830025393e-007 46 1.4873076281674003e-007
-		 47 1.487407388367501e-007 48 1.4875699605454429e-007 49 1.4877652176892298e-007 50 1.4879573484449793e-007
-		 51 1.4881095466989791e-007 52 1.4881884169426485e-007 53 1.4881688059631415e-007
-		 54 1.4880380660997616e-007 55 1.487798186872169e-007 56 1.4874677845000406e-007 57 1.4870799702748627e-007
-		 58 1.4866790820633469e-007 59 1.4863162789424678e-007 60 1.4860427199892001e-007
-		 61 1.4859035957215383e-007 62 1.485932301648063e-007 63 1.4861463171200739e-007 64 1.4865447894862882e-007
-		 65 1.4871086762013874e-007 66 1.4878024501285836e-007 67 1.4885776522532979e-007
-		 68 1.4893771549395751e-007 69 1.4901415568147058e-007 70 1.4908140144598292e-007
-		 71 1.4913464951860078e-007 72 1.4917031876393594e-007 73 1.4918647650574712e-007
-		 74 1.4918292379206832e-007 75 1.4916111013008049e-007 76 1.491240055884191e-007 77 1.4907557499554969e-007
-		 78 1.4902036582498113e-007 79 1.4896298239364114e-007 80 1.4890757427110657e-007
-		 81 1.4885753785165434e-007 82 1.4881517529374833e-007 83 1.4878175136345817e-007
-		 84 1.4875745080189517e-007 85 1.4874154885546886e-007 86 1.4873269549298129e-007
-		 87 1.4872912856844778e-007 88 1.4872890119477233e-007 89 1.4873003806314955e-007
-		 90 1.4873076281674003e-007;
-createNode animCurveTA -n "center_tail_1_deformer_null1_rotateZ";
-	rename -uid "3838F21A-4024-3C03-884C-B7985BDE034C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -0.4734406471252442 2 -0.65843445062637329
-		 3 -0.83153271675109863 4 -0.98933702707290638 5 -1.1287015676498413 6 -1.246803879737854
-		 7 -1.3412164449691772 8 -1.4099771976470947 9 -1.4516516923904419 10 -1.4653816223144531
-		 11 -1.4509158134460449 12 -1.4086192846298218 13 -1.339457631111145 14 -1.244961142539978
-		 15 -1.1271684169769287 16 -0.98855781555175792 17 -0.83197098970413208 18 -0.66053491830825806
-		 19 -0.47758877277374268 20 -0.28661683201789856 21 -0.091191157698631287 22 0.10507827997207642
-		 23 0.29858690500259399 24 0.48577612638473511 25 0.66317445039749146 26 0.82744216918945313
-		 27 0.97542297840118408 28 1.1042021512985229 29 1.2111715078353882 30 1.2940976619720459
-		 31 1.351190447807312 32 1.3811646699905396 33 1.3832911252975464 34 1.3574299812316895
-		 35 1.3040441274642944 36 1.2241905927658081 37 1.1194895505905151 38 0.99207508563995361
-		 39 0.84453243017196655 40 0.67982560396194458 41 0.50122272968292236 42 0.31222224235534668
-		 43 0.11648387461900711 44 -0.082234837114810944 45 -0.28013685345649719 46 -0.47344058752059937
-		 47 -0.27329033613204956 48 -0.063912428915500641 49 0.14987020194530487 50 0.36277356743812561
-		 51 0.56920367479324341 52 0.76342707872390747 53 0.93976372480392467 54 1.0928010940551758
-		 55 1.2176233530044556 56 1.3100426197052002 57 1.366814136505127 58 1.3858116865158081
-		 59 1.3661458492279053 60 1.3082095384597778 61 1.2136471271514893 62 1.0852556228637695
-		 63 0.92683243751525879 64 0.74299216270446777 65 0.53897196054458618 66 0.32044357061386108
-		 67 0.093339651823043823 68 -0.13630327582359314 69 -0.3624902069568634 70 -0.57940971851348877
-		 71 -0.78157997131347656 72 -0.96400374174118042 73 -1.1223295927047729 74 -1.2530118227005005
-		 75 -1.3534548282623291 76 -1.4221252202987671 77 -1.4586172103881836 78 -1.4636621475219727
-		 79 -1.4390782117843628 80 -1.3876694440841675 81 -1.3130866289138794 82 -1.2196691036224365
-		 83 -1.1122895479202271 84 -0.99622613191604603 85 -0.87708497047424316 86 -0.760811448097229
-		 87 -0.65384501218795776 88 -0.56353098154067993 89 -0.49904084205627441 90 -0.4734406471252442;
-createNode animCurveTA -n "center_tail_1_deformer_null_rotateX";
-	rename -uid "0DF98DAE-4142-8E2E-BDF3-43BB0F765F88";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_1_deformer_null_rotateY";
-	rename -uid "B036CA20-47B1-6E16-536C-BFAA08EFA3C8";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_1_deformer_null_rotateZ";
-	rename -uid "13D3D66C-41B7-0DB8-4F10-F5BE23C5DF92";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_2_deformer_null1_rotateX";
-	rename -uid "EB0A02DE-40C5-5BB6-DC40-06A5A000C161";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 2.2486058154358446e-011 2 -7.6190068143411338e-011
-		 3 -1.7363688264993016e-010 4 -2.6804503061583773e-010 5 -3.5766434258732716e-010
-		 6 -4.4082040795423433e-010 7 -5.1593151972895157e-010 8 -5.8152854753856786e-010
-		 9 -6.3628036173213331e-010 10 -6.7902439226941169e-010 11 -7.0880223912439533e-010
-		 12 -7.2489753089044484e-010 13 -7.2687150742822837e-010 14 -7.1459338446544507e-010
-		 15 -6.8825883881018513e-010 16 -6.4839517088799425e-010 17 -5.9585025802277869e-010
-		 18 -5.317659645953654e-010 19 -4.575383405480693e-010 20 -3.747687715716097e-010
-		 21 -2.8520946715460127e-010 22 -1.9070980905588897e-010 23 -9.3165947179230102e-011
-		 24 5.5226405046293614e-012 25 1.0348838452856057e-010 26 1.9892251734709987e-010
-		 27 2.9009475377428373e-010 28 3.7536773689339498e-010 29 4.5320883157451414e-010
-		 30 5.2220217039433692e-010 31 5.8106319755779623e-010 32 6.2865734840045207e-010
-		 33 6.6402378040564258e-010 34 6.8640276795761679e-010 35 6.9526534529629203e-010
-		 36 6.9034150618207946e-010 37 6.7164296346788888e-010 38 6.3947741546499515e-010
-		 39 5.9445093292254114e-010 40 5.3745691230844272e-010 41 4.6965226152551054e-010
-		 42 3.9242226135272062e-010 43 3.073380994145225e-010 44 2.1611017142486588e-010 45 1.2054167386477133e-010
-		 46 2.2486061623805398e-011 47 1.2392745163403163e-010 48 2.247201313920755e-010 49 3.221941324849098e-010
-		 50 4.1357833824307022e-010 51 4.9610687780088369e-010 52 5.6714127838475292e-010
-		 53 6.2430011160685694e-010 54 6.6558286659912369e-010 55 6.8947569875632553e-010
-		 56 6.9502570365642669e-010 57 6.8187744339809342e-010 58 6.5027017104313245e-010
-		 59 6.0100263654661035e-010 60 5.3537552169302671e-010 61 4.5512549284865145e-010
-		 62 3.6235961453634502e-010 63 2.5949692394888757e-010 64 1.4921722191196807e-010
-		 65 3.4411973270920271e-011 66 -8.1869483414820365e-011 67 -1.9648685456452597e-010
-		 68 -3.0629440650464801e-010 69 -4.0824654767845914e-010 70 -4.9951981440088389e-010
-		 71 -5.7764154570705273e-010 72 -6.406117858404059e-010 73 -6.8700378719199762e-010
-		 74 -7.1602851425822678e-010 75 -7.2755584890060732e-010 76 -7.220911646399486e-010
-		 77 -7.0071254354431289e-010 78 -6.649808481640207e-010 79 -6.1683624874575571e-010
-		 80 -5.5849452840206482e-010 81 -4.9235288068771865e-010 82 -4.2091166663205115e-010
-		 83 -3.4671560067423002e-010 84 -2.7231725208132218e-010 85 -2.0026809377515775e-010
-		 86 -1.3315043512207581e-010 87 -7.367857712825554e-011 88 -2.4932604592020624e-011
-		 89 9.1284159051130409e-012 90 2.2486058154358446e-011;
-createNode animCurveTA -n "center_tail_2_deformer_null1_rotateY";
-	rename -uid "BEBA0840-42DA-86B1-F099-D3A827FF06CD";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 8.0760948151237244e-008 2 8.0743731700749777e-008
-		 3 8.073640600514409e-008 4 8.0744023023271438e-008 5 8.0770952592956746e-008 6 8.0820448999929795e-008
-		 7 8.0894274390175269e-008 8 8.0992464290829957e-008 9 8.1113178396208241e-008 10 8.1252728989511525e-008
-		 11 8.140577989479425e-008 12 8.1565644904912915e-008 13 8.1724699896312814e-008 14 8.1874965474071359e-008
-		 15 8.2008590140958404e-008 16 8.2118432942479558e-008 17 8.2198553741363867e-008
-		 18 8.2244596910641121e-008 19 8.2254082656163519e-008 20 8.2226549125152815e-008
-		 21 8.2163573722482397e-008 22 8.206860968584806e-008 23 8.1946801344656706e-008 24 8.1804572005239606e-008
-		 25 8.1649240257775091e-008 26 8.1488558123510302e-008 27 8.1330171042282018e-008
-		 28 8.1181198652302555e-008 29 8.1047730304817378e-008 30 8.0934505319874006e-008
-		 31 8.0844621663800353e-008 32 8.0779379629802861e-008 33 8.0738296048821212e-008
-		 34 8.0719203765511338e-008 35 8.0718542960767081e-008 36 8.0731702212233358e-008
-		 37 8.0753501663366478e-008 38 8.0778676192494459e-008 39 8.0802358581877343e-008
-		 40 8.0820534265058086e-008 41 8.0830389492803079e-008 42 8.0830581339341734e-008
-		 43 8.0821315862067422e-008 44 8.0804340996110113e-008 45 8.0782811551216582e-008
-		 46 8.0760948151237244e-008 47 8.0783593148225918e-008 48 8.0806152880086302e-008
-		 49 8.0823490122838848e-008 50 8.0831483728616149e-008 51 8.0827810222672269e-008
-		 52 8.0812419867015706e-008 53 8.0787835088358406e-008 54 8.0759036791278049e-008
-		 55 8.0733009610867157e-008 56 8.07179532102964e-008 57 8.0722223572138319e-008 58 8.0753217446272174e-008
-		 59 8.081625679778881e-008 60 8.0913729050280381e-008 61 8.1044504440797027e-008 62 8.1203829438436514e-008
-		 63 8.138362517229325e-008 64 8.1573148236202542e-008 65 8.1760028081134806e-008 66 8.1931389672718069e-008
-		 67 8.207512536273498e-008 68 8.2181024652072665e-008 69 8.2241747634270723e-008 70 8.2253464483983407e-008
-		 71 8.2216210728347505e-008 72 8.2133766454717261e-008 73 8.2013180247031414e-008
-		 74 8.1864001799658581e-008 75 8.1697244525003043e-008 76 8.1524248685127532e-008
-		 77 8.1355608472222229e-008 78 8.1200262513902999e-008 79 8.1064861490176554e-008
-		 80 8.0953434178354655e-008 81 8.0867422980190895e-008 82 8.0805961033547646e-008
-		 83 8.0766376697738451e-008 84 8.074481883113549e-008 85 8.0736825225358189e-008 86 8.0737933672025974e-008
-		 87 8.0744072761262942e-008 88 8.0751782149945939e-008 89 8.075823387798664e-008 90 8.0760948151237244e-008;
-createNode animCurveTA -n "center_tail_2_deformer_null1_rotateZ";
-	rename -uid "E14640E6-449A-714B-71B0-06BDDE68A71E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0.031905438750982285 2 -0.10812901705503464
-		 3 -0.24644768238067627 4 -0.38040706515312195 5 -0.50742334127426147 6 -0.62501287460327148
-		 7 -0.7308381199836731 8 -0.82275736331939697 9 -0.89887863397598278 10 -0.9576132297515868
-		 11 -0.9977269172668457 12 -1.0183820724487305 13 -1.0191677808761597 14 -1.0001143217086792
-		 15 -0.96169000864028931 16 -0.90477979183197033 17 -0.8306502103805542 18 -0.74090057611465454
-		 19 -0.63740932941436768 20 -0.52227729558944702 21 -0.3977733850479126 22 -0.26628577709197998
-		 23 -0.1302800327539444 24 0.0077360998839139938 25 0.14524194598197937 26 0.2797301709651947
-		 27 0.40873250365257263 28 0.52984791994094849 29 0.64077538251876831 30 0.73935282230377197
-		 31 0.82360237836837769 32 0.89177966117858887 33 0.94242566823959351 34 0.97441625595092762
-		 35 0.98700511455535889 36 0.97985577583312988 37 0.95305931568145763 38 0.90713566541671753
-		 39 0.8430182933807373 40 0.76202356815338135 41 0.6658090353012085 42 0.55632346868515015
-		 43 0.43575385212898254 44 0.3064730167388916 45 0.17099003493785858 46 0.031905446201562881
-		 47 0.17579106986522675 48 0.31867590546607971 49 0.45680472254753113 50 0.58630859851837158
-		 51 0.70333433151245117 52 0.80419039726257324 53 0.885506272315979 54 0.94439578056335438
-		 55 0.97861093282699585 56 0.98667204380035411 57 0.96795618534088135 58 0.92273592948913585
-		 59 0.85216253995895386 60 0.75819826126098633 61 0.64351081848144531 62 0.51134407520294189
-		 63 0.36538150906562805 64 0.20961582660675049 65 0.048230450600385666 66 -0.11450498551130295
-		 67 -0.27433040738105774 68 -0.42708894610404968 69 -0.56882607936859131 70 -0.69589871168136597
-		 71 -0.80509406328201294 72 -0.89375239610671997 73 -0.95988267660141002 74 -1.0022569894790649
-		 75 -1.0204700231552124 76 -1.0149548053741455 77 -0.98694854974746704 78 -0.93841475248336792
-		 79 -0.87193018198013306 80 -0.79055047035217285 81 -0.69767051935195923 82 -0.59689301252365112
-		 83 -0.49191829562187195 84 -0.38646635413169861 85 -0.28424447774887085 86 -0.18898066878318787
-		 87 -0.10456427186727524 88 -0.035380858927965164 89 0.012952733784914017 90 0.031905438750982285;
-createNode animCurveTA -n "center_tail_2_deformer_null_rotateX";
-	rename -uid "5A6730F2-4B71-9309-39D4-B29BF7FD6ADA";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_2_deformer_null_rotateY";
-	rename -uid "2086769A-40E8-4C47-FAE2-80BD8567014A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_2_deformer_null_rotateZ";
-	rename -uid "DC131698-4951-A30A-C7CE-26A649B53975";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_3_deformer_null1_rotateX";
-	rename -uid "CD1F33FC-4729-C1D2-0A77-3EA54E8F2661";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -2.1523964902070425e-011 2 -1.1762192782260872e-011
-		 3 -1.7326851758925341e-012 4 8.3494079705648261e-012 5 1.8239862745184077e-011 6 2.7672586444538183e-011
-		 7 3.6373338369033448e-011 8 4.407861575739247e-011 9 5.0557297931463907e-011 10 5.5631721451732119e-011
-		 11 5.9194774082449442e-011 12 6.121964740701813e-011 13 6.1760291325541061e-011 14 6.094168225612151e-011
-		 15 5.8941122815792113e-011 16 5.5963275680248614e-011 17 5.2212831280762373e-011
-		 18 4.786922941368843e-011 19 4.3067424626563877e-011 20 3.7887526449509323e-011 21 3.2354653678456913e-011
-		 22 2.6448570764059379e-011 23 2.012115474236964e-011 24 1.331868296206018e-011 25 6.0053689451833314e-012
-		 26 -1.8153651325236717e-012 27 -1.0084987532577028e-011 28 -1.86815285463382e-011
-		 29 -2.7420007236989005e-011 30 -3.6061587743718704e-011 31 -4.4330338011544512e-011
-		 32 -5.1935313688522555e-011 33 -5.8595031604546932e-011 34 -6.4061006499471773e-011
-		 35 -6.8137037678717149e-011 36 -7.0691841269621136e-011 37 -7.1663411316258419e-011
-		 38 -7.1055279715626085e-011 39 -6.892596909890969e-011 40 -6.5374303193088679e-011
-		 41 -6.0523648592880619e-011 42 -5.4508345753712106e-011 43 -4.7464632918492455e-011
-		 44 -3.9527381368031911e-011 45 -3.0832548320036679e-011 46 -2.1523964902070425e-011
-		 47 -3.1146994705633091e-011 48 -4.0292040537348583e-011 49 -4.8721207623891871e-011
-		 50 -5.6196880482417561e-011 51 -6.2475170869991103e-011 52 -6.7305515327742427e-011
-		 53 -7.0441298627432758e-011 54 -7.1663126821608358e-011 55 -7.0812133934339272e-011
-		 56 -6.782618217071601e-011 57 -6.276937997151677e-011 58 -5.584538387282123e-011
-		 59 -4.7388138552095782e-011 60 -3.7829347293572013e-011 61 -2.7647635916783209e-011
-		 62 -1.7309289418454554e-011 63 -7.2124628318348538e-012 64 2.3537617167834757e-012
-		 65 1.1227467740237973e-011 66 1.9365994918807417e-011 67 2.6814406597908125e-011
-		 68 3.3657732850800315e-011 69 3.9968042764293443e-011 70 4.5758532379869266e-011
-		 71 5.0955576563760374e-011 72 5.539535496978943e-011 73 5.8845782413552428e-011 74 6.1048152644183062e-011
-		 75 6.1768118397864669e-011 76 6.0843732829773955e-011 77 5.8219880305632188e-011
-		 78 5.3962737056600929e-011 79 4.8253297191269695e-011 80 4.1364033726010163e-011
-		 81 3.3625911083356996e-011 82 2.5393583069632797e-011 83 1.7015590325630825e-011
-		 84 8.8139773257722709e-012 85 1.0753014147504847e-012 86 -5.9465939117320232e-012
-		 87 -1.201556822788552e-011 88 -1.6882436421061797e-011 89 -2.022571173043719e-011
-		 90 -2.1523964902070425e-011;
-createNode animCurveTA -n "center_tail_3_deformer_null1_rotateY";
-	rename -uid "1651AF29-4CBC-5B38-6451-6286EE53AC4E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -9.6718197895029334e-009 2 -9.6852481590303796e-009
-		 3 -9.6926209280923104e-009 4 -9.687293633930949e-009 5 -9.6624610534945532e-009 6 -9.6118251136090294e-009
-		 7 -9.5302459257595729e-009 8 -9.4143182138850534e-009 9 -9.2628376080483577e-009
-		 10 -9.0770999605638281e-009 11 -8.8610159210134043e-009 12 -8.6210159011557153e-009
-		 13 -8.3657489824418008e-009 14 -8.1055997469547947e-009 15 -7.8520443480556423e-009
-		 16 -7.6169106577594903e-009 17 -7.4115997783508192e-009 18 -7.2463164357827736e-009
-		 19 -7.1293979608810779e-009 20 -7.0667600660101479e-009 21 -7.0615215896907557e-009
-		 22 -7.1138259727376854e-009 23 -7.2208545809360203e-009 24 -7.3770420883079169e-009
-		 25 -7.574456617476244e-009 26 -7.8033259853782511e-009 27 -8.0526731949248642e-009
-		 28 -8.3110061055435835e-009 29 -8.5670333049847613e-009 30 -8.8103480067047713e-009
-		 31 -9.0320400047971816e-009 32 -9.2251939420862072e-009 33 -9.3852365878888122e-009
-		 34 -9.5101091446281316e-009 35 -9.6002450433729791e-009 36 -9.6583612219092174e-009
-		 37 -9.6890673262350901e-009 38 -9.6983390207583398e-009 39 -9.6928847170829613e-009
-		 40 -9.6794687820533909e-009 41 -9.6642533975455081e-009 42 -9.6522043691038562e-009
-		 43 -9.6466310495202379e-009 44 -9.6488745882084004e-009 45 -9.6581898034742153e-009
-		 46 -9.6718197895029334e-009 47 -9.6577714714385365e-009 48 -9.6483461220486788e-009
-		 49 -9.6470342825227817e-009 50 -9.6548502526161428e-009 51 -9.6697885254570792e-009
-		 52 -9.6867074361739469e-009 53 -9.6976737751219844e-009 54 -9.6927799120294367e-009
-		 55 -9.6613499422915083e-009 56 -9.5933927468649927e-009 57 -9.4811047901544043e-009
-		 58 -9.3202174866746645e-009 59 -9.1109928490595848e-009 60 -8.8587084334790234e-009
-		 61 -8.573580068116371e-009 62 -8.2700868375695791e-009 63 -7.9658031282292541e-009
-		 64 -7.6798372106168244e-009 65 -7.4310757547380035e-009 66 -7.2364034764404997e-009
-		 67 -7.1091004194556709e-009 68 -7.057590512005163e-009 69 -7.0846639665944622e-009
-		 70 -7.1872912066339714e-009 71 -7.3570070036055321e-009 72 -7.5808674893096395e-009
-		 73 -7.8428206151670565e-009 74 -8.1253439532247285e-009 75 -8.4111348996884772e-009
-		 76 -8.6846432267861928e-009 77 -8.9332861108459838e-009 78 -9.148204860309761e-009
-		 79 -9.3245455801138633e-009 80 -9.461267325150402e-009 81 -9.5605718897218139e-009
-		 82 -9.6270778016105396e-009 83 -9.666880629310981e-009 84 -9.6866248355809148e-009
-		 85 -9.692707969577441e-009 86 -9.6906900282078823e-009 87 -9.6849532837950392e-009
-		 88 -9.6786276770899349e-009 89 -9.6737666765989161e-009 90 -9.6718197895029334e-009;
-createNode animCurveTA -n "center_tail_3_deformer_null1_rotateZ";
-	rename -uid "9C9797E8-4AB9-6BA4-2FBD-BFA947744F07";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0.25501412153244019 2 0.13916443288326263
-		 3 0.020484685897827148 4 -0.09876522421836853 5 -0.21631379425525665 6 -0.3299085795879364
-		 7 -0.43734869360923767 8 -0.53652107715606689 9 -0.62544095516204834 10 -0.7022969126701355
-		 11 -0.76549810171127319 12 -0.81372147798538208 13 -0.84595495462417603 14 -0.86153250932693481
-		 15 -0.86015760898590088 16 -0.84191238880157471 17 -0.80725085735321045 18 -0.75697785615921021
-		 19 -0.69221508502960205 20 -0.61435878276824951 21 -0.5250319242477417 22 -0.42603695392608643
-		 23 -0.31931072473526001 24 -0.2068849503993988 25 -0.090852856636047363 26 0.026658438146114349
-		 27 0.14351114630699158 28 0.25757798552513123 29 0.3667636513710022 30 0.46902945637702936
-		 31 0.56242227554321289 32 0.64510959386825562 33 0.71541953086853027 34 0.77188491821289063
-		 35 0.81328833103179932 36 0.83870458602905273 37 0.84753668308258057 38 0.83954143524169922
-		 39 0.81484204530715942 40 0.77392673492431641 41 0.71763241291046143 42 0.64711695909500122
-		 43 0.56382179260253906 44 0.46942898631095892 45 0.36581635475158691 46 0.25501415133476257
-		 47 0.36956310272216797 48 0.47853624820709229 49 0.57872390747070313 50 0.66697978973388672
-		 51 0.74034708738327026 52 0.79619312286376953 53 0.83234435319900513 54 0.84720867872238159
-		 55 0.83987176418304443 56 0.81015628576278687 57 0.7586359977722168 58 0.68660485744476318
-		 59 0.59600633382797241 60 0.48933529853820801 61 0.36952599883079529 62 0.23983865976333618
-		 63 0.10375390201807022 64 -0.035120520740747452 65 -0.17313313484191895 66 -0.30666649341583252
-		 67 -0.43221688270568848 68 -0.54648149013519287 69 -0.64645648002624512 70 -0.72954368591308594
-		 71 -0.7936590313911438 72 -0.83733093738555908 73 -0.85977619886398315 74 -0.86094057559967041
-		 75 -0.84149712324142456 76 -0.80280011892318726 77 -0.74680066108703613 78 -0.6759333610534668
-		 79 -0.59298849105834961 80 -0.50098150968551636 81 -0.40303179621696472 82 -0.30225911736488342
-		 83 -0.20170241594314575 84 -0.10426780581474304 85 -0.012712647207081318 86 0.070317663252353668
-		 87 0.14216655492782593 88 0.19988113641738892 89 0.23958435654640195 90 0.25501412153244019;
-createNode animCurveTA -n "center_tail_3_deformer_null_rotateX";
-	rename -uid "2D208095-4A3D-9AAD-D897-45AEA330DAC7";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_3_deformer_null_rotateY";
-	rename -uid "0BB2F82A-41A1-5339-B659-928881636882";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_3_deformer_null_rotateZ";
-	rename -uid "D4A2FE16-414B-C737-370B-3A8C2000B4EF";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_4_deformer_null1_rotateX";
-	rename -uid "3FA4703F-42C2-1FCB-E880-1F8F61039665";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 1.3676889620839461e-009 2 1.0394319849282851e-009
-		 3 6.9103972544226622e-010 4 3.2920580150808121e-010 5 -3.9190647255216149e-011 6 -4.0718636795666896e-010
-		 7 -7.6782635805017208e-010 8 -1.114252690115336e-009 9 -1.4397972813995352e-009 10 -1.7380834549385327e-009
-		 11 -2.0031436509526657e-009 12 -2.229547879650795e-009 13 -2.4125472730673891e-009
-		 14 -2.548217192810398e-009 15 -2.6335928993148627e-009 16 -2.6667850150374761e-009
-		 17 -2.647059682558961e-009 18 -2.5748749798992776e-009 19 -2.4518693741981679e-009
-		 20 -2.280799549225776e-009 21 -2.0654364885075438e-009 22 -1.8104288068698793e-009
-		 23 -1.5211453208152648e-009 24 -1.2035137331167789e-009 25 -8.6386320319320475e-010
-		 26 -5.0878329327375127e-010 27 -1.4500171896525416e-010 28 2.2071658389855031e-010
-		 29 5.8165366967344312e-010 30 9.3121088617920133e-010 31 1.26297672320419e-009 32 1.5707990463909027e-009
-		 33 1.8488656161608221e-009 34 2.0917994003610829e-009 35 2.2947683753216097e-009
-		 36 2.453604652785657e-009 37 2.5649289359108707e-009 38 2.6262687580214106e-009 39 2.6361575145017468e-009
-		 40 2.5942064052486558e-009 41 2.5011379634065634e-009 42 2.3587778397171633e-009
-		 43 2.170003288171074e-009 44 1.938654570210474e-009 45 1.6694179372223061e-009 46 1.3676889620839461e-009
-		 47 1.6793879620280448e-009 48 1.9616186452964257e-009 49 2.2050055115130363e-009
-		 50 2.4008841581490969e-009 51 2.5417128401983291e-009 52 2.6214643789046477e-009
-		 53 2.6359592286695488e-009 54 2.583104619091614e-009 55 2.4630129047409355e-009 56 2.2779922392857088e-009
-		 57 2.0324182337105867e-009 58 1.7325145762470129e-009 59 1.3860800285314667e-009
-		 60 1.0021955487715672e-009 61 5.9093852033953453e-010 62 1.6311793582524103e-010
-		 63 -2.6997462598821187e-010 64 -6.9681066472426778e-010 65 -1.1058892690485322e-009
-		 66 -1.4860378483305681e-009 67 -1.8267585222275782e-009 68 -2.1186137288964346e-009
-		 69 -2.3536266269275075e-009 70 -2.5256596813960641e-009 71 -2.6307243050638363e-009
-		 72 -2.6671798103450328e-009 73 -2.6357873661453368e-009 74 -2.539616295038627e-009
-		 75 -2.3838073737181276e-009 76 -2.1752324386170585e-009 77 -1.9220898206384618e-009
-		 78 -1.6334799068928874e-009 79 -1.3189996872498e-009 80 -9.8837560358333576e-010
-		 81 -6.5115363101497792e-010 82 -3.1644609155279113e-010 83 7.2598559108794092e-012
-		 84 3.1222485707971259e-010 85 5.9148941300435354e-010 86 8.387664451880994e-010 87 1.048089948163522e-009
-		 88 1.2129948157024728e-009 89 1.3246840291358808e-009 90 1.3676889620839461e-009;
-createNode animCurveTA -n "center_tail_4_deformer_null1_rotateY";
-	rename -uid "BDAAE569-435D-FA9A-E065-4392AEFFE5EE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -6.2541516854253132e-007 2 -6.2540993894799612e-007
-		 3 -6.2539942291550688e-007 4 -6.2537816347685293e-007 5 -6.2533962363886531e-007
-		 6 -6.2527692534786183e-007 7 -6.251834179238358e-007 8 -6.2505364439857658e-007 9 -6.2488373941960162e-007
-		 10 -6.2467228190143942e-007 11 -6.244205223993049e-007 12 -6.2413266732619377e-007
-		 13 -6.2381576526604476e-007 14 -6.2347959328690195e-007 15 -6.2313608850672608e-007
-		 16 -6.2279872281578719e-007 17 -6.2248182075563818e-007 18 -6.2219930896389997e-007
-		 19 -6.2196426142691053e-007 20 -6.2178764892450999e-007 21 -6.216779979695275e-007
-		 22 -6.2164053815649822e-007 23 -6.2167703163140686e-007 24 -6.2178560256143101e-007
-		 25 -6.2196102135203546e-007 26 -6.2219498886406654e-007 27 -6.2247659116110299e-007
-		 28 -6.2279315216073883e-007 29 -6.2313097259902861e-007 30 -6.2347612583835144e-007
-		 31 -6.2381525367527502e-007 32 -6.2413636214841972e-007 33 -6.2442944681606605e-007
-		 34 -6.2468706119034323e-007 35 -6.2490431673722924e-007 36 -6.2507945131073939e-007
-		 37 -6.2521326071873773e-007 38 -6.2530898503609933e-007 39 -6.2537191070077824e-007
-		 40 -6.2540840417568688e-007 41 -6.2542551404476399e-007 42 -6.2543000467485399e-007
-		 43 -6.2542784462493728e-007 44 -6.2542335399484728e-007 45 -6.2541897705159499e-007
-		 46 -6.2541516854253132e-007 47 -6.2541914758185158e-007 48 -6.254237518987793e-007
-		 49 -6.2542846990254475e-007 50 -6.2542972045775969e-007 51 -6.2542096657125512e-007
-		 52 -6.2539317013943219e-007 53 -6.2533575828638277e-007 54 -6.2523787391910446e-007
-		 55 -6.2509013787348522e-007 56 -6.2488618368661264e-007 57 -6.2462390815198887e-007
-		 58 -6.2430660818790784e-007 59 -6.2394309452429297e-007 60 -6.2354791907637264e-007
-		 61 -6.2313995385920862e-007 62 -6.2274142464957549e-007 63 -6.2237563724920619e-007
-		 64 -6.220653858690639e-007 65 -6.2183045201891218e-007 66 -6.2168584236133029e-007
-		 67 -6.2164070868675481e-007 68 -6.2169698367142701e-007 69 -6.2184955140764941e-007
-		 70 -6.2208692952481215e-007 71 -6.2239217868409469e-007 72 -6.2274494894154486e-007
-		 73 -6.2312324189406354e-007 74 -6.235056275727402e-007 75 -6.2387294974541874e-007
-		 76 -6.2420986068900675e-007 77 -6.2450550331050181e-007 78 -6.2475373852066696e-007
-		 79 -6.2495314523403067e-007 80 -6.2510611087418511e-007 81 -6.2521775134882773e-007
-		 82 -6.2529511524189729e-007 83 -6.2534570588468341e-007 84 -6.2537679923480027e-007
-		 85 -6.2539487544199801e-007 86 -6.2540476619687979e-007 87 -6.2541010947825271e-007
-		 88 -6.2541300849261461e-007 89 -6.2541460010834271e-007 90 -6.2541516854253132e-007;
-createNode animCurveTA -n "center_tail_4_deformer_null1_rotateZ";
-	rename -uid "33AEE12A-41A4-FCA2-459D-119D6EA530A0";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0.40339696407318115 2 0.30657464265823364
-		 3 0.20381307601928711 4 0.097089685499668121 5 -0.011556999757885933 6 -0.12005648761987688
-		 7 -0.22633440792560577 8 -0.32834142446517944 9 -0.42408487200737 10 -0.51166445016860962
-		 11 -0.58931148052215576 12 -0.65543234348297119 13 -0.70865225791931152 14 -0.74785780906677246
-		 15 -0.77223402261734009 16 -0.78129208087921143 17 -0.77488541603088379 18 -0.75321155786514282
-		 19 -0.71680033206939697 20 -0.66648924350738525 21 -0.60338896512985229 22 -0.5288425087928772
-		 23 -0.44438245892524719 24 -0.35168862342834473 25 -0.2525499165058136 26 -0.14883148670196533
-		 27 -0.04244706779718399 28 0.06466374546289444 29 0.17055536806583405 30 0.27329528331756592
-		 31 0.37098485231399536 32 0.46178328990936279 33 0.54393714666366577 34 0.61581432819366455
-		 35 0.67594325542449951 36 0.72305405139923096 37 0.75611954927444458 38 0.77439218759536743
-		 39 0.77743375301361084 40 0.76513415575027466 41 0.73771786689758301 42 0.69573748111724854
-		 43 0.64005476236343384 44 0.5718117356300354 45 0.49239513278007502 46 0.40339696407318115
-		 47 0.49533587694168091 48 0.57858556509017944 49 0.6503797173500061 50 0.70815610885620117
-		 51 0.7496764063835144 52 0.77314305305480957 53 0.77730298042297363 54 0.76152563095092773
-		 55 0.72584652900695801 56 0.670970618724823 57 0.59823614358901978 58 0.50954627990722656
-		 59 0.40727818012237549 60 0.29418212175369263 61 0.17328189313411713 62 0.047782644629478455
-		 63 -0.079010628163814545 64 -0.2037665843963623 65 -0.32319808006286621 66 -0.43413618206977844
-		 67 -0.53361278772354126 68 -0.61895352602005005 69 -0.68787866830825806 70 -0.73860341310501099
-		 71 -0.76992744207382202 72 -0.78130024671554565 73 -0.77285212278366089 74 -0.74538344144821167
-		 75 -0.70031321048736572 76 -0.63959199190139771 77 -0.56558972597122192 78 -0.48097178339958191
-		 79 -0.38857418298721313 80 -0.29128813743591309 81 -0.19195947051048279 82 -0.093306638300418854
-		 83 0.0021409052424132824 84 0.092081330716609955 85 0.17445002496242523 86 0.24738641083240509
-		 87 0.30912843346595764 88 0.35776859521865845 89 0.39071229100227356 90 0.40339696407318115;
-createNode animCurveTA -n "center_tail_4_deformer_null_rotateX";
-	rename -uid "C41A6630-496A-3B3B-1ED9-3589C92E6815";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_4_deformer_null_rotateY";
-	rename -uid "39D1AC88-4EE1-220A-8A0D-E997210169CB";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_4_deformer_null_rotateZ";
-	rename -uid "0B7F2B6D-4DA1-166B-2DC1-7F824C6E5CDA";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
 createNode animCurveTA -n "center_tail_4_anim_rotateX";
 	rename -uid "0368DB88-43CD-A4CB-72E1-30BEA8BBD42D";
 	setAttr ".tan" 1;
@@ -14758,132 +13900,6 @@ createNode animCurveTU -n "center_tail_4_anim_center_tail_flap_influence";
 	setAttr -s 2 ".kiy[0:1]"  0 0;
 	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
 	setAttr -s 2 ".koy[0:1]"  0 0;
-createNode animCurveTA -n "center_tail_5_deformer_null1_rotateX";
-	rename -uid "6E54CF96-4F45-0EDB-2A44-F19685E31C23";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -1.320516029856833e-009 2 -1.1167492486308106e-009
-		 3 -8.9150936632975696e-010 4 -6.4925098630652656e-010 5 -3.9470757218218466e-010
-		 6 -1.3281545307997078e-010 7 1.3135889598281381e-010 8 3.9269060225777253e-010 9 6.4607258432047843e-010
-		 10 8.8650009555379928e-010 11 1.1091666474172257e-009 12 1.3095693418563314e-009
-		 13 1.4836234463189157e-009 14 1.6277765801930855e-009 15 1.7391157403068293e-009
-		 16 1.8154578951268261e-009 17 1.8554123792924315e-009 18 1.8584128680387835e-009
-		 19 1.8247114930147745e-009 20 1.7553396514102815e-009 21 1.6520401713293609e-009
-		 22 1.5171783829259766e-009 23 1.35364564002316e-009 24 1.1647625086652624e-009 25 9.5419039336519518e-010
-		 26 7.2585859545171161e-010 27 4.8390547124910199e-010 28 2.3263486970126476e-010
-		 29 -2.3518298419844541e-011 30 -2.8001825858048335e-010 31 -5.3226184570931423e-010
-		 32 -7.7562134492836776e-010 33 -1.0055021260058083e-009 34 -1.2174182772994868e-009
-		 35 -1.4070867804250042e-009 36 -1.570536256600974e-009 37 -1.704226315624169e-009
-		 38 -1.805166349733156e-009 39 -1.871027111022272e-009 40 -1.9002297513281974e-009
-		 41 -1.8920092159646629e-009 42 -1.8464434425879972e-009 43 -1.7644451455467445e-009
-		 44 -1.6477239572765257e-009 45 -1.4987194818516514e-009 46 -1.320516029856833e-009
-		 47 -1.5044272494435518e-009 48 -1.6598636909392894e-009 49 -1.7807944008296772e-009
-		 50 -1.8620212038911177e-009 51 -1.8994619210843666e-009 52 -1.8904018350696106e-009
-		 53 -1.833683871410585e-009 54 -1.7298102950036309e-009 55 -1.5809402675870388e-009
-		 56 -1.3907829332637789e-009 57 -1.1643993547139075e-009 58 -9.0794521900861014e-010
-		 59 -6.2838562131517506e-010 60 -3.3321728709623244e-010 61 -3.0220107666290019e-011
-		 62 2.7274904557117452e-010 63 5.6792243130487918e-010 64 8.4776013986598297e-010
-		 65 1.1050806936196977e-009 66 1.3332026593815272e-009 67 1.5261131247612525e-009
-		 68 1.6786652068390138e-009 69 1.7867957113892883e-009 70 1.8477415153483889e-009
-		 71 1.8602195339667558e-009 72 1.8245390753790502e-009 73 1.7426213805293857e-009
-		 74 1.6179125816861983e-009 75 1.4551980731525305e-009 76 1.2603393884091929e-009
-		 77 1.039964114823988e-009 78 8.0114165301736762e-010 79 5.5107379770547027e-010 80 2.9681787583335506e-010
-		 81 4.5054061176275084e-011 82 -1.9809989759700386e-010 83 -4.2722561599539688e-010
-		 84 -6.3768884617232402e-010 85 -8.2565976278203834e-010 86 -9.8804076031910881e-010
-		 87 -1.122236192863113e-009 88 -1.2256210490946273e-009 89 -1.2943519589470043e-009
-		 90 -1.320516029856833e-009;
-createNode animCurveTA -n "center_tail_5_deformer_null1_rotateY";
-	rename -uid "7C72AEC8-49F1-0CF7-AFAF-D3AD66B87BC8";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -2.5556698801665334e-007 2 -2.555415221650037e-007
-		 3 -2.5550187388034828e-007 4 -2.5544628101670241e-007 5 -2.5537150349919102e-007
-		 6 -2.5527313596285239e-007 7 -2.5514617618682678e-007 8 -2.5498565037196386e-007
-		 9 -2.5478729526184907e-007 10 -2.5454821184212051e-007 11 -2.5426734850952926e-007
-		 12 -2.5394618319296569e-007 13 -2.5358880861858779e-007 14 -2.5320213126178714e-007
-		 15 -2.5279575766035123e-007 16 -2.5238162493224081e-007 17 -2.5197348918482021e-007
-		 18 -2.5158615812870266e-007 19 -2.5123472369159572e-007 20 -2.5093356725847116e-007
-		 21 -2.5069553544199152e-007 22 -2.5053111585293664e-007 23 -2.5044775497917726e-007
-		 24 -2.5044937501661479e-007 25 -2.5053623176063411e-007 26 -2.5070482934097527e-007
-		 27 -2.5094817601711839e-007 28 -2.5125635261247226e-007 29 -2.516168535748875e-007
-		 30 -2.520156385799055e-007 31 -2.5243772938665643e-007 32 -2.5286803406743275e-007
-		 33 -2.5329231334580982e-007 34 -2.5369760692228738e-007 35 -2.5407317139070074e-007
-		 36 -2.5441056550334906e-007 37 -2.5470416176176514e-007 38 -2.5495111799500592e-007
-		 39 -2.5515120682939596e-007 40 -2.5530655989314255e-007 41 -2.5542107096043765e-007
-		 42 -2.5549994120410702e-007 43 -2.5554882654432731e-007 44 -2.5557332605785632e-007
-		 45 -2.5557821459187835e-007 46 -2.5556698801665334e-007 47 -2.5557832827871607e-007
-		 48 -2.5557196181580366e-007 49 -2.5554243165970547e-007 50 -2.5548231974426017e-007
-		 51 -2.5538284376125375e-007 52 -2.5523493718537793e-007 53 -2.5503044298602617e-007
-		 54 -2.547636768213124e-007 55 -2.5443267759328592e-007 56 -2.5404031589459919e-007
-		 57 -2.5359491928611533e-007 58 -2.5311027229690808e-007 59 -2.526052185203298e-007
-		 60 -2.5210241005879652e-007 61 -2.5162682959489757e-007 62 -2.512038577151543e-007
-		 63 -2.5085711286010337e-007 64 -2.5060640496121778e-007 65 -2.5046608698175987e-007
-		 66 -2.5044357698789099e-007 67 -2.5053876129277342e-007 68 -2.5074405129998922e-007
-		 69 -2.5104520773311378e-007 70 -2.5142264803434955e-007 71 -2.518535495710239e-007
-		 72 -2.523138391552493e-007 73 -2.5278029625042109e-007 74 -2.5323245722574939e-007
-		 75 -2.5365378064634569e-007 76 -2.5403255676792469e-007 77 -2.5436193595851364e-007
-		 78 -2.5463970132477698e-007 79 -2.5486733079560508e-007 80 -2.5504914447083138e-007
-		 81 -2.5519113933114568e-007 82 -2.5529996605655469e-007 83 -2.5538210479680856e-007
-		 84 -2.5544326831550279e-007 85 -2.5548811777298397e-007 86 -2.5552026272634976e-007
-		 87 -2.5554234639457718e-007 88 -2.5555650040587352e-007 89 -2.5556437321938574e-007
-		 90 -2.5556698801665334e-007;
-createNode animCurveTA -n "center_tail_5_deformer_null1_rotateZ";
-	rename -uid "8E4C0F32-455E-0BD7-1B15-B6828F413AA3";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0.56147241592407227 2 0.47487840056419373
-		 3 0.37915566563606262 4 0.27618148922920227 5 0.16794942319393158 6 0.056534111499786384
-		 7 -0.055940493941307068 8 -0.16733092069625854 9 -0.27550339698791504 10 -0.3783644437789917
-		 11 -0.47389474511146545 12 -0.56018698215484619 13 -0.63548743724822998 14 -0.69824093580245972
-		 15 -0.74713557958602905 16 -0.78114438056945801 17 -0.799560546875 18 -0.80202168226242065
-		 19 -0.78852152824401855 20 -0.7594069242477417 21 -0.71536082029342651 22 -0.65737318992614746
-		 23 -0.58670294284820557 24 -0.50483441352844238 25 -0.41343274712562561 26 -0.31430107355117798
-		 27 -0.20934171974658966 28 -0.10052301734685898 29 0.010148612782359123 30 0.1206522211432457
-		 31 0.22897347807884219 32 0.3331255316734314 33 0.43117174506187439 34 0.52125227451324463
-		 35 0.6016155481338501 36 0.67065435647964478 37 0.72694617509841919 38 0.76929432153701782
-		 39 0.79676789045333862 40 0.80873644351959229 41 0.80489557981491089 42 0.7852817177772522
-		 43 0.75027316808700562 44 0.70057886838912964 45 0.6372150182723999 46 0.56147241592407227
-		 47 0.63964146375656128 48 0.70574390888214111 49 0.75724297761917114 50 0.79195839166641235
-		 51 0.80818063020706177 52 0.80476784706115723 53 0.78121656179428101 54 0.73769545555114746
-		 55 0.67504143714904785 56 0.59471768140792847 57 0.49874323606491089 58 0.38960385322570801
-		 59 0.27015489339828491 60 0.14352738857269287 61 0.013040086254477501 62 -0.11787992715835571
-		 63 -0.24577261507511139 64 -0.3672214150428772 65 -0.47893697023391724 66 -0.57785171270370483
-		 67 -0.66122531890869141 68 -0.72675627470016479 69 -0.77268952131271362 70 -0.79790782928466797
-		 71 -0.801993727684021 72 -0.78525161743164063 73 -0.74868494272232056 74 -0.69393116235733032
-		 75 -0.62316077947616577 76 -0.53895473480224609 77 -0.44417142868041992 78 -0.34181657433509827
-		 79 -0.23492339253425598 80 -0.12644840776920319 81 -0.01918351836502552 82 0.084314621984958649
-		 83 0.18177878856658936 84 0.27126616239547729 85 0.35116812586784363 86 0.4201810359954834
-		 87 0.47721016407012934 88 0.52114468812942505 89 0.55035316944122314 90 0.56147241592407227;
-createNode animCurveTA -n "center_tail_5_deformer_null_rotateX";
-	rename -uid "EC00AF30-4103-F647-C093-6A9FEE557DD0";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_5_deformer_null_rotateY";
-	rename -uid "4D83EB69-4D35-F887-E121-B9B32FCA4217";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_5_deformer_null_rotateZ";
-	rename -uid "7731CCC9-4F44-6CBC-C1E6-5C8B0020158C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
 createNode animCurveTA -n "center_tail_5_anim_rotateX";
 	rename -uid "FC2E9705-4630-DFFA-3162-3089C2F76188";
 	setAttr ".tan" 1;
@@ -14903,7 +13919,7 @@ createNode animCurveTA -n "center_tail_5_anim_rotateY";
 createNode animCurveTA -n "center_tail_5_anim_rotateZ";
 	rename -uid "D563FF24-4B8A-1596-22F2-A7866EE98D41";
 	setAttr ".tan" 1;
-	setAttr -s 4 ".ktv[0:3]"  1 0 20 12.144927024841309 64 -12.963183403015137
+	setAttr -s 4 ".ktv[0:3]"  1 0 20 12.14492702484131 64 -12.963183403015137
 		 90 0;
 	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.7916666586929928 
 		1.8333334109808883 0.79145415623982751;
@@ -14928,128 +13944,6 @@ createNode animCurveTU -n "center_tail_5_anim_center_tail_flap_influence";
 	setAttr -s 2 ".kiy[0:1]"  0 0;
 	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
 	setAttr -s 2 ".koy[0:1]"  0 0;
-createNode animCurveTA -n "center_tail_6_deformer_null1_rotateX";
-	rename -uid "2C16F625-47A7-1119-73A8-48B743745505";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -5.1654476251883352e-009 2 -4.6339923009952599e-009
-		 3 -4.0134602308228295e-009 4 -3.3163747303888158e-009 5 -2.556614253634848e-009 6 -1.7491120773982516e-009
-		 7 -9.0957674725444814e-010 8 -5.4232975749135554e-011 9 8.0042267258662037e-010 10 1.6378677303308109e-009
-		 11 2.4418032040784965e-009 12 3.1964249025406843e-009 13 3.8867224994021399e-009
-		 14 4.498802219643494e-009 15 5.0202291212997352e-009 16 5.440365491438115e-009 17 5.7506834849618826e-009
-		 18 5.9450280254225163e-009 19 6.019800213863391e-009 20 5.9740443703049095e-009 21 5.809433378800577e-009
-		 22 5.5301456747258726e-009 23 5.1426622960093482e-009 24 4.655491991911731e-009 25 4.078867910095596e-009
-		 26 3.4244285185280883e-009 27 2.7049256168254487e-009 28 1.9339569945486801e-009
-		 29 1.1257470511338852e-009 30 2.9496494136083129e-010 31 -5.4342830235754036e-010
-		 32 -1.3743166604740509e-009 33 -2.1825710128098308e-009 34 -2.9532143397403843e-009
-		 35 -3.6716223394961389e-009 36 -4.3237724511868691e-009 37 -4.8965334009665185e-009
-		 38 -5.3779989350744017e-009 39 -5.7578315448836292e-009 40 -6.0276041935480862e-009
-		 41 -6.1811067375572293e-009 42 -6.2145950607828127e-009 43 -6.1269389561857679e-009
-		 44 -5.9196780810566452e-009 45 -5.5969704426672706e-009 46 -5.1654476251883352e-009
-		 47 -5.6101017165133271e-009 48 -5.9436713328864244e-009 49 -6.1502229975474165e-009
-		 50 -6.2175282700138723e-009 51 -6.1377742888168996e-009 52 -5.9080638159514365e-009
-		 53 -5.5306483837114229e-009 54 -5.0128634576651621e-009 55 -4.3667571780758863e-009
-		 56 -3.6085066046354086e-009 57 -2.7576843031340559e-009 58 -1.8364669784887155e-009
-		 59 -8.6886942085584441e-010 60 1.1995300586153945e-010 61 1.1043126413312621e-009
-		 62 2.0585362303648935e-009 63 2.9574886983851911e-009 64 3.7771310523737611e-009
-		 65 4.4951491418032674e-009 66 5.0916688643098951e-009 67 5.5500364304350569e-009
-		 68 5.8575970740548655e-009 69 6.0063811702093517e-009 70 5.9935993945714472e-009
-		 71 5.8218572185353423e-009 72 5.4990398901111348e-009 73 5.0378718974286585e-009
-		 74 4.4551966560391065e-009 75 3.77106257332116e-009 76 3.0077134116623938e-009 77 2.1885717682579298e-009
-		 78 1.3372869478445182e-009 79 4.7688342164065034e-010 80 -3.7097228067217713e-010
-		 81 -1.1865867177718314e-009 82 -1.9527444106159919e-009 83 -2.655100805881716e-009
-		 84 -3.2824387652397036e-009 85 -3.8267482516118889e-009 86 -4.2830405888594214e-009
-		 87 -4.6487169669262585e-009 88 -4.9221036135804752e-009 89 -5.0991570965663868e-009
-		 90 -5.1654476251883352e-009;
-createNode animCurveTA -n "center_tail_6_deformer_null1_rotateY";
-	rename -uid "2F52ECE7-4EF8-E865-4CBE-138D33B5D1DE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 2.4405185428122422e-008 2 2.4424174682735611e-008
-		 3 2.4481018101596419e-008 4 2.4572537782319159e-008 5 2.4696582556771318e-008 6 2.4852106150774489e-008
-		 7 2.5039103235258153e-008 8 2.5258357183588487e-008 9 2.5510905388159699e-008 10 2.579787583556481e-008
-		 11 2.6119931106904914e-008 12 2.6476760339733119e-008 13 2.686660316442158e-008 14 2.7285883774652572e-008
-		 15 2.7728935592108428e-008 16 2.8187889355990592e-008 17 2.8652765493575313e-008
-		 18 2.9111722810171156e-008 19 2.9551497249258315e-008 20 2.9958055591805532e-008
-		 21 3.031727402458273e-008 22 3.0615773027875548e-008 23 3.0841700748851508e-008 24 3.098543288615474e-008
-		 25 3.1040194414799771e-008 26 3.1002478806385625e-008 27 3.087226119191655e-008 28 3.0653016125370414e-008
-		 29 3.035154350072844e-008 30 2.9977606175179972e-008 31 2.9543416601995883e-008 32 2.9063022211062162e-008
-		 33 2.8551642827778775e-008 34 2.8024926379544016e-008 35 2.7498273880155463e-008
-		 36 2.6986157308783731e-008 37 2.6501531635858555e-008 38 2.6055371193933752e-008
-		 39 2.5656309077248807e-008 40 2.5310523454891154e-008 41 2.5021627436672134e-008
-		 42 2.4790690389409065e-008 43 2.4616721105985562e-008 44 2.4497087025565634e-008
-		 45 2.4428024048006591e-008 46 2.4405185428122422e-008 47 2.442962809823257e-008 48 2.4505926177198489e-008
-		 49 2.4642211826630955e-008 50 2.4845878243695552e-008 51 2.5122545821432141e-008
-		 52 2.5474994558294384e-008 53 2.5902082256834547e-008 54 2.6397765751084989e-008
-		 55 2.6951067155778219e-008 56 2.7546017022928027e-008 57 2.8162205012449704e-008
-		 58 2.8775792415558499e-008 59 2.9360927911170623e-008 60 2.9891438657614344e-008
-		 61 3.0342668821958796e-008 62 3.0693311003915369e-008 63 3.0927061800412048e-008
-		 64 3.1033906111588294e-008 65 3.101093426494117e-008 66 3.0862512545581922e-008 67 3.0599796474461982e-008
-		 68 3.0239636572559903e-008 69 2.9802958323443818e-008 70 2.9312866800523804e-008
-		 71 2.8792667805532804e-008 72 2.8264098617114541e-008 73 2.7745912234422576e-008
-		 74 2.7253006962268959e-008 75 2.6796053376187959e-008 76 2.6381639983696914e-008
-		 77 2.6012806131348043e-008 78 2.5689802285455698e-008 79 2.5410967552375041e-008
-		 80 2.5173553908075519e-008 81 2.4974466938942896e-008 82 2.4810663745711281e-008
-		 83 2.4679241761305093e-008 84 2.4577580859386217e-008 85 2.4503098217110164e-008
-		 86 2.4452866398405604e-008 87 2.4423203015544459e-008 88 2.4409342103126619e-008
-		 89 2.4405402143656829e-008 90 2.4405185428122422e-008;
-createNode animCurveTA -n "center_tail_6_deformer_null1_rotateZ";
-	rename -uid "ABB57D99-4483-A7B6-7B39-F3A22F6BFA74";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0.65107357501983643 2 0.58410024642944336
-		 3 0.50591689348220825 4 0.41808867454528809 5 0.32235178351402283 6 0.22057558596134186
-		 7 0.11472786217927934 8 0.0068422351032495499 9 -0.10101237148046494 10 -0.20676210522651672
-		 11 -0.30835878849029541 12 -0.4038129448890686 13 -0.49123018980026245 14 -0.56885087490081787
-		 15 -0.63509184122085571 16 -0.68858951330184937 17 -0.72823953628540039 18 -0.75323176383972168
-		 19 -0.7630760669708252 20 -0.75761693716049194 21 -0.73703479766845703 22 -0.70183485746383667
-		 23 -0.65282344818115234 24 -0.5910760760307312 25 -0.51789849996566772 26 -0.43478631973266602
-		 27 -0.34338489174842834 28 -0.24545270204544067 29 -0.14282931387424469 30 -0.037408247590065002
-		 31 0.068885929882526398 32 0.17411814630031586 33 0.2763628363609314 34 0.37372559309005737
-		 35 0.46436828374862665 36 0.5465388298034668 37 0.61860567331314087 38 0.67909640073776245
-		 39 0.72673821449279785 40 0.7604975700378418 41 0.77961629629135132 42 0.78364080190658569
-		 43 0.77244013547897339 44 0.74621272087097168 45 0.70548081398010254 46 0.65107357501983643
-		 47 0.70713722705841064 48 0.74924439191818237 49 0.77539724111557007 50 0.78405827283859253
-		 51 0.77423697710037231 52 0.74555069208145142 53 0.69825351238250732 54 0.63322949409484863
-		 55 0.55195075273513794 56 0.45640978217124945 57 0.34903457760810852 58 0.23259598016738889
-		 59 0.11011715978384018 60 -0.01521131210029125 61 -0.14010843634605408 62 -0.26127558946609497
-		 63 -0.3754698634147644 64 -0.47958377003669739 65 -0.57073485851287842 66 -0.64636528491973877
-		 67 -0.70434671640396118 68 -0.74308127164840698 69 -0.76158696413040161 70 -0.75955444574356079
-		 71 -0.73736637830734253 72 -0.69607436656951904 73 -0.63733571767807007 74 -0.56331682205200195
-		 75 -0.4765754342079162 76 -0.37993285059928894 77 -0.27634739875793457 78 -0.16879718005657196
-		 79 -0.060175493359565728 80 0.046798877418041229 81 0.14965735375881195 82 0.24624377489089966
-		 83 0.3347630500793457 84 0.4138127863407135 85 0.48239290714263916 86 0.53988158702850342
-		 87 0.58595561981201172 88 0.62040501832962036 89 0.64271837472915649 90 0.65107357501983643;
-createNode animCurveTA -n "center_tail_6_deformer_null_rotateX";
-	rename -uid "1954B3B0-4C0B-92F2-0EBA-C2877AFD5841";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_6_deformer_null_rotateY";
-	rename -uid "411E4117-4279-39C8-3BBA-2D801D12E406";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-createNode animCurveTA -n "center_tail_6_deformer_null_rotateZ";
-	rename -uid "FDD9961A-42B1-C739-3941-F0B0EB2E2229";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
 createNode animCurveTA -n "center_tail_6_anim_rotateX";
 	rename -uid "C38C02CB-4B51-C735-777F-C892E5422AD8";
 	setAttr ".tan" 1;
@@ -15249,12 +14143,12 @@ createNode animCurveTA -n "center_swim_1_deformer_joint_rotateX";
 		 10 1.4272295567607785e-009 11 1.696632501158035e-009 12 1.9286718888622545e-009 13 2.1190897925293939e-009
 		 14 2.2644592867493429e-009 15 2.3622130917999584e-009 16 2.4106556750780328e-009
 		 17 2.4089692463036272e-009 18 2.3572102048063925e-009 19 2.2563071411241253e-009
-		 20 2.1080526213523854e-009 21 1.9150927510480642e-009 22 1.6809100777948063e-009
+		 20 2.1080526213523858e-009 21 1.9150927510480642e-009 22 1.6809100777948063e-009
 		 23 1.4097927270029231e-009 24 1.1067867733416392e-009 25 7.7762851713458758e-010
 		 26 4.2864928273544933e-010 27 6.6657901420796861e-011 28 -3.0120181349069242e-010
 		 29 -6.6761118855396262e-010 30 -1.0252484416994889e-009 31 -1.3669626541812363e-009
 		 32 -1.685942274676222e-009 33 -1.9758683578174896e-009 34 -2.2310489011800883e-009
-		 35 -2.4465260928252519e-009 36 -2.6181625756294125e-009 37 -2.7426998450152951e-009
+		 35 -2.4465260928252523e-009 36 -2.6181625756294125e-009 37 -2.7426998450152951e-009
 		 38 -2.8177988831146195e-009 39 -2.8420632514070121e-009 40 -2.8150490827272279e-009
 		 41 -2.737268189889619e-009 42 -2.610178961859333e-009 43 -2.4361728190314125e-009
 		 44 -2.218547789922809e-009 45 -1.9614674329204718e-009 46 -1.669902549572555e-009
@@ -15264,12 +14158,12 @@ createNode animCurveTA -n "center_swim_1_deformer_joint_rotateX";
 		 56 -2.4285957689329507e-009 57 -2.1684627427021042e-009 58 -1.854322473349157e-009
 		 59 -1.4943007942136433e-009 60 -1.0981805464993499e-009 61 -6.7707683903961424e-010
 		 62 -2.4302618251148544e-010 63 1.9148553576098237e-010 64 6.1402238848984325e-010
-		 65 1.0126861571535528e-009 66 1.3765564244039297e-009 67 1.6960548521183225e-009
+		 65 1.0126861571535528e-009 66 1.3765564244039299e-009 67 1.6960548521183225e-009
 		 68 1.9632198089425401e-009 69 2.171887114599258e-009 70 2.3177884056480025e-009 71 2.3985817776406293e-009
-		 72 2.4138273602147819e-009 73 2.364927365050562e-009 74 2.2550292744227818e-009 75 2.0888986096423423e-009
+		 72 2.4138273602147819e-009 73 2.364927365050562e-009 74 2.2550292744227822e-009 75 2.0888986096423423e-009
 		 76 1.8727559503162183e-009 77 1.6140665470842919e-009 78 1.3212897442826943e-009
 		 79 1.0035813291509044e-009 80 6.704645172384005e-010 81 3.3148722655695906e-010 82 -4.1095859354411957e-012
-		 83 -3.2768193714005633e-010 84 -6.3139743433637818e-010 85 -9.0833462973449752e-010
+		 83 -3.2768193714005639e-010 84 -6.3139743433637818e-010 85 -9.0833462973449752e-010
 		 86 -1.1524102783155854e-009 87 -1.3580370161747624e-009 88 -1.5192956892562393e-009
 		 89 -1.6281033188292326e-009 90 -1.669902549572555e-009;
 createNode animCurveTA -n "center_swim_1_deformer_joint_rotateY";
@@ -15283,27 +14177,27 @@ createNode animCurveTA -n "center_swim_1_deformer_joint_rotateY";
 		 14 8.4906552899610688e-008 15 8.4874763217612781e-008 16 8.4858697846357245e-008
 		 17 8.4859259175118495e-008 18 8.4876411676759744e-008 19 8.4909167696878285e-008
 		 20 8.4955701140643214e-008 21 8.5013425632496364e-008 22 8.5079186362690962e-008
-		 23 8.5149487460967066e-008 24 8.522067673766287e-008 25 8.5289258322518435e-008 26 8.5352077405786986e-008
+		 23 8.5149487460967066e-008 24 8.522067673766287e-008 25 8.5289258322518449e-008 26 8.5352077405786986e-008
 		 27 8.5406540506482997e-008 28 8.5450771791784064e-008 29 8.5483733869295975e-008
-		 30 8.5505270419616863e-008 31 8.5516020931208914e-008 32 8.5517406489543646e-008
+		 30 8.5505270419616863e-008 31 8.5516020931208927e-008 32 8.5517406489543646e-008
 		 33 8.5511402403426473e-008 34 8.5500388991022191e-008 35 8.5486909995324822e-008
 		 36 8.5473423894200096e-008 37 8.5462119159274152e-008 38 8.5454672671403387e-008
 		 39 8.5452164455546153e-008 40 8.5454956888497691e-008 41 8.5462637855471257e-008
 		 42 8.5474113120653783e-008 43 8.5487648959770013e-008 44 8.5501056901193806e-008
 		 45 8.5511864256204717e-008 46 8.5517534387236083e-008 47 8.551155872282834e-008 48 8.5499891611107159e-008
 		 49 8.5485304168742005e-008 50 8.5470809096932499e-008 51 8.5459255672049039e-008
-		 52 8.5452917630846059e-008 53 8.5453137899094145e-008 54 8.5460058585340448e-008
+		 52 8.5452917630846072e-008 53 8.5453137899094158e-008 54 8.5460058585340448e-008
 		 55 8.5472542821207753e-008 56 8.5488181866821833e-008 57 8.550359353876047e-008 58 8.5514763270566618e-008
 		 59 8.5517577019800228e-008 60 8.5508368385944777e-008 61 8.5484444412031735e-008
 		 62 8.5444519015709375e-008 63 8.5388982995482365e-008 64 8.5319967979557987e-008
-		 65 8.5241211422726337e-008 66 8.5157672913283022e-008 67 8.5075079425678268e-008
+		 65 8.5241211422726337e-008 66 8.5157672913283022e-008 67 8.5075079425678282e-008
 		 68 8.4999335570046242e-008 69 8.493589831459758e-008 70 8.4889315132841148e-008 71 8.4862719518241647e-008
 		 72 8.4857639137680962e-008 73 8.4873867933765723e-008 74 8.4909579811665026e-008
-		 75 8.496157732906795e-008 76 8.5025668283833511e-008 77 8.5097106250486831e-008 78 8.5171080854706815e-008
-		 79 8.524315830982232e-008 80 8.5309629582752677e-008 81 8.5367759083965211e-008 82 8.5415912565167673e-008
-		 83 8.5453521592171455e-008 84 8.5480976963481226e-008 85 8.549938712576477e-008 86 8.5510393432741694e-008
-		 87 8.5515857506379689e-008 88 8.5517726233774738e-008 89 8.5517775971766241e-008
-		 90 8.5517534387236083e-008;
+		 75 8.4961577329067963e-008 76 8.5025668283833511e-008 77 8.5097106250486831e-008
+		 78 8.5171080854706815e-008 79 8.524315830982232e-008 80 8.5309629582752677e-008 81 8.5367759083965211e-008
+		 82 8.5415912565167673e-008 83 8.5453521592171455e-008 84 8.5480976963481226e-008
+		 85 8.549938712576477e-008 86 8.5510393432741694e-008 87 8.5515857506379689e-008 88 8.5517726233774738e-008
+		 89 8.5517775971766241e-008 90 8.5517534387236083e-008;
 createNode animCurveTA -n "center_swim_1_deformer_joint_rotateZ";
 	rename -uid "789C4302-4827-72FA-A278-A5A8D2A1CB3A";
 	setAttr ".tan" 9;
@@ -15316,14 +14210,14 @@ createNode animCurveTA -n "center_swim_1_deformer_joint_rotateZ";
 		 19 3.300715446472168 20 3.0992090702056885 21 2.8373298645019531 22 2.5200605392456055
 		 23 2.1534512042999268 24 1.7445205450057983 25 1.3011331558227539 26 0.83185738325119019
 		 27 0.34580448269844055 28 -0.14754906296730042 29 -0.63855123519897461 30 -1.1175729036331177
-		 31 -1.5752075910568237 32 -2.0024676322937012 33 -2.39096999168396 34 -2.7331080436706543
+		 31 -1.575207591056824 32 -2.0024676322937012 33 -2.39096999168396 34 -2.7331080436706543
 		 35 -3.0222015380859375 36 -3.2526242733001709 37 -3.4199097156524658 38 -3.5208282470703125
 		 39 -3.5534417629241943 40 -3.5171327590942383 41 -3.412611722946167 42 -3.2419030666351318
 		 43 -3.0083067417144775 44 -2.7163422107696533 45 -2.3716678619384766 46 -1.9809796810150146
-		 47 -2.3845045566558838 48 -2.7455246448516846 49 -3.0520133972167969 50 -3.2930896282196045
+		 47 -2.3845045566558838 48 -2.7455246448516846 49 -3.0520133972167969 50 -3.2930896282196049
 		 51 -3.4594457149505615 52 -3.5437343120574951 53 -3.5408937931060791 54 -3.448408842086792
 		 55 -3.2664854526519775 56 -2.9981381893157959 57 -2.6491742134094238 58 -2.2280738353729248
-		 59 -1.7457567453384399 60 -1.2152460813522339 61 -0.65123176574707031 62 -0.069558776915073395
+		 59 -1.7457567453384399 60 -1.2152460813522341 61 -0.65123176574707031 62 -0.069558776915073395
 		 63 0.51334047317504883 64 1.0810354948043823 65 1.6176799535751343 66 2.1085567474365234
 		 67 2.5405609607696533 68 2.9026064872741699 69 3.1859393119812012 70 3.3843603134155273
 		 71 3.4943523406982422 72 3.5151174068450928 73 3.4485249519348145 74 3.2989771366119385
@@ -15339,7 +14233,7 @@ createNode animCurveTA -n "center_swim_2_deformer_joint_rotateX";
 		 3 -2.0645660736562377e-009 4 -2.2325516990662209e-009 5 -2.3548625271985202e-009
 		 6 -2.4289377176245353e-009 7 -2.4532527120868508e-009 8 -2.4273754117842827e-009
 		 9 -2.3519839409402721e-009 10 -2.2288391132718743e-009 11 -2.0607127115823687e-009
-		 12 -1.8512840149753629e-009 13 -1.6050054618688137e-009 14 -1.3269598753140599e-009
+		 12 -1.8512840149753629e-009 13 -1.6050054618688139e-009 14 -1.3269598753140599e-009
 		 15 -1.0227151348018992e-009 16 -6.9818795189746652e-010 17 -3.59525936799443e-010
 		 18 -1.3008046029217013e-011 19 3.3503547158808544e-010 20 6.7829031280552954e-010
 		 21 1.0105181136310648e-009 22 1.3256182818111029e-009 23 1.6176990857985629e-009
@@ -15352,14 +14246,14 @@ createNode animCurveTA -n "center_swim_2_deformer_joint_rotateX";
 		 44 -1.0176028908404078e-009 45 -1.3256127306959797e-009 46 -1.6064148899985753e-009
 		 47 -1.315294428927416e-009 48 -9.8808106141490271e-010 49 -6.3116867288215417e-010
 		 50 -2.5228638622643018e-010 51 1.3972460688460586e-010 52 5.3515236686507706e-010
-		 53 9.2367574699991895e-010 54 1.2946551608550294e-009 55 1.6374629430160326e-009
+		 53 9.2367574699991895e-010 54 1.2946551608550294e-009 55 1.6374629430160328e-009
 		 56 1.9418586738595423e-009 57 2.198401460873356e-009 58 2.3988819819464879e-009 59 2.5367346001559099e-009
 		 60 2.6073907477552893e-009 61 2.6085276161325055e-009 62 2.5401807324243464e-009
-		 63 2.4047062119336715e-009 64 2.2066053428915211e-009 65 1.9522388150505776e-009
+		 63 2.4047062119336719e-009 64 2.2066053428915211e-009 65 1.9522388150505776e-009
 		 66 1.6494716703618906e-009 67 1.3072969373695287e-009 68 9.3547358748224951e-010
 		 69 5.4420068451577208e-010 70 1.4383602642276117e-010 71 -2.5534843683949759e-010
 		 72 -6.4339256145018453e-010 73 -1.0108738290881547e-009 74 -1.3491462391712616e-009
-		 75 -1.6505974365088605e-009 76 -1.9089136937822104e-009 77 -2.1193309329703425e-009
+		 75 -1.6505974365088605e-009 76 -1.9089136937822104e-009 77 -2.1193309329703429e-009
 		 78 -2.27884755510388e-009 79 -2.3863675480129132e-009 80 -2.4427606604149332e-009
 		 81 -2.4508273188672547e-009 82 -2.4151840527508739e-009 83 -2.3420894113002078e-009
 		 84 -2.2392525611536485e-009 85 -2.1156729701488075e-009 86 -1.9815753482532728e-009
@@ -15379,7 +14273,7 @@ createNode animCurveTA -n "center_swim_2_deformer_joint_rotateY";
 		 23 1.707249310811676e-007 24 1.7079401004593819e-007 25 1.7087334924781317e-007 26 1.709587280629421e-007
 		 27 1.7104578375892743e-007 28 1.7113022465764516e-007 29 1.712082280391769e-007 30 1.7127653961779288e-007
 		 31 1.7133277196990093e-007 32 1.7137548979917483e-007 33 1.714043520451014e-007 34 1.7141998398528813e-007
-		 35 1.7142392039204424e-007 36 1.7141847763468832e-007 37 1.7140644104074454e-007
+		 35 1.7142392039204424e-007 36 1.7141847763468834e-007 37 1.7140644104074454e-007
 		 38 1.7139085173312196e-007 39 1.7137469399131078e-007 40 1.7136063945599744e-007
 		 41 1.7135086238795338e-007 42 1.7134675545094069e-007 43 1.7134883023572911e-007
 		 44 1.7135681673607905e-007 45 1.7136945018592087e-007 46 1.7138476948730386e-007
@@ -15392,11 +14286,10 @@ createNode animCurveTA -n "center_swim_2_deformer_joint_rotateY";
 		 67 1.7066706448076729e-007 68 1.7062573931525549e-007 69 1.7061113055660826e-007
 		 70 1.7062393453670666e-007 71 1.7066268753751501e-007 72 1.7072395053219225e-007
 		 73 1.7080266445645975e-007 74 1.7089277548620885e-007 75 1.7098786031510826e-007
-		 76 1.7108163774537388e-007 77 1.7116875028477807e-007 78 1.7124499152032513e-007
-		 79 1.7130766138961917e-007 80 1.7135559460257355e-007 81 1.713890185328637e-007 82 1.7140934005510644e-007
-		 83 1.7141877606263733e-007 84 1.7141994135272398e-007 85 1.714155644094717e-007 86 1.7140817476501979e-007
-		 87 1.7139987562586612e-007 88 1.7139235808372177e-007 89 1.7138692953722057e-007
-		 90 1.7138476948730386e-007;
+		 76 1.7108163774537388e-007 77 1.711687502847781e-007 78 1.7124499152032513e-007 79 1.713076613896192e-007
+		 80 1.7135559460257357e-007 81 1.713890185328637e-007 82 1.7140934005510647e-007 83 1.7141877606263733e-007
+		 84 1.7141994135272398e-007 85 1.714155644094717e-007 86 1.7140817476501979e-007 87 1.7139987562586612e-007
+		 88 1.7139235808372177e-007 89 1.7138692953722057e-007 90 1.7138476948730386e-007;
 createNode animCurveTA -n "center_swim_2_deformer_joint_rotateZ";
 	rename -uid "AF39A821-4E25-D623-634A-4C8B5AA5C8D9";
 	setAttr ".tan" 9;
@@ -15414,15 +14307,15 @@ createNode animCurveTA -n "center_swim_2_deformer_joint_rotateZ";
 		 39 0.47457119822502142 40 0.24164943397045133 41 0.0051580425351858139 42 -0.23036299645900726
 		 43 -0.46039190888404852 44 -0.68049442768096924 45 -0.88639509677886963 46 -1.0740524530410767
 		 47 -0.87949842214584351 48 -0.66075664758682251 49 -0.42210164666175842 50 -0.16872100532054901
-		 51 0.093439720571041107 52 0.35785007476806641 53 0.61758369207382202 54 0.86552536487579346
+		 51 0.093439720571041107 52 0.35785007476806641 53 0.61758369207382202 54 0.86552536487579357
 		 55 1.0945991277694702 56 1.2980163097381592 57 1.469541072845459 58 1.6037577390670776
 		 59 1.6963256597518921 60 1.7441946268081665 61 1.7457621097564697 62 1.7009505033493042
 		 63 1.611198902130127 64 1.4793713092803955 65 1.3095955848693848 66 1.1070535182952881
 		 67 0.87774580717086792 68 0.62825417518615723 69 0.36551311612129211 70 0.096600718796253204
 		 71 -0.17145375907421112 72 -0.43184939026832581 73 -0.6781877875328064 74 -0.90464669466018677
 		 75 -1.1061528921127319 76 -1.2785496711730957 77 -1.4187467098236084 78 -1.5248407125473022
-		 79 -1.5961921215057373 80 -1.6334502696990967 81 -1.638524055480957 82 -1.6145061254501343
-		 83 -1.5655637979507446 84 -1.4968205690383911 85 -1.4142590761184692 86 -1.3246843814849854
+		 79 -1.5961921215057373 80 -1.6334502696990967 81 -1.6385240554809573 82 -1.6145061254501343
+		 83 -1.5655637979507446 84 -1.4968205690383911 85 -1.4142590761184692 86 -1.3246843814849856
 		 87 -1.2358102798461914 88 -1.1565678119659424 89 -1.0978364944458008 90 -1.0740524530410767;
 createNode animCurveTA -n "center_swim_3_deformer_joint_rotateX";
 	rename -uid "7A271927-4D3D-A72B-7243-EE92DEE9E225";
@@ -15450,7 +14343,7 @@ createNode animCurveTA -n "center_swim_3_deformer_joint_rotateX";
 		 58 1.7980007482876201e-009 59 1.7720506173546367e-009 60 1.6965816529435076e-009
 		 61 1.5737893210854281e-009 62 1.4073150422788672e-009 63 1.2020417994307309e-009
 		 64 9.638636555564517e-010 65 6.994543277905052e-010 66 4.1604975020703705e-010 67 1.2125091208847749e-010
-		 68 -1.7715705291632133e-010 69 -4.7138148939751545e-010 70 -7.5380707231786914e-010
+		 68 -1.7715705291632133e-010 69 -4.7138148939751545e-010 70 -7.5380707231786925e-010
 		 71 -1.0171989917040491e-009 72 -1.2549274952533551e-009 73 -1.4612046017603575e-009
 		 74 -1.6313188577754545e-009 75 -1.7618416725539987e-009 76 -1.8507806398559978e-009
 		 77 -1.8976604732046098e-009 78 -1.9035195641947666e-009 79 -1.8708234961195558e-009
@@ -15463,44 +14356,44 @@ createNode animCurveTA -n "center_swim_3_deformer_joint_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
 	setAttr -s 90 ".ktv[0:89]"  1 1.4873076281674003e-007 2 1.4872921383357607e-007
-		 3 1.4873738507503731e-007 4 1.4875629972266324e-007 5 1.4878608567414631e-007 6 1.488259044890583e-007
+		 3 1.4873738507503734e-007 4 1.4875629972266324e-007 5 1.4878608567414631e-007 6 1.488259044890583e-007
 		 7 1.4887405086483341e-007 8 1.489279810584776e-007 9 1.4898456868195353e-007 10 1.4904018996730883e-007
-		 11 1.4909120693573641e-007 12 1.4913408108441217e-007 13 1.4916574286871764e-007
-		 14 1.4918377644335123e-007 15 1.4918667545771314e-007 16 1.4917389989932417e-007
-		 17 1.4914590451553522e-007 18 1.4910412460267253e-007 19 1.4905084810834524e-007
-		 20 1.4898901667947939e-007 21 1.4892206934291607e-007 22 1.4885368671002652e-007
-		 23 1.4878753518132726e-007 24 1.4872708220536879e-007 25 1.4867531206164131e-007
-		 26 1.4863458375202754e-007 27 1.4860651731396501e-007 28 1.4859179486848006e-007
-		 29 1.4859023167446139e-007 30 1.4860073349609593e-007 31 1.486213676571424e-007 32 1.4864961883631622e-007
-		 33 1.4868251696498191e-007 34 1.4871687881168327e-007 35 1.4874963483180181e-007
-		 36 1.4877805654123222e-007 37 1.4879995546834834e-007 38 1.4881389631682396e-007
-		 39 1.4881929644161573e-007 40 1.4881646848152741e-007 41 1.4880652088322677e-007
-		 42 1.4879135790124565e-007 43 1.4877340959174035e-007 44 1.487554186496709e-007 45 1.4874029830025393e-007
-		 46 1.4873076281674003e-007 47 1.487407388367501e-007 48 1.4875699605454429e-007 49 1.4877652176892298e-007
-		 50 1.4879573484449793e-007 51 1.4881095466989791e-007 52 1.4881884169426485e-007
-		 53 1.4881688059631415e-007 54 1.4880380660997616e-007 55 1.487798186872169e-007 56 1.4874677845000406e-007
-		 57 1.4870799702748627e-007 58 1.4866790820633469e-007 59 1.4863162789424678e-007
-		 60 1.4860428620977473e-007 61 1.4859035957215383e-007 62 1.4859324437566102e-007
-		 63 1.4861463171200739e-007 64 1.4865447894862882e-007 65 1.4871086762013874e-007
-		 66 1.4878025922371307e-007 67 1.4885776522532979e-007 68 1.4893771549395751e-007
-		 69 1.4901415568147058e-007 70 1.4908140144598292e-007 71 1.4913464951860078e-007
-		 72 1.4917031876393594e-007 73 1.4918647650574712e-007 74 1.4918290958121361e-007
-		 75 1.491611243409352e-007 76 1.491240055884191e-007 77 1.4907557499554969e-007 78 1.4902036582498113e-007
-		 79 1.4896298239364114e-007 80 1.4890757427110657e-007 81 1.4885752364079963e-007
-		 82 1.4881517529374833e-007 83 1.4878175136345817e-007 84 1.4875745080189517e-007
-		 85 1.4874154885546886e-007 86 1.4873269549298129e-007 87 1.4872914277930249e-007
-		 88 1.4872890119477233e-007 89 1.4873003806314955e-007 90 1.4873076281674003e-007;
+		 11 1.4909120693573641e-007 12 1.491340810844122e-007 13 1.4916574286871767e-007 14 1.4918377644335126e-007
+		 15 1.4918667545771314e-007 16 1.4917389989932417e-007 17 1.4914590451553522e-007
+		 18 1.4910412460267253e-007 19 1.4905084810834524e-007 20 1.4898901667947939e-007
+		 21 1.4892206934291607e-007 22 1.4885368671002652e-007 23 1.4878753518132726e-007
+		 24 1.4872708220536879e-007 25 1.4867531206164131e-007 26 1.4863458375202756e-007
+		 27 1.4860651731396501e-007 28 1.4859179486848006e-007 29 1.4859023167446139e-007
+		 30 1.4860073349609593e-007 31 1.486213676571424e-007 32 1.4864961883631622e-007 33 1.4868251696498194e-007
+		 34 1.4871687881168327e-007 35 1.4874963483180181e-007 36 1.4877805654123222e-007
+		 37 1.4879995546834834e-007 38 1.4881389631682396e-007 39 1.4881929644161573e-007
+		 40 1.4881646848152741e-007 41 1.4880652088322679e-007 42 1.4879135790124565e-007
+		 43 1.4877340959174035e-007 44 1.487554186496709e-007 45 1.4874029830025393e-007 46 1.4873076281674003e-007
+		 47 1.487407388367501e-007 48 1.4875699605454429e-007 49 1.4877652176892298e-007 50 1.4879573484449793e-007
+		 51 1.4881095466989791e-007 52 1.4881884169426485e-007 53 1.4881688059631415e-007
+		 54 1.4880380660997616e-007 55 1.487798186872169e-007 56 1.4874677845000406e-007 57 1.4870799702748627e-007
+		 58 1.4866790820633469e-007 59 1.4863162789424678e-007 60 1.4860428620977473e-007
+		 61 1.4859035957215383e-007 62 1.4859324437566102e-007 63 1.4861463171200739e-007
+		 64 1.4865447894862882e-007 65 1.4871086762013874e-007 66 1.4878025922371307e-007
+		 67 1.4885776522532979e-007 68 1.4893771549395751e-007 69 1.4901415568147058e-007
+		 70 1.4908140144598292e-007 71 1.4913464951860078e-007 72 1.4917031876393594e-007
+		 73 1.4918647650574712e-007 74 1.4918290958121361e-007 75 1.491611243409352e-007 76 1.491240055884191e-007
+		 77 1.4907557499554969e-007 78 1.4902036582498113e-007 79 1.4896298239364114e-007
+		 80 1.4890757427110657e-007 81 1.4885752364079963e-007 82 1.4881517529374833e-007
+		 83 1.487817513634582e-007 84 1.4875745080189517e-007 85 1.4874154885546886e-007 86 1.4873269549298132e-007
+		 87 1.4872914277930249e-007 88 1.4872890119477233e-007 89 1.4873003806314955e-007
+		 90 1.4873076281674003e-007;
 createNode animCurveTA -n "center_swim_3_deformer_joint_rotateZ";
 	rename -uid "D46EB238-47CA-F78C-FB8C-F9B474A7964E";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
 	setAttr -s 90 ".ktv[0:89]"  1 -0.4734406471252442 2 -0.65843439102172852
-		 3 -0.83153271675109863 4 -0.98933702707290638 5 -1.1287015676498413 6 -1.246803879737854
+		 3 -0.83153271675109874 4 -0.98933702707290638 5 -1.1287015676498413 6 -1.246803879737854
 		 7 -1.3412164449691772 8 -1.4099773168563843 9 -1.4516516923904419 10 -1.4653816223144531
 		 11 -1.4509158134460449 12 -1.4086192846298218 13 -1.339457631111145 14 -1.244961142539978
 		 15 -1.1271684169769287 16 -0.98855781555175792 17 -0.83197098970413208 18 -0.66053497791290283
 		 19 -0.47758877277374268 20 -0.28661683201789856 21 -0.091191157698631287 22 0.10507827997207642
-		 23 0.29858693480491638 24 0.48577618598937988 25 0.66317445039749146 26 0.82744216918945313
+		 23 0.29858693480491638 24 0.48577618598937988 25 0.66317445039749157 26 0.82744216918945313
 		 27 0.97542297840118408 28 1.1042022705078125 29 1.2111715078353882 30 1.2940976619720459
 		 31 1.351190447807312 32 1.3811646699905396 33 1.3832911252975464 34 1.3574299812316895
 		 35 1.3040441274642944 36 1.2241905927658081 37 1.1194894313812256 38 0.99207508563995361
@@ -15529,13 +14422,13 @@ createNode animCurveTA -n "center_swim_4_deformer_joint_rotateX";
 		 15 -6.8825889432133636e-010 16 -6.4839517088799425e-010 17 -5.9585031353392992e-010
 		 18 -5.317659645953654e-010 19 -4.5753839605922053e-010 20 -3.7476879932718532e-010
 		 21 -2.8520949491017689e-010 22 -1.9070980905588897e-010 23 -9.3165947179230102e-011
-		 24 5.5226405046293614e-012 25 1.0348838452856057e-010 26 1.9892253122488768e-010
+		 24 5.5226405046293614e-012 25 1.0348838452856059e-010 26 1.9892253122488768e-010
 		 27 2.9009478152985935e-010 28 3.7536773689339498e-010 29 4.5320883157451414e-010
 		 30 5.2220217039433692e-010 31 5.8106319755779623e-010 32 6.2865734840045207e-010
 		 33 6.6402378040564258e-010 34 6.8640276795761679e-010 35 6.9526540080744326e-010
 		 36 6.9034156169323069e-010 37 6.7164296346788888e-010 38 6.3947741546499515e-010
 		 39 5.9445093292254114e-010 40 5.3745696781959396e-010 41 4.6965226152551054e-010
-		 42 3.9242226135272062e-010 43 3.073380994145225e-010 44 2.1611014366929024e-010 45 1.2054168774255913e-010
+		 42 3.9242226135272062e-010 43 3.073380994145225e-010 44 2.1611014366929024e-010 45 1.2054168774255916e-010
 		 46 2.2486061623805398e-011 47 1.2392743775624382e-010 48 2.2472010363649986e-010
 		 49 3.221941324849098e-010 50 4.1357833824307022e-010 51 4.9610687780088369e-010 52 5.6714133389590415e-010
 		 53 6.2430016711800818e-010 54 6.6558292211027492e-010 55 6.8947569875632553e-010
@@ -15544,11 +14437,11 @@ createNode animCurveTA -n "center_swim_4_deformer_joint_rotateX";
 		 62 3.6235961453634502e-010 63 2.5949692394888757e-010 64 1.4921722191196807e-010
 		 65 3.4411969801473319e-011 66 -8.1869483414820365e-011 67 -1.9648685456452597e-010
 		 68 -3.0629440650464801e-010 69 -4.0824654767845914e-010 70 -4.9951981440088389e-010
-		 71 -5.776414901959015e-010 72 -6.4061184135155713e-010 73 -6.8700384270314885e-010
+		 71 -5.776414901959016e-010 72 -6.4061184135155713e-010 73 -6.8700384270314895e-010
 		 74 -7.1602851425822678e-010 75 -7.2755584890060732e-010 76 -7.220911646399486e-010
 		 77 -7.0071259905546412e-010 78 -6.649808481640207e-010 79 -6.1683624874575571e-010
 		 80 -5.5849452840206482e-010 81 -4.9235288068771865e-010 82 -4.2091166663205115e-010
-		 83 -3.4671562842980563e-010 84 -2.7231725208132218e-010 85 -2.0026809377515775e-010
+		 83 -3.4671562842980569e-010 84 -2.7231725208132218e-010 85 -2.0026809377515775e-010
 		 86 -1.3315043512207581e-010 87 -7.3678584067149444e-011 88 -2.4932604592020624e-011
 		 89 9.1284167724747789e-012 90 2.2486058154358446e-011;
 createNode animCurveTA -n "center_swim_4_deformer_joint_rotateY";
@@ -15559,7 +14452,7 @@ createNode animCurveTA -n "center_swim_4_deformer_joint_rotateY";
 		 3 8.0736413110571448e-008 4 8.0744023023271438e-008 5 8.0770959698384104e-008 6 8.0820448999929795e-008
 		 7 8.0894274390175269e-008 8 8.0992464290829957e-008 9 8.1113178396208241e-008 10 8.1252728989511525e-008
 		 11 8.140577989479425e-008 12 8.1565644904912915e-008 13 8.1724699896312814e-008 14 8.1874965474071359e-008
-		 15 8.2008590140958404e-008 16 8.2118440047906915e-008 17 8.2198553741363867e-008
+		 15 8.2008590140958404e-008 16 8.2118440047906929e-008 17 8.2198553741363867e-008
 		 18 8.2244596910641121e-008 19 8.2254082656163519e-008 20 8.2226549125152815e-008
 		 21 8.2163566617055039e-008 22 8.206860968584806e-008 23 8.1946801344656706e-008 24 8.1804564899812249e-008
 		 25 8.1649240257775091e-008 26 8.1488551018082944e-008 27 8.1330178147709375e-008
@@ -15577,13 +14470,12 @@ createNode animCurveTA -n "center_swim_4_deformer_joint_rotateY";
 		 61 8.1044504440797027e-008 62 8.1203829438436514e-008 63 8.1383618066865893e-008
 		 64 8.1573148236202542e-008 65 8.1760028081134806e-008 66 8.1931396778145427e-008
 		 67 8.2075132468162337e-008 68 8.2181031757500023e-008 69 8.2241747634270723e-008
-		 70 8.2253464483983407e-008 71 8.2216210728347505e-008 72 8.2133766454717261e-008
-		 73 8.2013180247031414e-008 74 8.1864001799658581e-008 75 8.1697251630430401e-008
-		 76 8.1524248685127532e-008 77 8.1355608472222229e-008 78 8.1200262513902999e-008
-		 79 8.1064861490176554e-008 80 8.0953434178354655e-008 81 8.0867422980190895e-008
-		 82 8.0805961033547646e-008 83 8.0766383803165809e-008 84 8.074481883113549e-008 85 8.0736825225358189e-008
-		 86 8.0737933672025974e-008 87 8.0744072761262942e-008 88 8.0751782149945939e-008
-		 89 8.075823387798664e-008 90 8.0760948151237244e-008;
+		 70 8.225346448398342e-008 71 8.2216210728347518e-008 72 8.2133766454717261e-008 73 8.2013180247031414e-008
+		 74 8.1864001799658581e-008 75 8.1697251630430401e-008 76 8.1524248685127532e-008
+		 77 8.1355608472222229e-008 78 8.1200262513902999e-008 79 8.1064861490176554e-008
+		 80 8.0953434178354655e-008 81 8.0867422980190895e-008 82 8.0805961033547646e-008
+		 83 8.0766383803165809e-008 84 8.074481883113549e-008 85 8.0736825225358189e-008 86 8.0737933672025974e-008
+		 87 8.0744072761262942e-008 88 8.0751782149945939e-008 89 8.075823387798664e-008 90 8.0760948151237244e-008;
 createNode animCurveTA -n "center_swim_4_deformer_joint_rotateZ";
 	rename -uid "ECEBE2D6-4518-EC3B-20D2-4C8C59F24549";
 	setAttr ".tan" 9;
@@ -15593,22 +14485,22 @@ createNode animCurveTA -n "center_swim_4_deformer_joint_rotateZ";
 		 7 -0.7308381199836731 8 -0.82275742292404175 9 -0.89887863397598278 10 -0.9576132297515868
 		 11 -0.9977269172668457 12 -1.0183820724487305 13 -1.0191677808761597 14 -1.0001144409179687
 		 15 -0.96169000864028931 16 -0.90477991104125977 17 -0.8306502103805542 18 -0.74090057611465454
-		 19 -0.63740932941436768 20 -0.52227729558944702 21 -0.3977733850479126 22 -0.26628577709197998
+		 19 -0.63740932941436768 20 -0.52227729558944713 21 -0.3977733850479126 22 -0.26628577709197998
 		 23 -0.1302800327539444 24 0.0077360998839139938 25 0.14524194598197937 26 0.2797301709651947
 		 27 0.40873250365257263 28 0.52984791994094849 29 0.64077538251876831 30 0.73935288190841675
 		 31 0.82360237836837769 32 0.89177966117858887 33 0.94242566823959351 34 0.97441625595092762
 		 35 0.98700511455535889 36 0.97985577583312988 37 0.95305931568145763 38 0.90713566541671753
-		 39 0.8430182933807373 40 0.76202356815338135 41 0.6658090353012085 42 0.55632346868515015
+		 39 0.8430182933807373 40 0.76202356815338146 41 0.6658090353012085 42 0.55632346868515015
 		 43 0.43575385212898254 44 0.3064730167388916 45 0.17099002003669739 46 0.031905446201562881
 		 47 0.17579106986522675 48 0.31867590546607971 49 0.45680472254753113 50 0.58630859851837158
 		 51 0.70333433151245117 52 0.80419039726257324 53 0.885506272315979 54 0.94439578056335438
 		 55 0.97861093282699585 56 0.98667204380035411 57 0.96795618534088135 58 0.92273604869842518
-		 59 0.85216259956359863 60 0.75819826126098633 61 0.64351081848144531 62 0.51134407520294189
+		 59 0.85216259956359863 60 0.75819826126098644 61 0.64351081848144531 62 0.51134407520294189
 		 63 0.36538153886795044 64 0.20961582660675049 65 0.048230450600385666 66 -0.11450498551130295
 		 67 -0.27433040738105774 68 -0.42708894610404968 69 -0.56882607936859131 70 -0.69589871168136597
 		 71 -0.80509406328201294 72 -0.89375239610671997 73 -0.95988267660141002 74 -1.0022569894790649
 		 75 -1.0204700231552124 76 -1.0149548053741455 77 -0.98694854974746704 78 -0.93841475248336792
-		 79 -0.87193018198013306 80 -0.79055047035217285 81 -0.69767051935195923 82 -0.59689301252365112
+		 79 -0.87193018198013317 80 -0.79055047035217285 81 -0.69767051935195923 82 -0.59689301252365112
 		 83 -0.49191829562187195 84 -0.38646635413169861 85 -0.28424447774887085 86 -0.18898066878318787
 		 87 -0.10456426441669464 88 -0.035380858927965164 89 0.012952734716236591 90 0.031905438750982285;
 createNode animCurveTA -n "center_swim_5_deformer_joint_rotateX";
@@ -15633,15 +14525,15 @@ createNode animCurveTA -n "center_swim_5_deformer_joint_rotateX";
 		 50 -5.6196880482417561e-011 51 -6.2475170869991103e-011 52 -6.7305522266636331e-011
 		 53 -7.0441298627432758e-011 54 -7.1663126821608358e-011 55 -7.0812133934339272e-011
 		 56 -6.782618217071601e-011 57 -6.2769386910410674e-011 58 -5.584538387282123e-011
-		 59 -4.7388142021542734e-011 60 -3.7829347293572013e-011 61 -2.7647635916783209e-011
+		 59 -4.7388142021542734e-011 60 -3.782934729357202e-011 61 -2.7647635916783209e-011
 		 62 -1.7309289418454554e-011 63 -7.2124628318348538e-012 64 2.3537617167834757e-012
 		 65 1.1227467740237973e-011 66 1.9365994918807417e-011 67 2.6814406597908125e-011
-		 68 3.3657736320247267e-011 69 3.9968042764293443e-011 70 4.5758532379869266e-011
+		 68 3.3657736320247273e-011 69 3.9968042764293443e-011 70 4.5758532379869266e-011
 		 71 5.0955576563760374e-011 72 5.539535496978943e-011 73 5.8845775474658524e-011 74 6.1048152644183062e-011
 		 75 6.1768118397864669e-011 76 6.0843732829773955e-011 77 5.8219880305632188e-011
 		 78 5.3962737056600929e-011 79 4.8253297191269695e-011 80 4.1364033726010163e-011
 		 81 3.3625911083356996e-011 82 2.5393583069632797e-011 83 1.7015590325630825e-011
-		 84 8.8139781931340089e-012 85 1.0753014147504847e-012 86 -5.9465939117320232e-012
+		 84 8.8139781931340089e-012 85 1.0753014147504849e-012 86 -5.9465939117320232e-012
 		 87 -1.201556822788552e-011 88 -1.6882436421061797e-011 89 -2.022571173043719e-011
 		 90 -2.1523964902070425e-011;
 createNode animCurveTA -n "center_swim_5_deformer_joint_rotateY";
@@ -15675,7 +14567,7 @@ createNode animCurveTA -n "center_swim_5_deformer_joint_rotateY";
 		 73 -7.8428206151670565e-009 74 -8.1253439532247285e-009 75 -8.4111340115100575e-009
 		 76 -8.6846441149646125e-009 77 -8.9332861108459838e-009 78 -9.148204860309761e-009
 		 79 -9.3245455801138633e-009 80 -9.461267325150402e-009 81 -9.5605718897218139e-009
-		 82 -9.6270778016105396e-009 83 -9.666880629310981e-009 84 -9.6866248355809148e-009
+		 82 -9.6270778016105396e-009 83 -9.666880629310981e-009 84 -9.6866248355809165e-009
 		 85 -9.692707969577441e-009 86 -9.6906900282078823e-009 87 -9.6849532837950392e-009
 		 88 -9.6786285652683546e-009 89 -9.6737666765989161e-009 90 -9.6718206776813531e-009;
 createNode animCurveTA -n "center_swim_5_deformer_joint_rotateZ";
@@ -15686,24 +14578,24 @@ createNode animCurveTA -n "center_swim_5_deformer_joint_rotateZ";
 		 3 0.020484685897827148 4 -0.09876522421836853 5 -0.21631379425525665 6 -0.3299085795879364
 		 7 -0.43734869360923767 8 -0.53652107715606689 9 -0.62544095516204834 10 -0.7022969126701355
 		 11 -0.76549810171127319 12 -0.81372147798538208 13 -0.84595495462417603 14 -0.86153250932693481
-		 15 -0.86015766859054565 16 -0.84191238880157471 17 -0.80725085735321045 18 -0.75697785615921021
+		 15 -0.86015766859054565 16 -0.84191238880157471 17 -0.80725085735321045 18 -0.75697785615921032
 		 19 -0.69221514463424683 20 -0.61435878276824951 21 -0.5250319242477417 22 -0.42603695392608643
 		 23 -0.31931069493293762 24 -0.2068849503993988 25 -0.090852856636047363 26 0.026658438146114349
-		 27 0.14351114630699158 28 0.25757798552513123 29 0.3667636513710022 30 0.46902945637702936
+		 27 0.1435111463069916 28 0.25757798552513123 29 0.36676365137100225 30 0.46902945637702936
 		 31 0.56242227554321289 32 0.64510959386825562 33 0.71541953086853027 34 0.77188491821289063
-		 35 0.81328833103179932 36 0.83870458602905273 37 0.84753674268722534 38 0.83954143524169922
+		 35 0.81328833103179932 36 0.83870458602905273 37 0.84753674268722545 38 0.83954143524169922
 		 39 0.81484204530715942 40 0.77392673492431641 41 0.71763241291046143 42 0.647117018699646
 		 43 0.56382185220718384 44 0.46942898631095892 45 0.36581635475158691 46 0.25501412153244019
 		 47 0.36956313252449036 48 0.47853624820709229 49 0.57872390747070313 50 0.66697984933853149
 		 51 0.74034702777862549 52 0.79619312286376953 53 0.83234435319900513 54 0.84720867872238159
-		 55 0.83987176418304443 56 0.81015628576278687 57 0.7586359977722168 58 0.68660485744476318
+		 55 0.83987176418304443 56 0.81015628576278687 57 0.75863599777221691 58 0.68660485744476318
 		 59 0.59600633382797241 60 0.48933529853820801 61 0.36952602863311768 62 0.23983865976333618
 		 63 0.10375390201807022 64 -0.035120520740747452 65 -0.17313313484191895 66 -0.30666649341583252
 		 67 -0.43221688270568848 68 -0.54648149013519287 69 -0.64645642042160034 70 -0.72954368591308594
 		 71 -0.7936590313911438 72 -0.83733093738555908 73 -0.85977613925933838 74 -0.86094063520431519
 		 75 -0.84149712324142456 76 -0.80280017852783203 77 -0.74680066108703613 78 -0.67593342065811157
 		 79 -0.59298849105834961 80 -0.50098145008087158 81 -0.40303179621696472 82 -0.30225911736488342
-		 83 -0.20170243084430695 84 -0.10426780581474304 85 -0.012712648138403893 86 0.070317663252353668
+		 83 -0.20170243084430695 84 -0.10426780581474304 85 -0.012712648138403894 86 0.070317663252353668
 		 87 0.14216655492782593 88 0.19988113641738892 89 0.23958435654640195 90 0.25501412153244019;
 createNode animCurveTA -n "center_swim_6_deformer_joint_rotateX";
 	rename -uid "D1E35F79-4F0A-D159-A924-EA855DFB63B0";
@@ -15711,7 +14603,7 @@ createNode animCurveTA -n "center_swim_6_deformer_joint_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 90 ".ktv[0:89]"  1 1.3676890731062485e-009 2 1.0394319849282851e-009
 		 3 6.9103972544226622e-010 4 3.2920580150808121e-010 5 -3.9190647255216149e-011 6 -4.0718636795666896e-010
-		 7 -7.6782635805017208e-010 8 -1.1142528011376385e-009 9 -1.4397972813995352e-009
+		 7 -7.6782635805017218e-010 8 -1.1142528011376385e-009 9 -1.4397972813995352e-009
 		 10 -1.7380834549385327e-009 11 -2.0031436509526657e-009 12 -2.229547879650795e-009
 		 13 -2.4125472730673891e-009 14 -2.548217192810398e-009 15 -2.6335928993148627e-009
 		 16 -2.6667850150374761e-009 17 -2.647059682558961e-009 18 -2.5748752019438825e-009
@@ -15720,16 +14612,16 @@ createNode animCurveTA -n "center_swim_6_deformer_joint_rotateX";
 		 25 -8.6386320319320475e-010 26 -5.0878329327375127e-010 27 -1.4500171896525416e-010
 		 28 2.2071658389855031e-010 29 5.8165366967344312e-010 30 9.3121088617920133e-010
 		 31 1.2629768342264924e-009 32 1.5707990463909027e-009 33 1.8488656161608221e-009
-		 34 2.0917996224056878e-009 35 2.2947683753216097e-009 36 2.453604652785657e-009 37 2.5649291579554756e-009
+		 34 2.0917996224056883e-009 35 2.2947683753216097e-009 36 2.453604652785657e-009 37 2.5649291579554756e-009
 		 38 2.6262689800660155e-009 39 2.6361575145017468e-009 40 2.5942064052486558e-009
 		 41 2.5011379634065634e-009 42 2.3587778397171633e-009 43 2.1700035102156789e-009
 		 44 1.938654570210474e-009 45 1.6694179372223061e-009 46 1.3676890731062485e-009 47 1.6793877399834402e-009
 		 48 1.9616188673410306e-009 49 2.2050057335576412e-009 50 2.4008841581490969e-009
 		 51 2.5417128401983291e-009 52 2.6214643789046477e-009 53 2.6359592286695488e-009
 		 54 2.583104619091614e-009 55 2.4630131267855404e-009 56 2.2779924613303137e-009 57 2.0324182337105867e-009
-		 58 1.7325145762470129e-009 59 1.3860800285314667e-009 60 1.0021954377492648e-009
-		 61 5.9093857585068577e-010 62 1.6311793582524103e-010 63 -2.6997462598821187e-010
-		 64 -6.9681066472426778e-010 65 -1.1058891580262298e-009 66 -1.4860378483305681e-009
+		 58 1.7325145762470129e-009 59 1.3860800285314669e-009 60 1.0021954377492648e-009
+		 61 5.9093857585068587e-010 62 1.6311793582524103e-010 63 -2.6997462598821187e-010
+		 64 -6.9681066472426788e-010 65 -1.1058891580262298e-009 66 -1.4860378483305681e-009
 		 67 -1.8267585222275782e-009 68 -2.1186137288964346e-009 69 -2.3536266269275075e-009
 		 70 -2.5256596813960641e-009 71 -2.6307245271084412e-009 72 -2.6671798103450328e-009
 		 73 -2.6357875881899417e-009 74 -2.5396165170832319e-009 75 -2.3838073737181276e-009
@@ -15742,37 +14634,36 @@ createNode animCurveTA -n "center_swim_6_deformer_joint_rotateY";
 	rename -uid "382646B7-4224-2485-65B3-DD96650A2C36";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -6.2541516854253132e-007 2 -6.2540993894799612e-007
+	setAttr -s 90 ".ktv[0:89]"  1 -6.2541516854253142e-007 2 -6.2540993894799612e-007
 		 3 -6.2539942291550688e-007 4 -6.2537816347685293e-007 5 -6.2533962363886531e-007
-		 6 -6.2527698219128069e-007 7 -6.2518347476725467e-007 8 -6.2505364439857658e-007
-		 9 -6.2488373941960162e-007 10 -6.2467228190143942e-007 11 -6.244205223993049e-007
-		 12 -6.2413266732619377e-007 13 -6.238157084226259e-007 14 -6.2347953644348308e-007
-		 15 -6.2313608850672608e-007 16 -6.2279877965920605e-007 17 -6.2248182075563818e-007
-		 18 -6.2219930896389997e-007 19 -6.2196426142691053e-007 20 -6.2178764892450999e-007
-		 21 -6.216779979695275e-007 22 -6.2164053815649822e-007 23 -6.2167703163140686e-007
-		 24 -6.2178554571801214e-007 25 -6.2196102135203546e-007 26 -6.2219498886406654e-007
-		 27 -6.2247659116110299e-007 28 -6.2279315216073883e-007 29 -6.2313102944244747e-007
-		 30 -6.2347612583835144e-007 31 -6.2381525367527502e-007 32 -6.2413636214841972e-007
-		 33 -6.2442944681606605e-007 34 -6.2468706119034323e-007 35 -6.249043735806481e-007
-		 36 -6.2507945131073939e-007 37 -6.2521326071873773e-007 38 -6.2530904187951819e-007
-		 39 -6.2537191070077824e-007 40 -6.2540840417568688e-007 41 -6.2542551404476399e-007
-		 42 -6.2543000467485399e-007 43 -6.2542784462493728e-007 44 -6.2542329715142841e-007
-		 45 -6.2541897705159499e-007 46 -6.2541516854253132e-007 47 -6.2541914758185158e-007
-		 48 -6.254237518987793e-007 49 -6.2542846990254475e-007 50 -6.2542972045775969e-007
-		 51 -6.2542096657125512e-007 52 -6.2539317013943219e-007 53 -6.2533575828638277e-007
-		 54 -6.2523787391910446e-007 55 -6.2509013787348522e-007 56 -6.248862405300315e-007
-		 57 -6.2462396499540773e-007 58 -6.2430660818790784e-007 59 -6.2394309452429297e-007
-		 60 -6.2354791907637264e-007 61 -6.2313995385920862e-007 62 -6.2274142464957549e-007
-		 63 -6.2237569409262505e-007 64 -6.220653858690639e-007 65 -6.2183045201891218e-007
-		 66 -6.2168589920474915e-007 67 -6.2164070868675481e-007 68 -6.2169698367142701e-007
-		 69 -6.2184960825106828e-007 70 -6.2208692952481215e-007 71 -6.2239223552751355e-007
-		 72 -6.2274494894154486e-007 73 -6.2312324189406354e-007 74 -6.235056275727402e-007
-		 75 -6.238730065888376e-007 76 -6.2420986068900675e-007 77 -6.2450550331050181e-007
-		 78 -6.2475373852066696e-007 79 -6.2495314523403067e-007 80 -6.2510611087418511e-007
-		 81 -6.2521775134882773e-007 82 -6.2529511524189729e-007 83 -6.2534570588468341e-007
-		 84 -6.2537685607821913e-007 85 -6.2539487544199801e-007 86 -6.2540476619687979e-007
-		 87 -6.2541010947825271e-007 88 -6.2541300849261461e-007 89 -6.2541460010834271e-007
-		 90 -6.2541516854253132e-007;
+		 6 -6.252769821912808e-007 7 -6.2518347476725467e-007 8 -6.2505364439857658e-007 9 -6.2488373941960162e-007
+		 10 -6.2467228190143942e-007 11 -6.244205223993049e-007 12 -6.2413266732619377e-007
+		 13 -6.238157084226259e-007 14 -6.2347953644348308e-007 15 -6.2313608850672608e-007
+		 16 -6.2279877965920605e-007 17 -6.2248182075563818e-007 18 -6.2219930896389997e-007
+		 19 -6.2196426142691063e-007 20 -6.2178764892450999e-007 21 -6.216779979695275e-007
+		 22 -6.2164053815649822e-007 23 -6.2167703163140686e-007 24 -6.2178554571801214e-007
+		 25 -6.2196102135203546e-007 26 -6.2219498886406654e-007 27 -6.2247659116110299e-007
+		 28 -6.2279315216073883e-007 29 -6.2313102944244747e-007 30 -6.2347612583835144e-007
+		 31 -6.2381525367527502e-007 32 -6.2413636214841972e-007 33 -6.2442944681606605e-007
+		 34 -6.2468706119034323e-007 35 -6.249043735806481e-007 36 -6.2507945131073939e-007
+		 37 -6.2521326071873773e-007 38 -6.253090418795183e-007 39 -6.2537191070077824e-007
+		 40 -6.2540840417568688e-007 41 -6.2542551404476399e-007 42 -6.2543000467485399e-007
+		 43 -6.2542784462493728e-007 44 -6.2542329715142841e-007 45 -6.2541897705159499e-007
+		 46 -6.2541516854253142e-007 47 -6.2541914758185158e-007 48 -6.254237518987793e-007
+		 49 -6.2542846990254485e-007 50 -6.2542972045775969e-007 51 -6.2542096657125512e-007
+		 52 -6.2539317013943219e-007 53 -6.2533575828638277e-007 54 -6.2523787391910446e-007
+		 55 -6.2509013787348522e-007 56 -6.248862405300315e-007 57 -6.2462396499540773e-007
+		 58 -6.2430660818790784e-007 59 -6.2394309452429297e-007 60 -6.2354791907637264e-007
+		 61 -6.2313995385920862e-007 62 -6.2274142464957549e-007 63 -6.2237569409262505e-007
+		 64 -6.220653858690639e-007 65 -6.2183045201891218e-007 66 -6.2168589920474915e-007
+		 67 -6.2164070868675481e-007 68 -6.2169698367142701e-007 69 -6.2184960825106828e-007
+		 70 -6.2208692952481215e-007 71 -6.2239223552751355e-007 72 -6.2274494894154486e-007
+		 73 -6.2312324189406354e-007 74 -6.235056275727402e-007 75 -6.238730065888376e-007
+		 76 -6.2420986068900675e-007 77 -6.2450550331050181e-007 78 -6.2475373852066696e-007
+		 79 -6.2495314523403078e-007 80 -6.2510611087418511e-007 81 -6.2521775134882773e-007
+		 82 -6.2529511524189729e-007 83 -6.2534570588468341e-007 84 -6.2537685607821924e-007
+		 85 -6.2539487544199801e-007 86 -6.2540476619687979e-007 87 -6.2541010947825271e-007
+		 88 -6.2541300849261461e-007 89 -6.2541460010834271e-007 90 -6.2541516854253142e-007;
 createNode animCurveTA -n "center_swim_6_deformer_joint_rotateZ";
 	rename -uid "A0BEC085-4765-5103-73C8-A1AEC60C7578";
 	setAttr ".tan" 9;
@@ -15780,13 +14671,13 @@ createNode animCurveTA -n "center_swim_6_deformer_joint_rotateZ";
 	setAttr -s 90 ".ktv[0:89]"  1 0.40339699387550354 2 0.30657464265823364
 		 3 0.20381307601928711 4 0.097089685499668121 5 -0.011556999757885933 6 -0.12005650252103806
 		 7 -0.22633440792560577 8 -0.32834142446517944 9 -0.42408490180969238 10 -0.51166439056396484
-		 11 -0.58931148052215576 12 -0.65543240308761597 13 -0.70865225791931152 14 -0.74785780906677246
-		 15 -0.77223402261734009 16 -0.7812921404838562 17 -0.77488547563552856 18 -0.75321155786514282
+		 11 -0.58931148052215576 12 -0.65543240308761608 13 -0.70865225791931163 14 -0.74785780906677246
+		 15 -0.77223402261734009 16 -0.7812921404838562 17 -0.77488547563552856 18 -0.75321155786514293
 		 19 -0.71680033206939697 20 -0.66648930311203003 21 -0.60338896512985229 22 -0.5288425087928772
 		 23 -0.44438245892524719 24 -0.35168862342834473 25 -0.2525499165058136 26 -0.14883148670196533
 		 27 -0.04244706779718399 28 0.064663752913475037 29 0.17055536806583405 30 0.27329528331756592
 		 31 0.37098485231399536 32 0.46178328990936279 33 0.543937087059021 34 0.61581432819366455
-		 35 0.67594325542449951 36 0.72305405139923096 37 0.75611954927444458 38 0.77439224720001221
+		 35 0.67594325542449951 36 0.72305405139923096 37 0.75611954927444458 38 0.77439224720001232
 		 39 0.77743381261825562 40 0.76513415575027466 41 0.73771786689758301 42 0.69573748111724854
 		 43 0.64005476236343384 44 0.57181167602539063 45 0.49239513278007502 46 0.40339699387550354
 		 47 0.49533593654632574 48 0.57858562469482422 49 0.6503797173500061 50 0.70815610885620117
@@ -15795,11 +14686,11 @@ createNode animCurveTA -n "center_swim_6_deformer_joint_rotateZ";
 		 59 0.40727818012237549 60 0.29418212175369263 61 0.17328189313411713 62 0.047782648354768753
 		 63 -0.079010628163814545 64 -0.2037665992975235 65 -0.3231981098651886 66 -0.43413618206977844
 		 67 -0.53361278772354126 68 -0.61895358562469482 69 -0.68787872791290283 70 -0.73860341310501099
-		 71 -0.76992744207382202 72 -0.78130030632019043 73 -0.77285206317901611 74 -0.74538344144821167
+		 71 -0.76992744207382202 72 -0.78130030632019043 73 -0.77285206317901611 74 -0.74538344144821178
 		 75 -0.70031321048736572 76 -0.63959199190139771 77 -0.56558972597122192 78 -0.48097178339958191
 		 79 -0.38857418298721313 80 -0.29128813743591309 81 -0.19195947051048279 82 -0.093306638300418854
 		 83 0.0021409052424132824 84 0.092081338167190552 85 0.17445002496242523 86 0.24738641083240509
-		 87 0.30912840366363525 88 0.35776859521865845 89 0.39071229100227356 90 0.40339699387550354;
+		 87 0.30912840366363525 88 0.35776859521865845 89 0.39071229100227362 90 0.40339699387550354;
 createNode animCurveTA -n "center_swim_7_deformer_joint_rotateX";
 	rename -uid "2EFCF4A4-47C5-4626-90DF-E399A7FFDFCE";
 	setAttr ".tan" 9;
@@ -15823,14 +14714,14 @@ createNode animCurveTA -n "center_swim_7_deformer_joint_rotateX";
 		 50 -1.8620212038911177e-009 51 -1.8994619210843666e-009 52 -1.8904018350696106e-009
 		 53 -1.833683871410585e-009 54 -1.7298100729590262e-009 55 -1.5809402675870388e-009
 		 56 -1.3907829332637789e-009 57 -1.1643993547139075e-009 58 -9.0794521900861014e-010
-		 59 -6.2838562131517506e-010 60 -3.3321728709623244e-010 61 -3.0220104196843067e-011
+		 59 -6.2838562131517506e-010 60 -3.3321728709623249e-010 61 -3.0220104196843067e-011
 		 62 2.7274907332675014e-010 63 5.6792243130487918e-010 64 8.4776013986598297e-010
-		 65 1.1050806936196977e-009 66 1.3332026593815272e-009 67 1.5261131247612525e-009
+		 65 1.1050806936196977e-009 66 1.3332026593815272e-009 67 1.5261131247612527e-009
 		 68 1.6786649847944091e-009 69 1.7867957113892883e-009 70 1.8477415153483889e-009
 		 71 1.8602195339667558e-009 72 1.8245390753790502e-009 73 1.7426213805293857e-009
 		 74 1.6179125816861983e-009 75 1.4551980731525305e-009 76 1.2603393884091929e-009
 		 77 1.039964114823988e-009 78 8.0114165301736762e-010 79 5.5107379770547027e-010 80 2.9681787583335506e-010
-		 81 4.5054064645722036e-011 82 -1.9809991147479167e-010 83 -4.2722561599539688e-010
+		 81 4.5054064645722043e-011 82 -1.9809991147479167e-010 83 -4.2722561599539688e-010
 		 84 -6.3768884617232402e-010 85 -8.2565976278203834e-010 86 -9.8804076031910881e-010
 		 87 -1.1222363038854155e-009 88 -1.2256210490946273e-009 89 -1.2943519589470043e-009
 		 90 -1.3205161408791355e-009;
@@ -15838,7 +14729,7 @@ createNode animCurveTA -n "center_swim_7_deformer_joint_rotateY";
 	rename -uid "0D5951C1-42D0-B8BE-9499-A79B643286E9";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 -2.5556701643836277e-007 2 -2.5554155058671313e-007
+	setAttr -s 90 ".ktv[0:89]"  1 -2.5556701643836282e-007 2 -2.5554155058671313e-007
 		 3 -2.5550187388034828e-007 4 -2.5544628101670241e-007 5 -2.5537150349919102e-007
 		 6 -2.5527313596285239e-007 7 -2.5514617618682678e-007 8 -2.5498565037196386e-007
 		 9 -2.547873236835585e-007 10 -2.5454818342041108e-007 11 -2.5426734850952926e-007
@@ -15853,13 +14744,13 @@ createNode animCurveTA -n "center_swim_7_deformer_joint_rotateY";
 		 36 -2.5441056550334906e-007 37 -2.5470416176176514e-007 38 -2.5495111799500592e-007
 		 39 -2.5515123525110539e-007 40 -2.5530655989314255e-007 41 -2.5542107096043765e-007
 		 42 -2.5549994120410702e-007 43 -2.5554885496603674e-007 44 -2.5557332605785632e-007
-		 45 -2.5557824301358778e-007 46 -2.5556701643836277e-007 47 -2.5557832827871607e-007
+		 45 -2.5557824301358778e-007 46 -2.5556701643836282e-007 47 -2.5557832827871607e-007
 		 48 -2.5557196181580366e-007 49 -2.5554243165970547e-007 50 -2.5548231974426017e-007
 		 51 -2.5538284376125375e-007 52 -2.5523493718537793e-007 53 -2.5503044298602617e-007
 		 54 -2.547636768213124e-007 55 -2.5443267759328592e-007 56 -2.5404031589459919e-007
 		 57 -2.5359491928611533e-007 58 -2.5311027229690808e-007 59 -2.5260519009862037e-007
 		 60 -2.5210238163708709e-007 61 -2.5162682959489757e-007 62 -2.5120388613686373e-007
-		 63 -2.5085711286010337e-007 64 -2.5060640496121778e-007 65 -2.5046608698175987e-007
+		 63 -2.5085711286010337e-007 64 -2.5060640496121778e-007 65 -2.5046608698175993e-007
 		 66 -2.5044357698789099e-007 67 -2.5053876129277342e-007 68 -2.5074407972169865e-007
 		 69 -2.5104520773311378e-007 70 -2.5142264803434955e-007 71 -2.518535495710239e-007
 		 72 -2.523138391552493e-007 73 -2.5278032467213052e-007 74 -2.5323245722574939e-007
@@ -15868,7 +14759,7 @@ createNode animCurveTA -n "center_swim_7_deformer_joint_rotateY";
 		 81 -2.5519113933114568e-007 82 -2.5529996605655469e-007 83 -2.5538210479680856e-007
 		 84 -2.5544326831550279e-007 85 -2.5548811777298397e-007 86 -2.5552023430464033e-007
 		 87 -2.5554234639457718e-007 88 -2.5555650040587352e-007 89 -2.5556437321938574e-007
-		 90 -2.5556701643836277e-007;
+		 90 -2.5556701643836282e-007;
 createNode animCurveTA -n "center_swim_7_deformer_joint_rotateZ";
 	rename -uid "0CC122AE-4210-3D5E-1FC6-668BF1214D5E";
 	setAttr ".tan" 9;
@@ -15876,9 +14767,9 @@ createNode animCurveTA -n "center_swim_7_deformer_joint_rotateZ";
 	setAttr -s 90 ".ktv[0:89]"  1 0.56147241592407227 2 0.47487840056419373
 		 3 0.37915566563606262 4 0.27618148922920227 5 0.16794942319393158 6 0.056534115225076675
 		 7 -0.055940497666597366 8 -0.16733092069625854 9 -0.27550339698791504 10 -0.3783644437789917
-		 11 -0.47389474511146545 12 -0.56018692255020142 13 -0.63548743724822998 14 -0.69824093580245972
+		 11 -0.47389474511146545 12 -0.56018692255020142 13 -0.63548743724822998 14 -0.69824093580245983
 		 15 -0.74713563919067383 16 -0.78114444017410278 17 -0.799560546875 18 -0.80202168226242065
-		 19 -0.78852146863937378 20 -0.7594069242477417 21 -0.71536082029342651 22 -0.65737318992614746
+		 19 -0.78852146863937378 20 -0.7594069242477417 21 -0.71536082029342662 22 -0.65737318992614746
 		 23 -0.58670294284820557 24 -0.50483441352844238 25 -0.413432776927948 26 -0.31430107355117798
 		 27 -0.20934171974658966 28 -0.10052301734685898 29 0.010148612782359123 30 0.1206522211432457
 		 31 0.22897347807884219 32 0.3331255316734314 33 0.43117174506187439 34 0.52125227451324463
@@ -15891,8 +14782,8 @@ createNode animCurveTA -n "center_swim_7_deformer_joint_rotateZ";
 		 59 0.27015489339828491 60 0.14352738857269287 61 0.013040087185800076 62 -0.11787992715835571
 		 63 -0.24577261507511139 64 -0.3672214150428772 65 -0.47893697023391724 66 -0.57785165309906006
 		 67 -0.66122525930404663 68 -0.72675627470016479 69 -0.77268952131271362 70 -0.79790782928466797
-		 71 -0.80199378728866577 72 -0.78525161743164063 73 -0.74868494272232056 74 -0.69393116235733032
-		 75 -0.62316077947616577 76 -0.53895473480224609 77 -0.44417142868041992 78 -0.34181654453277588
+		 71 -0.80199378728866577 72 -0.78525161743164063 73 -0.74868494272232067 74 -0.69393116235733032
+		 75 -0.62316077947616577 76 -0.5389547348022462 77 -0.44417142868041998 78 -0.34181654453277588
 		 79 -0.23492342233657834 80 -0.12644840776920319 81 -0.01918351836502552 82 0.084314621984958649
 		 83 0.18177878856658936 84 0.27126616239547729 85 0.35116812586784363 86 0.4201810359954834
 		 87 0.47721016407012934 88 0.52114474773406982 89 0.55035316944122314 90 0.56147241592407227;
@@ -15904,20 +14795,20 @@ createNode animCurveTA -n "center_swim_8_deformer_joint_rotateX";
 		 3 -4.0134602308228295e-009 4 -3.3163747303888158e-009 5 -2.556614253634848e-009 6 -1.7491120773982516e-009
 		 7 -9.0957674725444814e-010 8 -5.42329792185825e-011 9 8.0042267258662037e-010 10 1.6378677303308109e-009
 		 11 2.4418032040784965e-009 12 3.1964251245852893e-009 13 3.8867224994021399e-009
-		 14 4.498802219643494e-009 15 5.0202291212997352e-009 16 5.440365491438115e-009 17 5.7506834849618826e-009
+		 14 4.498802219643494e-009 15 5.0202291212997352e-009 16 5.440365491438115e-009 17 5.7506834849618835e-009
 		 18 5.9450280254225163e-009 19 6.019800213863391e-009 20 5.9740448143941194e-009 21 5.8094329347113671e-009
 		 22 5.5301456747258726e-009 23 5.1426622960093482e-009 24 4.655491991911731e-009 25 4.078867910095596e-009
 		 26 3.4244285185280883e-009 27 2.7049256168254487e-009 28 1.9339569945486801e-009
-		 29 1.1257470511338852e-009 30 2.9496494136083129e-010 31 -5.4342835786869159e-010
+		 29 1.1257470511338852e-009 30 2.9496494136083134e-010 31 -5.4342835786869159e-010
 		 32 -1.3743165494517484e-009 33 -2.1825712348544357e-009 34 -2.9532143397403843e-009
 		 35 -3.6716227835853492e-009 36 -4.3237724511868691e-009 37 -4.8965334009665185e-009
 		 38 -5.3779993791636116e-009 39 -5.7578315448836292e-009 40 -6.027604637637296e-009
-		 41 -6.1811067375572293e-009 42 -6.2145946166936028e-009 43 -6.1269389561857679e-009
+		 41 -6.1811067375572293e-009 42 -6.2145946166936028e-009 43 -6.1269389561857687e-009
 		 44 -5.9196780810566452e-009 45 -5.5969704426672706e-009 46 -5.1654476251883352e-009
 		 47 -5.6101017165133271e-009 48 -5.9436713328864244e-009 49 -6.1502225534582067e-009
 		 50 -6.2175282700138723e-009 51 -6.1377742888168996e-009 52 -5.9080638159514365e-009
-		 53 -5.5306483837114229e-009 54 -5.0128634576651621e-009 55 -4.3667567339866764e-009
-		 56 -3.6085066046354086e-009 57 -2.7576843031340559e-009 58 -1.8364672005333205e-009
+		 53 -5.5306483837114237e-009 54 -5.0128634576651621e-009 55 -4.3667567339866764e-009
+		 56 -3.6085066046354086e-009 57 -2.7576843031340563e-009 58 -1.8364672005333205e-009
 		 59 -8.6886942085584441e-010 60 1.1995300586153945e-010 61 1.1043127523535645e-009
 		 62 2.0585360083202886e-009 63 2.9574886983851911e-009 64 3.777131496462971e-009 65 4.4951491418032674e-009
 		 66 5.0916688643098951e-009 67 5.5500364304350569e-009 68 5.8575970740548655e-009
@@ -15933,7 +14824,7 @@ createNode animCurveTA -n "center_swim_8_deformer_joint_rotateY";
 	rename -uid "2736F327-4239-F8EA-DBF6-6594064D39AE";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 2.4405185428122422e-008 2 2.4424174682735611e-008
+	setAttr -s 90 ".ktv[0:89]"  1 2.4405185428122426e-008 2 2.4424174682735611e-008
 		 3 2.4481019877953258e-008 4 2.4572539558675999e-008 5 2.4696582556771318e-008 6 2.4852106150774489e-008
 		 7 2.5039105011614993e-008 8 2.5258355407231647e-008 9 2.5510905388159699e-008 10 2.579787583556481e-008
 		 11 2.6119931106904914e-008 12 2.6476762116089958e-008 13 2.686660316442158e-008 14 2.7285883774652572e-008
@@ -15946,28 +14837,28 @@ createNode animCurveTA -n "center_swim_8_deformer_joint_rotateY";
 		 36 2.6986157308783731e-008 37 2.6501531635858555e-008 38 2.6055371193933752e-008
 		 39 2.5656309077248807e-008 40 2.5310523454891154e-008 41 2.5021627436672134e-008
 		 42 2.4790690389409065e-008 43 2.4616721105985562e-008 44 2.4497085249208794e-008
-		 45 2.4428022271649752e-008 46 2.4405185428122422e-008 47 2.4429629874589409e-008
-		 48 2.4505926177198489e-008 49 2.4642213602987795e-008 50 2.4845878243695552e-008
+		 45 2.4428022271649752e-008 46 2.4405185428122426e-008 47 2.4429629874589409e-008
+		 48 2.4505926177198489e-008 49 2.4642213602987798e-008 50 2.4845878243695552e-008
 		 51 2.5122545821432141e-008 52 2.5474994558294384e-008 53 2.5902082256834547e-008
 		 54 2.6397765751084989e-008 55 2.6951067155778219e-008 56 2.7546017022928027e-008
 		 57 2.8162205012449704e-008 58 2.8775792415558499e-008 59 2.9360927911170623e-008
 		 60 2.9891438657614344e-008 61 3.0342665269245117e-008 62 3.0693311003915369e-008
 		 63 3.0927061800412048e-008 64 3.1033906111588294e-008 65 3.1010937817654849e-008
 		 66 3.0862512545581922e-008 67 3.0599796474461982e-008 68 3.0239636572559903e-008
-		 69 2.9802958323443818e-008 70 2.9312866800523804e-008 71 2.8792667805532804e-008
+		 69 2.9802958323443824e-008 70 2.9312866800523804e-008 71 2.8792667805532804e-008
 		 72 2.8264098617114541e-008 73 2.7745912234422576e-008 74 2.7253006962268959e-008
 		 75 2.6796053376187959e-008 76 2.6381639983696914e-008 77 2.6012806131348043e-008
 		 78 2.5689802285455698e-008 79 2.5410967552375041e-008 80 2.5173553908075519e-008
 		 81 2.4974468715299736e-008 82 2.4810663745711281e-008 83 2.4679239984948254e-008
 		 84 2.4577580859386217e-008 85 2.4503098217110164e-008 86 2.4452866398405604e-008
 		 87 2.4423203015544459e-008 88 2.4409342103126619e-008 89 2.4405402143656829e-008
-		 90 2.4405185428122422e-008;
+		 90 2.4405185428122426e-008;
 createNode animCurveTA -n "center_swim_8_deformer_joint_rotateZ";
 	rename -uid "44E52430-46CE-B282-88DB-0287736F229C";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
 	setAttr -s 90 ".ktv[0:89]"  1 0.65107357501983643 2 0.58410030603408813
-		 3 0.50591689348220825 4 0.41808870434761047 5 0.32235178351402283 6 0.22057558596134186
+		 3 0.50591689348220836 4 0.41808870434761047 5 0.32235178351402283 6 0.22057558596134186
 		 7 0.11472786217927934 8 0.0068422351032495499 9 -0.10101237893104553 10 -0.20676210522651672
 		 11 -0.30835878849029541 12 -0.4038129448890686 13 -0.49123018980026245 14 -0.56885087490081787
 		 15 -0.63509184122085571 16 -0.68858951330184937 17 -0.72823953628540039 18 -0.7532317042350769
@@ -15977,15 +14868,15 @@ createNode animCurveTA -n "center_swim_8_deformer_joint_rotateZ";
 		 31 0.068885929882526398 32 0.17411814630031586 33 0.2763628363609314 34 0.37372559309005737
 		 35 0.46436828374862665 36 0.5465388298034668 37 0.61860567331314087 38 0.67909640073776245
 		 39 0.72673827409744263 40 0.76049762964248657 41 0.77961629629135132 42 0.78364080190658569
-		 43 0.77244013547897339 44 0.74621272087097168 45 0.70548087358474731 46 0.65107357501983643
+		 43 0.77244013547897339 44 0.74621272087097168 45 0.70548087358474743 46 0.65107357501983643
 		 47 0.70713722705841064 48 0.74924439191818237 49 0.77539724111557007 50 0.78405827283859253
-		 51 0.77423703670501709 52 0.74555069208145142 53 0.69825351238250732 54 0.63322949409484863
+		 51 0.77423703670501709 52 0.74555069208145142 53 0.69825351238250732 54 0.63322949409484874
 		 55 0.55195081233978271 56 0.45640984177589417 57 0.34903457760810852 58 0.2325960099697113
-		 59 0.11011716723442078 60 -0.01521131210029125 61 -0.14010845124721527 62 -0.26127558946609497
+		 59 0.11011716723442078 60 -0.01521131210029125 61 -0.1401084512472153 62 -0.26127558946609497
 		 63 -0.3754698634147644 64 -0.47958377003669739 65 -0.57073485851287842 66 -0.64636528491973877
 		 67 -0.70434671640396118 68 -0.74308127164840698 69 -0.76158696413040161 70 -0.75955444574356079
-		 71 -0.73736637830734253 72 -0.69607442617416382 73 -0.63733571767807007 74 -0.56331682205200195
-		 75 -0.4765754342079162 76 -0.37993285059928894 77 -0.27634739875793457 78 -0.16879719495773315
+		 71 -0.73736637830734264 72 -0.69607442617416382 73 -0.63733571767807007 74 -0.56331682205200195
+		 75 -0.4765754342079162 76 -0.37993285059928894 77 -0.27634739875793457 78 -0.16879719495773318
 		 79 -0.060175493359565728 80 0.046798877418041229 81 0.14965735375881195 82 0.24624377489089966
 		 83 0.3347630500793457 84 0.4138127863407135 85 0.48239290714263916 86 0.53988158702850342
 		 87 0.58595556020736694 88 0.62040501832962036 89 0.64271837472915649 90 0.65107357501983643;
@@ -16517,28 +15408,6 @@ createNode animCurveTA -n "right_fluke_3_anim_rotateZ";
 	setAttr -s 2 ".kiy[0:1]"  0 0;
 	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
 	setAttr -s 2 ".koy[0:1]"  0 0;
-createNode animCurveTU -n "bind_joint_grp1_visibility";
-	rename -uid "88E0DDD1-4613-A98D-D509-0486DBFE1C9E";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-	setAttr -s 90 ".kot[0:89]"  17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 9;
-	setAttr -s 90 ".kix[0:89]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 90 ".kiy[0:89]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "center_eye_aim_main_anim_translateX";
 	rename -uid "3564F60D-4B5C-9070-2CD3-2D98107D6765";
 	setAttr ".tan" 1;
@@ -16675,31 +15544,886 @@ createNode animCurveTU -n "center_jaw_anim_parent_to";
 	setAttr -s 3 ".kot[0:2]"  5 5 9;
 	setAttr -s 3 ".kix[0:2]"  1 1 1;
 	setAttr -s 3 ".kiy[0:2]"  0 0 0;
-createNode animCurveTU -n "bind_joint_grp2_visibility";
-	rename -uid "BC128354-442D-03E8-A28E-56B6CB1260D7";
+createNode reference -n "lunaRN1";
+	rename -uid "62247BD0-4892-9F0C-35EF-BFB695D7375D";
+	setAttr -s 69 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"lunaRN1"
+		"lunaRN1" 0
+		"lunaRN1" 84
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim|luna1:center_spine_2_null|luna1:center_spine_2_deformer_null|luna1:center_spine_2_vis_null|luna1:center_spine_2_anim" 
+		"rotate" " -type \"double3\" 0 0 23.957346245905608"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim|luna1:center_spine_2_null|luna1:center_spine_2_deformer_null|luna1:center_spine_2_vis_null|luna1:center_spine_2_anim" 
+		"rotateZ" " -av"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim" 
+		"rotate" " -type \"double3\" 0 0 10.393243504201166"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim" 
+		"rotateZ" " -av"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim" 
+		"rotate" " -type \"double3\" 0 -9.8951111111111114 -25.363885073730213"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim" 
+		"rotateY" " -av"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim" 
+		"rotateZ" " -av"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim" 
+		"rotate" " -type \"double3\" 0 -10.535549211119461 -18.565020136090538"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim" 
+		"rotateY" " -av"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim" 
+		"rotateZ" " -av"
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_swim_component_grp|luna1:DO_NOT_TOUCH|luna1:center_swim_IK" 
+		"translate" " -type \"double3\" 3.5405029129570568e-009 51.7755203578118 -146.26226796752499"
+		
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_swim_component_grp|luna1:DO_NOT_TOUCH|luna1:center_swim_IK" 
+		"rotate" " -type \"double3\" -90.00000000000118 88.766416002124089 -90.000000000001577"
+		
+		2 "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_flap_component_grp|luna1:DO_NOT_TOUCH|luna1:center_tail_flap_IK" 
+		"rotate" " -type \"double3\" 90.000000000000824 88.22747350608276 90.000000000000426"
+		
+		2 "|luna1:Luna_topCon|luna1:Luna_Face_topCon|luna1:component_grp|luna1:center_eye_aim_component_grp|luna1:center_eye_aim_anim_grp|luna1:center_eye_aim_main_null|luna1:center_eye_aim_main_multicon_null|luna1:center_eye_aim_main_vis_null|luna1:center_eye_aim_main_anim" 
+		"translate" " -type \"double3\" 0 -10.625 41.39"
+		2 "|luna1:Luna_topCon|luna1:Luna_Face_topCon|luna1:component_grp|luna1:center_eye_aim_component_grp|luna1:center_eye_aim_anim_grp|luna1:center_eye_aim_main_null|luna1:center_eye_aim_main_multicon_null|luna1:center_eye_aim_main_vis_null|luna1:center_eye_aim_main_anim|luna1:center_eye_aim_left_null|luna1:center_eye_aim_left_vis_null|luna1:center_eye_aim_left_anim" 
+		"translate" " -type \"double3\" 0 17.908 -47.789"
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.translateX" 
+		"lunaRN1.placeHolderList[1]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.translateY" 
+		"lunaRN1.placeHolderList[2]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.translateZ" 
+		"lunaRN1.placeHolderList[3]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.rotateX" 
+		"lunaRN1.placeHolderList[4]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.rotateY" 
+		"lunaRN1.placeHolderList[5]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.rotateZ" 
+		"lunaRN1.placeHolderList[6]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.display_deformer" 
+		"lunaRN1.placeHolderList[7]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.swim_height" 
+		"lunaRN1.placeHolderList[8]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.swim_length" 
+		"lunaRN1.placeHolderList[9]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_COG_component_grp|luna1:center_COG_anim_grp|luna1:center_COG_null|luna1:center_COG_vis_null|luna1:center_COG_anim.swim_offset" 
+		"lunaRN1.placeHolderList[10]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim.rotateX" 
+		"lunaRN1.placeHolderList[11]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim.rotateY" 
+		"lunaRN1.placeHolderList[12]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim.rotateZ" 
+		"lunaRN1.placeHolderList[13]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[14]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim|luna1:center_spine_2_null|luna1:center_spine_2_deformer_null|luna1:center_spine_2_vis_null|luna1:center_spine_2_anim.rotateX" 
+		"lunaRN1.placeHolderList[15]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim|luna1:center_spine_2_null|luna1:center_spine_2_deformer_null|luna1:center_spine_2_vis_null|luna1:center_spine_2_anim.rotateY" 
+		"lunaRN1.placeHolderList[16]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim|luna1:center_spine_2_null|luna1:center_spine_2_deformer_null|luna1:center_spine_2_vis_null|luna1:center_spine_2_anim.rotateZ" 
+		"lunaRN1.placeHolderList[17]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_spine_component_grp|luna1:center_spine_anim_grp|luna1:center_spine_1_null|luna1:center_spine_1_deformer_null|luna1:center_spine_1_vis_null|luna1:center_spine_1_anim|luna1:center_spine_2_null|luna1:center_spine_2_deformer_null|luna1:center_spine_2_vis_null|luna1:center_spine_2_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[18]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.rotateX" 
+		"lunaRN1.placeHolderList[19]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.rotateY" 
+		"lunaRN1.placeHolderList[20]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.rotateZ" 
+		"lunaRN1.placeHolderList[21]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.display_deformer" 
+		"lunaRN1.placeHolderList[22]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[23]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.tail_flap_height" 
+		"lunaRN1.placeHolderList[24]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.tail_flap_length" 
+		"lunaRN1.placeHolderList[25]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.tail_flap_offset" 
+		"lunaRN1.placeHolderList[26]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim.center_tail_flap_influence" 
+		"lunaRN1.placeHolderList[27]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim.rotateX" 
+		"lunaRN1.placeHolderList[28]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim.rotateY" 
+		"lunaRN1.placeHolderList[29]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim.rotateZ" 
+		"lunaRN1.placeHolderList[30]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[31]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim.center_tail_flap_influence" 
+		"lunaRN1.placeHolderList[32]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim.rotateX" 
+		"lunaRN1.placeHolderList[33]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim.rotateY" 
+		"lunaRN1.placeHolderList[34]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim.rotateZ" 
+		"lunaRN1.placeHolderList[35]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[36]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim.center_tail_flap_influence" 
+		"lunaRN1.placeHolderList[37]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim.rotateX" 
+		"lunaRN1.placeHolderList[38]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim.rotateY" 
+		"lunaRN1.placeHolderList[39]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim.rotateZ" 
+		"lunaRN1.placeHolderList[40]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[41]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim.center_tail_flap_influence" 
+		"lunaRN1.placeHolderList[42]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim.rotateX" 
+		"lunaRN1.placeHolderList[43]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim.rotateY" 
+		"lunaRN1.placeHolderList[44]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim.rotateZ" 
+		"lunaRN1.placeHolderList[45]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[46]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim.center_tail_flap_influence" 
+		"lunaRN1.placeHolderList[47]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim|luna1:center_tail_6_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_vis_null|luna1:center_tail_6_anim.rotateX" 
+		"lunaRN1.placeHolderList[48]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim|luna1:center_tail_6_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_vis_null|luna1:center_tail_6_anim.rotateY" 
+		"lunaRN1.placeHolderList[49]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim|luna1:center_tail_6_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_vis_null|luna1:center_tail_6_anim.rotateZ" 
+		"lunaRN1.placeHolderList[50]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim|luna1:center_tail_6_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_vis_null|luna1:center_tail_6_anim.center_swim_influence" 
+		"lunaRN1.placeHolderList[51]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_tail_component_grp|luna1:center_tail_anim_grp|luna1:center_tail_1_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_deformer_null|luna1:center_tail_1_vis_null|luna1:center_tail_1_anim|luna1:center_tail_2_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_deformer_null|luna1:center_tail_2_vis_null|luna1:center_tail_2_anim|luna1:center_tail_3_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_deformer_null|luna1:center_tail_3_vis_null|luna1:center_tail_3_anim|luna1:center_tail_4_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_deformer_null|luna1:center_tail_4_vis_null|luna1:center_tail_4_anim|luna1:center_tail_5_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_deformer_null|luna1:center_tail_5_vis_null|luna1:center_tail_5_anim|luna1:center_tail_6_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_deformer_null|luna1:center_tail_6_vis_null|luna1:center_tail_6_anim.center_tail_flap_influence" 
+		"lunaRN1.placeHolderList[52]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim.rotateX" 
+		"lunaRN1.placeHolderList[53]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim.rotateY" 
+		"lunaRN1.placeHolderList[54]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim.rotateZ" 
+		"lunaRN1.placeHolderList[55]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_neck_component_grp|luna1:center_neck_anim_grp|luna1:center_neck_null|luna1:center_neck_multicon_null|luna1:center_neck_vis_null|luna1:center_neck_anim.parent_to" 
+		"lunaRN1.placeHolderList[56]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim.rotateX" 
+		"lunaRN1.placeHolderList[57]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim.rotateY" 
+		"lunaRN1.placeHolderList[58]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim.rotateZ" 
+		"lunaRN1.placeHolderList[59]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_head_component_grp|luna1:center_head_anim_grp|luna1:center_head_null|luna1:center_head_multicon_null|luna1:center_head_vis_null|luna1:center_head_anim.parent_to" 
+		"lunaRN1.placeHolderList[60]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim.rotateX" 
+		"lunaRN1.placeHolderList[61]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim.rotateY" 
+		"lunaRN1.placeHolderList[62]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim.rotateZ" 
+		"lunaRN1.placeHolderList[63]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim|luna1:center_dorsal_fin_2_null|luna1:center_dorsal_fin_2_vis_null|luna1:center_dorsal_fin_2_anim.rotateX" 
+		"lunaRN1.placeHolderList[64]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim|luna1:center_dorsal_fin_2_null|luna1:center_dorsal_fin_2_vis_null|luna1:center_dorsal_fin_2_anim.rotateY" 
+		"lunaRN1.placeHolderList[65]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim|luna1:center_dorsal_fin_2_null|luna1:center_dorsal_fin_2_vis_null|luna1:center_dorsal_fin_2_anim.rotateZ" 
+		"lunaRN1.placeHolderList[66]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim|luna1:center_dorsal_fin_2_null|luna1:center_dorsal_fin_2_vis_null|luna1:center_dorsal_fin_2_anim|luna1:center_dorsal_fin_3_null|luna1:center_dorsal_fin_3_vis_null|luna1:center_dorsal_fin_3_anim.rotateX" 
+		"lunaRN1.placeHolderList[67]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim|luna1:center_dorsal_fin_2_null|luna1:center_dorsal_fin_2_vis_null|luna1:center_dorsal_fin_2_anim|luna1:center_dorsal_fin_3_null|luna1:center_dorsal_fin_3_vis_null|luna1:center_dorsal_fin_3_anim.rotateY" 
+		"lunaRN1.placeHolderList[68]" ""
+		5 4 "lunaRN1" "|luna1:Luna_topCon|luna1:component_grp|luna1:center_dorsal_fin_component_grp|luna1:center_dorsal_fin_anim_grp|luna1:center_dorsal_fin_1_null|luna1:center_dorsal_fin_1_vis_null|luna1:center_dorsal_fin_1_anim|luna1:center_dorsal_fin_2_null|luna1:center_dorsal_fin_2_vis_null|luna1:center_dorsal_fin_2_anim|luna1:center_dorsal_fin_3_null|luna1:center_dorsal_fin_3_vis_null|luna1:center_dorsal_fin_3_anim.rotateZ" 
+		"lunaRN1.placeHolderList[69]" "";
+lockNode -l 1 ;
+createNode animCurveTL -n "center_COG_anim_translateX2";
+	rename -uid "13F70B3E-4017-51E2-E878-DD92B77832B4";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 90 ".ktv[0:89]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
-		 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0
-		 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0
-		 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0
-		 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0;
-	setAttr -s 90 ".kot[0:89]"  17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 
-		17 17 17 17 17 17 17 17 17 17 17 17 17 9;
-	setAttr -s 90 ".kix[0:89]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 90 ".kiy[0:89]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kit[1]"  2;
+	setAttr -s 2 ".kot[1]"  2;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTL -n "center_COG_anim_translateY2";
+	rename -uid "CCD8F28A-4A58-829C-F32E-808C1D1A4CF7";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 20 186.49224853515625 46 0 90 0;
+	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.79166666666666663 
+		1.0833333333333333 1;
+	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
+	setAttr -s 4 ".kox[0:3]"  0.00062499998603016138 1.0833333333333333 
+		1.8333333333333333 0.33000000317891437;
+	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode animCurveTL -n "center_COG_anim_translateZ2";
+	rename -uid "9CB53DD2-42DD-F889-F21A-248C88E0DD25";
+	setAttr ".tan" 1;
+	setAttr -s 7 ".ktv[0:6]"  1 0 10 143.63691711425781 30 -176.23033142089844
+		 46 0 56 27.201276779174805 75 0 90 0;
+	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.37500000795139071 
+		0.83308332424283194 0.66666666858746992 0.41654165585835773 0.79166666666666663 0.99984995524088538;
+	setAttr -s 7 ".kiy[0:6]"  0 -54.692180247917719 -79.774343290782681 
+		125.18866264602748 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.00062499998603016138 0.83308331171671546 
+		0.66666666666666663 0.41654166938565118 0.79166666666666663 0.625 0.33000000317891437;
+	setAttr -s 7 ".koy[0:6]"  0 0 0 78.219441564733856 0 0 0;
+createNode animCurveTA -n "center_COG_anim_rotateX2";
+	rename -uid "65A46710-48D9-4559-DDF0-679247678379";
+	setAttr ".tan" 1;
+	setAttr -s 5 ".ktv[0:4]"  1 0 20 -176.90484619140625 46 -360 56 -370.1434326171875
+		 90 -360;
+	setAttr -s 5 ".kix[0:4]"  0.33000000317891437 0.7916667312594029 
+		1.0833333263732867 0.41654165585835773 0.99969991048177087;
+	setAttr -s 5 ".kiy[0:4]"  0 -2.6528997974170498 -2.4358015740669594 
+		0 0;
+	setAttr -s 5 ".kox[0:4]"  0.00062499998603016138 1.083333342864208 
+		0.41654166997845271 1.4162416458129883 0.33000000317891437;
+	setAttr -s 5 ".koy[0:4]"  0 -3.6302836690479636 -0.53094931583041494 
+		0 0;
+createNode animCurveTA -n "center_COG_anim_rotateY2";
+	rename -uid "61F85B7C-493A-2FD3-42B8-3D8AA664E754";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kit[1]"  2;
+	setAttr -s 2 ".kot[1]"  2;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_COG_anim_rotateZ2";
+	rename -uid "EF899435-41F2-5100-68FF-68BE67FEFEA6";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kit[1]"  2;
+	setAttr -s 2 ".kot[1]"  2;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_COG_anim_display_deformer2";
+	rename -uid "57148A42-4DB6-EA94-4557-27B206B8B21B";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kit[1]"  2;
+	setAttr -s 2 ".kot[1]"  2;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_COG_anim_swim_height2";
+	rename -uid "651D52C0-44CA-FA67-DA9F-EABEF8335819";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0.05000000074505806 90 0.05000000074505806;
+	setAttr -s 2 ".kit[1]"  2;
+	setAttr -s 2 ".kot[1]"  2;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_COG_anim_swim_length2";
+	rename -uid "60C301D9-44A6-20F0-2F66-7687D0B65366";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 5 90 5;
+	setAttr -s 2 ".kit[1]"  2;
+	setAttr -s 2 ".kot[1]"  2;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_COG_anim_swim_offset2";
+	rename -uid "EDF64DCB-4905-BC5B-5988-879E86E6AD21";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 5 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.32999998453331303 1.8749999336629466 
+		1;
+	setAttr -s 3 ".kiy[0:2]"  0.8800000296781445 5.0000002260707586 0;
+	setAttr -s 3 ".kox[0:2]"  1.8749999336629466 0.00062499998603016138 
+		0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  5.0000002260707586 0 0;
+createNode animCurveTA -n "center_spine_2_anim_rotateX2";
+	rename -uid "45D348C4-417C-A9CC-D9F7-A09C1D840D37";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_spine_2_anim_rotateY2";
+	rename -uid "1C3DF856-479E-CE5C-FFCA-BC971890947D";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_spine_2_anim_rotateZ2";
+	rename -uid "AD54413C-4A11-E921-15B4-49980C24D44F";
+	setAttr ".tan" 1;
+	setAttr -s 7 ".ktv[0:6]"  1 -12.000000000000002 10 28.653619766235352
+		 20 5.8621506690979013 30 21.433122634887695 46 -5.7461237907409668 56 -16.457366943359375
+		 90 -12.000000000000002;
+	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.37500000487485269 
+		0.41654163417123002 0.41654168462327518 0.99990002314249671 0.41654165585835773 0.41654165585835773;
+	setAttr -s 7 ".kiy[0:6]"  0 0.095969657731269184 -0.062991813409685432 
+		-0.07790070491448671 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.375 0.41654165585835773 0.41654165585835773 
+		0.66666666666666663 0.99997496604919434 1.4162416458129883 0.33000000317891437;
+	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
+createNode animCurveTU -n "center_spine_2_anim_center_swim_influence2";
+	rename -uid "74729020-4733-7E12-3A94-8899B75A2CC8";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 46 1 90 1;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_spine_1_anim_rotateX2";
+	rename -uid "2E017BEC-461C-68F6-A2E4-619EF01714F1";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_spine_1_anim_rotateY2";
+	rename -uid "979C26DB-45C9-9A02-0F58-3C83069EA378";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_spine_1_anim_rotateZ2";
+	rename -uid "A5BEF1F8-4915-8C42-5F81-BC9BC14BB96A";
+	setAttr ".tan" 1;
+	setAttr -s 5 ".ktv[0:4]"  1 -8.9044942855834961 10 -11.644616127014162
+		 20 -6.7412090301513672 46 -8.9044942855834961 90 -8.9044942855834961;
+	setAttr -s 5 ".kix[0:4]"  0.33000000317891437 0.375 0.41654165585835773 
+		1.8331832885742187 0.41639165083567303;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
+	setAttr -s 5 ".kox[0:4]"  0.375 0.41654165585835773 1.0833333333333333 
+		1 0.33000000317891437;
+	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
+createNode animCurveTU -n "center_spine_1_anim_center_swim_influence2";
+	rename -uid "49227B10-4DBA-EA00-080E-7CA42208CD9F";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 46 1 90 1;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_tail_1_anim_rotateX2";
+	rename -uid "BBEBED86-41AA-F42F-897A-2E9CFD6D9C4E";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_1_anim_rotateY2";
+	rename -uid "C714BB0B-4DC4-9D4B-833F-CCB4EA2AB870";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_1_anim_rotateZ2";
+	rename -uid "6B91D583-4B4A-866B-504C-E6BAF2EEE157";
+	setAttr ".tan" 1;
+	setAttr -s 7 ".ktv[0:6]"  1 -9 10 9.1267108917236328 20 11.054741859436035
+		 30 16.692672729492188 56 -15.031231880187988 64 -17.502548217773437 90 -9;
+	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.375 0.41654165585835773 
+		0.41654162077145201 1.0833333333333333 0.33333333333333331 0.41636661688486737;
+	setAttr -s 7 ".kiy[0:6]"  0 0 0 -0.12643041941136748 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.375 0.41654164172093061 0.41654166161000233 
+		1.0833333333333333 0.33333331875919686 1.0833333333333333 0.33000000317891437;
+	setAttr -s 7 ".koy[0:6]"  0 0.10092116976285102 0.066005671693134385 
+		0 -0.12939779478124644 0 0;
+createNode animCurveTU -n "center_tail_1_anim_display_deformer2";
+	rename -uid "8B294423-4047-900D-4F03-1A96A2F71088";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_1_anim_center_swim_influence2";
+	rename -uid "7F40E8E9-4340-8096-7D4B-C595841249FF";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_1_anim_tail_flap_height2";
+	rename -uid "EF913331-48E3-BB4D-2F45-6185EC93F477";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_1_anim_tail_flap_length2";
+	rename -uid "8812873B-425D-E351-4FF0-10ACC23F6022";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 5 90 5;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_1_anim_tail_flap_offset2";
+	rename -uid "A9EFA14C-45DA-1C01-CB2D-04BEBDF97F44";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_1_anim_center_tail_flap_influence2";
+	rename -uid "250ABAE1-4C3B-ED00-9E3E-07AC07D43636";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_2_anim_rotateX2";
+	rename -uid "38E11EE3-47DE-FC58-E368-5BBFA3DD3BE9";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 30 1.6165659427642822 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.2083333333333333 
+		1.2076207796732585;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.2083333333333333 2.5 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_tail_2_anim_rotateY2";
+	rename -uid "336C7D36-49A0-D3C9-F0D6-F98CAC7C7EEE";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 30 -2.8691637516021729 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.2083333333333333 
+		1.2076207796732585;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.2083333333333333 2.5 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_tail_2_anim_rotateZ2";
+	rename -uid "46A6DBDD-427B-CA83-DE79-589DB969FE1E";
+	setAttr ".tan" 1;
+	setAttr -s 7 ".ktv[0:6]"  1 -3.2279555797576904 10 10.946612358093262
+		 20 12.359272956848146 30 12.653008460998535 56 -11.850085258483887 64 -14.321401596069336
+		 90 -3.2279555797576904;
+	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.375 0.41654165585835773 
+		0.41654165585835773 1.0833333333333333 0.33333333333333331 0.41636661688486737;
+	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.375 0.41654164070360844 0.41654162682398299 
+		1.0833333333333333 0.33333335481652421 1.0833333333333333 0.33000000317891437;
+	setAttr -s 7 ".koy[0:6]"  0 0.073944517693329492 0.01488664314927764 
+		0 -0.11077465190803315 0 0;
+createNode animCurveTU -n "center_tail_2_anim_center_swim_influence2";
+	rename -uid "17537F1A-4D7A-C727-DF37-0996B671F1E8";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_2_anim_center_tail_flap_influence2";
+	rename -uid "D08A069E-4D48-3796-58E6-169CD86E1F49";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_3_anim_rotateX2";
+	rename -uid "4BEA169A-4A04-9BA0-1AA9-FE96989AF041";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_3_anim_rotateY2";
+	rename -uid "6E3F9A3E-41B8-3CC3-D8C0-228D7599091D";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_3_anim_rotateZ2";
+	rename -uid "FC29CAB6-4F34-DC89-86E7-4CA372A620FA";
+	setAttr ".tan" 1;
+	setAttr -s 7 ".ktv[0:6]"  1 -3.6975998878479004 10 10.476967811584473
+		 20 10.742863655090332 30 7.2031898498535165 56 -17.747369766235352 64 -20.218685150146484
+		 90 -3.6975998878479004;
+	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.375 0.41654165585835773 
+		0.41654166485451216 1.0833333333333333 0.33333333333333331 0.41636661688486737;
+	setAttr -s 7 ".kiy[0:6]"  0 0 0 -0.13808311158462969 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.375 0.41654166902659789 0.41654165585835773 
+		1.083333340013203 0.3333333266414531 1.0833333333333333 0.33000000317891437;
+	setAttr -s 7 ".koy[0:6]"  0 0.013918062141510566 0 -0.35912378705704617 
+		-0.11261222372100149 0 0;
+createNode animCurveTU -n "center_tail_3_anim_center_swim_influence2";
+	rename -uid "94AA9D35-4E06-5982-5947-7EA7238F150B";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_3_anim_center_tail_flap_influence2";
+	rename -uid "C9B9EB82-4AA4-184D-7480-ACA259EEA615";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_4_anim_rotateX1";
+	rename -uid "61804612-43F1-8D04-FF85-49B4048B6784";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_4_anim_rotateY1";
+	rename -uid "70CF1BAF-4FDE-4A8A-FA5E-62B10E9AC29A";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_4_anim_rotateZ1";
+	rename -uid "601A7F8E-4944-7C7A-89D8-5C910C65B441";
+	setAttr ".tan" 1;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 14.174568176269531 20 17.24079704284668
+		 56 -12.658355712890625 64 -15.129671096801756 90 0;
+	setAttr -s 6 ".kix[0:5]"  0.33000000317891437 0.37500001557896107 
+		0.41654166332328918 1.5 0.33333333333333331 0.41636661688486737;
+	setAttr -s 6 ".kiy[0:5]"  0 0.14253569598651938 -0.10177877938804751 
+		0 0 0;
+	setAttr -s 6 ".kox[0:5]"  0.375 0.41654166460092551 1.5 0.33333332115877229 
+		1.0833333333333333 0.33000000317891437;
+	setAttr -s 6 ".koy[0:5]"  0 0.15832549524230427 0 -0.10272203944202782 
+		0 0;
+createNode animCurveTU -n "center_tail_4_anim_center_swim_influence1";
+	rename -uid "736E8192-4901-2FAF-EBC6-B19B13FB2474";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_4_anim_center_tail_flap_influence1";
+	rename -uid "4DA4EA18-4676-A32D-49DC-94A4C56F9101";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_5_anim_rotateX1";
+	rename -uid "1627413B-48ED-4544-EAE1-D2A71024F938";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_5_anim_rotateY1";
+	rename -uid "B66AA14A-4990-F405-C013-A9A1B242E26E";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_5_anim_rotateZ1";
+	rename -uid "D23FFFDC-4FBE-84A5-9655-3E8BECE0A79D";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 20 12.14492702484131 64 -12.963183403015137
+		 90 0;
+	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.7916666586929928 
+		1.8333334109808883 0.79145415623982751;
+	setAttr -s 4 ".kiy[0:3]"  0 -0.068234197161981106 -0.1332376380213631 
+		0;
+	setAttr -s 4 ".kox[0:3]"  0.79166666666666663 1.8333333333333333 
+		1.0833333333333333 0.33000000317891437;
+	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode animCurveTU -n "center_tail_5_anim_center_swim_influence1";
+	rename -uid "675DB991-4640-9A9F-4EB2-99898068D40D";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_5_anim_center_tail_flap_influence1";
+	rename -uid "CEA9F274-45EC-54EA-E32E-91A1B145E073";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_6_anim_rotateX1";
+	rename -uid "E725B6F3-4A50-C4E4-0B14-3CB97F82C9D2";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_6_anim_rotateY1";
+	rename -uid "D4887CD7-4D36-040F-6CF1-9C9A180E312F";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 0 90 0;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_tail_6_anim_rotateZ1";
+	rename -uid "EB46E1C9-4B13-74DD-C0E7-158F2EFC2363";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 20 18.684299468994141 64 -26.399269104003906
+		 90 0;
+	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.79166663890754785 
+		1.8333331771867727 0.79145415623982751;
+	setAttr -s 4 ".kiy[0:3]"  0 -0.1389575957363321 -0.20497870115197969 
+		0;
+	setAttr -s 4 ".kox[0:3]"  0.79166666666666663 1.8333333333333333 
+		1.0833333333333333 0.33000000317891437;
+	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode animCurveTU -n "center_tail_6_anim_center_swim_influence1";
+	rename -uid "92AC3B5F-4CC8-9858-85E7-28BA90207310";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTU -n "center_tail_6_anim_center_tail_flap_influence1";
+	rename -uid "DE0CA518-48F4-6677-B512-FCA8107872F3";
+	setAttr ".tan" 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 90 1;
+	setAttr -s 2 ".kix[0:1]"  0.33000000317891437 3.7072207132975259;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  3.7072207132975259 0.33000000317891437;
+	setAttr -s 2 ".koy[0:1]"  0 0;
+createNode animCurveTA -n "center_neck_anim_rotateX1";
+	rename -uid "D8A24E39-4E28-05EC-CCD1-5DB71892A8F2";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_neck_anim_rotateY1";
+	rename -uid "37FDD0CB-4301-46ED-7417-09B9041BB0C1";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 -12.000000000000002 46 0 90 -12.000000000000002;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_neck_anim_rotateZ1";
+	rename -uid "A9675643-4E7A-75D9-FBFF-F4BFBB2EE581";
+	setAttr ".tan" 1;
+	setAttr -s 7 ".ktv[0:6]"  1 0 10 -28.516288757324219 20 -13.628762245178223
+		 30 -26.491350173950195 46 0 56 10.473361015319824 90 0;
+	setAttr -s 7 ".kix[0:6]"  0.33000000317891437 0.37500000356760238 
+		0.41654168255396518 0.41654165888772932 0.99990002314249671 0.41654165585835773 0.41654165585835773;
+	setAttr -s 7 ".kiy[0:6]"  0 -0.11267374069129603 0.017665619907918418 
+		0.091459778561873525 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.375 0.41654165585835773 0.41654165585835773 
+		0.66666666666666663 0.99997496604919434 1.4162416458129883 0.33000000317891437;
+	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
+createNode animCurveTU -n "center_neck_anim_parent_to1";
+	rename -uid "2ADD7AF6-4E10-24F0-1B4F-EB9996572993";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kot[0:2]"  5 5 9;
+	setAttr -s 3 ".kix[0:2]"  1 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_head_anim_rotateX1";
+	rename -uid "554C0892-4FA4-25ED-D3E2-8C8A0CB7F086";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 56 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 2.2916666666666665 
+		2.2497501373291016;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  2.2916666666666665 1.4162416458129883 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_head_anim_rotateY1";
+	rename -uid "16B20E83-4852-4035-FBA4-B4B200F6E6DA";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 -12.000000000000002 56 0 90 -12.000000000000002;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 2.2916666666666665 
+		2.2497501373291016;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  2.2916666666666665 1.4162416458129883 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_head_anim_rotateZ1";
+	rename -uid "BA83A069-44BF-0C0A-AF98-448130C6DC1F";
+	setAttr ".tan" 1;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 -19.492109298706055 20 -15.200660705566404
+		 30 -15.38754463195801 56 5.7228012084960937 90 0;
+	setAttr -s 6 ".kix[0:5]"  0.33000000317891437 0.37499999452151794 
+		0.41654165585835773 0.41654165585835773 1.8331832885742187 0.41654165585835773;
+	setAttr -s 6 ".kiy[0:5]"  0 -0.12566916107327478 0 0 0 0;
+	setAttr -s 6 ".kox[0:5]"  0.375 0.41654165585835773 0.41654165585835773 
+		1.0833333333333333 0.99969991048177087 0.33000000317891437;
+	setAttr -s 6 ".koy[0:5]"  0 0 0 0 0 0;
+createNode animCurveTU -n "center_head_anim_parent_to1";
+	rename -uid "B5E65914-4DEE-DE26-7271-14B4C9806748";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 56 0 90 0;
+	setAttr -s 3 ".kot[0:2]"  5 5 9;
+	setAttr -s 3 ".kix[0:2]"  1 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_1_anim_rotateX1";
+	rename -uid "91C9D82A-4687-9287-FE67-32BBBA44D413";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_1_anim_rotateY1";
+	rename -uid "767B5F80-450F-F8C0-B55E-C0B5F3113E7D";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_1_anim_rotateZ1";
+	rename -uid "25F2AED1-4248-C46D-4981-D486EAE645B1";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 10.750720024108887 46 0 90 0;
+	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.375 1 0.41639165083567303;
+	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
+	setAttr -s 4 ".kox[0:3]"  0.375 1.5 1 0.33000000317891437;
+	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_2_anim_rotateX1";
+	rename -uid "0B0DA8F5-434E-5FB8-450F-8E8D70CB786E";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_2_anim_rotateY1";
+	rename -uid "35A0A476-42BC-AE3F-F7B7-D1860C931F90";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_2_anim_rotateZ1";
+	rename -uid "F832FB6D-490E-11C0-EF29-29810A87144B";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 10.750720024108887 46 0 90 0;
+	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.375 1 0.41639165083567303;
+	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
+	setAttr -s 4 ".kox[0:3]"  0.375 1.5 1 0.33000000317891437;
+	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_3_anim_rotateX1";
+	rename -uid "598322B8-44F0-B21B-48DE-AC985B05477D";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_3_anim_rotateY1";
+	rename -uid "9883C69A-4B27-B800-56B6-F3BC358AE748";
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 0 46 0 90 0;
+	setAttr -s 3 ".kix[0:2]"  0.33000000317891437 1.875 1.8333333333333333;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1.875 1.8333333333333333 0.33000000317891437;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+createNode animCurveTA -n "center_dorsal_fin_3_anim_rotateZ1";
+	rename -uid "B663E0AB-4EB3-8F3C-F949-02B11D3ED3A0";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 10.750720024108887 46 0 90 0;
+	setAttr -s 4 ".kix[0:3]"  0.33000000317891437 0.375 1 0.41639165083567303;
+	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
+	setAttr -s 4 ".kox[0:3]"  0.375 1.5 1 0.33000000317891437;
+	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 13;
+	setAttr ".unw" 13;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -16729,277 +16453,81 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-connectAttr "center_COG_anim_translateX1.o" "lunaRN.phl[1]";
-connectAttr "center_COG_anim_translateY1.o" "lunaRN.phl[2]";
-connectAttr "center_COG_anim_translateZ1.o" "lunaRN.phl[3]";
-connectAttr "center_COG_anim_rotateX1.o" "lunaRN.phl[4]";
-connectAttr "center_COG_anim_rotateY1.o" "lunaRN.phl[5]";
-connectAttr "center_COG_anim_rotateZ1.o" "lunaRN.phl[6]";
-connectAttr "center_COG_anim_display_deformer1.o" "lunaRN.phl[7]";
-connectAttr "center_COG_anim_swim_height1.o" "lunaRN.phl[8]";
-connectAttr "center_COG_anim_swim_length1.o" "lunaRN.phl[9]";
-connectAttr "center_COG_anim_swim_offset1.o" "lunaRN.phl[10]";
-connectAttr "center_spine_1_deformer_null_translateX.o" "lunaRN.phl[11]";
-connectAttr "center_spine_1_deformer_null_translateY.o" "lunaRN.phl[12]";
-connectAttr "center_spine_1_deformer_null_translateZ.o" "lunaRN.phl[13]";
-connectAttr "center_spine_1_deformer_null_rotateX.o" "lunaRN.phl[14]";
-connectAttr "center_spine_1_deformer_null_rotateY.o" "lunaRN.phl[15]";
-connectAttr "center_spine_1_deformer_null_rotateZ.o" "lunaRN.phl[16]";
-connectAttr "center_spine_1_anim_rotateX1.o" "lunaRN.phl[17]";
-connectAttr "center_spine_1_anim_rotateY1.o" "lunaRN.phl[18]";
-connectAttr "center_spine_1_anim_rotateZ1.o" "lunaRN.phl[19]";
-connectAttr "center_spine_1_anim_center_swim_influence1.o" "lunaRN.phl[20]";
-connectAttr "center_spine_2_deformer_null_rotateX.o" "lunaRN.phl[21]";
-connectAttr "center_spine_2_deformer_null_rotateY.o" "lunaRN.phl[22]";
-connectAttr "center_spine_2_deformer_null_rotateZ.o" "lunaRN.phl[23]";
-connectAttr "center_spine_2_anim_rotateX1.o" "lunaRN.phl[24]";
-connectAttr "center_spine_2_anim_rotateY1.o" "lunaRN.phl[25]";
-connectAttr "center_spine_2_anim_rotateZ1.o" "lunaRN.phl[26]";
-connectAttr "center_spine_2_anim_center_swim_influence1.o" "lunaRN.phl[27]";
-connectAttr "lunaRN.phl[28]" "luna:center_tail_1_deformer_null1.is";
-connectAttr "center_tail_1_anim_rotateX1.o" "lunaRN.phl[29]";
-connectAttr "center_tail_1_anim_rotateY1.o" "lunaRN.phl[30]";
-connectAttr "center_tail_1_anim_rotateZ1.o" "lunaRN.phl[31]";
-connectAttr "center_tail_1_anim_display_deformer1.o" "lunaRN.phl[32]";
-connectAttr "center_tail_1_anim_center_swim_influence1.o" "lunaRN.phl[33]";
-connectAttr "center_tail_1_anim_tail_flap_height1.o" "lunaRN.phl[34]";
-connectAttr "center_tail_1_anim_tail_flap_length1.o" "lunaRN.phl[35]";
-connectAttr "center_tail_1_anim_tail_flap_offset1.o" "lunaRN.phl[36]";
-connectAttr "center_tail_1_anim_center_tail_flap_influence1.o" "lunaRN.phl[37]";
-connectAttr "lunaRN.phl[38]" "luna:center_tail_2_deformer_null1.is";
-connectAttr "center_tail_2_anim_rotateX1.o" "lunaRN.phl[39]";
-connectAttr "center_tail_2_anim_rotateY1.o" "lunaRN.phl[40]";
-connectAttr "center_tail_2_anim_rotateZ1.o" "lunaRN.phl[41]";
-connectAttr "center_tail_2_anim_center_swim_influence1.o" "lunaRN.phl[42]";
-connectAttr "center_tail_2_anim_center_tail_flap_influence1.o" "lunaRN.phl[43]";
-connectAttr "lunaRN.phl[44]" "luna:center_tail_3_deformer_null1.is";
-connectAttr "center_tail_3_anim_rotateX1.o" "lunaRN.phl[45]";
-connectAttr "center_tail_3_anim_rotateY1.o" "lunaRN.phl[46]";
-connectAttr "center_tail_3_anim_rotateZ1.o" "lunaRN.phl[47]";
-connectAttr "center_tail_3_anim_center_swim_influence1.o" "lunaRN.phl[48]";
-connectAttr "center_tail_3_anim_center_tail_flap_influence1.o" "lunaRN.phl[49]";
-connectAttr "lunaRN.phl[50]" "luna:center_tail_4_deformer_null1.is";
-connectAttr "center_tail_4_anim_rotateX.o" "lunaRN.phl[51]";
-connectAttr "center_tail_4_anim_rotateY.o" "lunaRN.phl[52]";
-connectAttr "center_tail_4_anim_rotateZ.o" "lunaRN.phl[53]";
-connectAttr "center_tail_4_anim_center_swim_influence.o" "lunaRN.phl[54]";
-connectAttr "center_tail_4_anim_center_tail_flap_influence.o" "lunaRN.phl[55]";
-connectAttr "lunaRN.phl[56]" "luna:center_tail_5_deformer_null1.is";
-connectAttr "center_tail_5_anim_rotateX.o" "lunaRN.phl[57]";
-connectAttr "center_tail_5_anim_rotateY.o" "lunaRN.phl[58]";
-connectAttr "center_tail_5_anim_rotateZ.o" "lunaRN.phl[59]";
-connectAttr "center_tail_5_anim_center_swim_influence.o" "lunaRN.phl[60]";
-connectAttr "center_tail_5_anim_center_tail_flap_influence.o" "lunaRN.phl[61]";
-connectAttr "lunaRN.phl[62]" "luna:center_tail_6_deformer_null1.is";
-connectAttr "center_tail_6_anim_rotateX.o" "lunaRN.phl[63]";
-connectAttr "center_tail_6_anim_rotateY.o" "lunaRN.phl[64]";
-connectAttr "center_tail_6_anim_rotateZ.o" "lunaRN.phl[65]";
-connectAttr "center_tail_6_anim_center_swim_influence.o" "lunaRN.phl[66]";
-connectAttr "center_tail_6_anim_center_tail_flap_influence.o" "lunaRN.phl[67]";
-connectAttr "center_neck_anim_rotateX.o" "lunaRN.phl[68]";
-connectAttr "center_neck_anim_rotateY.o" "lunaRN.phl[69]";
-connectAttr "center_neck_anim_rotateZ.o" "lunaRN.phl[70]";
-connectAttr "center_neck_anim_parent_to.o" "lunaRN.phl[71]";
-connectAttr "center_head_anim_rotateX.o" "lunaRN.phl[72]";
-connectAttr "center_head_anim_rotateY.o" "lunaRN.phl[73]";
-connectAttr "center_head_anim_rotateZ.o" "lunaRN.phl[74]";
-connectAttr "center_head_anim_parent_to.o" "lunaRN.phl[75]";
-connectAttr "center_dorsal_fin_1_anim_rotateX.o" "lunaRN.phl[76]";
-connectAttr "center_dorsal_fin_1_anim_rotateY.o" "lunaRN.phl[77]";
-connectAttr "center_dorsal_fin_1_anim_rotateZ.o" "lunaRN.phl[78]";
-connectAttr "center_dorsal_fin_2_anim_rotateX.o" "lunaRN.phl[79]";
-connectAttr "center_dorsal_fin_2_anim_rotateY.o" "lunaRN.phl[80]";
-connectAttr "center_dorsal_fin_2_anim_rotateZ.o" "lunaRN.phl[81]";
-connectAttr "center_dorsal_fin_3_anim_rotateX.o" "lunaRN.phl[82]";
-connectAttr "center_dorsal_fin_3_anim_rotateY.o" "lunaRN.phl[83]";
-connectAttr "center_dorsal_fin_3_anim_rotateZ.o" "lunaRN.phl[84]";
-connectAttr "center_swim_1_deformer_joint_rotateX.o" "lunaRN.phl[85]";
-connectAttr "center_swim_1_deformer_joint_rotateY.o" "lunaRN.phl[86]";
-connectAttr "center_swim_1_deformer_joint_rotateZ.o" "lunaRN.phl[87]";
-connectAttr "center_swim_2_deformer_joint_rotateX.o" "lunaRN.phl[88]";
-connectAttr "center_swim_2_deformer_joint_rotateY.o" "lunaRN.phl[89]";
-connectAttr "center_swim_2_deformer_joint_rotateZ.o" "lunaRN.phl[90]";
-connectAttr "center_swim_3_deformer_joint_rotateX.o" "lunaRN.phl[91]";
-connectAttr "center_swim_3_deformer_joint_rotateY.o" "lunaRN.phl[92]";
-connectAttr "center_swim_3_deformer_joint_rotateZ.o" "lunaRN.phl[93]";
-connectAttr "center_swim_4_deformer_joint_rotateX.o" "lunaRN.phl[94]";
-connectAttr "center_swim_4_deformer_joint_rotateY.o" "lunaRN.phl[95]";
-connectAttr "center_swim_4_deformer_joint_rotateZ.o" "lunaRN.phl[96]";
-connectAttr "center_swim_5_deformer_joint_rotateX.o" "lunaRN.phl[97]";
-connectAttr "center_swim_5_deformer_joint_rotateY.o" "lunaRN.phl[98]";
-connectAttr "center_swim_5_deformer_joint_rotateZ.o" "lunaRN.phl[99]";
-connectAttr "center_swim_6_deformer_joint_rotateX.o" "lunaRN.phl[100]";
-connectAttr "center_swim_6_deformer_joint_rotateY.o" "lunaRN.phl[101]";
-connectAttr "center_swim_6_deformer_joint_rotateZ.o" "lunaRN.phl[102]";
-connectAttr "center_swim_7_deformer_joint_rotateX.o" "lunaRN.phl[103]";
-connectAttr "center_swim_7_deformer_joint_rotateY.o" "lunaRN.phl[104]";
-connectAttr "center_swim_7_deformer_joint_rotateZ.o" "lunaRN.phl[105]";
-connectAttr "center_swim_8_deformer_joint_rotateX.o" "lunaRN.phl[106]";
-connectAttr "center_swim_8_deformer_joint_rotateY.o" "lunaRN.phl[107]";
-connectAttr "center_swim_8_deformer_joint_rotateZ.o" "lunaRN.phl[108]";
-connectAttr "center_swim_end_deformer_joint_rotateX.o" "lunaRN.phl[109]";
-connectAttr "center_swim_end_deformer_joint_rotateY.o" "lunaRN.phl[110]";
-connectAttr "center_swim_end_deformer_joint_rotateZ.o" "lunaRN.phl[111]";
-connectAttr "center_tail_flap_1_deformer_joint_rotateX.o" "lunaRN.phl[112]";
-connectAttr "center_tail_flap_1_deformer_joint_rotateY.o" "lunaRN.phl[113]";
-connectAttr "center_tail_flap_1_deformer_joint_rotateZ.o" "lunaRN.phl[114]";
-connectAttr "center_tail_flap_2_deformer_joint_rotateX.o" "lunaRN.phl[115]";
-connectAttr "center_tail_flap_2_deformer_joint_rotateY.o" "lunaRN.phl[116]";
-connectAttr "center_tail_flap_2_deformer_joint_rotateZ.o" "lunaRN.phl[117]";
-connectAttr "center_tail_flap_3_deformer_joint_rotateX.o" "lunaRN.phl[118]";
-connectAttr "center_tail_flap_3_deformer_joint_rotateY.o" "lunaRN.phl[119]";
-connectAttr "center_tail_flap_3_deformer_joint_rotateZ.o" "lunaRN.phl[120]";
-connectAttr "center_tail_flap_4_deformer_joint_rotateX.o" "lunaRN.phl[121]";
-connectAttr "center_tail_flap_4_deformer_joint_rotateY.o" "lunaRN.phl[122]";
-connectAttr "center_tail_flap_4_deformer_joint_rotateZ.o" "lunaRN.phl[123]";
-connectAttr "center_tail_flap_5_deformer_joint_rotateX.o" "lunaRN.phl[124]";
-connectAttr "center_tail_flap_5_deformer_joint_rotateY.o" "lunaRN.phl[125]";
-connectAttr "center_tail_flap_5_deformer_joint_rotateZ.o" "lunaRN.phl[126]";
-connectAttr "center_tail_flap_6_deformer_joint_rotateX.o" "lunaRN.phl[127]";
-connectAttr "center_tail_flap_6_deformer_joint_rotateY.o" "lunaRN.phl[128]";
-connectAttr "center_tail_flap_6_deformer_joint_rotateZ.o" "lunaRN.phl[129]";
-connectAttr "center_tail_flap_end_deformer_joint_rotateX.o" "lunaRN.phl[130]";
-connectAttr "center_tail_flap_end_deformer_joint_rotateY.o" "lunaRN.phl[131]";
-connectAttr "center_tail_flap_end_deformer_joint_rotateZ.o" "lunaRN.phl[132]";
-connectAttr "left_flipper_1_anim_rotateX.o" "lunaRN.phl[133]";
-connectAttr "left_flipper_1_anim_rotateY.o" "lunaRN.phl[134]";
-connectAttr "left_flipper_1_anim_rotateZ.o" "lunaRN.phl[135]";
-connectAttr "left_flipper_2_anim_rotateX.o" "lunaRN.phl[136]";
-connectAttr "left_flipper_2_anim_rotateY.o" "lunaRN.phl[137]";
-connectAttr "left_flipper_2_anim_rotateZ.o" "lunaRN.phl[138]";
-connectAttr "left_flipper_3_anim_rotateX.o" "lunaRN.phl[139]";
-connectAttr "left_flipper_3_anim_rotateY.o" "lunaRN.phl[140]";
-connectAttr "left_flipper_3_anim_rotateZ.o" "lunaRN.phl[141]";
-connectAttr "left_fluke_1_anim_rotateX.o" "lunaRN.phl[142]";
-connectAttr "left_fluke_1_anim_rotateY.o" "lunaRN.phl[143]";
-connectAttr "left_fluke_1_anim_rotateZ.o" "lunaRN.phl[144]";
-connectAttr "left_fluke_2_anim_rotateX.o" "lunaRN.phl[145]";
-connectAttr "left_fluke_2_anim_rotateY.o" "lunaRN.phl[146]";
-connectAttr "left_fluke_2_anim_rotateZ.o" "lunaRN.phl[147]";
-connectAttr "left_fluke_3_anim_rotateX.o" "lunaRN.phl[148]";
-connectAttr "left_fluke_3_anim_rotateY.o" "lunaRN.phl[149]";
-connectAttr "left_fluke_3_anim_rotateZ.o" "lunaRN.phl[150]";
-connectAttr "right_flipper_1_anim_rotateX.o" "lunaRN.phl[151]";
-connectAttr "right_flipper_1_anim_rotateY.o" "lunaRN.phl[152]";
-connectAttr "right_flipper_1_anim_rotateZ.o" "lunaRN.phl[153]";
-connectAttr "right_flipper_2_anim_rotateX.o" "lunaRN.phl[154]";
-connectAttr "right_flipper_2_anim_rotateY.o" "lunaRN.phl[155]";
-connectAttr "right_flipper_2_anim_rotateZ.o" "lunaRN.phl[156]";
-connectAttr "right_flipper_3_anim_rotateX.o" "lunaRN.phl[157]";
-connectAttr "right_flipper_3_anim_rotateY.o" "lunaRN.phl[158]";
-connectAttr "right_flipper_3_anim_rotateZ.o" "lunaRN.phl[159]";
-connectAttr "right_fluke_1_anim_rotateX.o" "lunaRN.phl[160]";
-connectAttr "right_fluke_1_anim_rotateY.o" "lunaRN.phl[161]";
-connectAttr "right_fluke_1_anim_rotateZ.o" "lunaRN.phl[162]";
-connectAttr "right_fluke_2_anim_rotateX.o" "lunaRN.phl[163]";
-connectAttr "right_fluke_2_anim_rotateY.o" "lunaRN.phl[164]";
-connectAttr "right_fluke_2_anim_rotateZ.o" "lunaRN.phl[165]";
-connectAttr "right_fluke_3_anim_rotateX.o" "lunaRN.phl[166]";
-connectAttr "right_fluke_3_anim_rotateY.o" "lunaRN.phl[167]";
-connectAttr "right_fluke_3_anim_rotateZ.o" "lunaRN.phl[168]";
-connectAttr "center_eye_aim_main_anim_parent_to.o" "lunaRN.phl[169]";
-connectAttr "center_eye_aim_main_anim_translateX.o" "lunaRN.phl[170]";
-connectAttr "center_eye_aim_main_anim_translateY.o" "lunaRN.phl[171]";
-connectAttr "center_eye_aim_main_anim_translateZ.o" "lunaRN.phl[172]";
-connectAttr "center_eye_aim_main_anim_rotateX.o" "lunaRN.phl[173]";
-connectAttr "center_eye_aim_main_anim_rotateY.o" "lunaRN.phl[174]";
-connectAttr "center_eye_aim_main_anim_rotateZ.o" "lunaRN.phl[175]";
-connectAttr "center_eye_aim_right_anim_translateX.o" "lunaRN.phl[176]";
-connectAttr "center_eye_aim_right_anim_translateY.o" "lunaRN.phl[177]";
-connectAttr "center_eye_aim_right_anim_translateZ.o" "lunaRN.phl[178]";
-connectAttr "center_eye_aim_left_anim_translateX.o" "lunaRN.phl[179]";
-connectAttr "center_eye_aim_left_anim_translateY.o" "lunaRN.phl[180]";
-connectAttr "center_eye_aim_left_anim_translateZ.o" "lunaRN.phl[181]";
-connectAttr "center_jaw_anim_rotateX.o" "lunaRN.phl[182]";
-connectAttr "center_jaw_anim_rotateY.o" "lunaRN.phl[183]";
-connectAttr "center_jaw_anim_rotateZ.o" "lunaRN.phl[184]";
-connectAttr "center_jaw_anim_parent_to.o" "lunaRN.phl[185]";
-connectAttr "bind_joint_grp1_visibility.o" "luna:bind_joint_grp1.v";
-connectAttr "bind_joint_grp2_visibility.o" "luna:bind_joint_grp2.v";
-connectAttr "center_tail_1_deformer_null1_rotateX.o" "luna:center_tail_1_deformer_null1.rx"
-		 -l on;
-connectAttr "center_tail_1_deformer_null1_rotateY.o" "luna:center_tail_1_deformer_null1.ry"
-		 -l on;
-connectAttr "center_tail_1_deformer_null1_rotateZ.o" "luna:center_tail_1_deformer_null1.rz"
-		 -l on;
-connectAttr "luna:center_tail_1_deformer_null1.s" "|lunaRNfosterParent1|luna:center_tail_1_deformer_null1|luna:center_tail_1_deformer_null.is"
+connectAttr "center_COG_anim_translateX2.o" "lunaRN1.phl[1]";
+connectAttr "center_COG_anim_translateY2.o" "lunaRN1.phl[2]";
+connectAttr "center_COG_anim_translateZ2.o" "lunaRN1.phl[3]";
+connectAttr "center_COG_anim_rotateX2.o" "lunaRN1.phl[4]";
+connectAttr "center_COG_anim_rotateY2.o" "lunaRN1.phl[5]";
+connectAttr "center_COG_anim_rotateZ2.o" "lunaRN1.phl[6]";
+connectAttr "center_COG_anim_display_deformer2.o" "lunaRN1.phl[7]";
+connectAttr "center_COG_anim_swim_height2.o" "lunaRN1.phl[8]";
+connectAttr "center_COG_anim_swim_length2.o" "lunaRN1.phl[9]";
+connectAttr "center_COG_anim_swim_offset2.o" "lunaRN1.phl[10]";
+connectAttr "center_spine_1_anim_rotateX2.o" "lunaRN1.phl[11]";
+connectAttr "center_spine_1_anim_rotateY2.o" "lunaRN1.phl[12]";
+connectAttr "center_spine_1_anim_rotateZ2.o" "lunaRN1.phl[13]";
+connectAttr "center_spine_1_anim_center_swim_influence2.o" "lunaRN1.phl[14]";
+connectAttr "center_spine_2_anim_rotateX2.o" "lunaRN1.phl[15]";
+connectAttr "center_spine_2_anim_rotateY2.o" "lunaRN1.phl[16]";
+connectAttr "center_spine_2_anim_rotateZ2.o" "lunaRN1.phl[17]";
+connectAttr "center_spine_2_anim_center_swim_influence2.o" "lunaRN1.phl[18]";
+connectAttr "center_tail_1_anim_rotateX2.o" "lunaRN1.phl[19]";
+connectAttr "center_tail_1_anim_rotateY2.o" "lunaRN1.phl[20]";
+connectAttr "center_tail_1_anim_rotateZ2.o" "lunaRN1.phl[21]";
+connectAttr "center_tail_1_anim_display_deformer2.o" "lunaRN1.phl[22]";
+connectAttr "center_tail_1_anim_center_swim_influence2.o" "lunaRN1.phl[23]";
+connectAttr "center_tail_1_anim_tail_flap_height2.o" "lunaRN1.phl[24]";
+connectAttr "center_tail_1_anim_tail_flap_length2.o" "lunaRN1.phl[25]";
+connectAttr "center_tail_1_anim_tail_flap_offset2.o" "lunaRN1.phl[26]";
+connectAttr "center_tail_1_anim_center_tail_flap_influence2.o" "lunaRN1.phl[27]"
 		;
-connectAttr "center_tail_1_deformer_null_rotateX.o" "|lunaRNfosterParent1|luna:center_tail_1_deformer_null1|luna:center_tail_1_deformer_null.rx"
-		 -l on;
-connectAttr "center_tail_1_deformer_null_rotateY.o" "|lunaRNfosterParent1|luna:center_tail_1_deformer_null1|luna:center_tail_1_deformer_null.ry"
-		 -l on;
-connectAttr "center_tail_1_deformer_null_rotateZ.o" "|lunaRNfosterParent1|luna:center_tail_1_deformer_null1|luna:center_tail_1_deformer_null.rz"
-		 -l on;
-connectAttr "center_tail_2_deformer_null1_rotateX.o" "luna:center_tail_2_deformer_null1.rx"
-		 -l on;
-connectAttr "center_tail_2_deformer_null1_rotateY.o" "luna:center_tail_2_deformer_null1.ry"
-		 -l on;
-connectAttr "center_tail_2_deformer_null1_rotateZ.o" "luna:center_tail_2_deformer_null1.rz"
-		 -l on;
-connectAttr "luna:center_tail_2_deformer_null1.s" "|lunaRNfosterParent1|luna:center_tail_2_deformer_null1|luna:center_tail_2_deformer_null.is"
+connectAttr "center_tail_2_anim_rotateX2.o" "lunaRN1.phl[28]";
+connectAttr "center_tail_2_anim_rotateY2.o" "lunaRN1.phl[29]";
+connectAttr "center_tail_2_anim_rotateZ2.o" "lunaRN1.phl[30]";
+connectAttr "center_tail_2_anim_center_swim_influence2.o" "lunaRN1.phl[31]";
+connectAttr "center_tail_2_anim_center_tail_flap_influence2.o" "lunaRN1.phl[32]"
 		;
-connectAttr "center_tail_2_deformer_null_rotateX.o" "|lunaRNfosterParent1|luna:center_tail_2_deformer_null1|luna:center_tail_2_deformer_null.rx"
-		 -l on;
-connectAttr "center_tail_2_deformer_null_rotateY.o" "|lunaRNfosterParent1|luna:center_tail_2_deformer_null1|luna:center_tail_2_deformer_null.ry"
-		 -l on;
-connectAttr "center_tail_2_deformer_null_rotateZ.o" "|lunaRNfosterParent1|luna:center_tail_2_deformer_null1|luna:center_tail_2_deformer_null.rz"
-		 -l on;
-connectAttr "center_tail_3_deformer_null1_rotateX.o" "luna:center_tail_3_deformer_null1.rx"
-		 -l on;
-connectAttr "center_tail_3_deformer_null1_rotateY.o" "luna:center_tail_3_deformer_null1.ry"
-		 -l on;
-connectAttr "center_tail_3_deformer_null1_rotateZ.o" "luna:center_tail_3_deformer_null1.rz"
-		 -l on;
-connectAttr "luna:center_tail_3_deformer_null1.s" "|lunaRNfosterParent1|luna:center_tail_3_deformer_null1|luna:center_tail_3_deformer_null.is"
+connectAttr "center_tail_3_anim_rotateX2.o" "lunaRN1.phl[33]";
+connectAttr "center_tail_3_anim_rotateY2.o" "lunaRN1.phl[34]";
+connectAttr "center_tail_3_anim_rotateZ2.o" "lunaRN1.phl[35]";
+connectAttr "center_tail_3_anim_center_swim_influence2.o" "lunaRN1.phl[36]";
+connectAttr "center_tail_3_anim_center_tail_flap_influence2.o" "lunaRN1.phl[37]"
 		;
-connectAttr "center_tail_3_deformer_null_rotateX.o" "|lunaRNfosterParent1|luna:center_tail_3_deformer_null1|luna:center_tail_3_deformer_null.rx"
-		 -l on;
-connectAttr "center_tail_3_deformer_null_rotateY.o" "|lunaRNfosterParent1|luna:center_tail_3_deformer_null1|luna:center_tail_3_deformer_null.ry"
-		 -l on;
-connectAttr "center_tail_3_deformer_null_rotateZ.o" "|lunaRNfosterParent1|luna:center_tail_3_deformer_null1|luna:center_tail_3_deformer_null.rz"
-		 -l on;
-connectAttr "center_tail_4_deformer_null1_rotateX.o" "luna:center_tail_4_deformer_null1.rx"
-		 -l on;
-connectAttr "center_tail_4_deformer_null1_rotateY.o" "luna:center_tail_4_deformer_null1.ry"
-		 -l on;
-connectAttr "center_tail_4_deformer_null1_rotateZ.o" "luna:center_tail_4_deformer_null1.rz"
-		 -l on;
-connectAttr "luna:center_tail_4_deformer_null1.s" "|lunaRNfosterParent1|luna:center_tail_4_deformer_null1|luna:center_tail_4_deformer_null.is"
+connectAttr "center_tail_4_anim_rotateX1.o" "lunaRN1.phl[38]";
+connectAttr "center_tail_4_anim_rotateY1.o" "lunaRN1.phl[39]";
+connectAttr "center_tail_4_anim_rotateZ1.o" "lunaRN1.phl[40]";
+connectAttr "center_tail_4_anim_center_swim_influence1.o" "lunaRN1.phl[41]";
+connectAttr "center_tail_4_anim_center_tail_flap_influence1.o" "lunaRN1.phl[42]"
 		;
-connectAttr "center_tail_4_deformer_null_rotateX.o" "|lunaRNfosterParent1|luna:center_tail_4_deformer_null1|luna:center_tail_4_deformer_null.rx"
-		 -l on;
-connectAttr "center_tail_4_deformer_null_rotateY.o" "|lunaRNfosterParent1|luna:center_tail_4_deformer_null1|luna:center_tail_4_deformer_null.ry"
-		 -l on;
-connectAttr "center_tail_4_deformer_null_rotateZ.o" "|lunaRNfosterParent1|luna:center_tail_4_deformer_null1|luna:center_tail_4_deformer_null.rz"
-		 -l on;
-connectAttr "center_tail_5_deformer_null1_rotateX.o" "luna:center_tail_5_deformer_null1.rx"
-		 -l on;
-connectAttr "center_tail_5_deformer_null1_rotateY.o" "luna:center_tail_5_deformer_null1.ry"
-		 -l on;
-connectAttr "center_tail_5_deformer_null1_rotateZ.o" "luna:center_tail_5_deformer_null1.rz"
-		 -l on;
-connectAttr "luna:center_tail_5_deformer_null1.s" "|lunaRNfosterParent1|luna:center_tail_5_deformer_null1|luna:center_tail_5_deformer_null.is"
+connectAttr "center_tail_5_anim_rotateX1.o" "lunaRN1.phl[43]";
+connectAttr "center_tail_5_anim_rotateY1.o" "lunaRN1.phl[44]";
+connectAttr "center_tail_5_anim_rotateZ1.o" "lunaRN1.phl[45]";
+connectAttr "center_tail_5_anim_center_swim_influence1.o" "lunaRN1.phl[46]";
+connectAttr "center_tail_5_anim_center_tail_flap_influence1.o" "lunaRN1.phl[47]"
 		;
-connectAttr "center_tail_5_deformer_null_rotateX.o" "|lunaRNfosterParent1|luna:center_tail_5_deformer_null1|luna:center_tail_5_deformer_null.rx"
-		 -l on;
-connectAttr "center_tail_5_deformer_null_rotateY.o" "|lunaRNfosterParent1|luna:center_tail_5_deformer_null1|luna:center_tail_5_deformer_null.ry"
-		 -l on;
-connectAttr "center_tail_5_deformer_null_rotateZ.o" "|lunaRNfosterParent1|luna:center_tail_5_deformer_null1|luna:center_tail_5_deformer_null.rz"
-		 -l on;
-connectAttr "center_tail_6_deformer_null1_rotateX.o" "luna:center_tail_6_deformer_null1.rx"
-		 -l on;
-connectAttr "center_tail_6_deformer_null1_rotateY.o" "luna:center_tail_6_deformer_null1.ry"
-		 -l on;
-connectAttr "center_tail_6_deformer_null1_rotateZ.o" "luna:center_tail_6_deformer_null1.rz"
-		 -l on;
-connectAttr "luna:center_tail_6_deformer_null1.s" "|lunaRNfosterParent1|luna:center_tail_6_deformer_null1|luna:center_tail_6_deformer_null.is"
+connectAttr "center_tail_6_anim_rotateX1.o" "lunaRN1.phl[48]";
+connectAttr "center_tail_6_anim_rotateY1.o" "lunaRN1.phl[49]";
+connectAttr "center_tail_6_anim_rotateZ1.o" "lunaRN1.phl[50]";
+connectAttr "center_tail_6_anim_center_swim_influence1.o" "lunaRN1.phl[51]";
+connectAttr "center_tail_6_anim_center_tail_flap_influence1.o" "lunaRN1.phl[52]"
 		;
-connectAttr "center_tail_6_deformer_null_rotateX.o" "|lunaRNfosterParent1|luna:center_tail_6_deformer_null1|luna:center_tail_6_deformer_null.rx"
-		 -l on;
-connectAttr "center_tail_6_deformer_null_rotateY.o" "|lunaRNfosterParent1|luna:center_tail_6_deformer_null1|luna:center_tail_6_deformer_null.ry"
-		 -l on;
-connectAttr "center_tail_6_deformer_null_rotateZ.o" "|lunaRNfosterParent1|luna:center_tail_6_deformer_null1|luna:center_tail_6_deformer_null.rz"
-		 -l on;
+connectAttr "center_neck_anim_rotateX1.o" "lunaRN1.phl[53]";
+connectAttr "center_neck_anim_rotateY1.o" "lunaRN1.phl[54]";
+connectAttr "center_neck_anim_rotateZ1.o" "lunaRN1.phl[55]";
+connectAttr "center_neck_anim_parent_to1.o" "lunaRN1.phl[56]";
+connectAttr "center_head_anim_rotateX1.o" "lunaRN1.phl[57]";
+connectAttr "center_head_anim_rotateY1.o" "lunaRN1.phl[58]";
+connectAttr "center_head_anim_rotateZ1.o" "lunaRN1.phl[59]";
+connectAttr "center_head_anim_parent_to1.o" "lunaRN1.phl[60]";
+connectAttr "center_dorsal_fin_1_anim_rotateX1.o" "lunaRN1.phl[61]";
+connectAttr "center_dorsal_fin_1_anim_rotateY1.o" "lunaRN1.phl[62]";
+connectAttr "center_dorsal_fin_1_anim_rotateZ1.o" "lunaRN1.phl[63]";
+connectAttr "center_dorsal_fin_2_anim_rotateX1.o" "lunaRN1.phl[64]";
+connectAttr "center_dorsal_fin_2_anim_rotateY1.o" "lunaRN1.phl[65]";
+connectAttr "center_dorsal_fin_2_anim_rotateZ1.o" "lunaRN1.phl[66]";
+connectAttr "center_dorsal_fin_3_anim_rotateX1.o" "lunaRN1.phl[67]";
+connectAttr "center_dorsal_fin_3_anim_rotateY1.o" "lunaRN1.phl[68]";
+connectAttr "center_dorsal_fin_3_anim_rotateZ1.o" "lunaRN1.phl[69]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -17047,6 +16575,185 @@ connectAttr "center_tail_3_anim_center_swim_influence.o" "grannyRN.phl[36]";
 connectAttr "center_tail_3_anim_center_tail_flap_influence.o" "grannyRN.phl[37]"
 		;
 connectAttr "sharedReferenceNode.sr" "grannyRN.sr";
-connectAttr "lunaRNfosterParent1.msg" "lunaRN.fp";
+connectAttr "center_COG_anim_translateX1.o" "lunaRN.phl[1]";
+connectAttr "center_COG_anim_translateY1.o" "lunaRN.phl[2]";
+connectAttr "center_COG_anim_translateZ1.o" "lunaRN.phl[3]";
+connectAttr "center_COG_anim_rotateX1.o" "lunaRN.phl[4]";
+connectAttr "center_COG_anim_rotateY1.o" "lunaRN.phl[5]";
+connectAttr "center_COG_anim_rotateZ1.o" "lunaRN.phl[6]";
+connectAttr "center_COG_anim_display_deformer1.o" "lunaRN.phl[7]";
+connectAttr "center_COG_anim_swim_height1.o" "lunaRN.phl[8]";
+connectAttr "center_COG_anim_swim_length1.o" "lunaRN.phl[9]";
+connectAttr "center_COG_anim_swim_offset1.o" "lunaRN.phl[10]";
+connectAttr "center_spine_1_deformer_null_translateX.o" "lunaRN.phl[11]";
+connectAttr "center_spine_1_deformer_null_translateY.o" "lunaRN.phl[12]";
+connectAttr "center_spine_1_deformer_null_translateZ.o" "lunaRN.phl[13]";
+connectAttr "center_spine_1_deformer_null_rotateX.o" "lunaRN.phl[14]";
+connectAttr "center_spine_1_deformer_null_rotateY.o" "lunaRN.phl[15]";
+connectAttr "center_spine_1_deformer_null_rotateZ.o" "lunaRN.phl[16]";
+connectAttr "center_spine_1_anim_rotateX1.o" "lunaRN.phl[17]";
+connectAttr "center_spine_1_anim_rotateY1.o" "lunaRN.phl[18]";
+connectAttr "center_spine_1_anim_rotateZ1.o" "lunaRN.phl[19]";
+connectAttr "center_spine_1_anim_center_swim_influence1.o" "lunaRN.phl[20]";
+connectAttr "center_spine_2_deformer_null_rotateX.o" "lunaRN.phl[21]";
+connectAttr "center_spine_2_deformer_null_rotateY.o" "lunaRN.phl[22]";
+connectAttr "center_spine_2_deformer_null_rotateZ.o" "lunaRN.phl[23]";
+connectAttr "center_spine_2_anim_rotateX1.o" "lunaRN.phl[24]";
+connectAttr "center_spine_2_anim_rotateY1.o" "lunaRN.phl[25]";
+connectAttr "center_spine_2_anim_rotateZ1.o" "lunaRN.phl[26]";
+connectAttr "center_spine_2_anim_center_swim_influence1.o" "lunaRN.phl[27]";
+connectAttr "center_tail_1_anim_rotateX1.o" "lunaRN.phl[28]";
+connectAttr "center_tail_1_anim_rotateY1.o" "lunaRN.phl[29]";
+connectAttr "center_tail_1_anim_rotateZ1.o" "lunaRN.phl[30]";
+connectAttr "center_tail_1_anim_display_deformer1.o" "lunaRN.phl[31]";
+connectAttr "center_tail_1_anim_center_swim_influence1.o" "lunaRN.phl[32]";
+connectAttr "center_tail_1_anim_tail_flap_height1.o" "lunaRN.phl[33]";
+connectAttr "center_tail_1_anim_tail_flap_length1.o" "lunaRN.phl[34]";
+connectAttr "center_tail_1_anim_tail_flap_offset1.o" "lunaRN.phl[35]";
+connectAttr "center_tail_1_anim_center_tail_flap_influence1.o" "lunaRN.phl[36]";
+connectAttr "center_tail_2_anim_rotateX1.o" "lunaRN.phl[37]";
+connectAttr "center_tail_2_anim_rotateY1.o" "lunaRN.phl[38]";
+connectAttr "center_tail_2_anim_rotateZ1.o" "lunaRN.phl[39]";
+connectAttr "center_tail_2_anim_center_swim_influence1.o" "lunaRN.phl[40]";
+connectAttr "center_tail_2_anim_center_tail_flap_influence1.o" "lunaRN.phl[41]";
+connectAttr "center_tail_3_anim_rotateX1.o" "lunaRN.phl[42]";
+connectAttr "center_tail_3_anim_rotateY1.o" "lunaRN.phl[43]";
+connectAttr "center_tail_3_anim_rotateZ1.o" "lunaRN.phl[44]";
+connectAttr "center_tail_3_anim_center_swim_influence1.o" "lunaRN.phl[45]";
+connectAttr "center_tail_3_anim_center_tail_flap_influence1.o" "lunaRN.phl[46]";
+connectAttr "center_tail_4_anim_rotateX.o" "lunaRN.phl[47]";
+connectAttr "center_tail_4_anim_rotateY.o" "lunaRN.phl[48]";
+connectAttr "center_tail_4_anim_rotateZ.o" "lunaRN.phl[49]";
+connectAttr "center_tail_4_anim_center_swim_influence.o" "lunaRN.phl[50]";
+connectAttr "center_tail_4_anim_center_tail_flap_influence.o" "lunaRN.phl[51]";
+connectAttr "center_tail_5_anim_rotateX.o" "lunaRN.phl[52]";
+connectAttr "center_tail_5_anim_rotateY.o" "lunaRN.phl[53]";
+connectAttr "center_tail_5_anim_rotateZ.o" "lunaRN.phl[54]";
+connectAttr "center_tail_5_anim_center_swim_influence.o" "lunaRN.phl[55]";
+connectAttr "center_tail_5_anim_center_tail_flap_influence.o" "lunaRN.phl[56]";
+connectAttr "center_tail_6_anim_rotateX.o" "lunaRN.phl[57]";
+connectAttr "center_tail_6_anim_rotateY.o" "lunaRN.phl[58]";
+connectAttr "center_tail_6_anim_rotateZ.o" "lunaRN.phl[59]";
+connectAttr "center_tail_6_anim_center_swim_influence.o" "lunaRN.phl[60]";
+connectAttr "center_tail_6_anim_center_tail_flap_influence.o" "lunaRN.phl[61]";
+connectAttr "center_neck_anim_rotateX.o" "lunaRN.phl[62]";
+connectAttr "center_neck_anim_rotateY.o" "lunaRN.phl[63]";
+connectAttr "center_neck_anim_rotateZ.o" "lunaRN.phl[64]";
+connectAttr "center_neck_anim_parent_to.o" "lunaRN.phl[65]";
+connectAttr "center_head_anim_rotateX.o" "lunaRN.phl[66]";
+connectAttr "center_head_anim_rotateY.o" "lunaRN.phl[67]";
+connectAttr "center_head_anim_rotateZ.o" "lunaRN.phl[68]";
+connectAttr "center_head_anim_parent_to.o" "lunaRN.phl[69]";
+connectAttr "center_dorsal_fin_1_anim_rotateX.o" "lunaRN.phl[70]";
+connectAttr "center_dorsal_fin_1_anim_rotateY.o" "lunaRN.phl[71]";
+connectAttr "center_dorsal_fin_1_anim_rotateZ.o" "lunaRN.phl[72]";
+connectAttr "center_dorsal_fin_2_anim_rotateX.o" "lunaRN.phl[73]";
+connectAttr "center_dorsal_fin_2_anim_rotateY.o" "lunaRN.phl[74]";
+connectAttr "center_dorsal_fin_2_anim_rotateZ.o" "lunaRN.phl[75]";
+connectAttr "center_dorsal_fin_3_anim_rotateX.o" "lunaRN.phl[76]";
+connectAttr "center_dorsal_fin_3_anim_rotateY.o" "lunaRN.phl[77]";
+connectAttr "center_dorsal_fin_3_anim_rotateZ.o" "lunaRN.phl[78]";
+connectAttr "center_swim_1_deformer_joint_rotateX.o" "lunaRN.phl[79]";
+connectAttr "center_swim_1_deformer_joint_rotateY.o" "lunaRN.phl[80]";
+connectAttr "center_swim_1_deformer_joint_rotateZ.o" "lunaRN.phl[81]";
+connectAttr "center_swim_2_deformer_joint_rotateX.o" "lunaRN.phl[82]";
+connectAttr "center_swim_2_deformer_joint_rotateY.o" "lunaRN.phl[83]";
+connectAttr "center_swim_2_deformer_joint_rotateZ.o" "lunaRN.phl[84]";
+connectAttr "center_swim_3_deformer_joint_rotateX.o" "lunaRN.phl[85]";
+connectAttr "center_swim_3_deformer_joint_rotateY.o" "lunaRN.phl[86]";
+connectAttr "center_swim_3_deformer_joint_rotateZ.o" "lunaRN.phl[87]";
+connectAttr "center_swim_4_deformer_joint_rotateX.o" "lunaRN.phl[88]";
+connectAttr "center_swim_4_deformer_joint_rotateY.o" "lunaRN.phl[89]";
+connectAttr "center_swim_4_deformer_joint_rotateZ.o" "lunaRN.phl[90]";
+connectAttr "center_swim_5_deformer_joint_rotateX.o" "lunaRN.phl[91]";
+connectAttr "center_swim_5_deformer_joint_rotateY.o" "lunaRN.phl[92]";
+connectAttr "center_swim_5_deformer_joint_rotateZ.o" "lunaRN.phl[93]";
+connectAttr "center_swim_6_deformer_joint_rotateX.o" "lunaRN.phl[94]";
+connectAttr "center_swim_6_deformer_joint_rotateY.o" "lunaRN.phl[95]";
+connectAttr "center_swim_6_deformer_joint_rotateZ.o" "lunaRN.phl[96]";
+connectAttr "center_swim_7_deformer_joint_rotateX.o" "lunaRN.phl[97]";
+connectAttr "center_swim_7_deformer_joint_rotateY.o" "lunaRN.phl[98]";
+connectAttr "center_swim_7_deformer_joint_rotateZ.o" "lunaRN.phl[99]";
+connectAttr "center_swim_8_deformer_joint_rotateX.o" "lunaRN.phl[100]";
+connectAttr "center_swim_8_deformer_joint_rotateY.o" "lunaRN.phl[101]";
+connectAttr "center_swim_8_deformer_joint_rotateZ.o" "lunaRN.phl[102]";
+connectAttr "center_swim_end_deformer_joint_rotateX.o" "lunaRN.phl[103]";
+connectAttr "center_swim_end_deformer_joint_rotateY.o" "lunaRN.phl[104]";
+connectAttr "center_swim_end_deformer_joint_rotateZ.o" "lunaRN.phl[105]";
+connectAttr "center_tail_flap_1_deformer_joint_rotateX.o" "lunaRN.phl[106]";
+connectAttr "center_tail_flap_1_deformer_joint_rotateY.o" "lunaRN.phl[107]";
+connectAttr "center_tail_flap_1_deformer_joint_rotateZ.o" "lunaRN.phl[108]";
+connectAttr "center_tail_flap_2_deformer_joint_rotateX.o" "lunaRN.phl[109]";
+connectAttr "center_tail_flap_2_deformer_joint_rotateY.o" "lunaRN.phl[110]";
+connectAttr "center_tail_flap_2_deformer_joint_rotateZ.o" "lunaRN.phl[111]";
+connectAttr "center_tail_flap_3_deformer_joint_rotateX.o" "lunaRN.phl[112]";
+connectAttr "center_tail_flap_3_deformer_joint_rotateY.o" "lunaRN.phl[113]";
+connectAttr "center_tail_flap_3_deformer_joint_rotateZ.o" "lunaRN.phl[114]";
+connectAttr "center_tail_flap_4_deformer_joint_rotateX.o" "lunaRN.phl[115]";
+connectAttr "center_tail_flap_4_deformer_joint_rotateY.o" "lunaRN.phl[116]";
+connectAttr "center_tail_flap_4_deformer_joint_rotateZ.o" "lunaRN.phl[117]";
+connectAttr "center_tail_flap_5_deformer_joint_rotateX.o" "lunaRN.phl[118]";
+connectAttr "center_tail_flap_5_deformer_joint_rotateY.o" "lunaRN.phl[119]";
+connectAttr "center_tail_flap_5_deformer_joint_rotateZ.o" "lunaRN.phl[120]";
+connectAttr "center_tail_flap_6_deformer_joint_rotateX.o" "lunaRN.phl[121]";
+connectAttr "center_tail_flap_6_deformer_joint_rotateY.o" "lunaRN.phl[122]";
+connectAttr "center_tail_flap_6_deformer_joint_rotateZ.o" "lunaRN.phl[123]";
+connectAttr "center_tail_flap_end_deformer_joint_rotateX.o" "lunaRN.phl[124]";
+connectAttr "center_tail_flap_end_deformer_joint_rotateY.o" "lunaRN.phl[125]";
+connectAttr "center_tail_flap_end_deformer_joint_rotateZ.o" "lunaRN.phl[126]";
+connectAttr "left_flipper_1_anim_rotateX.o" "lunaRN.phl[127]";
+connectAttr "left_flipper_1_anim_rotateY.o" "lunaRN.phl[128]";
+connectAttr "left_flipper_1_anim_rotateZ.o" "lunaRN.phl[129]";
+connectAttr "left_flipper_2_anim_rotateX.o" "lunaRN.phl[130]";
+connectAttr "left_flipper_2_anim_rotateY.o" "lunaRN.phl[131]";
+connectAttr "left_flipper_2_anim_rotateZ.o" "lunaRN.phl[132]";
+connectAttr "left_flipper_3_anim_rotateX.o" "lunaRN.phl[133]";
+connectAttr "left_flipper_3_anim_rotateY.o" "lunaRN.phl[134]";
+connectAttr "left_flipper_3_anim_rotateZ.o" "lunaRN.phl[135]";
+connectAttr "left_fluke_1_anim_rotateX.o" "lunaRN.phl[136]";
+connectAttr "left_fluke_1_anim_rotateY.o" "lunaRN.phl[137]";
+connectAttr "left_fluke_1_anim_rotateZ.o" "lunaRN.phl[138]";
+connectAttr "left_fluke_2_anim_rotateX.o" "lunaRN.phl[139]";
+connectAttr "left_fluke_2_anim_rotateY.o" "lunaRN.phl[140]";
+connectAttr "left_fluke_2_anim_rotateZ.o" "lunaRN.phl[141]";
+connectAttr "left_fluke_3_anim_rotateX.o" "lunaRN.phl[142]";
+connectAttr "left_fluke_3_anim_rotateY.o" "lunaRN.phl[143]";
+connectAttr "left_fluke_3_anim_rotateZ.o" "lunaRN.phl[144]";
+connectAttr "right_flipper_1_anim_rotateX.o" "lunaRN.phl[145]";
+connectAttr "right_flipper_1_anim_rotateY.o" "lunaRN.phl[146]";
+connectAttr "right_flipper_1_anim_rotateZ.o" "lunaRN.phl[147]";
+connectAttr "right_flipper_2_anim_rotateX.o" "lunaRN.phl[148]";
+connectAttr "right_flipper_2_anim_rotateY.o" "lunaRN.phl[149]";
+connectAttr "right_flipper_2_anim_rotateZ.o" "lunaRN.phl[150]";
+connectAttr "right_flipper_3_anim_rotateX.o" "lunaRN.phl[151]";
+connectAttr "right_flipper_3_anim_rotateY.o" "lunaRN.phl[152]";
+connectAttr "right_flipper_3_anim_rotateZ.o" "lunaRN.phl[153]";
+connectAttr "right_fluke_1_anim_rotateX.o" "lunaRN.phl[154]";
+connectAttr "right_fluke_1_anim_rotateY.o" "lunaRN.phl[155]";
+connectAttr "right_fluke_1_anim_rotateZ.o" "lunaRN.phl[156]";
+connectAttr "right_fluke_2_anim_rotateX.o" "lunaRN.phl[157]";
+connectAttr "right_fluke_2_anim_rotateY.o" "lunaRN.phl[158]";
+connectAttr "right_fluke_2_anim_rotateZ.o" "lunaRN.phl[159]";
+connectAttr "right_fluke_3_anim_rotateX.o" "lunaRN.phl[160]";
+connectAttr "right_fluke_3_anim_rotateY.o" "lunaRN.phl[161]";
+connectAttr "right_fluke_3_anim_rotateZ.o" "lunaRN.phl[162]";
+connectAttr "center_eye_aim_main_anim_parent_to.o" "lunaRN.phl[163]";
+connectAttr "center_eye_aim_main_anim_translateX.o" "lunaRN.phl[164]";
+connectAttr "center_eye_aim_main_anim_translateY.o" "lunaRN.phl[165]";
+connectAttr "center_eye_aim_main_anim_translateZ.o" "lunaRN.phl[166]";
+connectAttr "center_eye_aim_main_anim_rotateX.o" "lunaRN.phl[167]";
+connectAttr "center_eye_aim_main_anim_rotateY.o" "lunaRN.phl[168]";
+connectAttr "center_eye_aim_main_anim_rotateZ.o" "lunaRN.phl[169]";
+connectAttr "center_eye_aim_right_anim_translateX.o" "lunaRN.phl[170]";
+connectAttr "center_eye_aim_right_anim_translateY.o" "lunaRN.phl[171]";
+connectAttr "center_eye_aim_right_anim_translateZ.o" "lunaRN.phl[172]";
+connectAttr "center_eye_aim_left_anim_translateX.o" "lunaRN.phl[173]";
+connectAttr "center_eye_aim_left_anim_translateY.o" "lunaRN.phl[174]";
+connectAttr "center_eye_aim_left_anim_translateZ.o" "lunaRN.phl[175]";
+connectAttr "center_jaw_anim_rotateX.o" "lunaRN.phl[176]";
+connectAttr "center_jaw_anim_rotateY.o" "lunaRN.phl[177]";
+connectAttr "center_jaw_anim_rotateZ.o" "lunaRN.phl[178]";
+connectAttr "center_jaw_anim_parent_to.o" "lunaRN.phl[179]";
+connectAttr "sharedReferenceNode.sr" "lunaRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of scarlet_rock_celebrate.ma
