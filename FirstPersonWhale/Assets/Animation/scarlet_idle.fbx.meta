@@ -677,7 +677,17 @@ ModelImporter:
     13700008: luna:right_eye_geo
     13700010: luna:teeth_lower
     13700012: luna:teeth_upper
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luna_body_texture
+    second: {fileID: 2100000, guid: f17ff6466146e3e4981ec9853767183e, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luna_eye_texture
+    second: {fileID: 2100002, guid: a6f2c7cc0fa907c40b6181640f29332b, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
