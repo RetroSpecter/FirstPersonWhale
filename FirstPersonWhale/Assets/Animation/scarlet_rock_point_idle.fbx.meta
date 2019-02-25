@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c7dff12dd4892c47888ccadd5143d42
+guid: 4f254930ce610b3458bc329becb27ec5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -193,143 +193,293 @@ ModelImporter:
     100374: luna:DO_NOT_TOUCH 13
     100376: luna:DO_NOT_TOUCH 14
     100378: luna:DO_NOT_TOUCH 15
-    100380: luna:DO_NOT_TOUCH 2
-    100382: luna:DO_NOT_TOUCH 3
-    100384: luna:DO_NOT_TOUCH 4
-    100386: luna:DO_NOT_TOUCH 5
-    100388: luna:DO_NOT_TOUCH 6
-    100390: luna:DO_NOT_TOUCH 7
-    100392: luna:DO_NOT_TOUCH 8
-    100394: luna:DO_NOT_TOUCH 9
-    100396: luna:gum_lower
-    100398: luna:gum_upper
-    100400: luna:left_eye_aim_null
-    100402: luna:left_eye_anim
-    100404: luna:left_eye_anim_grp
-    100406: luna:left_eye_bind_joint
-    100408: luna:left_eye_component_grp
-    100410: luna:left_eye_control_joint
-    100412: luna:left_eye_end_anim
-    100414: luna:left_eye_end_control_joint
-    100416: luna:left_eye_end_joint
-    100418: luna:left_eye_geo
-    100420: luna:left_eye_null
-    100422: luna:left_eye_vis_null
-    100424: luna:left_flipper_1_anim
-    100426: luna:left_flipper_1_bind_joint
-    100428: luna:left_flipper_1_control_joint
-    100430: luna:left_flipper_1_null
-    100432: luna:left_flipper_1_vis_null
-    100434: luna:left_flipper_2_anim
-    100436: luna:left_flipper_2_bind_joint
-    100438: luna:left_flipper_2_control_joint
-    100440: luna:left_flipper_2_null
-    100442: luna:left_flipper_2_vis_null
-    100444: luna:left_flipper_3_anim
-    100446: luna:left_flipper_3_bind_joint
-    100448: luna:left_flipper_3_control_joint
-    100450: luna:left_flipper_3_null
-    100452: luna:left_flipper_3_vis_null
-    100454: luna:left_flipper_anim_grp
-    100456: luna:left_flipper_component_grp
-    100458: luna:left_flipper_end_anim
-    100460: luna:left_flipper_end_control_joint
-    100462: luna:left_flipper_end_joint
-    100464: luna:left_fluke_1_anim
-    100466: luna:left_fluke_1_bind_joint
-    100468: luna:left_fluke_1_control_joint
-    100470: luna:left_fluke_1_null
-    100472: luna:left_fluke_1_vis_null
-    100474: luna:left_fluke_2_anim
-    100476: luna:left_fluke_2_bind_joint
-    100478: luna:left_fluke_2_control_joint
-    100480: luna:left_fluke_2_null
-    100482: luna:left_fluke_2_vis_null
-    100484: luna:left_fluke_3_anim
-    100486: luna:left_fluke_3_bind_joint
-    100488: luna:left_fluke_3_control_joint
-    100490: luna:left_fluke_3_null
-    100492: luna:left_fluke_3_vis_null
-    100494: luna:left_fluke_anim_grp
-    100496: luna:left_fluke_component_grp
-    100498: luna:left_fluke_end_anim
-    100500: luna:left_fluke_end_control_joint
-    100502: luna:left_fluke_end_joint
-    100504: luna:locator1
-    100506: luna:locator2
-    100508: luna:Luna_Face_topCon
-    100510: luna:luna_geo
-    100512: luna:Luna_root_bind_joint
-    100514: luna:Luna_topCon
-    100516: luna:mesh_grp
-    100518: luna:mesh_grp 1
-    100520: luna:MultiConstraint1_center_COG_anim_null
-    100522: luna:MultiConstraint1_center_neck_anim_null
-    100524: luna:MultiConstraint1_Luna_topCon_null
-    100526: luna:MultiConstraint2_center_head_anim_null
-    100528: luna:MultiConstraint2_center_neck_anim_null
-    100530: luna:MultiConstraint3_center_COG_anim_null
-    100532: luna:MultiConstraint3_center_head_anim_null
-    100534: luna:MultiConstraint3_center_neck_anim_null
-    100536: luna:MultiConstraint3_Luna_topCon_null
-    100538: luna:MultiConstraint_center_COG_anim_null
-    100540: luna:MultiConstraint_center_spine_1_anim_null
-    100542: luna:MultiConstraint_Luna_topCon_null
-    100544: luna:right_eye_aim_null
-    100546: luna:right_eye_anim
-    100548: luna:right_eye_anim_grp
-    100550: luna:right_eye_bind_joint
-    100552: luna:right_eye_component_grp
-    100554: luna:right_eye_control_joint
-    100556: luna:right_eye_end_anim
-    100558: luna:right_eye_end_control_joint
-    100560: luna:right_eye_end_joint
-    100562: luna:right_eye_geo
-    100564: luna:right_eye_null
-    100566: luna:right_eye_vis_null
-    100568: luna:right_flipper_1_anim
-    100570: luna:right_flipper_1_bind_joint
-    100572: luna:right_flipper_1_control_joint
-    100574: luna:right_flipper_1_null
-    100576: luna:right_flipper_1_vis_null
-    100578: luna:right_flipper_2_anim
-    100580: luna:right_flipper_2_bind_joint
-    100582: luna:right_flipper_2_control_joint
-    100584: luna:right_flipper_2_null
-    100586: luna:right_flipper_2_vis_null
-    100588: luna:right_flipper_3_anim
-    100590: luna:right_flipper_3_bind_joint
-    100592: luna:right_flipper_3_control_joint
-    100594: luna:right_flipper_3_null
-    100596: luna:right_flipper_3_vis_null
-    100598: luna:right_flipper_anim_grp
-    100600: luna:right_flipper_component_grp
-    100602: luna:right_flipper_end_anim
-    100604: luna:right_flipper_end_control_joint
-    100606: luna:right_flipper_end_joint
-    100608: luna:right_fluke_1_anim
-    100610: luna:right_fluke_1_bind_joint
-    100612: luna:right_fluke_1_control_joint
-    100614: luna:right_fluke_1_null
-    100616: luna:right_fluke_1_vis_null
-    100618: luna:right_fluke_2_anim
-    100620: luna:right_fluke_2_bind_joint
-    100622: luna:right_fluke_2_control_joint
-    100624: luna:right_fluke_2_null
-    100626: luna:right_fluke_2_vis_null
-    100628: luna:right_fluke_3_anim
-    100630: luna:right_fluke_3_bind_joint
-    100632: luna:right_fluke_3_control_joint
-    100634: luna:right_fluke_3_null
-    100636: luna:right_fluke_3_vis_null
-    100638: luna:right_fluke_anim_grp
-    100640: luna:right_fluke_component_grp
-    100642: luna:right_fluke_end_anim
-    100644: luna:right_fluke_end_control_joint
-    100646: luna:right_fluke_end_joint
-    100648: luna:teeth_lower
-    100650: luna:teeth_upper
-    100652: //RootNode
+    100380: luna:DO_NOT_TOUCH 16
+    100382: luna:DO_NOT_TOUCH 17
+    100384: luna:DO_NOT_TOUCH 18
+    100386: luna:DO_NOT_TOUCH 19
+    100388: luna:DO_NOT_TOUCH 2
+    100390: luna:DO_NOT_TOUCH 20
+    100392: luna:DO_NOT_TOUCH 21
+    100394: luna:DO_NOT_TOUCH 22
+    100396: luna:DO_NOT_TOUCH 23
+    100398: luna:DO_NOT_TOUCH 24
+    100400: luna:DO_NOT_TOUCH 25
+    100402: luna:DO_NOT_TOUCH 26
+    100404: luna:DO_NOT_TOUCH 27
+    100406: luna:DO_NOT_TOUCH 3
+    100408: luna:DO_NOT_TOUCH 4
+    100410: luna:DO_NOT_TOUCH 5
+    100412: luna:DO_NOT_TOUCH 6
+    100414: luna:DO_NOT_TOUCH 7
+    100416: luna:DO_NOT_TOUCH 8
+    100418: luna:DO_NOT_TOUCH 9
+    100420: luna:gum_lower
+    100422: luna:gum_upper
+    100424: luna:left_eye_aim_null
+    100426: luna:left_eye_anim
+    100428: luna:left_eye_anim_grp
+    100430: luna:left_eye_bind_joint
+    100432: luna:left_eye_component_grp
+    100434: luna:left_eye_control_joint
+    100436: luna:left_eye_end_anim
+    100438: luna:left_eye_end_control_joint
+    100440: luna:left_eye_end_joint
+    100442: luna:left_eye_geo
+    100444: luna:left_eye_null
+    100446: luna:left_eye_socket_bind_joint
+    100448: luna:left_eye_vis_null
+    100450: luna:left_flipper_1_anim
+    100452: luna:left_flipper_1_bind_joint
+    100454: luna:left_flipper_1_control_joint
+    100456: luna:left_flipper_1_null
+    100458: luna:left_flipper_1_vis_null
+    100460: luna:left_flipper_2_anim
+    100462: luna:left_flipper_2_bind_joint
+    100464: luna:left_flipper_2_control_joint
+    100466: luna:left_flipper_2_null
+    100468: luna:left_flipper_2_vis_null
+    100470: luna:left_flipper_3_anim
+    100472: luna:left_flipper_3_bind_joint
+    100474: luna:left_flipper_3_control_joint
+    100476: luna:left_flipper_3_null
+    100478: luna:left_flipper_3_vis_null
+    100480: luna:left_flipper_anim_grp
+    100482: luna:left_flipper_component_grp
+    100484: luna:left_flipper_end_anim
+    100486: luna:left_flipper_end_control_joint
+    100488: luna:left_flipper_end_joint
+    100490: luna:left_fluke_1_anim
+    100492: luna:left_fluke_1_bind_joint
+    100494: luna:left_fluke_1_control_joint
+    100496: luna:left_fluke_1_null
+    100498: luna:left_fluke_1_vis_null
+    100500: luna:left_fluke_2_anim
+    100502: luna:left_fluke_2_bind_joint
+    100504: luna:left_fluke_2_control_joint
+    100506: luna:left_fluke_2_null
+    100508: luna:left_fluke_2_vis_null
+    100510: luna:left_fluke_3_anim
+    100512: luna:left_fluke_3_bind_joint
+    100514: luna:left_fluke_3_control_joint
+    100516: luna:left_fluke_3_null
+    100518: luna:left_fluke_3_vis_null
+    100520: luna:left_fluke_anim_grp
+    100522: luna:left_fluke_component_grp
+    100524: luna:left_fluke_end_anim
+    100526: luna:left_fluke_end_control_joint
+    100528: luna:left_fluke_end_joint
+    100530: luna:left_inner_lid_bind_joint
+    100532: luna:left_innerlid_anim
+    100534: luna:left_innerlid_anim1
+    100536: luna:left_innerlid_anim_grp
+    100538: luna:left_innerlid_component_grp
+    100540: luna:left_innerlid_control_joint
+    100542: luna:left_innerlid_vis_null
+    100544: luna:left_lower_eyelid_bind_joint
+    100546: luna:left_lower_eyelid_end_joint
+    100548: luna:left_lower_lid_1_bind_joint
+    100550: luna:left_lower_lid_2_bind_joint
+    100552: luna:left_lower_lid_3_bind_joint
+    100554: luna:left_lower_lid_base_anim
+    100556: luna:left_lower_lid_base_anim_grp
+    100558: luna:left_lower_lid_base_component_grp
+    100560: luna:left_lower_lid_base_control_joint
+    100562: luna:left_lower_lid_base_end_anim
+    100564: luna:left_lower_lid_base_end_control_joint
+    100566: luna:left_lower_lid_base_null
+    100568: luna:left_lower_lid_base_vis_null
+    100570: luna:left_lowerlid_1_anim
+    100572: luna:left_lowerlid_1_anim1
+    100574: luna:left_lowerlid_1_control_joint
+    100576: luna:left_lowerlid_1_vis_null
+    100578: luna:left_lowerlid_2_anim
+    100580: luna:left_lowerlid_2_anim1
+    100582: luna:left_lowerlid_2_control_joint
+    100584: luna:left_lowerlid_2_vis_null
+    100586: luna:left_lowerlid_3_anim
+    100588: luna:left_lowerlid_3_anim1
+    100590: luna:left_lowerlid_3_control_joint
+    100592: luna:left_lowerlid_3_vis_null
+    100594: luna:left_lowerlid_anim_grp
+    100596: luna:left_lowerlid_component_grp
+    100598: luna:left_outer_lid_bind_joint
+    100600: luna:left_outerlid_anim
+    100602: luna:left_outerlid_anim1
+    100604: luna:left_outerlid_anim_grp
+    100606: luna:left_outerlid_component_grp
+    100608: luna:left_outerlid_control_joint
+    100610: luna:left_outerlid_vis_null
+    100612: luna:left_upper_eyelid_bind_joint
+    100614: luna:left_upper_eyelid_end_joint
+    100616: luna:left_upper_lid_1_bind_joint
+    100618: luna:left_upper_lid_2_bind_joint
+    100620: luna:left_upper_lid_3_bind_joint
+    100622: luna:left_upper_lid_base_anim
+    100624: luna:left_upper_lid_base_anim_grp
+    100626: luna:left_upper_lid_base_component_grp
+    100628: luna:left_upper_lid_base_control_joint
+    100630: luna:left_upper_lid_base_end_anim
+    100632: luna:left_upper_lid_base_end_control_joint
+    100634: luna:left_upper_lid_base_null
+    100636: luna:left_upper_lid_base_vis_null
+    100638: luna:left_upperlid_1_anim
+    100640: luna:left_upperlid_1_anim1
+    100642: luna:left_upperlid_1_control_joint
+    100644: luna:left_upperlid_1_vis_null
+    100646: luna:left_upperlid_2_anim
+    100648: luna:left_upperlid_2_anim1
+    100650: luna:left_upperlid_2_control_joint
+    100652: luna:left_upperlid_2_vis_null
+    100654: luna:left_upperlid_3_anim
+    100656: luna:left_upperlid_3_anim1
+    100658: luna:left_upperlid_3_control_joint
+    100660: luna:left_upperlid_3_vis_null
+    100662: luna:left_upperlid_anim_grp
+    100664: luna:left_upperlid_component_grp
+    100666: luna:locator1
+    100668: luna:locator2
+    100670: luna:Luna_Face_topCon
+    100672: luna:luna_geo
+    100674: luna:Luna_root_bind_joint
+    100676: luna:Luna_topCon
+    100678: luna:mesh_grp
+    100680: luna:mesh_grp 1
+    100682: luna:MultiConstraint1_center_COG_anim_null
+    100684: luna:MultiConstraint1_center_neck_anim_null
+    100686: luna:MultiConstraint1_Luna_topCon_null
+    100688: luna:MultiConstraint2_center_head_anim_null
+    100690: luna:MultiConstraint2_center_neck_anim_null
+    100692: luna:MultiConstraint3_center_COG_anim_null
+    100694: luna:MultiConstraint3_center_head_anim_null
+    100696: luna:MultiConstraint3_center_neck_anim_null
+    100698: luna:MultiConstraint3_Luna_topCon_null
+    100700: luna:MultiConstraint_center_COG_anim_null
+    100702: luna:MultiConstraint_center_spine_1_anim_null
+    100704: luna:MultiConstraint_Luna_topCon_null
+    100706: luna:right_eye_aim_null
+    100708: luna:right_eye_anim
+    100710: luna:right_eye_anim_grp
+    100712: luna:right_eye_bind_joint
+    100714: luna:right_eye_component_grp
+    100716: luna:right_eye_control_joint
+    100718: luna:right_eye_end_anim
+    100720: luna:right_eye_end_control_joint
+    100722: luna:right_eye_end_joint
+    100724: luna:right_eye_geo
+    100726: luna:right_eye_null
+    100728: luna:right_eye_socket_bind_joint
+    100730: luna:right_eye_vis_null
+    100732: luna:right_flipper_1_anim
+    100734: luna:right_flipper_1_bind_joint
+    100736: luna:right_flipper_1_control_joint
+    100738: luna:right_flipper_1_null
+    100740: luna:right_flipper_1_vis_null
+    100742: luna:right_flipper_2_anim
+    100744: luna:right_flipper_2_bind_joint
+    100746: luna:right_flipper_2_control_joint
+    100748: luna:right_flipper_2_null
+    100750: luna:right_flipper_2_vis_null
+    100752: luna:right_flipper_3_anim
+    100754: luna:right_flipper_3_bind_joint
+    100756: luna:right_flipper_3_control_joint
+    100758: luna:right_flipper_3_null
+    100760: luna:right_flipper_3_vis_null
+    100762: luna:right_flipper_anim_grp
+    100764: luna:right_flipper_component_grp
+    100766: luna:right_flipper_end_anim
+    100768: luna:right_flipper_end_control_joint
+    100770: luna:right_flipper_end_joint
+    100772: luna:right_fluke_1_anim
+    100774: luna:right_fluke_1_bind_joint
+    100776: luna:right_fluke_1_control_joint
+    100778: luna:right_fluke_1_null
+    100780: luna:right_fluke_1_vis_null
+    100782: luna:right_fluke_2_anim
+    100784: luna:right_fluke_2_bind_joint
+    100786: luna:right_fluke_2_control_joint
+    100788: luna:right_fluke_2_null
+    100790: luna:right_fluke_2_vis_null
+    100792: luna:right_fluke_3_anim
+    100794: luna:right_fluke_3_bind_joint
+    100796: luna:right_fluke_3_control_joint
+    100798: luna:right_fluke_3_null
+    100800: luna:right_fluke_3_vis_null
+    100802: luna:right_fluke_anim_grp
+    100804: luna:right_fluke_component_grp
+    100806: luna:right_fluke_end_anim
+    100808: luna:right_fluke_end_control_joint
+    100810: luna:right_fluke_end_joint
+    100812: luna:right_inner_lid_bind_joint
+    100814: luna:right_innerlid_anim
+    100816: luna:right_innerlid_anim1
+    100818: luna:right_innerlid_anim_grp
+    100820: luna:right_innerlid_component_grp
+    100822: luna:right_innerlid_control_joint
+    100824: luna:right_innerlid_vis_null
+    100826: luna:right_lower_eyelid_bind_joint
+    100828: luna:right_lower_eyelid_end_joint
+    100830: luna:right_lower_lid_1_bind_joint
+    100832: luna:right_lower_lid_2_bind_joint
+    100834: luna:right_lower_lid_3_bind_joint
+    100836: luna:right_lower_lid_base_anim
+    100838: luna:right_lower_lid_base_anim_grp
+    100840: luna:right_lower_lid_base_component_grp
+    100842: luna:right_lower_lid_base_control_joint
+    100844: luna:right_lower_lid_base_end_anim
+    100846: luna:right_lower_lid_base_end_control_joint
+    100848: luna:right_lower_lid_base_null
+    100850: luna:right_lower_lid_base_vis_null
+    100852: luna:right_lowerlid_1_anim
+    100854: luna:right_lowerlid_1_anim1
+    100856: luna:right_lowerlid_1_control_joint
+    100858: luna:right_lowerlid_1_vis_null
+    100860: luna:right_lowerlid_2_anim
+    100862: luna:right_lowerlid_2_anim1
+    100864: luna:right_lowerlid_2_control_joint
+    100866: luna:right_lowerlid_2_vis_null
+    100868: luna:right_lowerlid_3_anim
+    100870: luna:right_lowerlid_3_anim1
+    100872: luna:right_lowerlid_3_control_joint
+    100874: luna:right_lowerlid_3_vis_null
+    100876: luna:right_lowerlid_anim_grp
+    100878: luna:right_lowerlid_component_grp
+    100880: luna:right_outer_lid_bind_joint
+    100882: luna:right_outerlid_anim
+    100884: luna:right_outerlid_anim1
+    100886: luna:right_outerlid_anim_grp
+    100888: luna:right_outerlid_component_grp
+    100890: luna:right_outerlid_control_joint
+    100892: luna:right_outerlid_vis_null
+    100894: luna:right_upper_eyelid_bind_joint
+    100896: luna:right_upper_eyelid_end_joint
+    100898: luna:right_upper_lid_1_bind_joint
+    100900: luna:right_upper_lid_2_bind_joint
+    100902: luna:right_upper_lid_3_bind_joint
+    100904: luna:right_upper_lid_base_anim
+    100906: luna:right_upper_lid_base_anim_grp
+    100908: luna:right_upper_lid_base_component_grp
+    100910: luna:right_upper_lid_base_control_joint
+    100912: luna:right_upper_lid_base_end_anim
+    100914: luna:right_upper_lid_base_end_control_joint
+    100916: luna:right_upper_lid_base_null
+    100918: luna:right_upper_lid_base_vis_null
+    100920: luna:right_upperlid_1_anim
+    100922: luna:right_upperlid_1_anim1
+    100924: luna:right_upperlid_1_control_joint
+    100926: luna:right_upperlid_1_vis_null
+    100928: luna:right_upperlid_2_anim
+    100930: luna:right_upperlid_2_anim1
+    100932: luna:right_upperlid_2_control_joint
+    100934: luna:right_upperlid_2_vis_null
+    100936: luna:right_upperlid_3_anim
+    100938: luna:right_upperlid_3_anim1
+    100940: luna:right_upperlid_3_control_joint
+    100942: luna:right_upperlid_3_vis_null
+    100944: luna:right_upperlid_anim_grp
+    100946: luna:right_upperlid_component_grp
+    100948: luna:teeth_lower
+    100950: luna:teeth_upper
+    100952: //RootNode
     400000: luna:bind_joint_grp
     400002: luna:bind_joint_grp 1
     400004: luna:body_grp
@@ -520,143 +670,293 @@ ModelImporter:
     400374: luna:DO_NOT_TOUCH 13
     400376: luna:DO_NOT_TOUCH 14
     400378: luna:DO_NOT_TOUCH 15
-    400380: luna:DO_NOT_TOUCH 2
-    400382: luna:DO_NOT_TOUCH 3
-    400384: luna:DO_NOT_TOUCH 4
-    400386: luna:DO_NOT_TOUCH 5
-    400388: luna:DO_NOT_TOUCH 6
-    400390: luna:DO_NOT_TOUCH 7
-    400392: luna:DO_NOT_TOUCH 8
-    400394: luna:DO_NOT_TOUCH 9
-    400396: luna:gum_lower
-    400398: luna:gum_upper
-    400400: luna:left_eye_aim_null
-    400402: luna:left_eye_anim
-    400404: luna:left_eye_anim_grp
-    400406: luna:left_eye_bind_joint
-    400408: luna:left_eye_component_grp
-    400410: luna:left_eye_control_joint
-    400412: luna:left_eye_end_anim
-    400414: luna:left_eye_end_control_joint
-    400416: luna:left_eye_end_joint
-    400418: luna:left_eye_geo
-    400420: luna:left_eye_null
-    400422: luna:left_eye_vis_null
-    400424: luna:left_flipper_1_anim
-    400426: luna:left_flipper_1_bind_joint
-    400428: luna:left_flipper_1_control_joint
-    400430: luna:left_flipper_1_null
-    400432: luna:left_flipper_1_vis_null
-    400434: luna:left_flipper_2_anim
-    400436: luna:left_flipper_2_bind_joint
-    400438: luna:left_flipper_2_control_joint
-    400440: luna:left_flipper_2_null
-    400442: luna:left_flipper_2_vis_null
-    400444: luna:left_flipper_3_anim
-    400446: luna:left_flipper_3_bind_joint
-    400448: luna:left_flipper_3_control_joint
-    400450: luna:left_flipper_3_null
-    400452: luna:left_flipper_3_vis_null
-    400454: luna:left_flipper_anim_grp
-    400456: luna:left_flipper_component_grp
-    400458: luna:left_flipper_end_anim
-    400460: luna:left_flipper_end_control_joint
-    400462: luna:left_flipper_end_joint
-    400464: luna:left_fluke_1_anim
-    400466: luna:left_fluke_1_bind_joint
-    400468: luna:left_fluke_1_control_joint
-    400470: luna:left_fluke_1_null
-    400472: luna:left_fluke_1_vis_null
-    400474: luna:left_fluke_2_anim
-    400476: luna:left_fluke_2_bind_joint
-    400478: luna:left_fluke_2_control_joint
-    400480: luna:left_fluke_2_null
-    400482: luna:left_fluke_2_vis_null
-    400484: luna:left_fluke_3_anim
-    400486: luna:left_fluke_3_bind_joint
-    400488: luna:left_fluke_3_control_joint
-    400490: luna:left_fluke_3_null
-    400492: luna:left_fluke_3_vis_null
-    400494: luna:left_fluke_anim_grp
-    400496: luna:left_fluke_component_grp
-    400498: luna:left_fluke_end_anim
-    400500: luna:left_fluke_end_control_joint
-    400502: luna:left_fluke_end_joint
-    400504: luna:locator1
-    400506: luna:locator2
-    400508: luna:Luna_Face_topCon
-    400510: luna:luna_geo
-    400512: luna:Luna_root_bind_joint
-    400514: luna:Luna_topCon
-    400516: luna:mesh_grp
-    400518: luna:mesh_grp 1
-    400520: luna:MultiConstraint1_center_COG_anim_null
-    400522: luna:MultiConstraint1_center_neck_anim_null
-    400524: luna:MultiConstraint1_Luna_topCon_null
-    400526: luna:MultiConstraint2_center_head_anim_null
-    400528: luna:MultiConstraint2_center_neck_anim_null
-    400530: luna:MultiConstraint3_center_COG_anim_null
-    400532: luna:MultiConstraint3_center_head_anim_null
-    400534: luna:MultiConstraint3_center_neck_anim_null
-    400536: luna:MultiConstraint3_Luna_topCon_null
-    400538: luna:MultiConstraint_center_COG_anim_null
-    400540: luna:MultiConstraint_center_spine_1_anim_null
-    400542: luna:MultiConstraint_Luna_topCon_null
-    400544: luna:right_eye_aim_null
-    400546: luna:right_eye_anim
-    400548: luna:right_eye_anim_grp
-    400550: luna:right_eye_bind_joint
-    400552: luna:right_eye_component_grp
-    400554: luna:right_eye_control_joint
-    400556: luna:right_eye_end_anim
-    400558: luna:right_eye_end_control_joint
-    400560: luna:right_eye_end_joint
-    400562: luna:right_eye_geo
-    400564: luna:right_eye_null
-    400566: luna:right_eye_vis_null
-    400568: luna:right_flipper_1_anim
-    400570: luna:right_flipper_1_bind_joint
-    400572: luna:right_flipper_1_control_joint
-    400574: luna:right_flipper_1_null
-    400576: luna:right_flipper_1_vis_null
-    400578: luna:right_flipper_2_anim
-    400580: luna:right_flipper_2_bind_joint
-    400582: luna:right_flipper_2_control_joint
-    400584: luna:right_flipper_2_null
-    400586: luna:right_flipper_2_vis_null
-    400588: luna:right_flipper_3_anim
-    400590: luna:right_flipper_3_bind_joint
-    400592: luna:right_flipper_3_control_joint
-    400594: luna:right_flipper_3_null
-    400596: luna:right_flipper_3_vis_null
-    400598: luna:right_flipper_anim_grp
-    400600: luna:right_flipper_component_grp
-    400602: luna:right_flipper_end_anim
-    400604: luna:right_flipper_end_control_joint
-    400606: luna:right_flipper_end_joint
-    400608: luna:right_fluke_1_anim
-    400610: luna:right_fluke_1_bind_joint
-    400612: luna:right_fluke_1_control_joint
-    400614: luna:right_fluke_1_null
-    400616: luna:right_fluke_1_vis_null
-    400618: luna:right_fluke_2_anim
-    400620: luna:right_fluke_2_bind_joint
-    400622: luna:right_fluke_2_control_joint
-    400624: luna:right_fluke_2_null
-    400626: luna:right_fluke_2_vis_null
-    400628: luna:right_fluke_3_anim
-    400630: luna:right_fluke_3_bind_joint
-    400632: luna:right_fluke_3_control_joint
-    400634: luna:right_fluke_3_null
-    400636: luna:right_fluke_3_vis_null
-    400638: luna:right_fluke_anim_grp
-    400640: luna:right_fluke_component_grp
-    400642: luna:right_fluke_end_anim
-    400644: luna:right_fluke_end_control_joint
-    400646: luna:right_fluke_end_joint
-    400648: luna:teeth_lower
-    400650: luna:teeth_upper
-    400652: //RootNode
+    400380: luna:DO_NOT_TOUCH 16
+    400382: luna:DO_NOT_TOUCH 17
+    400384: luna:DO_NOT_TOUCH 18
+    400386: luna:DO_NOT_TOUCH 19
+    400388: luna:DO_NOT_TOUCH 2
+    400390: luna:DO_NOT_TOUCH 20
+    400392: luna:DO_NOT_TOUCH 21
+    400394: luna:DO_NOT_TOUCH 22
+    400396: luna:DO_NOT_TOUCH 23
+    400398: luna:DO_NOT_TOUCH 24
+    400400: luna:DO_NOT_TOUCH 25
+    400402: luna:DO_NOT_TOUCH 26
+    400404: luna:DO_NOT_TOUCH 27
+    400406: luna:DO_NOT_TOUCH 3
+    400408: luna:DO_NOT_TOUCH 4
+    400410: luna:DO_NOT_TOUCH 5
+    400412: luna:DO_NOT_TOUCH 6
+    400414: luna:DO_NOT_TOUCH 7
+    400416: luna:DO_NOT_TOUCH 8
+    400418: luna:DO_NOT_TOUCH 9
+    400420: luna:gum_lower
+    400422: luna:gum_upper
+    400424: luna:left_eye_aim_null
+    400426: luna:left_eye_anim
+    400428: luna:left_eye_anim_grp
+    400430: luna:left_eye_bind_joint
+    400432: luna:left_eye_component_grp
+    400434: luna:left_eye_control_joint
+    400436: luna:left_eye_end_anim
+    400438: luna:left_eye_end_control_joint
+    400440: luna:left_eye_end_joint
+    400442: luna:left_eye_geo
+    400444: luna:left_eye_null
+    400446: luna:left_eye_socket_bind_joint
+    400448: luna:left_eye_vis_null
+    400450: luna:left_flipper_1_anim
+    400452: luna:left_flipper_1_bind_joint
+    400454: luna:left_flipper_1_control_joint
+    400456: luna:left_flipper_1_null
+    400458: luna:left_flipper_1_vis_null
+    400460: luna:left_flipper_2_anim
+    400462: luna:left_flipper_2_bind_joint
+    400464: luna:left_flipper_2_control_joint
+    400466: luna:left_flipper_2_null
+    400468: luna:left_flipper_2_vis_null
+    400470: luna:left_flipper_3_anim
+    400472: luna:left_flipper_3_bind_joint
+    400474: luna:left_flipper_3_control_joint
+    400476: luna:left_flipper_3_null
+    400478: luna:left_flipper_3_vis_null
+    400480: luna:left_flipper_anim_grp
+    400482: luna:left_flipper_component_grp
+    400484: luna:left_flipper_end_anim
+    400486: luna:left_flipper_end_control_joint
+    400488: luna:left_flipper_end_joint
+    400490: luna:left_fluke_1_anim
+    400492: luna:left_fluke_1_bind_joint
+    400494: luna:left_fluke_1_control_joint
+    400496: luna:left_fluke_1_null
+    400498: luna:left_fluke_1_vis_null
+    400500: luna:left_fluke_2_anim
+    400502: luna:left_fluke_2_bind_joint
+    400504: luna:left_fluke_2_control_joint
+    400506: luna:left_fluke_2_null
+    400508: luna:left_fluke_2_vis_null
+    400510: luna:left_fluke_3_anim
+    400512: luna:left_fluke_3_bind_joint
+    400514: luna:left_fluke_3_control_joint
+    400516: luna:left_fluke_3_null
+    400518: luna:left_fluke_3_vis_null
+    400520: luna:left_fluke_anim_grp
+    400522: luna:left_fluke_component_grp
+    400524: luna:left_fluke_end_anim
+    400526: luna:left_fluke_end_control_joint
+    400528: luna:left_fluke_end_joint
+    400530: luna:left_inner_lid_bind_joint
+    400532: luna:left_innerlid_anim
+    400534: luna:left_innerlid_anim1
+    400536: luna:left_innerlid_anim_grp
+    400538: luna:left_innerlid_component_grp
+    400540: luna:left_innerlid_control_joint
+    400542: luna:left_innerlid_vis_null
+    400544: luna:left_lower_eyelid_bind_joint
+    400546: luna:left_lower_eyelid_end_joint
+    400548: luna:left_lower_lid_1_bind_joint
+    400550: luna:left_lower_lid_2_bind_joint
+    400552: luna:left_lower_lid_3_bind_joint
+    400554: luna:left_lower_lid_base_anim
+    400556: luna:left_lower_lid_base_anim_grp
+    400558: luna:left_lower_lid_base_component_grp
+    400560: luna:left_lower_lid_base_control_joint
+    400562: luna:left_lower_lid_base_end_anim
+    400564: luna:left_lower_lid_base_end_control_joint
+    400566: luna:left_lower_lid_base_null
+    400568: luna:left_lower_lid_base_vis_null
+    400570: luna:left_lowerlid_1_anim
+    400572: luna:left_lowerlid_1_anim1
+    400574: luna:left_lowerlid_1_control_joint
+    400576: luna:left_lowerlid_1_vis_null
+    400578: luna:left_lowerlid_2_anim
+    400580: luna:left_lowerlid_2_anim1
+    400582: luna:left_lowerlid_2_control_joint
+    400584: luna:left_lowerlid_2_vis_null
+    400586: luna:left_lowerlid_3_anim
+    400588: luna:left_lowerlid_3_anim1
+    400590: luna:left_lowerlid_3_control_joint
+    400592: luna:left_lowerlid_3_vis_null
+    400594: luna:left_lowerlid_anim_grp
+    400596: luna:left_lowerlid_component_grp
+    400598: luna:left_outer_lid_bind_joint
+    400600: luna:left_outerlid_anim
+    400602: luna:left_outerlid_anim1
+    400604: luna:left_outerlid_anim_grp
+    400606: luna:left_outerlid_component_grp
+    400608: luna:left_outerlid_control_joint
+    400610: luna:left_outerlid_vis_null
+    400612: luna:left_upper_eyelid_bind_joint
+    400614: luna:left_upper_eyelid_end_joint
+    400616: luna:left_upper_lid_1_bind_joint
+    400618: luna:left_upper_lid_2_bind_joint
+    400620: luna:left_upper_lid_3_bind_joint
+    400622: luna:left_upper_lid_base_anim
+    400624: luna:left_upper_lid_base_anim_grp
+    400626: luna:left_upper_lid_base_component_grp
+    400628: luna:left_upper_lid_base_control_joint
+    400630: luna:left_upper_lid_base_end_anim
+    400632: luna:left_upper_lid_base_end_control_joint
+    400634: luna:left_upper_lid_base_null
+    400636: luna:left_upper_lid_base_vis_null
+    400638: luna:left_upperlid_1_anim
+    400640: luna:left_upperlid_1_anim1
+    400642: luna:left_upperlid_1_control_joint
+    400644: luna:left_upperlid_1_vis_null
+    400646: luna:left_upperlid_2_anim
+    400648: luna:left_upperlid_2_anim1
+    400650: luna:left_upperlid_2_control_joint
+    400652: luna:left_upperlid_2_vis_null
+    400654: luna:left_upperlid_3_anim
+    400656: luna:left_upperlid_3_anim1
+    400658: luna:left_upperlid_3_control_joint
+    400660: luna:left_upperlid_3_vis_null
+    400662: luna:left_upperlid_anim_grp
+    400664: luna:left_upperlid_component_grp
+    400666: luna:locator1
+    400668: luna:locator2
+    400670: luna:Luna_Face_topCon
+    400672: luna:luna_geo
+    400674: luna:Luna_root_bind_joint
+    400676: luna:Luna_topCon
+    400678: luna:mesh_grp
+    400680: luna:mesh_grp 1
+    400682: luna:MultiConstraint1_center_COG_anim_null
+    400684: luna:MultiConstraint1_center_neck_anim_null
+    400686: luna:MultiConstraint1_Luna_topCon_null
+    400688: luna:MultiConstraint2_center_head_anim_null
+    400690: luna:MultiConstraint2_center_neck_anim_null
+    400692: luna:MultiConstraint3_center_COG_anim_null
+    400694: luna:MultiConstraint3_center_head_anim_null
+    400696: luna:MultiConstraint3_center_neck_anim_null
+    400698: luna:MultiConstraint3_Luna_topCon_null
+    400700: luna:MultiConstraint_center_COG_anim_null
+    400702: luna:MultiConstraint_center_spine_1_anim_null
+    400704: luna:MultiConstraint_Luna_topCon_null
+    400706: luna:right_eye_aim_null
+    400708: luna:right_eye_anim
+    400710: luna:right_eye_anim_grp
+    400712: luna:right_eye_bind_joint
+    400714: luna:right_eye_component_grp
+    400716: luna:right_eye_control_joint
+    400718: luna:right_eye_end_anim
+    400720: luna:right_eye_end_control_joint
+    400722: luna:right_eye_end_joint
+    400724: luna:right_eye_geo
+    400726: luna:right_eye_null
+    400728: luna:right_eye_socket_bind_joint
+    400730: luna:right_eye_vis_null
+    400732: luna:right_flipper_1_anim
+    400734: luna:right_flipper_1_bind_joint
+    400736: luna:right_flipper_1_control_joint
+    400738: luna:right_flipper_1_null
+    400740: luna:right_flipper_1_vis_null
+    400742: luna:right_flipper_2_anim
+    400744: luna:right_flipper_2_bind_joint
+    400746: luna:right_flipper_2_control_joint
+    400748: luna:right_flipper_2_null
+    400750: luna:right_flipper_2_vis_null
+    400752: luna:right_flipper_3_anim
+    400754: luna:right_flipper_3_bind_joint
+    400756: luna:right_flipper_3_control_joint
+    400758: luna:right_flipper_3_null
+    400760: luna:right_flipper_3_vis_null
+    400762: luna:right_flipper_anim_grp
+    400764: luna:right_flipper_component_grp
+    400766: luna:right_flipper_end_anim
+    400768: luna:right_flipper_end_control_joint
+    400770: luna:right_flipper_end_joint
+    400772: luna:right_fluke_1_anim
+    400774: luna:right_fluke_1_bind_joint
+    400776: luna:right_fluke_1_control_joint
+    400778: luna:right_fluke_1_null
+    400780: luna:right_fluke_1_vis_null
+    400782: luna:right_fluke_2_anim
+    400784: luna:right_fluke_2_bind_joint
+    400786: luna:right_fluke_2_control_joint
+    400788: luna:right_fluke_2_null
+    400790: luna:right_fluke_2_vis_null
+    400792: luna:right_fluke_3_anim
+    400794: luna:right_fluke_3_bind_joint
+    400796: luna:right_fluke_3_control_joint
+    400798: luna:right_fluke_3_null
+    400800: luna:right_fluke_3_vis_null
+    400802: luna:right_fluke_anim_grp
+    400804: luna:right_fluke_component_grp
+    400806: luna:right_fluke_end_anim
+    400808: luna:right_fluke_end_control_joint
+    400810: luna:right_fluke_end_joint
+    400812: luna:right_inner_lid_bind_joint
+    400814: luna:right_innerlid_anim
+    400816: luna:right_innerlid_anim1
+    400818: luna:right_innerlid_anim_grp
+    400820: luna:right_innerlid_component_grp
+    400822: luna:right_innerlid_control_joint
+    400824: luna:right_innerlid_vis_null
+    400826: luna:right_lower_eyelid_bind_joint
+    400828: luna:right_lower_eyelid_end_joint
+    400830: luna:right_lower_lid_1_bind_joint
+    400832: luna:right_lower_lid_2_bind_joint
+    400834: luna:right_lower_lid_3_bind_joint
+    400836: luna:right_lower_lid_base_anim
+    400838: luna:right_lower_lid_base_anim_grp
+    400840: luna:right_lower_lid_base_component_grp
+    400842: luna:right_lower_lid_base_control_joint
+    400844: luna:right_lower_lid_base_end_anim
+    400846: luna:right_lower_lid_base_end_control_joint
+    400848: luna:right_lower_lid_base_null
+    400850: luna:right_lower_lid_base_vis_null
+    400852: luna:right_lowerlid_1_anim
+    400854: luna:right_lowerlid_1_anim1
+    400856: luna:right_lowerlid_1_control_joint
+    400858: luna:right_lowerlid_1_vis_null
+    400860: luna:right_lowerlid_2_anim
+    400862: luna:right_lowerlid_2_anim1
+    400864: luna:right_lowerlid_2_control_joint
+    400866: luna:right_lowerlid_2_vis_null
+    400868: luna:right_lowerlid_3_anim
+    400870: luna:right_lowerlid_3_anim1
+    400872: luna:right_lowerlid_3_control_joint
+    400874: luna:right_lowerlid_3_vis_null
+    400876: luna:right_lowerlid_anim_grp
+    400878: luna:right_lowerlid_component_grp
+    400880: luna:right_outer_lid_bind_joint
+    400882: luna:right_outerlid_anim
+    400884: luna:right_outerlid_anim1
+    400886: luna:right_outerlid_anim_grp
+    400888: luna:right_outerlid_component_grp
+    400890: luna:right_outerlid_control_joint
+    400892: luna:right_outerlid_vis_null
+    400894: luna:right_upper_eyelid_bind_joint
+    400896: luna:right_upper_eyelid_end_joint
+    400898: luna:right_upper_lid_1_bind_joint
+    400900: luna:right_upper_lid_2_bind_joint
+    400902: luna:right_upper_lid_3_bind_joint
+    400904: luna:right_upper_lid_base_anim
+    400906: luna:right_upper_lid_base_anim_grp
+    400908: luna:right_upper_lid_base_component_grp
+    400910: luna:right_upper_lid_base_control_joint
+    400912: luna:right_upper_lid_base_end_anim
+    400914: luna:right_upper_lid_base_end_control_joint
+    400916: luna:right_upper_lid_base_null
+    400918: luna:right_upper_lid_base_vis_null
+    400920: luna:right_upperlid_1_anim
+    400922: luna:right_upperlid_1_anim1
+    400924: luna:right_upperlid_1_control_joint
+    400926: luna:right_upperlid_1_vis_null
+    400928: luna:right_upperlid_2_anim
+    400930: luna:right_upperlid_2_anim1
+    400932: luna:right_upperlid_2_control_joint
+    400934: luna:right_upperlid_2_vis_null
+    400936: luna:right_upperlid_3_anim
+    400938: luna:right_upperlid_3_anim1
+    400940: luna:right_upperlid_3_control_joint
+    400942: luna:right_upperlid_3_vis_null
+    400944: luna:right_upperlid_anim_grp
+    400946: luna:right_upperlid_component_grp
+    400948: luna:teeth_lower
+    400950: luna:teeth_upper
+    400952: //RootNode
     2100000: luna_body_texture
     2100002: luna_eye_texture
     2100004: luna_teeth_texture
@@ -668,7 +968,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: Take 001
+    7400000: Rock Point Idle
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -704,7 +1004,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Rock Point Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -749,6 +1077,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

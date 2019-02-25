@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f62e70f466d2ab4eb61b2b25fdd6e18
+guid: df5ee1ee911be1243829c1e6153646ed
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -968,7 +968,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: point behind
+    7400000: Point Behind
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -1006,7 +1006,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: point behind
+      name: Point Behind
       takeName: Take 001
       firstFrame: 1
       lastFrame: 120
