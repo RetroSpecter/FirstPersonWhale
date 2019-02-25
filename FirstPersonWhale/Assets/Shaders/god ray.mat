@@ -7,14 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: god ray
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7c44282f2b4dc8141bbb4b151a0ebfd6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
@@ -36,6 +35,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_3D15B086:
+        m_Texture: {fileID: 2800000, guid: a5dd8a43acf27894bb334a00d493887b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_58E023F6:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -46,6 +49,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - Texture2D_6D951A54:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_E3798896:
+        m_Texture: {fileID: 2800000, guid: c112b7a214b137d4388e57b686c64fac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -114,9 +121,12 @@ Material:
     - Vector1_45B4161: 1
     - Vector1_4766D232: 0.5
     - Vector1_49285522: 0.05
+    - Vector1_6433FAC4: -0.27
     - Vector1_6A8BE9E4: 0
+    - Vector1_6DD8CF7A: -2.33
     - Vector1_7C6230F6: 0.1
     - Vector1_83AC5829: 0.05
+    - Vector1_899BA1CD: 0.18
     - Vector1_8F71338: 121.9
     - Vector1_98ED8362: 0.5
     - Vector1_9D4B8341: 5
@@ -124,9 +134,12 @@ Material:
     - Vector1_B733207C: 0.01
     - Vector1_BC4A7EC8: 0.05
     - Vector1_BDA3F216: 10
+    - Vector1_C6B170FF: -0.7
     - Vector1_D4A650A6: 0
+    - Vector1_D8A9F50: 0.71
     - Vector1_E8C63353: 0.41
     - Vector1_E8FC2E2C: 0
+    - Vector1_EC5E41: 0.2
     - Vector1_F481A4D9: 0
     - _AlphaClip: 0
     - _Blend: 2
@@ -156,6 +169,8 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_20C02709: {r: 1, g: 0.766, b: 0.33599997, a: 0}
+    - Color_3563A0F6: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.2156863}
+    - Color_42400B6F: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.2156863}
     - Color_52858BDA: {r: 0.8962264, g: 0.19869167, b: 0.19869167, a: 0}
     - Color_5A22009C: {r: 1, g: 1, b: 1, a: 0}
     - Color_75479277: {r: 0, g: 0.30782837, b: 0.43396226, a: 0}
@@ -167,6 +182,7 @@ Material:
     - Color_FEE4C875: {r: 0.6853863, g: 0.8978286, b: 0.9622641, a: 0}
     - Vector2_1800F3E2: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_7AD323AA: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_8A4D8A16: {r: 7, g: 1, b: 0, a: 0}
     - Vector2_8A6F5EE5: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_94278C48: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_AE744D1D: {r: 1, g: 1, b: 0, a: 0}
