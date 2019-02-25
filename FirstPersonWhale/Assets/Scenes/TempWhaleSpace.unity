@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 1a480fd0d4d9f6a4d8ffd99fc8555320,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11944,8 +11944,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &212187277 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400652, guid: 13649340fdaed6d4b948e00e7cb5ac0a,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 212187276}
 --- !u!1 &212187278 stripped
 GameObject:

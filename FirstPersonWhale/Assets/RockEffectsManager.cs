@@ -21,6 +21,7 @@ public class RockEffectsManager : MonoBehaviour {
         rock.deselect += Deselect;
         rock.active += Activate;
         rock.deactive += Deactivate;
+        rock.play += PlayRock;
     }
 
     private void OnDestroy()
@@ -48,6 +49,10 @@ public class RockEffectsManager : MonoBehaviour {
         light.gameObject.SetActive(true);
         Material mat = symbolMat.GetComponent<Renderer>().material;
         fadeColor(baseColor);
+    }
+
+    void PlayRock() {
+        ps.Play();
     }
 
     void Deactivate() {

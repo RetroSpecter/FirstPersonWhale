@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d26357df38208b94e922c5ba385f9d79
+guid: 969cce0fe6863d94ea3edcdc288fbcac
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -968,7 +968,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: Look at Pod
+    7400000: Celebrate 2
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -1006,10 +1006,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Look at Pod
+      name: Celebrate 2
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 220
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1059,8 +1059,8 @@ ModelImporter:
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
-    normalSmoothAngle: 122
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

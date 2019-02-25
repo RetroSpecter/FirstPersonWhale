@@ -15,6 +15,7 @@ public class MusicRock : Interacatble {
     public selectionEvent deselect;
     public selectionEvent active;
     public selectionEvent deactive;
+    public selectionEvent play;
 
 
     private void Start()
@@ -65,6 +66,9 @@ public class MusicRock : Interacatble {
             print(triggerName);
             AnimatorHandler.instance.ActivateTriggers(triggerName);
         }
+
+        if (play != null)
+            play();
     }
 
     IEnumerator timeToLook(float delay) {   
