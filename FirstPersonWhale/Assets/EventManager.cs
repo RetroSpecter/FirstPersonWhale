@@ -13,6 +13,7 @@ public class EventManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         instance = this;
+        dict = new Dictionary<string, AnimationEvent>();
         foreach (AnimationEvent e in events) {
             if (dict.ContainsKey(name)) {
                 Debug.LogError("duplicate name in EventManager events");

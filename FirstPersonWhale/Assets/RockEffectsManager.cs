@@ -13,6 +13,9 @@ public class RockEffectsManager : MonoBehaviour {
     public Color baseColor;
     public Color selectedColor;
 
+    IEnumerator curFadeColor;
+    public float colorFadeSpeed = 0.5f;
+
     void Start() {
         rock.select += Select;
         rock.deselect += Deselect;
@@ -29,27 +32,51 @@ public class RockEffectsManager : MonoBehaviour {
     }
 
     void Select() {
-        ps.Play();
         light.intensity *= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        mat.SetColor("_EmissionColor", selectedColor);
+        fadeColor(selectedColor);
     }
 
     void Deselect() {
         light.intensity /= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        mat.SetColor("_EmissionColor", inactiveColor);
+        fadeColor(baseColor);
     }
 
     void Activate() {
+        ps.Play();
         light.gameObject.SetActive(true);
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        mat.SetColor("_EmissionColor", baseColor);
+        fadeColor(baseColor);
     }
 
     void Deactivate() {
         light.gameObject.SetActive(false);
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        mat.SetColor("_EmissionColor", inactiveColor);
+        fadeColor(inactiveColor);
+    }
+
+    void fadeColor(Color targetColor) {
+        if (curFadeColor != null)
+        {
+            StopCoroutine(curFadeColor);
+        }
+        curFadeColor = fadeEnum(targetColor, colorFadeSpeed);
+        StartCoroutine(curFadeColor);
+    }
+
+    IEnumerator fadeEnum(Color color, float length) {
+
+
+        Material mat = symbolMat.GetComponent<Renderer>().material;
+        Color curColor = mat.GetColor("_EmissionColor");
+        float time = 0;
+
+        while (time < length) {
+            time += Time.deltaTime;         
+            mat.SetColor("_EmissionColor", Color.Lerp(curColor, color, time/length));
+            yield return null;
+        }
+        mat.SetColor("_EmissionColor", color);
     }
 }

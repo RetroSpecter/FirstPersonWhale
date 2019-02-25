@@ -11,8 +11,7 @@ public class HidingBubbleTrail : MonoBehaviour {
         ps = GetComponent<ParticleSystem>();
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    public void PlayBubbles() {
+        ps.Play();
+    }
 }
