@@ -33,7 +33,7 @@ public class LipFlap : MonoBehaviour {
             }
         }
 
-        targetVelocity = Mathf.SmoothDamp(targetVelocity, volume / 1024 * offset, ref curVelocity, Time.deltaTime * 3);
+        targetVelocity = Mathf.SmoothDamp(targetVelocity, volume / 1024 * offset, ref curVelocity, Time.deltaTime * 7);
         anim.SetFloat("mouth", targetVelocity);
 	}
 }
