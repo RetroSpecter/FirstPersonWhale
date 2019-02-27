@@ -9,9 +9,11 @@ public class AudioManager : MonoBehaviour {
     private Dictionary<String, audioQueue> audioQueueDict;
 
     public float defaultVolume = 1;
+    public static AudioManager instance;
 
     public void Awake()
     {
+        instance = this;
         audioQueueDict = new Dictionary<string, audioQueue>();
         foreach (audioQueue aq in audioQueues) {
             if (audioQueueDict.ContainsKey(aq.name)) {
