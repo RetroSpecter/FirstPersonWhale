@@ -6,6 +6,7 @@ public class MusicRock : Interacatble {
 
     public float lookTimer;
     public string triggerName;
+    public string soundName;
     private IEnumerator currentTimer;
     private AudioSource source;
     public bool isActive;
@@ -65,6 +66,12 @@ public class MusicRock : Interacatble {
         if (!triggerName.Equals("")) {
             print(triggerName);
             AnimatorHandler.instance.ActivateTriggers(triggerName);
+        }
+
+        if (!soundName.Equals(""))
+        {
+            print(soundName);
+            AudioManager.instance.Play(soundName);
         }
 
         if (play != null)

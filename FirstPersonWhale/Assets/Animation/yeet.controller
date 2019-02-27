@@ -87,6 +87,20 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &114079013586732006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18f213a173df34db611e934a6fb255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionRadius: 90
+  IsInGaze: 0
+  triggerName: Look Away
 --- !u!114 &114174722300481444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +233,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockIndex: 0
+--- !u!114 &114478762813839196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: Pod Song
+--- !u!114 &114629626476073572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: Scarlet Sound 1
+--- !u!114 &114630578239822528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: Scarlet Swim
+--- !u!114 &114649325698304632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18f213a173df34db611e934a6fb255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionRadius: 361
+  IsInGaze: 0
+  triggerName: Look Away
 --- !u!114 &114705130908342602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockIndex: 2
---- !u!114 &114901003214715050
+--- !u!114 &114916605547676582
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba18f213a173df34db611e934a6fb255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRadius: 90
-  IsInGaze: 0
+  visionRadius: 10
+  IsInGaze: 1
   triggerName: Look Away
 --- !u!114 &114949338046134244
 MonoBehaviour:
@@ -830,7 +894,10 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Look Away
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 1107564056597929518}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -840,7 +907,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1521,6 +1588,7 @@ AnimatorState:
   - {fileID: 1101382501998873520}
   m_StateMachineBehaviours:
   - {fileID: 114398678885271274}
+  - {fileID: 114079013586732006}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1601,7 +1669,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101539990412317050}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114649325698304632}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1836,7 +1905,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101889476861883164}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114630578239822528}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1946,6 +2016,7 @@ AnimatorState:
   - {fileID: 1101559838231161164}
   m_StateMachineBehaviours:
   - {fileID: 114264716721313748}
+  - {fileID: 114478762813839196}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2058,7 +2129,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 36590243d99e3ca4cbf8b0064015fd53, type: 2}
+  m_Motion: {fileID: 0}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2262,7 +2333,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101374978594391912}
   m_StateMachineBehaviours:
-  - {fileID: 114901003214715050}
+  - {fileID: 114629626476073572}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2315,6 +2386,7 @@ AnimatorState:
   - {fileID: 1101138626796119782}
   m_StateMachineBehaviours:
   - {fileID: 114776458442168204}
+  - {fileID: 114916605547676582}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2428,7 +2500,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f6fe4e6bd5bf53f4d92c3a86189c08d7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8a34aeb99a113a64d830bf0e7a3b8fb0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2477,23 +2549,23 @@ AnimatorStateMachine:
     m_Position: {x: 564, y: 168, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107564056597929518}
-    m_Position: {x: 300, y: 192, z: 0}
+    m_Position: {x: 336, y: 120, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107712554768221260}
-    m_Position: {x: 204, y: 120, z: 0}
+    m_Position: {x: 96, y: 156, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions:
   - {fileID: 1109554073080545388}
   m_StateMachineTransitions:
-  - first: {fileID: 1107829224643733378}
-    second:
-    - {fileID: 1109763761712449280}
   - first: {fileID: 1107301733352278762}
     second:
     - {fileID: 1109408497246554372}
   - first: {fileID: 1107564056597929518}
     second:
     - {fileID: 1109346760413316592}
+  - first: {fileID: 1107829224643733378}
+    second:
+    - {fileID: 1109763761712449280}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 72, y: -24, z: 0}
   m_EntryPosition: {x: 60, y: 72, z: 0}
@@ -2639,7 +2711,7 @@ AnimatorStateMachine:
     m_Position: {x: 252, y: 144, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102914729692499286}
-    m_Position: {x: 252, y: 228, z: 0}
+    m_Position: {x: 252, y: 216, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102657414211552816}
     m_Position: {x: -48, y: 408, z: 0}
