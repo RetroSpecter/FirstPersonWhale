@@ -17,6 +17,10 @@ public class AnimatorHandler : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+
+        if (Input.GetKeyDown(KeyCode.R)) Application.LoadLevel(Application.loadedLevel);
+
         foreach (debugTrigger d in debugTriggers) {
             if (Input.GetKeyDown(d.input))
             {
