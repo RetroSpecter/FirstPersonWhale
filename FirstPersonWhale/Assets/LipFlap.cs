@@ -5,7 +5,7 @@ using UnityEngine;
 public class LipFlap : MonoBehaviour {
 
 
-    private Animator anim;
+    public Animator anim;
     private AudioSource source;
     public float offset = 0;
 
@@ -15,7 +15,6 @@ public class LipFlap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        anim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
         clipSampleData = new float[1024];
 	}

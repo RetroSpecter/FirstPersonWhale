@@ -19,7 +19,7 @@ public class LOSTrigger : MonoBehaviour
     // Update is called once per frame
     void Update() {
         Vector3 angleToCam = transform.position - cam.transform.position;
-
+        angleToCam.y = 0;
 
         if (Vector3.Angle(cam.transform.forward, angleToCam) < visionRadius == isInGaze)
         {
