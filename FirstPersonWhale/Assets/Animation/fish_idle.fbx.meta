@@ -632,7 +632,12 @@ ModelImporter:
     7400000: Idle
     9500000: //RootNode
     13700000: salmon:chinook_salmon
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: salmon_salmon_mat
+    second: {fileID: 2100000, guid: 95a5ef5ca062a0e45b698be82a5d2ec9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -732,7 +737,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
