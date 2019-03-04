@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: scarlet_point_behind_idle.ma
-//Last modified: Sun, Mar 03, 2019 09:10:19 PM
+//Last modified: Sun, Mar 03, 2019 09:16:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "granny" -dr 1 -rfn "grannyRN" -typ "mayaAscii" "C:/Users/Ellie/Documents/GitHub/FirstPersonWhale/MayaFiles/luna.ma";
 file -rdi 1 -ns "luna" -rfn "lunaRN" -typ "mayaAscii" "C:/Users/Ellie/Documents/GitHub/FirstPersonWhale/MayaFiles/luna.ma";
@@ -2276,29 +2276,23 @@ createNode animCurveTA -n "center_head_anim_rotateZ";
 createNode animCurveTA -n "center_neck_anim_rotateX";
 	rename -uid "A28804F3-4069-C917-5CD4-A8B68733E1D6";
 	setAttr ".tan" 10;
-	setAttr -s 8 ".ktv[0:7]"  1 0 16 -16.474587672995618 24 -10.941592594643227
-		 30 -11.729781040212158 36 -10.404057352793828 46 -10.46014934461855 54 0 76 0;
-	setAttr -s 8 ".kot[0:7]"  9 9 9 9 9 9 9 9;
+	setAttr -s 2 ".ktv[0:1]"  1 0 76 0;
+	setAttr -s 2 ".kot[0:1]"  9 9;
 createNode animCurveTA -n "center_neck_anim_rotateY";
 	rename -uid "39676AE9-40A0-EA5D-ECF7-D5A8C6A9E031";
-	setAttr ".tan" 10;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.9598380754777205 16 -26.344501547470401
-		 24 -5.4519520857102339 30 -24.154117733245791 36 -10.302476518085953 46 -3.7481349816377016
-		 54 0 76 -3.9598380754777205 120 -12.000000000000002;
-	setAttr -s 9 ".kit[7:8]"  1 10;
-	setAttr -s 9 ".kot[0:8]"  9 9 9 9 9 9 9 1 
-		18;
-	setAttr -s 9 ".kix[7:8]"  4.958333333333333 1.8333333333333335;
-	setAttr -s 9 ".kiy[7:8]"  -0.14032729797639765 -0.14032729797639765;
-	setAttr -s 9 ".kox[7:8]"  4.958333333333333 1.8333333333333335;
-	setAttr -s 9 ".koy[7:8]"  -0.14032729797639765 0;
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.9598380754777205 76 -3.9598380754777205
+		 120 -12.000000000000002;
+	setAttr -s 3 ".kit[0:2]"  10 1 10;
+	setAttr -s 3 ".kot[0:2]"  9 1 18;
+	setAttr -s 3 ".kix[1:2]"  4.958333333333333 1.8333333333333335;
+	setAttr -s 3 ".kiy[1:2]"  -0.14032729797639765 -0.14032729797639765;
+	setAttr -s 3 ".kox[1:2]"  4.958333333333333 1.8333333333333335;
+	setAttr -s 3 ".koy[1:2]"  -0.14032729797639765 0;
 createNode animCurveTA -n "center_neck_anim_rotateZ";
 	rename -uid "DE9866C0-45C1-CB26-B131-0FB269C731F5";
-	setAttr ".tan" 10;
-	setAttr -s 8 ".ktv[0:7]"  1 0 16 9.6849491247575017 24 -5.423219903007559
-		 30 5.1323651101312864 36 -4.670473807215811 46 12.481656517135699 54 0 76 0;
-	setAttr -s 8 ".kit[0:7]"  18 10 10 10 10 10 10 18;
-	setAttr -s 8 ".kot[0:7]"  18 9 9 9 9 9 9 18;
+	setAttr ".tan" 18;
+	setAttr -s 2 ".ktv[0:1]"  1 0 76 0;
 createNode animCurveTA -n "center_tail_4_anim_rotateX";
 	rename -uid "22E9E506-4297-0CD5-CC87-0CB7C88BD6F4";
 	setAttr ".tan" 10;
@@ -2527,24 +2521,17 @@ createNode animCurveTA -n "right_fluke_3_anim_rotateZ";
 createNode animCurveTL -n "center_eye_aim_main_anim_translateX";
 	rename -uid "E2DDFABE-4961-7DA0-D2C1-F2AFD4350B31";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 0 16 8.1744624446888174 47 -23.745015285493359
-		 52 -20.428274643517071 76 0;
-	setAttr -s 5 ".kit[3:4]"  10 18;
-	setAttr -s 5 ".kot[3:4]"  9 18;
+	setAttr -s 2 ".ktv[0:1]"  1 0 76 0;
 createNode animCurveTL -n "center_eye_aim_main_anim_translateY";
 	rename -uid "1E1953A1-4B39-4D0F-A6A4-1B889CE44ACB";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 -10.625 16 27.13011045252513 47 59.017273469383262
-		 52 14.266458415212563 76 -10.625 120 -10.625;
-	setAttr -s 6 ".kit[3:5]"  10 18 10;
-	setAttr -s 6 ".kot[3:5]"  9 18 18;
+	setAttr -s 3 ".ktv[0:2]"  1 -10.625 76 -10.625 120 -10.625;
+	setAttr -s 3 ".kit[2]"  10;
 createNode animCurveTL -n "center_eye_aim_main_anim_translateZ";
 	rename -uid "B75E09C2-4B94-6A18-6075-B89DA83C8EF6";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 41.39 16 88.903317732941773 47 135.93832454574098
-		 52 129.36775290962095 76 41.39 120 41.39;
-	setAttr -s 6 ".kit[3:5]"  10 18 10;
-	setAttr -s 6 ".kot[3:5]"  9 18 18;
+	setAttr -s 3 ".ktv[0:2]"  1 41.39 76 41.39 120 41.39;
+	setAttr -s 3 ".kit[2]"  10;
 createNode animCurveTU -n "center_eye_aim_main_anim_parent_to";
 	rename -uid "9462550E-4EE3-34D5-E25A-B0B5E63A945F";
 	setAttr ".tan" 18;
