@@ -1,0 +1,56 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RockGlow : MonoBehaviour
+{
+
+    public GameObject matObject;
+    public Material mat;
+    public Color selectedColor;
+    public Color baseColor;
+
+    IEnumerator curFadeColor;
+    public float colorFadeSpeed = 0.5f;
+
+    private void Start()
+    {
+        mat = matObject.GetComponent<Renderer>().material;
+        CharacterLook cl = GetComponent<CharacterLook>();
+        cl.select = OnSelected;
+        cl.deselect = OnDeselected;
+    }
+
+    public void OnDeselected()
+    {
+        fadeColor(baseColor);
+    }
+
+    public void OnSelected()
+    {
+        fadeColor(selectedColor);
+    }
+
+    void fadeColor(Color targetColor)
+    {
+        if (curFadeColor != null)
+        {
+            StopCoroutine(curFadeColor);
+        }
+        curFadeColor = fadeEnum(targetColor, colorFadeSpeed);
+        StartCoroutine(curFadeColor);
+    }
+
+    IEnumerator fadeEnum(Color color, float length)
+    {
+        Color curColor = mat.GetColor("_EmissionColor");
+        float time = 0;
+        while (time < length)
+        {
+            time += Time.deltaTime;
+            mat.SetColor("_EmissionColor", Color.Lerp(curColor, color, time / length));
+            yield return null;
+        }
+        mat.SetColor("_EmissionColor", color);
+    }
+}

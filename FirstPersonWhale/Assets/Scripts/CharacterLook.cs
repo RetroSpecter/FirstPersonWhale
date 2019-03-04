@@ -9,10 +9,17 @@ public class CharacterLook : Interacatble
     public string triggerName;
     private IEnumerator currentTimer;
 
+    public delegate void selectionEvent();
+    public selectionEvent select;
+    public selectionEvent deselect;
+
     public override void OnDeselected(CameraRaycast camera)
     {
         if (currentTimer != null)
             StopCoroutine(currentTimer);
+
+        if (deselect != null)
+            deselect();
 
         currentTimer = null;
     }
@@ -24,6 +31,10 @@ public class CharacterLook : Interacatble
             currentTimer = timeToLook(lookTimer);
             StartCoroutine(currentTimer);
         }
+
+        if (select != null)
+            select();
+
         return;
     }
 
