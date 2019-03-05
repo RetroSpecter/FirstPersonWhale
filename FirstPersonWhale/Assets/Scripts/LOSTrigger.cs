@@ -23,8 +23,7 @@ public class LOSTrigger : MonoBehaviour
 
         if (Vector3.Angle(cam.transform.forward, angleToCam) < visionRadius == isInGaze)
         {
-            if (!gaze)
-            {
+            if (!gaze) {
                 print("out of gaze");
                 AnimatorHandler.instance.ActivateTriggers(triggerName);
                 gaze = true;

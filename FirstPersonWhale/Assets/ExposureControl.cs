@@ -23,7 +23,6 @@ public class ExposureControl : MonoBehaviour {
         Vector3 headPos = transform.forward;
         float angle = Vector3.SignedAngle(Vector3.up, headPos, -Vector3.right);
         //angle = Mathf.Clamp(angle, 0, 90);
-        print(angle);
 
         autoExposure.maxLuminance.value = Mathf.Lerp(range.x, range.y, angle/90);
     }
