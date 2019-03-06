@@ -9294,7 +9294,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   SpatializePostEffects: 1
@@ -44674,9 +44674,9 @@ MonoBehaviour:
     pitchRange: {x: 1, y: 1}
   - name: PodSingBack
     audioSource: {fileID: 168122818}
-    audio: {fileID: 8300000, guid: a6d6006303c13aa489ce255edec8da46, type: 3}
+    audio: {fileID: 8300000, guid: 99d60b39f58d42c45824661921e05fa5, type: 3}
     volume: 1
-    pitchRange: {x: 1, y: 1}
+    pitchRange: {x: 0.85, y: 1}
   - name: EndingSongPlay
     audioSource: {fileID: 1401032983}
     audio: {fileID: 8300000, guid: 4ae4d3d5dac733648989579f45cd3cd5, type: 3}
@@ -44797,6 +44797,23 @@ MonoBehaviour:
         - m_Target: {fileID: 312725828}
           m_MethodName: setActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: FadeOut
+    eventCall:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1367677061}
+          m_MethodName: fadeOut
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -47802,6 +47819,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4848293993976074, guid: 94c40a7b35478f9488fba9796de03eb8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 35.36
@@ -47887,6 +47909,71 @@ Prefab:
         type: 2}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0.11803424
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.7265248
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0.11803424
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].inSlope
+      value: -7.6626015
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].outSlope
+      value: -7.6626015
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].inWeight
+      value: 0.09989995
+      objectReference: {fileID: 0}
+    - target: {fileID: 198607948049481542, guid: 94c40a7b35478f9488fba9796de03eb8,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c40a7b35478f9488fba9796de03eb8, type: 2}
@@ -74813,7 +74900,7 @@ MonoBehaviour:
   slider: 0
   minMax: {x: 0.1, y: 1}
   fadeInSpeed: 1
-  fadeOutSpeed: 1
+  fadeOutSpeed: 0.5
 --- !u!1 &1368556204
 GameObject:
   m_ObjectHideFlags: 0
