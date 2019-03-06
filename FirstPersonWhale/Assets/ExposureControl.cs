@@ -7,7 +7,6 @@ public class ExposureControl : MonoBehaviour {
 
     // PostProcessVolume ppv;
     AutoExposure autoExposure;
-
     public Vector2 range;
     //[Range(0,1)]public float slider;
 
@@ -19,10 +18,10 @@ public class ExposureControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //float exposure = Mathf.Lerp(range.x, range.y, slider);
-        Vector3 headPos = transform.forward;
-        float angle = Mathf.Clamp(headPos.y, 0, 1);
+            //float exposure = Mathf.Lerp(range.x, range.y, slider);
+            Vector3 headPos = transform.forward;
+            float angle = Mathf.Clamp(headPos.y, 0, 1);
 
-        autoExposure.maxLuminance.value = Mathf.Lerp(range.x, range.y, angle);
+            autoExposure.maxLuminance.value = Mathf.Lerp(range.x, range.y, angle);
     }
 }

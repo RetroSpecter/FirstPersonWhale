@@ -9,6 +9,7 @@ public class RockGlow : MonoBehaviour
     public Material mat;
     public Color selectedColor;
     public Color baseColor;
+    public bool active;
 
     IEnumerator curFadeColor;
     public float colorFadeSpeed = 0.5f;
@@ -23,12 +24,19 @@ public class RockGlow : MonoBehaviour
 
     public void OnDeselected()
     {
-        fadeColor(baseColor);
+        //if (active)
+            fadeColor(baseColor);
     }
 
     public void OnSelected()
     {
-        fadeColor(selectedColor);
+        if(active)
+            fadeColor(selectedColor);
+    }
+
+    public void setActive(bool isActive)
+    {
+        active = isActive;
     }
 
     void fadeColor(Color targetColor)
