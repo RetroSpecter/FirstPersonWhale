@@ -21,9 +21,8 @@ public class ExposureControl : MonoBehaviour {
 	void Update () {
         //float exposure = Mathf.Lerp(range.x, range.y, slider);
         Vector3 headPos = transform.forward;
-        float angle = Vector3.SignedAngle(Vector3.up, headPos, -Vector3.right);
-        //angle = Mathf.Clamp(angle, 0, 90);
+        float angle = Mathf.Clamp(headPos.y, 0, 1);
 
-        autoExposure.maxLuminance.value = Mathf.Lerp(range.x, range.y, angle/90);
+        autoExposure.maxLuminance.value = Mathf.Lerp(range.x, range.y, angle);
     }
 }

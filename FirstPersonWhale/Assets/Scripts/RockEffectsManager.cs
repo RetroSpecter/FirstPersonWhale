@@ -7,6 +7,7 @@ public class RockEffectsManager : MonoBehaviour {
     public MusicRock rock;
     public Light light;
     public ParticleSystem ps;
+    public ParticleSystem fishSystem;
     public GameObject symbolMat;
     [Header("Color Settings")]
     public Color inactiveColor;
@@ -53,6 +54,10 @@ public class RockEffectsManager : MonoBehaviour {
 
     void PlayRock() {
         ps.Play();
+        if (fishSystem != null)
+        {
+            fishSystem.GetComponent<ParticleSystem>().Play();
+        }
     }
 
     void Deactivate() {
