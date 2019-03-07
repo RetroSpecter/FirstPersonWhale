@@ -551,7 +551,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 25.083334
+  - time: 25.5
     functionName: PlayEvent
     data: FadeOut
     objectReferenceParameter: {fileID: 0}

@@ -205,6 +205,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockIndex: 1
+--- !u!114 &114202489563386046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d00594d0178e494b967e1284f036758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockIndex: 0
 --- !u!114 &114208532742677538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1668,7 +1680,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.24999905
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.64844
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1945,7 +1957,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.94957983
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1956,10 +1968,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Look at Scarlet
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102658768837497018}
   m_Solo: 0
@@ -1969,7 +1978,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2843,7 +2852,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101445526079005172}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114202489563386046}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -3253,7 +3263,7 @@ AnimatorStateMachine:
     m_Position: {x: 540, y: 60, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107301733352278762}
-    m_Position: {x: 564, y: 168, z: 0}
+    m_Position: {x: 612, y: 156, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107564056597929518}
     m_Position: {x: 336, y: 120, z: 0}
@@ -3382,7 +3392,7 @@ AnimatorStateMachine:
     m_Position: {x: 84, y: 324, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102658768837497018}
-    m_Position: {x: 516, y: 384, z: 0}
+    m_Position: {x: 516, y: 372, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102165174577524770}
     m_Position: {x: 276, y: 240, z: 0}
