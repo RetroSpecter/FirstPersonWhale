@@ -1009,7 +1009,7 @@ ModelImporter:
       name: Goodbye
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 260
+      lastFrame: 400
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
