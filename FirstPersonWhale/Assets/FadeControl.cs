@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Kino.PostProcessing;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using Kino.PostProcessing;
 
 public class FadeControl : MonoBehaviour
 {
 
-    private Overlay overlay;
+    public MeshRenderer meshRenderer;
+    private Material mat;
+
     [Range(0,1)] public float slider;
     public Vector2 minMax;
 
@@ -17,8 +18,9 @@ public class FadeControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        mat = meshRenderer.material;
         PostProcessVolume ppv = GetComponent<PostProcessVolume>();
-        ppv.profile.TryGetSettings(out overlay);
+
         fadeIn();
 
     }
@@ -37,14 +39,16 @@ public class FadeControl : MonoBehaviour
             slider = 1;
             while (slider > 0) {
                 slider -= Time.deltaTime * speed;
-                overlay.opacity.value = Mathf.Lerp(minMax.x, minMax.y, slider);
+                Color col = Color.Lerp(Color.clear, Color.white, slider);
+                mat.SetColor("_Color", col);
                 yield return null;
             }
         } else {
             slider = 0;
             while (slider < 1) {
                 slider += Time.deltaTime * speed;
-                overlay.opacity.value = Mathf.Lerp(minMax.x, minMax.y, slider);
+                Color col = Color.Lerp(Color.clear, Color.white, slider);
+                mat.SetColor("_Color", col);
                 yield return null;
             }
         }
