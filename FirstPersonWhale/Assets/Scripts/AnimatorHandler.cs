@@ -38,6 +38,10 @@ public class AnimatorHandler : MonoBehaviour {
         StartCoroutine(resetTrigger(triggerName));
     }
 
+    public void reset() {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
     IEnumerator resetTrigger(string triggerName) {
         yield return new WaitForSeconds(0.5f);
         foreach (Animator anim in animators)

@@ -111,6 +111,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &114027898427260740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: WinChime
 --- !u!114 &114046896419570720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,6 +323,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioEvent: Seal Song
+--- !u!114 &114389962792979356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: Scarlet Yeah
 --- !u!114 &114406964950367928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,18 +662,6 @@ MonoBehaviour:
   visionRadius: 20
   IsInGaze: 1
   triggerName: Look at Scarlet
---- !u!114 &114848471742843118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioEvent: Scarlet Yeah
 --- !u!114 &114859570337902710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,18 +675,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockIndex: 0
 --- !u!114 &114864105976369796
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b94946505757c41b7f30595a42c902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioEvent: WinChime
---- !u!114 &114902167531122246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2505,7 +2505,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101983796065990936}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114389962792979356}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2775,7 +2776,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 114644011527826580}
   - {fileID: 114790817294680326}
-  - {fileID: 114848471742843118}
+  - {fileID: 114027898427260740}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -3430,7 +3431,6 @@ AnimatorState:
   - {fileID: 1101272953962049240}
   m_StateMachineBehaviours:
   - {fileID: 114159595793387066}
-  - {fileID: 114902167531122246}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -3711,12 +3711,12 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: 1107829224643733378}
+    second: []
   - first: {fileID: 1107301733352278762}
     second:
     - {fileID: 1109408497246554372}
   - first: {fileID: 1107564056597929518}
-    second: []
-  - first: {fileID: 1107829224643733378}
     second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 72, y: -24, z: 0}
@@ -3917,7 +3917,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102588173207508336}
-    m_Position: {x: 276, y: 120, z: 0}
+    m_Position: {x: 300, y: 96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102625748077325776}
     m_Position: {x: 36, y: 180, z: 0}
@@ -3926,13 +3926,13 @@ AnimatorStateMachine:
     m_Position: {x: 504, y: 312, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102734487016173044}
-    m_Position: {x: 276, y: 240, z: 0}
+    m_Position: {x: 300, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102810123968119734}
-    m_Position: {x: 276, y: 180, z: 0}
+    m_Position: {x: 288, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102361762395732580}
-    m_Position: {x: 276, y: 312, z: 0}
+    m_Position: {x: 288, y: 312, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102842427780778064}
     m_Position: {x: 732, y: 312, z: 0}
