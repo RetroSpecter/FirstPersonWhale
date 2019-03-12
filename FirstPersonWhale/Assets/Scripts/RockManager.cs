@@ -15,7 +15,24 @@ public class RockManager : MonoBehaviour {
     }
 
     public void ActivateRock(int i) {
-        for (int j = 0; j < rocks.Length; j++) {
+        if (i == 0) {
+            for (int j = 0; j < rocks.Length; j++)
+            {
+                if (j < i)
+                    rocks[j].ActivateRock(true);
+                else
+                    rocks[j].ActivateRock(false);
+            }
+            return;
+        }
+
+        StartCoroutine(ActivateRockEnum(i));
+    }
+
+    IEnumerator ActivateRockEnum(int i) {
+        for (int j = 0; j < rocks.Length; j++)
+        {
+            yield return new WaitForSeconds(1f);
             if (j < i)
                 rocks[j].ActivateRock(true);
             else

@@ -26,7 +26,10 @@ public class MusicRock : Interacatble {
 
     public void ActivateRock(bool active) {
         if (active && this.active != null)
+        {
             this.active();
+            source.Play();
+        }
 
         else if (!active && this.deactive != null)
             this.deactive();
