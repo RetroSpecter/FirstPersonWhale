@@ -15,7 +15,12 @@ public class RockEffectsManager : MonoBehaviour {
     public Color selectedColor;
 
     IEnumerator curFadeColor;
-    public float colorFadeSpeed = 0.5f;
+
+    [Header("ColorFadeSpeeds")]
+    public float colorDeactivteFadeSpeed = 0.25f;
+    public float colorActivateFadeSpeed = 0.25f;
+    public float colorSelectedFadeSpeed = 0.5f;
+    public float colorDeselectedFadeSpeed = 1.5f;
 
     void Start() {
         rock.select += Select;
@@ -36,20 +41,20 @@ public class RockEffectsManager : MonoBehaviour {
     void Select() {
         light.intensity *= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(selectedColor);
+        fadeColor(selectedColor, colorSelectedFadeSpeed);
     }
 
     void Deselect() {
         light.intensity /= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(baseColor);
+        fadeColor(baseColor, colorDeselectedFadeSpeed);
     }
 
     void Activate() {
         ps.Play();
         light.gameObject.SetActive(true);
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(baseColor);
+        fadeColor(baseColor, colorActivateFadeSpeed);
     }
 
     void PlayRock() {
@@ -63,10 +68,10 @@ public class RockEffectsManager : MonoBehaviour {
     void Deactivate() {
         light.gameObject.SetActive(false);
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(inactiveColor);
+        fadeColor(inactiveColor, colorDeselectedFadeSpeed);
     }
 
-    void fadeColor(Color targetColor) {
+    void fadeColor(Color targetColor, float colorFadeSpeed) {
         if (curFadeColor != null)
         {
             StopCoroutine(curFadeColor);

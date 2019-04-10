@@ -18,9 +18,11 @@ public class MusicRock : Interacatble {
     public selectionEvent deactive;
     public selectionEvent play;
 
+    private RockGlow rg;
 
     private void Start()
     {
+        rg = GetComponent<RockGlow>();
         source = GetComponent<AudioSource>();
     }
 
@@ -29,10 +31,10 @@ public class MusicRock : Interacatble {
         {
             this.active();
             source.Play();
-        }
-
-        else if (!active && this.deactive != null)
+        } else if (!active && this.deactive != null) {
+            rg.OnDeselected();
             this.deactive();
+        }
 
         isActive = active;
     }
@@ -46,7 +48,7 @@ public class MusicRock : Interacatble {
 
         if (currentTimer != null)
             StopCoroutine(currentTimer);
-
+        rg.OnDeselected();
         currentTimer = null;
     }
 
@@ -61,6 +63,7 @@ public class MusicRock : Interacatble {
             currentTimer = timeToLook(lookTimer);
             StartCoroutine(currentTimer);
         }
+        rg.OnSelected();
         return;
     }
 

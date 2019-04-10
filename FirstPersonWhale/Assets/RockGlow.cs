@@ -6,7 +6,7 @@ public class RockGlow : MonoBehaviour
 {
 
     public GameObject matObject;
-    public Material mat;
+    private Material mat;
     public Color selectedColor;
     public Color baseColor;
     public bool active;
