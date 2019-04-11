@@ -18,11 +18,10 @@ public class MusicRock : Interacatble {
     public selectionEvent deactive;
     public selectionEvent play;
 
-    private RockGlow rg;
+    public RockGlow rg;
 
     private void Start()
     {
-        rg = GetComponent<RockGlow>();
         source = GetComponent<AudioSource>();
     }
 

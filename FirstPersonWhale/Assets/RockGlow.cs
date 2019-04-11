@@ -18,8 +18,12 @@ public class RockGlow : MonoBehaviour
     {
         mat = matObject.GetComponent<Renderer>().material;
         CharacterLook cl = GetComponent<CharacterLook>();
-        cl.select = OnSelected;
-        cl.deselect = OnDeselected;
+
+        if (cl != null)
+        {
+            cl.select = OnSelected;
+            cl.deselect = OnDeselected;
+        }
     }
 
     public void OnDeselected()

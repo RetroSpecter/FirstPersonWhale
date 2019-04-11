@@ -1,82 +1,30 @@
-Animations:
+import pymel.all as pm
+import MARS as mars
+import MARS.MarsUtilities as mu
 
-- Sea Lion Interaction -
+reload(mars)
+reload(mu)
 
-1. Scarlet greeting
+fin = {}
+primary_anims = {}
+primary_face_anims = {}
+secondary_face_anims = {}
 
-2. Sea lion swims by, Scarlet greets sea lion (sings)
+body = mars.CharacterRig('Granny', 'center_root_bind_joint', tcr = 20.0)
+# pm.parent('granny', body.get_mesh_grp()) for whenever we get a mesh
 
-3. Scarlet gestures to rock / waits for you
+face = mars.CharacterRig('Granny_Face', 'center_head_bind_joint')
+face.connect_rigs(body, 'center_head_bind_joint')
 
-4. Interaction with Sea lion and scarlet is happy
+COG = mars.COGChain('center', 'COG', 'center_chest_bind_joint', 'center_tail_1_bind_joint', rig = body)
+chest = mars.FKChain('center', 'chest', 'center_chest_bind_joint', 'center_tail_1_bind_joint', stretch = False, connect_to = COG, area = 'end', rig = body)
+tail = mars.FKChain('center', 'tail', 'center_tail_1_bind_joint', 'center_tail_6_end_joint', stretch = False, connect_to = chest, area = 'end', rig = body)
+left_fluke = mars.FKChain('left', 'fluke', 'left_fluke_1_bind_joint', 'left_fluke_end_joint', stretch = False, connect_to = tail, area = 'end', rig = body)
+right_fluke = mars.FKChain('right', 'fluke', 'right_fluke_1_bind_joint', 'right_fluke_end_joint', stretch = False, connect_to = tail, area = 'end', rig = body)
+left_flipper = mars.FKChain('left', 'flipper', 'left_flipper_1_bind_joint', 'left_flipper_end_joint', stretch = False, connect_to = chest, area = 'start', rig = body)
+right_flipper = mars.FKChain('right', 'flipper', 'right_flipper_1_bind_joint', 'right_flipper_end_joint', stretch = False, connect_to = chest, area = 'start', rig = body)
+dorsal = mars.FKChain('center', 'dorsal', 'center_dorsal_fin_1_bind_joint', 'center_dorsal_fin_end_joint', stretch = False, connect_to = chest, area = 'start', rig = body)
 
-- Scarlet Name -
-
-1. She sings new tune refers to self
-
-2. Same idle animation
-
-3. Sea lion pops up and interacts (which can be the same)
-
-4. Scalret celebrates (which can also be the same) 
-
-- Scarlet Hide and seek -
-
-1. Gestures behind you
-
-2. reacts to you saying her name (old animation)
-
-3. sea lion reacts to hearing his name (old interaction)
-
-4. scarlet hids (which is litearlly not an animation)
-
-5. Scarlet sings back and becomes visible
-
-6. Scarlet pops up and she is happy
-
-- Pod Interaction - 
-
-1. scarlet seees pod
-
-2. scarlet idle where she keeps looking at it
-
-2. reacts to you saying her name, though less active
-
-3. sea lion reacts to hearing his name (old interaction)
-
-4. end scene where everything happens
-
-Sounds:
-
-- General -
-ambient underwater sounds
-	- low constant. filtering up and down.
-distant bubble sounds
-faint whale noises in the distant
-
-Wooshing when Scarlet or sea lion swim around
-
-- Sea Lion Interaction -
-
-Scarlet calls to greet you (3 - 4)
-Sea lion noises
-ambient bubble sounds (particle effects bubbles as well)
-Scarlet sea lion song
-Scarlet gesture sound (real short and question sounding)
-rock bubble sounds (more like scuba diving)
-
-
-- Scarlet Name -
-
-Scarlet song
-
-
-- Scarlet Hide and seek -
-
-big woosh sound effect as she swim away
-scarlet quiet response
-
-- Pod Interaction - 
-
-Family Song
-Pod 
+neck = mars.COGChain('center', 'neck', 'center_neck_bind_joint', 'center_head_bind_joint', connect_to = COG, area = 'end', rig = body)
+#mouth
+#face
