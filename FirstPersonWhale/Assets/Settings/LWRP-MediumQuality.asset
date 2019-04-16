@@ -18,13 +18,13 @@ MonoBehaviour:
   m_RequireSoftParticles: 0
   m_RequireOpaqueTexture: 0
   m_OpaqueDownsampling: 1
-  m_SupportsHDR: 0
+  m_SupportsHDR: 1
   m_MSAA: 4
   m_RenderScale: 1.59
   m_SupportsDynamicBatching: 1
   m_DirectionalShadowsSupported: 1
   m_ShadowAtlasResolution: 4096
-  m_ShadowDistance: 50
+  m_ShadowDistance: 25
   m_ShadowCascades: 2
   m_Cascade2Split: 0.3215188
   m_Cascade4Split: {x: 0.06730629, y: 0.36909658, z: 0.5165496}
