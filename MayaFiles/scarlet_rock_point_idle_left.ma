@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: scarlet_rock_point_idle_left.ma
-//Last modified: Tue, Apr 16, 2019 01:40:46 AM
+//Last modified: Tue, Apr 16, 2019 02:35:47 AM
 //Codeset: 1252
 file -rdi 1 -ns "granny" -dr 1 -rfn "grannyRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/granny/_published/granny.ma";
 file -rdi 1 -ns "luna" -rfn "lunaRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/luna/_published/luna.ma";
