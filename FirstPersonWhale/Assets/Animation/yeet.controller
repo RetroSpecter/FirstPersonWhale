@@ -2859,7 +2859,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a5489cd8e2ed8544da5330df1ec43b02, type: 2}
+  m_Motion: {fileID: 7400000, guid: 88ef1b8e46d46f9488356a06520e131d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2885,7 +2885,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8fdc4709936c9c34ab5c2449f634e16c, type: 2}
+  m_Motion: {fileID: 7400000, guid: a22ac05dde277e94f84dd80165839cac, type: 3}
   m_Tag: 'idle animation: she points her nose at the rocks every few seconds'
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3183,7 +3183,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 03dd9432064fac64fabfbefb3b99a345, type: 3}
+  m_Motion: {fileID: 7400000, guid: 05f31d11a2eef4f49ba2ded54a9b6a14, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
