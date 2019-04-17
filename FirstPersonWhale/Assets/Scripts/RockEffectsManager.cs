@@ -41,7 +41,7 @@ public class RockEffectsManager : MonoBehaviour {
     void Select() {
         light.intensity *= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(selectedColor, colorSelectedFadeSpeed);
+        fadeColor(selectedColor * 10, colorSelectedFadeSpeed);
     }
 
     void Deselect() {
@@ -54,7 +54,7 @@ public class RockEffectsManager : MonoBehaviour {
         ps.Play();
         light.gameObject.SetActive(true);
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(baseColor, colorActivateFadeSpeed);
+        fadeColor(baseColor * 3, colorActivateFadeSpeed);
     }
 
     void PlayRock() {
