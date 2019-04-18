@@ -51,9 +51,9 @@ public class MusicRock : Interacatble {
         currentTimer = null;
     }
 
-    public override void OnSelected(CameraRaycast camera)
+    public override bool OnSelected(CameraRaycast camera)
     {
-        if (!isActive) return;
+        if (!isActive) return false;
 
         if (select != null)
             select();
@@ -63,7 +63,7 @@ public class MusicRock : Interacatble {
             StartCoroutine(currentTimer);
         }
         rg.OnSelected();
-        return;
+        return true;
     }
 
     public void PlayRock() {
@@ -91,10 +91,6 @@ public class MusicRock : Interacatble {
         }
 
         PlayRock();
-
-        //TODO: this is pretty lazy. If things run really slow it might be this. 
-        while (true) {
-            yield return null;
-        }
+        currentTimer = null;
     }
 }

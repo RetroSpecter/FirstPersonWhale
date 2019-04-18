@@ -4,7 +4,8 @@ using UnityEngine;
 
 public abstract class Interacatble : MonoBehaviour
 {
-    public abstract void OnSelected(CameraRaycast camera);
+
+    public abstract bool OnSelected(CameraRaycast camera);
 
     public abstract void OnDeselected(CameraRaycast camera);
 }
