@@ -40,7 +40,7 @@ public class FadeControl : MonoBehaviour
             while (slider > 0) {
                 slider -= Time.deltaTime * speed;
                 Color col = Color.Lerp(Color.clear, Color.white, slider);
-                mat.SetColor("_Color", col);
+                mat.SetColor("_BaseColor", col);
                 yield return null;
             }
         } else {
@@ -48,7 +48,7 @@ public class FadeControl : MonoBehaviour
             while (slider < 1) {
                 slider += Time.deltaTime * speed;
                 Color col = Color.Lerp(Color.clear, Color.white, slider);
-                mat.SetColor("_Color", col);
+                mat.SetColor("_BaseColor", col);
                 yield return null;
             }
         }

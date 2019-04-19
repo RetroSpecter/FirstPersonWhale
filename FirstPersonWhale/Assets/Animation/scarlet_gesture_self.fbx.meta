@@ -968,7 +968,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: Take 001
+    7400000: Gesture to Self
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -1006,7 +1006,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Gesture to Self
       takeName: Take 001
       firstFrame: 1
       lastFrame: 132
@@ -1016,7 +1016,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1028,7 +1028,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.5358209
+        functionName: PlaySound
+        data: Scarlet Song
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
