@@ -968,7 +968,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: Take 001
+    7400000: Rock Point Idle
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -1006,7 +1006,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Rock Point Idle
       takeName: Take 001
       firstFrame: 1
       lastFrame: 90

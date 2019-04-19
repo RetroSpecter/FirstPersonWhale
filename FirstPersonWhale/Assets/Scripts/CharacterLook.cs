@@ -24,7 +24,7 @@ public class CharacterLook : Interacatble
         currentTimer = null;
     }
 
-    public override bool OnSelected(CameraRaycast camera)
+    public override void OnSelected(CameraRaycast camera)
     {
         if (currentTimer == null)
         {
@@ -35,7 +35,7 @@ public class CharacterLook : Interacatble
         if (select != null)
             select();
 
-        return true;
+        return;
     }
 
 

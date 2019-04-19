@@ -21,13 +21,9 @@ public class CameraRaycast : MonoBehaviour
                 if (selectedObject != null)
                     selectedObject.OnDeselected(this);
 
+                currentSelected.OnSelected(this);
+                selectedObject = currentSelected;
 
-                if (currentSelected.OnSelected(this))
-                {
-                    selectedObject = currentSelected;
-                } else {
-                    selectedObject = null;
-                }
             }
         }
         else if (selectedObject != null)

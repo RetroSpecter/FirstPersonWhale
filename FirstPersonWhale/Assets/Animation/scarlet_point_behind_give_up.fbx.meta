@@ -479,8 +479,7 @@ ModelImporter:
     100946: luna:right_upperlid_component_grp
     100948: luna:teeth_lower
     100950: luna:teeth_upper
-    100952: render_cam
-    100954: //RootNode
+    100952: //RootNode
     400000: luna:bind_joint_grp
     400002: luna:bind_joint_grp 1
     400004: luna:body_grp
@@ -957,9 +956,7 @@ ModelImporter:
     400946: luna:right_upperlid_component_grp
     400948: luna:teeth_lower
     400950: luna:teeth_upper
-    400952: render_cam
-    400954: //RootNode
-    2000000: render_cam
+    400952: //RootNode
     2100000: luna_body_texture
     2100002: luna_eye_texture
     2100004: luna_teeth_texture
@@ -971,7 +968,7 @@ ModelImporter:
     4300008: luna:teeth_upper
     4300010: luna:gum_lower
     4300012: luna:gum_upper
-    7400000: Take 001
+    7400000: Give Up Pointing Behind
     9500000: //RootNode
     13700000: luna:gum_lower
     13700002: luna:gum_upper
@@ -1007,7 +1004,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Give Up Pointing Behind
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
