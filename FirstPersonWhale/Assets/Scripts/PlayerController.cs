@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private void LateUpdate()
     {
         Vector2 speed = transform.position - deltaPos;
-        swimSource.volume = Mathf.Lerp(0, 0.5f, (Vector3.Magnitude(speed) * 100) / maxSpeed);
+        swimSource.volume = Mathf.Lerp(swimSource.volume, Mathf.Lerp(0, 0.75f, (Vector3.Magnitude(speed) * 100) / maxSpeed), Time.deltaTime * 4);
         deltaPos = transform.position;
     }
 }
