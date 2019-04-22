@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: scarlet_rock_point.ma
-//Last modified: Sun, Apr 21, 2019 05:54:18 PM
+//Name: scarlet_rock_point_far.ma
+//Last modified: Sun, Apr 21, 2019 06:30:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "granny" -dr 1 -rfn "grannyRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/granny/_published/granny.ma";
 file -rdi 1 -ns "luna" -rfn "lunaRN" -typ "mayaAscii" "Z:/GitHub/FirstPersonWhale/MayaFiles/luna.ma";
@@ -80,14 +80,14 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "render_cam";
 	rename -uid "53952B00-41F7-7F3C-C709-4F97964D1607";
-	setAttr ".t" -type "double3" 20.623016800067369 70.067870258072219 625.57965376557729 ;
-	setAttr ".r" -type "double3" -6.3379999997587593 -358.19999999996389 4.9720701062416232e-16 ;
+	setAttr ".t" -type "double3" -800.48870324409722 324.07646011480449 719.27536753421896 ;
+	setAttr ".r" -type "double3" -17.137999999758577 -413.79999999995584 -1.3463105993705786e-15 ;
 createNode camera -n "render_camShape" -p "render_cam";
 	rename -uid "60F23DD3-410B-3689-9939-5885DFBA47CE";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 629.0350577406839;
+	setAttr ".coi" 1169.9811370659922;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
@@ -471,7 +471,7 @@ createNode reference -n "lunaRN";
 		"lunaRN" 118
 		2 "|luna:Luna_topCon" "global_scale" " -k 1 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
-		"translate" " -type \"double3\" 84.63372772064839467 -14.14772634612602964 58.98969337934353518"
+		"translate" " -type \"double3\" -16.06623171911093095 -2.35936950315159644 9.3807450364722591"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"translateX" " -av"
@@ -480,7 +480,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"translateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
-		"rotate" " -type \"double3\" -9.94537430390289501 52.4328081906128034 -4.6000968635892816"
+		"rotate" " -type \"double3\" -8.23775196875291549 24.18274974563275848 -3.3163854622082467"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"rotateX" " -av"
@@ -489,11 +489,12 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
-		"swim_offset" " -av -k 1 5"
+		"swim_offset" " -av -k 1 1.24013640481034693"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_COG_component_grp|luna:center_COG_anim_grp|luna:center_COG_null|luna:center_COG_vis_null|luna:center_COG_anim" 
-		"swim_height" " -av -k 1 0.05"
+		"swim_height" " -av -k 1 0.29568366106980115"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim" 
-		"rotate" " -type \"double3\" -2.40313246699091598 0 -9"
+		"rotate" " -type \"double3\" 0.3866984883730164 -5.96689136947878218 -8.92464833476808472"
+		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim" 
@@ -501,7 +502,8 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
-		"rotate" " -type \"double3\" -0.5928638156724837 0 -12.00000000000000178"
+		"rotate" " -type \"double3\" -0.18441501292157406 -20.81145378177613381 7.2106435721576414"
+		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
@@ -511,7 +513,8 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_spine_component_grp|luna:center_spine_anim_grp|luna:center_spine_1_null|luna:center_spine_1_deformer_null|luna:center_spine_1_vis_null|luna:center_spine_1_anim|luna:center_spine_2_null|luna:center_spine_2_deformer_null|luna:center_spine_2_vis_null|luna:center_spine_2_anim" 
 		"segmentScaleCompensate" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
-		"rotate" " -type \"double3\" 0 0 -9"
+		"rotate" " -type \"double3\" -0.52834257442541954 0.28021663190400092 -18.15530112406671748"
+		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
@@ -519,11 +522,11 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 8.71578527200183473"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 6.12680183127677758"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
 		"rotateX" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
@@ -533,13 +536,13 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim" 
 		"segmentScaleCompensate" " 1"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 8.1019829947931985"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_component_grp|luna:center_tail_anim_grp|luna:center_tail_1_null|luna:center_tail_1_deformer_null|luna:center_tail_1_deformer_null|luna:center_tail_1_vis_null|luna:center_tail_1_anim|luna:center_tail_2_null|luna:center_tail_2_deformer_null|luna:center_tail_2_deformer_null|luna:center_tail_2_vis_null|luna:center_tail_2_anim|luna:center_tail_3_null|luna:center_tail_3_deformer_null|luna:center_tail_3_deformer_null|luna:center_tail_3_vis_null|luna:center_tail_3_anim|luna:center_tail_4_null|luna:center_tail_4_deformer_null|luna:center_tail_4_deformer_null|luna:center_tail_4_vis_null|luna:center_tail_4_anim|luna:center_tail_5_null|luna:center_tail_5_deformer_null|luna:center_tail_5_deformer_null|luna:center_tail_5_vis_null|luna:center_tail_5_anim|luna:center_tail_6_null|luna:center_tail_6_deformer_null|luna:center_tail_6_deformer_null|luna:center_tail_6_vis_null|luna:center_tail_6_anim" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim" 
-		"rotate" " -type \"double3\" 1.88681027516994049 21.10208374433106826 4.66491392454702503"
+		"rotate" " -type \"double3\" 6.18288433099053858 -15.77778739561625265 -8.49422524390841005"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim" 
 		"rotateX" " -av"
@@ -548,7 +551,7 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_neck_component_grp|luna:center_neck_anim_grp|luna:center_neck_null|luna:center_neck_multicon_null|luna:center_neck_vis_null|luna:center_neck_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim" 
-		"rotate" " -type \"double3\" 3.08344774165762159 4.921052458432424 17.7817711274379846"
+		"rotate" " -type \"double3\" 1.91348208559131239 -1.10735771730324561 4.58917174217400792"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim" 
 		"rotateX" " -av"
@@ -557,10 +560,10 @@ createNode reference -n "lunaRN";
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_head_component_grp|luna:center_head_anim_grp|luna:center_head_null|luna:center_head_multicon_null|luna:center_head_vis_null|luna:center_head_anim" 
 		"rotateZ" " -av"
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_IK" 
-		"translate" " -type \"double3\" 3.5404203107182397e-09 44.03636787325342539 -146.53308248600149"
+		"translate" " -type \"double3\" 3.5405077118022348e-09 61.20134143966631513 -141.12296478235171548"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_swim_component_grp|luna:DO_NOT_TOUCH|luna:center_swim_IK" 
-		"rotate" " -type \"double3\" 90.00000000001026024 89.85774784622486777 90.00000000000976286"
+		"rotate" " -type \"double3\" -90.00000000000008527 73.75159680638597592 -90.00000000000049738"
 		
 		2 "|luna:Luna_topCon|luna:component_grp|luna:center_tail_flap_component_grp|luna:DO_NOT_TOUCH|luna:center_tail_flap_IK" 
 		"translate" " -type \"double3\" 3.5404814485452269e-09 49.48128710831296218 -146.46702554900889481"
@@ -714,18 +717,18 @@ lockNode -l 1 ;
 createNode animCurveTA -n "center_neck_anim_rotateX1";
 	rename -uid "E12BE661-485C-3DED-5E86-39B68892C4C6";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 0 18 8.7055776994472307 31 4.6653625373694769
-		 58 -1.2144152182947425 80 1.8868102751699405;
+	setAttr -s 5 ".ktv[0:4]"  1 0 18 8.7055776994472307 31 4.8382065069177882
+		 58 -1.1333688152082928 80 1.7608000229495384;
 createNode animCurveTA -n "center_neck_anim_rotateY1";
 	rename -uid "4892D34C-4142-A18D-FC83-96AB91E59DF5";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 -12.000000000000002 18 -14.609551081228361
-		 31 -4.4923858719332106 58 21.149192244178824 80 21.102083744331068;
+		 31 -15.972701356402203 58 2.1019020295320345 80 1.4444102163119497;
 createNode animCurveTA -n "center_neck_anim_rotateZ1";
 	rename -uid "5C7B10ED-4231-24CC-8B6E-11B23B83727A";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 0 18 -7.2719694003978637 31 -7.5693569091052009
-		 58 -3.9256715193171332 80 4.664913924547025;
+	setAttr -s 5 ".ktv[0:4]"  1 0 18 -7.2719694003978637 31 -8.5374367915784504
+		 58 -3.5290300978546614 80 4.0297889571302141;
 createNode animCurveTU -n "center_neck_anim_parent_to1";
 	rename -uid "4ED08FF3-4170-88D5-15AC-9DA0B014457B";
 	setAttr ".tan" 18;
@@ -733,22 +736,22 @@ createNode animCurveTU -n "center_neck_anim_parent_to1";
 createNode animCurveTA -n "center_head_anim_rotateX1";
 	rename -uid "CD1FEB08-44FA-F709-457F-98B0A40DA243";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 18 1.5530448373338732 31 1.9806931235451175
-		 80 3.0834477416576216;
+	setAttr -s 4 ".ktv[0:3]"  1 0 18 1.5530448373338732 31 1.9722845337127737
+		 80 2.205379103573375;
 	setAttr -s 4 ".kit[3]"  10;
 	setAttr -s 4 ".kot[3]"  9;
 createNode animCurveTA -n "center_head_anim_rotateY1";
 	rename -uid "B2E7E067-47BE-B5EA-BD60-3FB5F6AE789B";
 	setAttr ".tan" 18;
 	setAttr -s 4 ".ktv[0:3]"  1 -12.000000000000002 18 -0.16089664205006865
-		 31 5.4579979976767241 80 4.921052458432424;
+		 31 -1.3833393124387987 80 5.3713660941830055;
 	setAttr -s 4 ".kit[3]"  10;
 	setAttr -s 4 ".kot[3]"  9;
 createNode animCurveTA -n "center_head_anim_rotateZ1";
 	rename -uid "F5B01435-4668-63E5-3107-9FBD2E001957";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 18 1.9609171970563282 31 5.6354226735237827
-		 80 17.781771127437985;
+	setAttr -s 4 ".ktv[0:3]"  1 0 18 1.9609171970563282 31 5.3993199336999913
+		 80 8.0161531331324998;
 	setAttr -s 4 ".kit[3]"  10;
 	setAttr -s 4 ".kot[3]"  9;
 createNode animCurveTU -n "center_head_anim_parent_to1";
@@ -758,38 +761,43 @@ createNode animCurveTU -n "center_head_anim_parent_to1";
 createNode animCurveTL -n "center_COG_anim_translateX1";
 	rename -uid "B3491795-4128-948C-4F62-2AA852DA7530";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 22 -17.504969469735819 60 60.519611827665429
-		 80 84.633727720648395;
-	setAttr -s 4 ".kit[2:3]"  10 18;
+	setAttr -s 5 ".ktv[0:4]"  1 0 22 -17.504969469735819 49 8.380728368513104
+		 60 27.604839530870436 80 33.936778233336554;
+	setAttr -s 5 ".kit[2:4]"  10 10 18;
+	setAttr -s 5 ".kot[2:4]"  9 18 18;
 createNode animCurveTL -n "center_COG_anim_translateY1";
 	rename -uid "C56D4C31-4FC1-7C67-0128-678FFC573D88";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 0 22 -1.5943635138135199 49 -7.2677019304477275
-		 60 -14.14772634612603 80 -14.14772634612603;
+		 60 -14.14772634612603 80 -14.544260266909356;
 	setAttr -s 5 ".kit[3:4]"  10 10;
 createNode animCurveTL -n "center_COG_anim_translateZ1";
 	rename -uid "F33B8DB0-4AA5-8A71-8E9A-25A1521F16C7";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 0 22 5.5326684416157814 49 35.136737294962039
-		 60 50.215612393222941 80 58.989693379343535;
+	setAttr -s 5 ".ktv[0:4]"  1 0 22 5.5326684416157814 49 34.222493051089948
+		 60 61.235590851043909 80 85.515167614162976;
 	setAttr -s 5 ".kit[3:4]"  10 18;
 createNode animCurveTA -n "center_COG_anim_rotateX1";
 	rename -uid "6C603D56-45E6-474E-4BCC-FFA6BA0AC82E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 22 -8.2942328299046562 49 -8.4766302781534044
-		 80 -9.945374303902895;
-	setAttr -s 4 ".kit[3]"  10;
+	setAttr -s 5 ".ktv[0:4]"  1 0 22 -8.2942328299046562 49 -7.3574644496476651
+		 60 -6.8841357776187682 80 -6.3176435243854616;
+	setAttr -s 5 ".kit[3:4]"  10 10;
+	setAttr -s 5 ".kot[3:4]"  9 18;
 createNode animCurveTA -n "center_COG_anim_rotateY1";
 	rename -uid "6C13AC6C-4650-FF2A-E6EC-D9A7DFCEF2B2";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 22 24.415887101439697 49 35.223805392662484
-		 80 52.432808190612803;
+	setAttr -s 5 ".ktv[0:4]"  1 0 22 24.415887101439697 49 19.894672196268239
+		 60 15.622625988403145 80 16.879983593257361;
+	setAttr -s 5 ".kit[3:4]"  10 18;
+	setAttr -s 5 ".kot[3:4]"  9 18;
 createNode animCurveTA -n "center_COG_anim_rotateZ1";
 	rename -uid "C200BF31-44AE-A585-BA58-C9B06C7A0AF6";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 22 -3.4484600615381531 49 -3.5504453472679351
-		 80 -4.6000968635892816;
-	setAttr -s 4 ".kit[3]"  10;
+	setAttr -s 5 ".ktv[0:4]"  1 0 22 -3.4484600615381531 49 -1.1533774130700742
+		 60 0.32376887933532389 80 1.4711658020947052;
+	setAttr -s 5 ".kit[3:4]"  10 10;
+	setAttr -s 5 ".kot[3:4]"  9 18;
 createNode animCurveTU -n "center_COG_anim_display_deformer1";
 	rename -uid "524917E3-4BA7-80DC-5437-F698B859C487";
 	setAttr ".tan" 18;
@@ -1180,8 +1188,8 @@ createNode animCurveTL -n "center_eye_aim_left_anim_translateZ";
 	setAttr ".ktv[0]"  1 -1.5777218104420236e-30;
 	setAttr ".kot[0]"  18;
 select -ne :time1;
-	setAttr ".o" 80;
-	setAttr ".unw" 80;
+	setAttr ".o" 27;
+	setAttr ".unw" 27;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1334,4 +1342,4 @@ connectAttr "center_head_anim_parent_to.o" "grannyRN.phl[45]";
 connectAttr "sharedReferenceNode.sr" "grannyRN.sr";
 connectAttr "sharedReferenceNode.sr" "lunaRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of scarlet_rock_point.ma
+// End of scarlet_rock_point_far.ma
