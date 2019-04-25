@@ -8,7 +8,7 @@ public class RandomIdle : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.SetFloat("idle variation", Random.value * 4);
+        animator.SetFloat("idle variation", Random.Range(0, 5));
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
