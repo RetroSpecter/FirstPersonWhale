@@ -33,6 +33,8 @@ public class MusicRock : Interacatble {
         } else if (!active && this.deactive != null) {
             rg.OnDeselected();
             this.deactive();
+            StopAllCoroutines();
+            currentTimer = null;
         }
 
         isActive = active;
