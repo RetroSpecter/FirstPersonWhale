@@ -69,13 +69,11 @@ public class MusicRock : Interacatble {
     public void PlayRock() {
         source.Play();
         if (!triggerName.Equals("")) {
-            print(triggerName);
             AnimatorHandler.instance.ActivateTriggers(triggerName);
         }
 
         if (!soundName.Equals(""))
         {
-            print(soundName);
             AudioManager.instance.Play(soundName);
         }
 

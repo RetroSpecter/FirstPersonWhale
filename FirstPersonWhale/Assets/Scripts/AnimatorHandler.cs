@@ -29,7 +29,7 @@ public class AnimatorHandler : MonoBehaviour {
         }
 	}
 
-    public void ActivateTriggers(string triggerName) {
+    public virtual void ActivateTriggers(string triggerName) {
         foreach(Animator anim in animators)
         {
             anim.SetTrigger(triggerName);

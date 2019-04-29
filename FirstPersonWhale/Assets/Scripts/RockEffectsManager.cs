@@ -51,7 +51,11 @@ public class RockEffectsManager : MonoBehaviour {
     }
 
     void Activate() {
-        ps.Play();
+
+        //TODO: lazy way of pulling this off, but Ill use it to my advantage
+        if(!light.gameObject.active)
+            ps.Play();
+
         light.gameObject.SetActive(true);
         Material mat = symbolMat.GetComponent<Renderer>().material;
         fadeColor(baseColor, colorActivateFadeSpeed);
