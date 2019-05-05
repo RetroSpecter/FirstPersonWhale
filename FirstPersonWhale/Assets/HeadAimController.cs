@@ -24,12 +24,12 @@ public class HeadAimController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lookTarget > -1) {
+        if (lookTarget == -1) {
             headAim.transform.position = Vector3.Lerp(headAim.transform.position,initialPosition,Time.deltaTime * turnSpeed);
         } else {
             headAim.transform.position = Vector3.Lerp(headAim.transform.position, targets[lookTarget].transform.position, Time.deltaTime * turnSpeed);
         }
-        headRig.weight = Mathf.Lerp(headRig.weight, trackingWeight, Time.deltaTime);
+        headRig.weight = Mathf.Lerp(headRig.weight, trackingWeight, Time.deltaTime * 3);
     }
 
     public void lookAtTarget(int target) {

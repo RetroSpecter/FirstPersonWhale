@@ -14,7 +14,7 @@ public class RockGlow : MonoBehaviour
     IEnumerator curFadeColor;
     public float colorFadeSpeed = 0.5f;
 
-    private void Start()
+    private void Awake()
     {
         mat = matObject.GetComponent<Renderer>().material;
         CharacterLook cl = GetComponent<CharacterLook>();

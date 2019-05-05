@@ -14,7 +14,7 @@ public class SetHeadTarget : StateMachineBehaviour
         HeadAimController hac = animator.GetComponent<HeadAimController>();
         if (hac != null) {
             hac.setWeight(weight);
-            if (targetIndex == -1)
+            if (targetIndex != -1)
                 hac.lookAtTarget(targetIndex);
             else
                 hac.resetTarget();
