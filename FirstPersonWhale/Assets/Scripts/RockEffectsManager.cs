@@ -22,7 +22,12 @@ public class RockEffectsManager : MonoBehaviour {
     public float colorSelectedFadeSpeed = 0.5f;
     public float colorDeselectedFadeSpeed = 1.5f;
 
+    [Header("Activation Angle Settings")]
+    private Camera cam;
+    public float visionRadius = 45;
+
     void Start() {
+        cam = Camera.main;
         rock.select += Select;
         rock.deselect += Deselect;
         rock.active += Activate;
@@ -76,12 +81,28 @@ public class RockEffectsManager : MonoBehaviour {
     }
 
     void fadeColor(Color targetColor, float colorFadeSpeed, bool on) {
-        if (curFadeColor != null)
-        {
+        if (curFadeColor != null) {
             StopCoroutine(curFadeColor);
         }
-        curFadeColor = fadeEnum(targetColor, colorFadeSpeed, on);
-        StartCoroutine(curFadeColor);
+
+        if (on) {
+            curFadeColor = WaitForPlayerToLook(fadeEnum(targetColor, colorFadeSpeed, on));
+            StartCoroutine(curFadeColor);
+        } else {
+            curFadeColor = fadeEnum(targetColor, colorFadeSpeed, on);
+            StartCoroutine(curFadeColor);
+        }
+  
+    }
+
+    IEnumerator WaitForPlayerToLook(IEnumerator fadeEnum) {
+        Vector3 angleToCam = transform.position - cam.transform.position;
+        while (Vector3.Angle(cam.transform.forward, angleToCam) > visionRadius) {
+            angleToCam = transform.position - cam.transform.position;
+            yield return null;
+        }
+        curFadeColor = fadeEnum;
+        StartCoroutine(fadeEnum);
     }
 
     IEnumerator fadeEnum(Color color, float length, bool on) {
@@ -89,13 +110,13 @@ public class RockEffectsManager : MonoBehaviour {
 
         Material mat = symbolMat.GetComponent<Renderer>().material;
         Color curColor = mat.GetColor("_EmissionColor");
-        Color curAlpha = mat.GetColor("_BaseColor");
+        float curAlpha = mat.GetFloat("_TransitionIn");
         float time = 0;
 
         while (time < length) {
             time += Time.deltaTime;         
             mat.SetColor("_EmissionColor", Color.Lerp(curColor, color, time/length));
-            mat.SetColor("_BaseColor", !on ? Color.Lerp(curAlpha, Color.clear, time / length) : Color.Lerp(curAlpha, Color.white, time / length));
+            mat.SetFloat("_TransitionIn", !on ? Mathf.Lerp(curAlpha, 0, time / length) : Mathf.Lerp(curAlpha, 1, time / length));
             yield return null;
         }
         mat.SetColor("_EmissionColor", color);
