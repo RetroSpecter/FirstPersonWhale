@@ -779,6 +779,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetIndex: 0
   weight: 1
+--- !u!1101 &-1571756261303725534
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Look at Hiding Place
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102461903960599630}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.94957983
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-1078180400089836527
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1026,7 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0416bf7c6662a7b4fa5d1631b3a20626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 5
+  seconds: 7
   trigger: Wait
 --- !u!114 &114174722300481444
 MonoBehaviour:
@@ -1166,7 +1191,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d00594d0178e494b967e1284f036758, type: 3}
   m_Name: 
@@ -2059,9 +2084,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 1
+  m_TransitionDuration: 0.43038017
   m_TransitionOffset: 0
-  m_ExitTime: 0.6859269
+  m_ExitTime: 0.68592685
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 4
@@ -3282,6 +3307,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101073359082568856}
+  - {fileID: -1571756261303725534}
   m_StateMachineBehaviours:
   - {fileID: 114630578239822528}
   - {fileID: 114442637555740560}
@@ -3560,7 +3586,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Point to Rock
-  m_Speed: 1
+  m_Speed: 2.3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101062879657753528}
@@ -3843,7 +3869,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Scarlet Sings Sea Lion
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101388235832964768}
@@ -3943,14 +3969,14 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 1107829224643733378}
-    second: []
   - first: {fileID: 1107301733352278762}
     second:
     - {fileID: 1109408497246554372}
   - first: {fileID: 1107564056597929518}
     second:
     - {fileID: 1109408377483022172}
+  - first: {fileID: 1107829224643733378}
+    second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 72, y: -24, z: 0}
   m_EntryPosition: {x: 48, y: 72, z: 0}
@@ -4073,7 +4099,7 @@ AnimatorStateMachine:
     m_Position: {x: 276, y: 372, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102165174577524770}
-    m_Position: {x: 276, y: 240, z: 0}
+    m_Position: {x: 280, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102295612000110506}
     m_Position: {x: 280, y: 180, z: 0}
@@ -4170,7 +4196,7 @@ AnimatorStateMachine:
     m_Position: {x: -168, y: 204, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102993138569488514}
-    m_Position: {x: 312, y: 516, z: 0}
+    m_Position: {x: 290, y: 520, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102461903960599630}
     m_Position: {x: 732, y: 516, z: 0}
@@ -4179,10 +4205,10 @@ AnimatorStateMachine:
     m_Position: {x: 312, y: 168, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102466417450498070}
-    m_Position: {x: 300, y: 380, z: 0}
+    m_Position: {x: 290, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102351391870664366}
-    m_Position: {x: 456, y: 276, z: 0}
+    m_Position: {x: 360, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102146618310898808}
     m_Position: {x: 732, y: 276, z: 0}

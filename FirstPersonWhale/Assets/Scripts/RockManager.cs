@@ -23,6 +23,7 @@ public class RockManager : MonoBehaviour {
                 else
                     rocks[j].ActivateRock(false);
             }
+
             return;
         }
 
