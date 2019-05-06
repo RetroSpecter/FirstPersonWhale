@@ -28,11 +28,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_17E2B38D: 0.15
-    - Vector1_5A2847FF: -0.28
+    - Vector1_17E2B38D: 0.02
+    - Vector1_5A2847FF: 2.91
     - Vector1_BB95447B: -0.17
     m_Colors:
     - Color_1DF375A2: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_1B08B9D4: {r: 5.27, g: 4.33, b: 0, a: 0}
     - Vector2_E698C840: {r: -1, g: 1, b: 0, a: 0}
-    - _caustic_range: {r: -0.54399616, g: 0.06223482, b: 0, a: 0}
+    - _caustic_range: {r: 0.17, g: 0.06223482, b: 0, a: 0}
