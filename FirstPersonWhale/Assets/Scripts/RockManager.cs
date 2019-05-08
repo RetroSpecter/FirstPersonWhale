@@ -18,11 +18,9 @@ public class RockManager : MonoBehaviour {
         if (i == 0) {
             for (int j = 0; j < rocks.Length; j++)
             {
-                if (j < i)
-                    rocks[j].ActivateRock(true);
-                else
-                    rocks[j].ActivateRock(false);
+                rocks[j].ActivateRock(false);
             }
+
             return;
         }
 
@@ -32,8 +30,8 @@ public class RockManager : MonoBehaviour {
     IEnumerator ActivateRockEnum(int i) {
         for (int j = 0; j < rocks.Length; j++)
         {
-            yield return new WaitForSeconds(1f);
-            if (j < i)
+            yield return new WaitForSeconds(0.5f);
+            if (j == i - 1)
                 rocks[j].ActivateRock(true);
             else
                 rocks[j].ActivateRock(false);

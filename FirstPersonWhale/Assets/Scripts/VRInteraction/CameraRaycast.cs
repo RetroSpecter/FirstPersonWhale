@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraRaycast : MonoBehaviour
 {
-
     public LayerMask gazeInteractive;
     public bool debug;
     [SerializeField] private Interacatble selectedObject;
@@ -31,7 +30,6 @@ public class CameraRaycast : MonoBehaviour
             selectedObject.OnDeselected(this);
             selectedObject = null;
         }
-
         Debug.DrawRay(transform.position, transform.forward * 100, (hit.transform != null) ? Color.red : Color.green);
     }
 }
