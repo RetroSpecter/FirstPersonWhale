@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: scarlet_idle.ma
-//Last modified: Sun, May 05, 2019 09:53:24 PM
+//Last modified: Sun, May 05, 2019 10:42:39 PM
 //Codeset: 1252
 file -rdi 1 -ns "granny" -dr 1 -rfn "grannyRN" -typ "mayaAscii" "//csenetid/cs/unix/projects/instr/capstone2/production/assets/character/granny/_published/granny.ma";
 file -rdi 1 -ns "luna" -rfn "lunaRN" -typ "mayaAscii" "Z:/GitHub/FirstPersonWhale/MayaFiles/luna.ma";
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1A880240-4B35-353D-F04D-FBA2F302276A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -440.56642000017752 73.592553540738663 443.73618565218601 ;
-	setAttr ".r" -type "double3" -6.3383527295878599 -44.999999999998721 0 ;
+	setAttr ".t" -type "double3" -604.39179822054336 151.13632571363274 81.666554881323577 ;
+	setAttr ".r" -type "double3" -13.538352729585947 -82.599999999999028 1.2347295893566211e-014 ;
 	setAttr ".rp" -type "double3" 5.6843418860808015e-014 1.0658141036401503e-014 -1.1368683772161603e-013 ;
 	setAttr ".rpt" -type "double3" 6.0940607757917339e-014 -1.3811575667048212e-014 
 		6.4835571281657864e-014 ;
