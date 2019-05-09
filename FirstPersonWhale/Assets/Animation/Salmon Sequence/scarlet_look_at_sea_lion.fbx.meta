@@ -2900,7 +2900,7 @@ ModelImporter:
     second: luna:gum_upper
   - first:
       74: 7400000
-    second: Look at Sea Lion
+    second: Look at Salmon
   - first:
       95: 9500000
     second: //RootNode
@@ -2964,7 +2964,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Look at Sea Lion
+      name: Look at Salmon
       takeName: Take 001
       internalID: 7400000
       firstFrame: 1
