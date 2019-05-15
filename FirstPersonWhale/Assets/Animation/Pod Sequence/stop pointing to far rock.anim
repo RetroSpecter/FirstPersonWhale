@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: stop point to far rock
+  m_Name: stop pointing to far rock
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
