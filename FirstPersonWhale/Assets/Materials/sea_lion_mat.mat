@@ -83,7 +83,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_3D0FDD9D_Out:
-        m_Texture: {fileID: 2800000, guid: 1b9a3eee3bccdb241ac90d7182726554, type: 3}
+        m_Texture: {fileID: 2800000, guid: 691086db8cbae0f4797ed0f8ee1ef2f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
