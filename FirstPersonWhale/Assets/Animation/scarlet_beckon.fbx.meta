@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: a764a84b9a46f194f860b26ce52c3176
+guid: c995bcb5142b43b4caf7582ce8a8ece2
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: Beckon_Take 001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Beckon_Take 001
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 1
