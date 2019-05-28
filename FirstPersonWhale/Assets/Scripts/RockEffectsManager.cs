@@ -7,6 +7,7 @@ public class RockEffectsManager : MonoBehaviour {
     public MusicRock rock;
     public Light light;
     public ParticleSystem ps;
+    public ParticleSystem attentionParticles;
     public ParticleSystem fishSystem;
     public GameObject symbolMat;
     [Header("Color Settings")]
@@ -14,6 +15,7 @@ public class RockEffectsManager : MonoBehaviour {
     public Color baseColor;
     public Color selectedColor;
 
+    private AudioSource source;
     IEnumerator curFadeColor;
 
     [Header("ColorFadeSpeeds")]
@@ -33,6 +35,9 @@ public class RockEffectsManager : MonoBehaviour {
         rock.active += Activate;
         rock.deactive += Deactivate;
         rock.play += PlayRock;
+        ParticleSystem.EmissionModule em = attentionParticles.emission;
+        em.enabled = false;
+        source = GetComponent<AudioSource>();
     }
 
     private void OnDestroy()
@@ -46,30 +51,26 @@ public class RockEffectsManager : MonoBehaviour {
     void Select() {
         light.intensity *= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(selectedColor, colorSelectedFadeSpeed, true);
+        fadeColor(selectedColor, colorSelectedFadeSpeed, true, false);
     }
 
     void Deselect() {
         light.intensity /= 2;
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(baseColor, colorDeselectedFadeSpeed, true);
+        fadeColor(baseColor, colorDeselectedFadeSpeed, true, false);
     }
 
     void Activate() {
-
-        //TODO: lazy way of pulling this off, but Ill use it to my advantage
-        if(!light.gameObject.active)
-            ps.Play();
-
         light.gameObject.SetActive(true);
+        source.Play();
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(baseColor, colorActivateFadeSpeed, true);
+        fadeColor(baseColor, colorActivateFadeSpeed, true, true);
     }
 
     void PlayRock() {
         ps.Play();
-        if (fishSystem != null)
-        {
+        source.Play();
+        if (fishSystem != null) {
             fishSystem.GetComponent<ParticleSystem>().Play();
         }
     }
@@ -77,37 +78,40 @@ public class RockEffectsManager : MonoBehaviour {
     void Deactivate() {
         light.gameObject.SetActive(false);
         Material mat = symbolMat.GetComponent<Renderer>().material;
-        fadeColor(inactiveColor, colorDeselectedFadeSpeed, false);
+        fadeColor(inactiveColor, colorDeselectedFadeSpeed, false, false);
     }
 
-    void fadeColor(Color targetColor, float colorFadeSpeed, bool on) {
+    void fadeColor(Color targetColor, float colorFadeSpeed, bool on, bool bubble) {
         if (curFadeColor != null) {
             StopCoroutine(curFadeColor);
         }
 
         if (on) {
-            curFadeColor = WaitForPlayerToLook(fadeEnum(targetColor, colorFadeSpeed, on));
+            curFadeColor = WaitForPlayerToLook(fadeEnum(targetColor, colorFadeSpeed, on, bubble));
             StartCoroutine(curFadeColor);
         } else {
-            curFadeColor = fadeEnum(targetColor, colorFadeSpeed, on);
+            curFadeColor = fadeEnum(targetColor, colorFadeSpeed, on, bubble);
             StartCoroutine(curFadeColor);
         }
   
     }
 
     IEnumerator WaitForPlayerToLook(IEnumerator fadeEnum) {
+        ParticleSystem.EmissionModule em = attentionParticles.emission;
+        em.enabled = true;
         Vector3 angleToCam = transform.position - cam.transform.position;
         while (Vector3.Angle(cam.transform.forward, angleToCam) > visionRadius) {
             angleToCam = transform.position - cam.transform.position;
             yield return null;
         }
+        em = attentionParticles.emission;
+        em.enabled = false;
         curFadeColor = fadeEnum;
+        source.Play();
         StartCoroutine(fadeEnum);
     }
 
-    IEnumerator fadeEnum(Color color, float length, bool on) {
-
-
+    IEnumerator fadeEnum(Color color, float length, bool on, bool bubble) {
         Material mat = symbolMat.GetComponent<Renderer>().material;
         Color curColor = mat.GetColor("_EmissionColor");
         float curAlpha = mat.GetFloat("_TransitionIn");
@@ -120,5 +124,8 @@ public class RockEffectsManager : MonoBehaviour {
             yield return null;
         }
         mat.SetColor("_EmissionColor", color);
+
+        if(bubble)
+            ps.Play();
     }
 }

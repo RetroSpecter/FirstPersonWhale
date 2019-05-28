@@ -8,7 +8,7 @@ public class MusicRock : Interacatble {
     public string triggerName;
     public string soundName;
     private IEnumerator currentTimer;
-    private AudioSource source;
+
     public bool isActive;
 
     public delegate void selectionEvent();
@@ -20,16 +20,10 @@ public class MusicRock : Interacatble {
 
     public RockGlow rg;
 
-    private void Start()
-    {
-        source = GetComponent<AudioSource>();
-    }
-
     public void ActivateRock(bool active) {
         if (active && this.active != null)
         {
             this.active();
-            source.Play();
         } else if (!active && this.deactive != null) {
             rg.OnDeselected();
             this.deactive();
@@ -69,7 +63,6 @@ public class MusicRock : Interacatble {
     }
 
     public void PlayRock() {
-        source.Play();
         if (!triggerName.Equals("")) {
             AnimatorHandler.instance.ActivateTriggers(triggerName);
         }
