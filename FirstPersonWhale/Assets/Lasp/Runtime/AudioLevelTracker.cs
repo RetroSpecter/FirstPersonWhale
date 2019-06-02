@@ -94,7 +94,7 @@ namespace Lasp
         const float kSilence = -60;
 
         // Current amplitude value.
-        public float _amplitude = kSilence;
+        float _amplitude = kSilence;
 
         // Variables for automatic gain control.
         float _peak = kSilence;

@@ -21,6 +21,7 @@ public class NoteBubble : Interacatble
             StopCoroutine(delayEnum);
         }
         delayEnum = null;
+        playNote.Invoke(null);
         StartCoroutine(transitionEnum);
     }
 
@@ -31,7 +32,7 @@ public class NoteBubble : Interacatble
             StopCoroutine(delayEnum);
         }
         delayEnum = selectDelay(0.75f);
-
+        StartCoroutine(delayEnum);
         StartCoroutine(transitionEnum);
         return true;
     }
@@ -55,8 +56,11 @@ public class NoteBubble : Interacatble
 
     IEnumerator selectDelay(float time) {
         yield return new WaitForSeconds(time);
-        playNote.Invoke(this);
-        delayEnum = null;
+        while (true)
+        {
+            playNote.Invoke(this);
+            yield return null;
+        }
     }
 
     IEnumerator GrowShrink(float targetScale, float time) {
