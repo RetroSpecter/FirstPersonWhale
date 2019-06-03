@@ -14,11 +14,18 @@ public class HeadAimController : MonoBehaviour
     public Rig headRig;
     [Range(0, 1)]
     public float trackingWeight;
+    public bool lookSwitch;
+
+    [Header("Activation Angle Settings")]
+    private Camera cam;
+    public float visionRadius = 30;
+    public GameObject head;
 
     // Start is called before the first frame update
     void Start()
     {
         initialPosition = headAim.transform.position;
+        cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -29,7 +36,13 @@ public class HeadAimController : MonoBehaviour
         } else {
             headAim.transform.position = Vector3.Lerp(headAim.transform.position, targets[lookTarget].transform.position, Time.deltaTime * turnSpeed);
         }
+
+        if (lookSwitch) {
+            Vector3 angleToCam = head.transform.position - cam.transform.position;
+            setWeight(Vector3.Angle(cam.transform.forward, angleToCam) < visionRadius ? 1 : 0);
+        }
         headRig.weight = Mathf.Lerp(headRig.weight, trackingWeight, Time.deltaTime * 3);
+
     }
 
     public void lookAtTarget(int target) {
