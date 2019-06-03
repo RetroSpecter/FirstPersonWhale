@@ -108,8 +108,12 @@ public class VolumeRock : MonoBehaviour
             yield return null;
         }
         print(curDict != null && curDict.isLeaf());
-        if (curDict != null && curDict.isLeaf()) {
+        if (curDict != null && curDict.isLeaf())
+        {
             PlayRock();
+        }
+        else {
+            AnimatorHandler.instance.ActivateTriggers("try again");
         }
     }
 
