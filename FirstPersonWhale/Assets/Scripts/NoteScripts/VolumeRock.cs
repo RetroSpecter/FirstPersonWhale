@@ -28,9 +28,8 @@ public class VolumeRock : MonoBehaviour
     private voiceNode voiceSequences;
 
     [Header("PlaySettings")]
-    public float lookTimer;
-    public string triggerName;
-    public string soundName;
+    public string changeSound;
+    public string changeSoundBack;
 
     private void Start()
     {
@@ -58,6 +57,9 @@ public class VolumeRock : MonoBehaviour
             }
         } else {
             if (CurMonitorVolume != null) {
+                if (!changeSoundBack.Equals("")) {
+                    EventManager.instance.CallEvent(changeSoundBack);
+                }
                 StopCoroutine(CurMonitorVolume);
                 CurMonitorVolume = null;
             }
@@ -66,21 +68,13 @@ public class VolumeRock : MonoBehaviour
 
     public void PlayRock()
     {
-        /*
-        if (!triggerName.Equals(""))
-        {
-            AnimatorHandler.instance.ActivateTriggers(triggerName);
-        }
-
-        if (!soundName.Equals(""))
-        {
-            AudioManager.instance.Play(soundName);
-        }*/
-
         GetComponent<MusicRock>().PlayRock(); // TODO: this is pretty lazy. would want to replace music rock with this in general
     }
 
     IEnumerator MonitorVolume() {
+        if (!changeSound.Equals("")) {
+            EventManager.instance.CallEvent(changeSound);
+        }
         while (true) {
             if (curVolume > volumeThreshold) {
                 yield return StartCoroutine(VoiceSequenceRecognition(sequenceRecognitionWaitTime));
@@ -163,7 +157,7 @@ class voiceNode {
 
     public voiceNode getNextNode(float t, float lengthError) {
         foreach(float key in nodes.Keys) {
-            if (Mathf.Abs(t - key) < lengthError) {
+            if (t + lengthError > key) {
                 return nodes[key];
             }
         }

@@ -24,7 +24,7 @@ public class EventManager : MonoBehaviour {
 
     public void CallEvent(string name) {
         if (!dict.ContainsKey(name)) {
-            Debug.LogError("event doesn't exist");
+            Debug.LogError("event " + name + " doesn't exist");
             return;
         }
 

@@ -29,12 +29,22 @@ public class MicrophoneManager : MonoBehaviour
 
     private void Update()
     {
-        if (curVolume > 0.2f)
+        if (curVolume > 0.1f)
         {
-            source.volume = Mathf.Lerp(curVolume, curVolume, Time.deltaTime * 1000);
+            if(!source.isPlaying)
+                source.Play();
+            source.volume = Mathf.Lerp(source.volume, 1, Time.deltaTime * 30);
         } else {
-            source.volume = Mathf.Lerp(source.volume, 0, Time.deltaTime * 50);
+            source.volume = Mathf.Lerp(source.volume, 0, Time.deltaTime * 10);
+            if (source.volume < 0.01f) {
+                source.Stop();
+            }
         }
+    }
+
+    public void updateClip(AudioClip ac)
+    {
+        source.clip = ac;
     }
 
     // Update is called once per frame
