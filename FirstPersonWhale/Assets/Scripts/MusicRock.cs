@@ -49,6 +49,7 @@ public class MusicRock : Interacatble {
 
     public override bool OnSelected(CameraRaycast camera)
     {
+        return false;
         if (!isActive) return false;
 
         if (select != null)
@@ -63,12 +64,11 @@ public class MusicRock : Interacatble {
     }
 
     public void PlayRock() {
-        if (!triggerName.Equals("")) {
+        if (!triggerName.Equals("") && AnimatorHandler.instance != null) {
             AnimatorHandler.instance.ActivateTriggers(triggerName);
         }
 
-        if (!soundName.Equals(""))
-        {
+        if (!soundName.Equals("")) {
             AudioManager.instance.Play(soundName);
         }
 

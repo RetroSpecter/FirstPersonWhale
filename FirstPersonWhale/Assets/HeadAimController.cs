@@ -56,4 +56,12 @@ public class HeadAimController : MonoBehaviour
     public void setWeight(float targetWeight) {
         trackingWeight = targetWeight;
     }
+
+    public void checkAudio(float audio) {
+        if (audio > 0.2f && lookSwitch) {
+            Vector3 angleToCam = head.transform.position - cam.transform.position;
+            if (Vector3.Angle(cam.transform.forward, angleToCam) < visionRadius)
+                AnimatorHandler.instance.ActivateTriggers("greet scarlet");
+        }
+    }
 }
