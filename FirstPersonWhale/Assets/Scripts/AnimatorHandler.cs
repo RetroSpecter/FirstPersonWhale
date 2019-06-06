@@ -39,7 +39,7 @@ public class AnimatorHandler : MonoBehaviour {
     }
 
     public void reset() {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneTransitions.instance.Transition();
     }
 
     IEnumerator resetTrigger(string triggerName) {
